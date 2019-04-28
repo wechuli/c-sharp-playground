@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\helloworld2\bin\Debug\netcoreapp2.1\helloworld2.deps.json
+F:\repos\c-sharp-playground\helloworld2\bin\Debug\netcoreapp2.1\helloworld2.runtimeconfig.json
+F:\repos\c-sharp-playground\helloworld2\bin\Debug\netcoreapp2.1\helloworld2.runtimeconfig.dev.json
+f:\repos\c-sharp-playground\helloworld2\bin\Debug\netcoreapp2.1\helloworld2.dll
+f:\repos\c-sharp-playground\helloworld2\bin\Debug\netcoreapp2.1\helloworld2.pdb
+f:\repos\c-sharp-playground\helloworld2\obj\Debug\netcoreapp2.1\helloworld2.csprojAssemblyReference.cache
+f:\repos\c-sharp-playground\helloworld2\obj\Debug\netcoreapp2.1\helloworld2.csproj.CoreCompileInputs.cache
+f:\repos\c-sharp-playground\helloworld2\obj\Debug\netcoreapp2.1\helloworld2.AssemblyInfoInputs.cache
+f:\repos\c-sharp-playground\helloworld2\obj\Debug\netcoreapp2.1\helloworld2.AssemblyInfo.cs
+f:\repos\c-sharp-playground\helloworld2\obj\Debug\netcoreapp2.1\helloworld2.dll
+f:\repos\c-sharp-playground\helloworld2\obj\Debug\netcoreapp2.1\helloworld2.pdb
