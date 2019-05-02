@@ -98,6 +98,21 @@ namespace Primitive_Types_and_Variables
             // i = ni.Value; //System.InvalidOperationException
             i = ni.GetValueOrDefault();
             Console.WriteLine(i);
+
+            //Variables
+            //A variable is a container of information, which can change its value. It provides a means for:
+            // - storing infomation
+            // - retriving the stored information
+            // - modifying the stored information
+            //Variables are characterized by name(identifier),type(of the information preserved in them),value(stored information) A variable is a named area of memory, which stores a value from a particular data type and that area of memory is accessible in the program by its name
+            //Primitive data types(numbers,char,bool) are called value types because they store their value directly in the program stack
+            //Reference data types(strings,objects,arrays) are an address, poinitng to the dynamic memory where their value is stored.The can be dynamically allocated and released
+            //Each data type in C# has a default value(default initialization) which is used when there is no explicit set value for a given variable
+            //Value types are stored in the program execution stack and directly contain their value - sbyte,byte,short,ushort,int,long,float,ulong,double,decimal,char,bool.variables allocated on the stack are stored directly to the memory and access to this memory is very fast and its allocation is dealt with when the program is compiled
+            //Reference types keep a reference(address), in the program execution stack, and that refernce points to the dynamic memory(heap) where their value is stored. the reference is a pointer indicating the actual location of the value in the heap.Variables allocated on the heap have their memory allocated at run time and accessing the memory is a bit slower, but the heap size is only limited by the size of the virtual memory.
+
+            //A Change in a value type changes its value directly into the stack. When changing a reference type, the value is changed in the heap, the variable that keeps the array reference remqains unchanged. When assignning a null value in a reference type, that reference is disconnected from its value and the variable remains with no value(obj=null)
+            //When assigning new value to an object(a reference type variable) the new object is allocated in the heap(the dynamic memory) while the old object remains free(unreferenced). The reference is redirected to the new object while the old objects will be cleaned at some moment by the garbage collector(.NET Framework's internal system for automatic memory cleaning) as they are not in use anymore
         }
     }
 }
