@@ -87,6 +87,7 @@ namespace Primitive_Types_and_Variables
             int? ni = 6;
             Console.WriteLine(ni);
 
+
             // i = ni; //this will fail to compile
             Console.WriteLine(ni.HasValue);
             i = ni.Value;
@@ -113,6 +114,27 @@ namespace Primitive_Types_and_Variables
 
             //A Change in a value type changes its value directly into the stack. When changing a reference type, the value is changed in the heap, the variable that keeps the array reference remqains unchanged. When assignning a null value in a reference type, that reference is disconnected from its value and the variable remains with no value(obj=null)
             //When assigning new value to an object(a reference type variable) the new object is allocated in the heap(the dynamic memory) while the old object remains free(unreferenced). The reference is redirected to the new object while the old objects will be cleaned at some moment by the garbage collector(.NET Framework's internal system for automatic memory cleaning) as they are not in use anymore
+
+            //Literals
+            //Primitive types are special data types built into the C# language. Their values specified in the source code of the program are called literals
+
+            //types of literals: Boolean,Integer,Real,Character,String,Object literal null
+
+            //an ordinary charcter
+            char character = 'a';
+            Console.WriteLine(character);
+
+            //Unicode charcter code in a hex format
+            character = '\u003A';
+            console.WriteLine(character);
+
+            // Assigning the single quotiation character (escaped as \') 
+            character = '\'';
+            Console.WriteLine(character);
+            // Assigning the backslash character (escaped as \\) 
+            character = '\\';
+            Console.WriteLine(character);
+
         }
     }
 }

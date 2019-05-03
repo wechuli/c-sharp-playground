@@ -9,3 +9,14 @@ E:\repos\c-sharp-playground\Primitive Types and Variables\Primitive Types and Va
 E:\repos\c-sharp-playground\Primitive Types and Variables\Primitive Types and Variables\obj\Debug\netcoreapp2.1\Primitive Types and Variables.AssemblyInfo.cs
 E:\repos\c-sharp-playground\Primitive Types and Variables\Primitive Types and Variables\obj\Debug\netcoreapp2.1\Primitive Types and Variables.dll
 E:\repos\c-sharp-playground\Primitive Types and Variables\Primitive Types and Variables\obj\Debug\netcoreapp2.1\Primitive Types and Variables.pdb
+F:\repos\c-sharp-playground\Primitive Types and Variables\Primitive Types and Variables\bin\Debug\netcoreapp2.1\Primitive Types and Variables.deps.json
+F:\repos\c-sharp-playground\Primitive Types and Variables\Primitive Types and Variables\bin\Debug\netcoreapp2.1\Primitive Types and Variables.runtimeconfig.json
+F:\repos\c-sharp-playground\Primitive Types and Variables\Primitive Types and Variables\bin\Debug\netcoreapp2.1\Primitive Types and Variables.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\Primitive Types and Variables\Primitive Types and Variables\bin\Debug\netcoreapp2.1\Primitive Types and Variables.dll
+F:\repos\c-sharp-playground\Primitive Types and Variables\Primitive Types and Variables\bin\Debug\netcoreapp2.1\Primitive Types and Variables.pdb
+F:\repos\c-sharp-playground\Primitive Types and Variables\Primitive Types and Variables\obj\Debug\netcoreapp2.1\Primitive Types and Variables.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\Primitive Types and Variables\Primitive Types and Variables\obj\Debug\netcoreapp2.1\Primitive Types and Variables.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\Primitive Types and Variables\Primitive Types and Variables\obj\Debug\netcoreapp2.1\Primitive Types and Variables.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\Primitive Types and Variables\Primitive Types and Variables\obj\Debug\netcoreapp2.1\Primitive Types and Variables.AssemblyInfo.cs
+F:\repos\c-sharp-playground\Primitive Types and Variables\Primitive Types and Variables\obj\Debug\netcoreapp2.1\Primitive Types and Variables.dll
+F:\repos\c-sharp-playground\Primitive Types and Variables\Primitive Types and Variables\obj\Debug\netcoreapp2.1\Primitive Types and Variables.pdb

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\repos\\c-sharp-playground\\Primitive Types and Variables\\Primitive Types and Variables\\Primitive Types and Variables.csproj": {}
+    "F:\\repos\\c-sharp-playground\\Primitive Types and Variables\\Primitive Types and Variables\\Primitive Types and Variables.csproj": {}
   },
   "projects": {
-    "E:\\repos\\c-sharp-playground\\Primitive Types and Variables\\Primitive Types and Variables\\Primitive Types and Variables.csproj": {
+    "F:\\repos\\c-sharp-playground\\Primitive Types and Variables\\Primitive Types and Variables\\Primitive Types and Variables.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\repos\\c-sharp-playground\\Primitive Types and Variables\\Primitive Types and Variables\\Primitive Types and Variables.csproj",
+        "projectUniqueName": "F:\\repos\\c-sharp-playground\\Primitive Types and Variables\\Primitive Types and Variables\\Primitive Types and Variables.csproj",
         "projectName": "Primitive Types and Variables",
-        "projectPath": "E:\\repos\\c-sharp-playground\\Primitive Types and Variables\\Primitive Types and Variables\\Primitive Types and Variables.csproj",
+        "projectPath": "F:\\repos\\c-sharp-playground\\Primitive Types and Variables\\Primitive Types and Variables\\Primitive Types and Variables.csproj",
         "packagesPath": "C:\\Users\\Wechuli\\.nuget\\packages\\",
-        "outputPath": "E:\\repos\\c-sharp-playground\\Primitive Types and Variables\\Primitive Types and Variables\\obj\\",
+        "outputPath": "F:\\repos\\c-sharp-playground\\Primitive Types and Variables\\Primitive Types and Variables\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
