@@ -47,6 +47,22 @@ namespace basics
             Console.WriteLine(bt || true);
             Console.WriteLine((5 > 7) ^ (at == bt));
 
+            //Bitwise Operators
+            // a bitwise operaot is an operator that acts on the binary representation of numeric types
+            //The bit shift left(<<) and bit shift right(>>) are used on numerical values, they move all the bits of the value to the left or right
+
+            byte aByte = 3; // 0000 0011 = 3
+            byte bByte = 5; // 0000 0101 = 5
+
+            Console.WriteLine(aByte | bByte);  //0000 0111 = 7
+            Console.WriteLine(aByte & bByte);  //0000 0001 = 1
+            Console.WriteLine(aByte ^ bByte);  //0000 0110 = 6
+            Console.WriteLine(~aByte & bByte);  //0000 0100 = 4
+            Console.WriteLine(aByte << 1);  //0000 0110 = 6
+            Console.WriteLine(aByte << 2);  //0000 1100 = 12
+            Console.WriteLine(aByte >> bByte);  //0000 0000 = 0
+
+
 
         }
     }
