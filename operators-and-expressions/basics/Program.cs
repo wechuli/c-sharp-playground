@@ -62,6 +62,71 @@ namespace basics
             Console.WriteLine(aByte << 2);  //0000 1100 = 12
             Console.WriteLine(aByte >> bByte);  //0000 0000 = 0
 
+            //Comparison Operators
+            // Comparion operators in C# are used to compare two or more operands.
+            //All comparion operators in C# are binary(take two operands) and the returned result is a Boolean value(true or false)
+
+            int x = 10, y = 5; Console.WriteLine("x > y : " + (x > y)); // True 
+            Console.WriteLine("x < y : " + (x < y)); // False 
+            Console.WriteLine("x >= y : " + (x >= y)); // True 
+            Console.WriteLine("x <= y : " + (x <= y)); // False 
+            Console.WriteLine("x == y : " + (x == y)); // False 
+            Console.WriteLine("x != y : " + (x != y)); // True
+
+
+            //Assignement Operators
+            // '='
+            //cascade asignmenent
+            int xa, ya, za;
+            xa = ya = za = 25; //cascade
+            Console.WriteLine(xa);
+            Console.WriteLine(ya);
+            Console.WriteLine(za);
+
+            //Compound Assignement Operators
+            int xc = 6;
+            int yc = 4;
+
+            xc *= yc; // Same as xc = xc * yc;
+            Console.WriteLine(xc);  //24
+            int zc = yc = 3;
+            Console.WriteLine(zc);
+            Console.WriteLine(xc |= 1); //bitwise operation xc = xc | 1
+            Console.WriteLine(xc += 3);
+            Console.WriteLine(xc /= 2);
+
+            //Conditional Operator(ternary)
+            //Uses the Boolean value of an expression to determine of two other expressions must be calculated and returned as a result
+
+            int ab = 6;
+            int bb = 4;
+
+            Console.WriteLine(ab > bb ? "ab>bb" : "bb<=ab");
+            int num = ab == bb ? 1 : -1;
+            Console.WriteLine(num);  //num will be -1
+
+            //The '.' Operator
+            //The access operator  "." (dot) is used to access the member fields or methods of a class or object
+            Console.WriteLine(DateTime.Now);
+
+            //Square Brackets[] Operator
+            //square brackets are used to access elements of an array by index
+
+            int[] arr = { 1, 2, 3 };
+            Console.WriteLine(arr[1]);
+            string str = "Hello";
+            Console.WriteLine(str[2]);
+
+            //Operator "??"
+            //The operator ?? is similar to the conditional operator ?: The difference is that it is placed between two operands and returns the left opoerand only if its value is not null, otherwise it returns the right operand
+
+            int? an = 5;
+            Console.WriteLine(an ?? -1); //5
+            string name = null;
+            Console.WriteLine(name ?? "(no name)"); // (no name)
+            /*
+            
+             */
 
 
         }
