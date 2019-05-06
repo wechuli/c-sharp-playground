@@ -17,7 +17,9 @@ namespace exercises
             Console.WriteLine(div5_7);
 
             //3. Write an expression that looks for a given integer if its third digit (right to left) is 7.
-            
+            int longnumber = 857645;
+            bool third7 = (longnumber / 100) % 10 == 7;
+            Console.WriteLine(third7);
         }
     }
 }
