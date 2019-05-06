@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\operators-and-expressions\exercises\bin\Debug\netcoreapp2.1\exercises.deps.json
+F:\repos\c-sharp-playground\operators-and-expressions\exercises\bin\Debug\netcoreapp2.1\exercises.runtimeconfig.json
+F:\repos\c-sharp-playground\operators-and-expressions\exercises\bin\Debug\netcoreapp2.1\exercises.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\operators-and-expressions\exercises\bin\Debug\netcoreapp2.1\exercises.dll
+F:\repos\c-sharp-playground\operators-and-expressions\exercises\bin\Debug\netcoreapp2.1\exercises.pdb
+F:\repos\c-sharp-playground\operators-and-expressions\exercises\obj\Debug\netcoreapp2.1\exercises.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\operators-and-expressions\exercises\obj\Debug\netcoreapp2.1\exercises.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\operators-and-expressions\exercises\obj\Debug\netcoreapp2.1\exercises.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\operators-and-expressions\exercises\obj\Debug\netcoreapp2.1\exercises.AssemblyInfo.cs
+F:\repos\c-sharp-playground\operators-and-expressions\exercises\obj\Debug\netcoreapp2.1\exercises.dll
+F:\repos\c-sharp-playground\operators-and-expressions\exercises\obj\Debug\netcoreapp2.1\exercises.pdb
