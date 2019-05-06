@@ -124,10 +124,42 @@ namespace basics
             Console.WriteLine(an ?? -1); //5
             string name = null;
             Console.WriteLine(name ?? "(no name)"); // (no name)
-            /*
-            
-             */
 
+
+            //Type Conversion
+            //type conversion can be explicit and implicit
+            //Implicit Type Conversion is possible only when there is no risk of data loss during the conversion
+            int myInt = 5;
+            Console.WriteLine(myInt);
+            long? myLong = myInt;
+            Console.WriteLine(myLong);
+            Console.WriteLine(myLong + myInt);
+
+            //Explicit Type Conversion
+            //explicit type conversion is used whenever there is a possibility of data loss
+            double myDouble = 5.1d;
+            Console.WriteLine(myDouble); //5.1
+
+            long myshLong = (long)myDouble;
+            Console.WriteLine(myshLong); //5
+
+            myDouble = 5e9d; //5*10^9
+            Console.WriteLine(myDouble);
+
+            int mysInt = (int)myDouble;
+            Console.WriteLine(mysInt);  // -2147483648
+            Console.WriteLine(int.MinValue); // -2147483648
+
+            //If we try to implicitly convert a type to another type leading to a loss in data, a compilation error will be raised
+
+            //Forcing Overflow Exceptions during Casting
+            //Sometimes it is convenient instead of getting the wrong result, when a type overflows during switching from larger to smaller type to get notification of the problem
+
+            double dd = 5e9; // 5 * 10^9
+            Console.WriteLine(dd.GetType());
+            Console.WriteLine(dd); //5000000000
+            int ii = checked((int)d); //System.OverflowException
+            Console.WriteLine(ii);
 
         }
     }
