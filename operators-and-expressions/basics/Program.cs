@@ -161,6 +161,46 @@ namespace basics
             int ii = checked((int)d); //System.OverflowException
             Console.WriteLine(ii);
 
+            //Conversion to String
+            int astr = 5;
+            int bstr = 7;
+
+            string sum = "Sum = " + (astr + bstr);
+            Console.WriteLine(sum);
+
+            string incorrect = "Sum = " + astr + bstr;
+            Console.WriteLine(incorrect);
+            Console.WriteLine("Perimeter = " + 2 * (astr + bstr) + ". Area =" + (astr * bstr) + ".");
+
+            //Expressions
+            //Much of the programs work is the calculation of expressions.Expressions are sequences of operators, literals and variables that are calculated to a value of some type
+            //The calculation of the expression can have side effects, because the expression can contain embedded assignment operators, can cause increasing or decreasing of the value and calling methods
+            int aexp = 5;
+            int bexp = ++aexp;
+
+            Console.WriteLine(aexp);
+            Console.WriteLine(bexp);
+
+            //when writing expressions, the data types and the behavior of the used operators should be considered.Ignoring this can lead to unexpected results
+
+            double d_weird = 1 / 2;
+            Console.WriteLine(d_weird); //0, not 0.5, this is super weird
+
+            double half = (double)1 / 2;
+            Console.WriteLine(half); //0.5
+
+            //Division by Zero
+            int number = 1;
+            double denum = 0; //The value is 0.0(real number)
+            int zeroInt = (int)denum; //The value is 0 (integer number)
+
+            Console.WriteLine(number / denum); //Infinity
+            Console.WriteLine(denum / denum);//NaN
+            //Console.WriteLine(zeroInt / zeroInt); //DivideByZeroException
+
+            //When working with expressions it is important to use brackets whenever there is the slightest doubt about the priorities of the operations
+
+
         }
     }
 }
