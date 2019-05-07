@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\repos\\c-sharp-playground\\operators-and-expressions\\exercises\\exercises.csproj": {}
+    "E:\\repos\\c-sharp-playground\\operators-and-expressions\\exercises-work\\exercises-work.csproj": {}
   },
   "projects": {
-    "E:\\repos\\c-sharp-playground\\operators-and-expressions\\exercises\\exercises.csproj": {
+    "E:\\repos\\c-sharp-playground\\operators-and-expressions\\exercises-work\\exercises-work.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\repos\\c-sharp-playground\\operators-and-expressions\\exercises\\exercises.csproj",
-        "projectName": "exercises",
-        "projectPath": "E:\\repos\\c-sharp-playground\\operators-and-expressions\\exercises\\exercises.csproj",
+        "projectUniqueName": "E:\\repos\\c-sharp-playground\\operators-and-expressions\\exercises-work\\exercises-work.csproj",
+        "projectName": "exercises-work",
+        "projectPath": "E:\\repos\\c-sharp-playground\\operators-and-expressions\\exercises-work\\exercises-work.csproj",
         "packagesPath": "C:\\Users\\Wechuli\\.nuget\\packages\\",
-        "outputPath": "E:\\repos\\c-sharp-playground\\operators-and-expressions\\exercises\\obj\\",
+        "outputPath": "E:\\repos\\c-sharp-playground\\operators-and-expressions\\exercises-work\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
