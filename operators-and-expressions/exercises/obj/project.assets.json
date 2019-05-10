@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\repos\\c-sharp-playground\\operators-and-expressions\\exercises\\exercises.csproj",
+      "projectUniqueName": "F:\\repos\\c-sharp-playground\\operators-and-expressions\\exercises\\exercises.csproj",
       "projectName": "exercises",
-      "projectPath": "E:\\repos\\c-sharp-playground\\operators-and-expressions\\exercises\\exercises.csproj",
+      "projectPath": "F:\\repos\\c-sharp-playground\\operators-and-expressions\\exercises\\exercises.csproj",
       "packagesPath": "C:\\Users\\Wechuli\\.nuget\\packages\\",
-      "outputPath": "E:\\repos\\c-sharp-playground\\operators-and-expressions\\exercises\\obj\\",
+      "outputPath": "F:\\repos\\c-sharp-playground\\operators-and-expressions\\exercises\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
