@@ -114,6 +114,15 @@ namespace exercises
             }
             Console.WriteLine(prime);
 
+            //15.Write a program that exchanges the values of the bits on positions 3, 4 and 5 with bits on positions 24, 25 and 26 of a given 32-bit unsigned integer.
+
+            int exbnumber = 58;
+            int bit3 = (number >> 3) & 1;
+            int bit24 = (number >> 24) & 1;
+            exbnumber = number & (~(1 << 24)) | (bit3 << 24);
+            exbnumber = number & (~(1 << 3)) | (bit3 << 24);
+
+            Console.WriteLine(exbnumber);
 
 
 
