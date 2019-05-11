@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\console-input-and-output\basics\bin\Debug\netcoreapp2.1\basics.deps.json
+F:\repos\c-sharp-playground\console-input-and-output\basics\bin\Debug\netcoreapp2.1\basics.runtimeconfig.json
+F:\repos\c-sharp-playground\console-input-and-output\basics\bin\Debug\netcoreapp2.1\basics.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\console-input-and-output\basics\bin\Debug\netcoreapp2.1\basics.dll
+F:\repos\c-sharp-playground\console-input-and-output\basics\bin\Debug\netcoreapp2.1\basics.pdb
+F:\repos\c-sharp-playground\console-input-and-output\basics\obj\Debug\netcoreapp2.1\basics.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\console-input-and-output\basics\obj\Debug\netcoreapp2.1\basics.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\console-input-and-output\basics\obj\Debug\netcoreapp2.1\basics.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\console-input-and-output\basics\obj\Debug\netcoreapp2.1\basics.AssemblyInfo.cs
+F:\repos\c-sharp-playground\console-input-and-output\basics\obj\Debug\netcoreapp2.1\basics.dll
+F:\repos\c-sharp-playground\console-input-and-output\basics\obj\Debug\netcoreapp2.1\basics.pdb
