@@ -45,6 +45,9 @@ namespace basics
             Console.WriteLine("Character entered: ", key.KeyChar);
             Console.WriteLine("Special keys: ", key.Modifiers);
 
+            //
+            NewClass fake = new NewClass();
+            fake.test();
         }
     }
 }
