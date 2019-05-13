@@ -33,7 +33,7 @@ namespace basics
 
             string str = "beer";
             string anotherStr = str;
-            Console.WriteLine(typeof(string));
+            Console.WriteLine(str.GetType());
             Console.WriteLine(str == anotherStr);  //true
             string athirdString = "beer";
             Console.WriteLine(str == athirdString); //The == has a special behavior when comparing strings, but for the rest of the reference types(like arrays or classes) it applies comparion by address
