@@ -1,0 +1,11 @@
+E:\repos\c-sharp-playground\conditional-statements\switch\bin\Debug\netcoreapp2.1\switch.deps.json
+E:\repos\c-sharp-playground\conditional-statements\switch\bin\Debug\netcoreapp2.1\switch.runtimeconfig.json
+E:\repos\c-sharp-playground\conditional-statements\switch\bin\Debug\netcoreapp2.1\switch.runtimeconfig.dev.json
+E:\repos\c-sharp-playground\conditional-statements\switch\bin\Debug\netcoreapp2.1\switch.dll
+E:\repos\c-sharp-playground\conditional-statements\switch\bin\Debug\netcoreapp2.1\switch.pdb
+E:\repos\c-sharp-playground\conditional-statements\switch\obj\Debug\netcoreapp2.1\switch.csprojAssemblyReference.cache
+E:\repos\c-sharp-playground\conditional-statements\switch\obj\Debug\netcoreapp2.1\switch.csproj.CoreCompileInputs.cache
+E:\repos\c-sharp-playground\conditional-statements\switch\obj\Debug\netcoreapp2.1\switch.AssemblyInfoInputs.cache
+E:\repos\c-sharp-playground\conditional-statements\switch\obj\Debug\netcoreapp2.1\switch.AssemblyInfo.cs
+E:\repos\c-sharp-playground\conditional-statements\switch\obj\Debug\netcoreapp2.1\switch.dll
+E:\repos\c-sharp-playground\conditional-statements\switch\obj\Debug\netcoreapp2.1\switch.pdb
