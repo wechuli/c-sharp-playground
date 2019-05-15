@@ -1,0 +1,11 @@
+E:\repos\c-sharp-playground\conditional-statements\exercises\bin\Debug\netcoreapp2.1\exercises.deps.json
+E:\repos\c-sharp-playground\conditional-statements\exercises\bin\Debug\netcoreapp2.1\exercises.runtimeconfig.json
+E:\repos\c-sharp-playground\conditional-statements\exercises\bin\Debug\netcoreapp2.1\exercises.runtimeconfig.dev.json
+E:\repos\c-sharp-playground\conditional-statements\exercises\bin\Debug\netcoreapp2.1\exercises.dll
+E:\repos\c-sharp-playground\conditional-statements\exercises\bin\Debug\netcoreapp2.1\exercises.pdb
+E:\repos\c-sharp-playground\conditional-statements\exercises\obj\Debug\netcoreapp2.1\exercises.csprojAssemblyReference.cache
+E:\repos\c-sharp-playground\conditional-statements\exercises\obj\Debug\netcoreapp2.1\exercises.csproj.CoreCompileInputs.cache
+E:\repos\c-sharp-playground\conditional-statements\exercises\obj\Debug\netcoreapp2.1\exercises.AssemblyInfoInputs.cache
+E:\repos\c-sharp-playground\conditional-statements\exercises\obj\Debug\netcoreapp2.1\exercises.AssemblyInfo.cs
+E:\repos\c-sharp-playground\conditional-statements\exercises\obj\Debug\netcoreapp2.1\exercises.dll
+E:\repos\c-sharp-playground\conditional-statements\exercises\obj\Debug\netcoreapp2.1\exercises.pdb
