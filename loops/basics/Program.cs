@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 
 namespace basics
 {
@@ -40,6 +41,7 @@ namespace basics
             int divider = 2;
             int maxDivider = (int)Math.Sqrt(numb);
             bool prime = true;
+
             while (prime && (divider <= maxDivider))
             {
                 if (numb % divider == 0)
