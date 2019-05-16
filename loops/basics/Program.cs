@@ -33,6 +33,42 @@ namespace basics
                 Console.Write($"+ {num}");
             }
             Console.WriteLine("=" + sum);
+
+            //find if a number is a primenumber
+            Console.Write("Enter a positive number: ");
+            int numb = int.Parse(Console.ReadLine());
+            int divider = 2;
+            int maxDivider = (int)Math.Sqrt(numb);
+            bool prime = true;
+            while (prime && (divider <= maxDivider))
+            {
+                if (numb % divider == 0)
+                {
+                    prime = false;
+                }
+                divider++;
+            }
+            Console.WriteLine($"Prime? {prime}");
+
+            //The break operator is used for prematurely exiting the loop, before it has completed its execution in a natural way.When the loop reaches the break operator, it is terminated and the program's execution continues from the line immediately after the loop's body.
+
+            Console.WriteLine("Please insert te number");
+            int nFact = int.Parse(Console.ReadLine());
+
+            //decimal is the biggest C# type that can hold integer values
+
+            decimal factorial = 1;
+            //Perform an infinite loop
+            while (true)
+            {
+                if (nFact <= 1)
+                {
+                    break;
+                }
+                factorial *= nFact;
+                nFact--;
+            }
+            Console.WriteLine($"{nFact}! = {factorial}");
         }
     }
 }
