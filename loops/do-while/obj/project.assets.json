@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\repos\\c-sharp-playground\\loops\\do-while\\do-while.csproj",
+      "projectUniqueName": "F:\\repos\\c-sharp-playground\\loops\\do-while\\do-while.csproj",
       "projectName": "do-while",
-      "projectPath": "E:\\repos\\c-sharp-playground\\loops\\do-while\\do-while.csproj",
+      "projectPath": "F:\\repos\\c-sharp-playground\\loops\\do-while\\do-while.csproj",
       "packagesPath": "C:\\Users\\Wechuli\\.nuget\\packages\\",
-      "outputPath": "E:\\repos\\c-sharp-playground\\loops\\do-while\\obj\\",
+      "outputPath": "F:\\repos\\c-sharp-playground\\loops\\do-while\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
