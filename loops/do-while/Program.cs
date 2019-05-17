@@ -1,13 +1,28 @@
-﻿using System;
+using System;
+using System.Numerics;
 
 namespace do_while
 {
-    class Program
+    class do_while
     {
-        static void Main(string[] args)
+        static void Main()
         {
-       //The do-while loop is simila to the while loop, but it checks the condition after each of its loop body
-       //The do-while loop is used when we want to guarantee that the sequence of operations in it will be executed repeatedly and a
+            Console.Write("N = ");
+            int n = Int32.Parse(Console.ReadLine());
+
+            //BigInteger can be used to represent very large integres(limited only by size of the memory)
+            //Found in the System.Numerics namespace
+            BigInteger factorial = 1;
+            do
+            {
+                factorial *= n;
+                n--;
+            } while (n > 0);
+            Console.WriteLine($"n! = {factorial}");
+
+            //Always beeware of hidden integer overflow
+
+
         }
     }
 }

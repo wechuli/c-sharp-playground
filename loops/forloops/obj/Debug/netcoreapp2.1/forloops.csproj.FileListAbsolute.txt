@@ -1,0 +1,11 @@
+E:\repos\c-sharp-playground\loops\forloops\bin\Debug\netcoreapp2.1\forloops.deps.json
+E:\repos\c-sharp-playground\loops\forloops\bin\Debug\netcoreapp2.1\forloops.runtimeconfig.json
+E:\repos\c-sharp-playground\loops\forloops\bin\Debug\netcoreapp2.1\forloops.runtimeconfig.dev.json
+E:\repos\c-sharp-playground\loops\forloops\bin\Debug\netcoreapp2.1\forloops.dll
+E:\repos\c-sharp-playground\loops\forloops\bin\Debug\netcoreapp2.1\forloops.pdb
+E:\repos\c-sharp-playground\loops\forloops\obj\Debug\netcoreapp2.1\forloops.csprojAssemblyReference.cache
+E:\repos\c-sharp-playground\loops\forloops\obj\Debug\netcoreapp2.1\forloops.csproj.CoreCompileInputs.cache
+E:\repos\c-sharp-playground\loops\forloops\obj\Debug\netcoreapp2.1\forloops.AssemblyInfoInputs.cache
+E:\repos\c-sharp-playground\loops\forloops\obj\Debug\netcoreapp2.1\forloops.AssemblyInfo.cs
+E:\repos\c-sharp-playground\loops\forloops\obj\Debug\netcoreapp2.1\forloops.dll
+E:\repos\c-sharp-playground\loops\forloops\obj\Debug\netcoreapp2.1\forloops.pdb
