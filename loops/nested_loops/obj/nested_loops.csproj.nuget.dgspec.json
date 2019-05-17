@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\repos\\c-sharp-playground\\loops\\foreach\\foreach.csproj": {}
+    "F:\\repos\\c-sharp-playground\\loops\\nested_loops\\nested_loops.csproj": {}
   },
   "projects": {
-    "F:\\repos\\c-sharp-playground\\loops\\foreach\\foreach.csproj": {
+    "F:\\repos\\c-sharp-playground\\loops\\nested_loops\\nested_loops.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\repos\\c-sharp-playground\\loops\\foreach\\foreach.csproj",
-        "projectName": "foreach",
-        "projectPath": "F:\\repos\\c-sharp-playground\\loops\\foreach\\foreach.csproj",
+        "projectUniqueName": "F:\\repos\\c-sharp-playground\\loops\\nested_loops\\nested_loops.csproj",
+        "projectName": "nested_loops",
+        "projectPath": "F:\\repos\\c-sharp-playground\\loops\\nested_loops\\nested_loops.csproj",
         "packagesPath": "C:\\Users\\Wechuli\\.nuget\\packages\\",
-        "outputPath": "F:\\repos\\c-sharp-playground\\loops\\foreach\\obj\\",
+        "outputPath": "F:\\repos\\c-sharp-playground\\loops\\nested_loops\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\loops\foreach\bin\Debug\netcoreapp2.1\foreach.deps.json
+F:\repos\c-sharp-playground\loops\foreach\bin\Debug\netcoreapp2.1\foreach.runtimeconfig.json
+F:\repos\c-sharp-playground\loops\foreach\bin\Debug\netcoreapp2.1\foreach.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\loops\foreach\bin\Debug\netcoreapp2.1\foreach.dll
+F:\repos\c-sharp-playground\loops\foreach\bin\Debug\netcoreapp2.1\foreach.pdb
+F:\repos\c-sharp-playground\loops\foreach\obj\Debug\netcoreapp2.1\foreach.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\loops\foreach\obj\Debug\netcoreapp2.1\foreach.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\loops\foreach\obj\Debug\netcoreapp2.1\foreach.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\loops\foreach\obj\Debug\netcoreapp2.1\foreach.AssemblyInfo.cs
+F:\repos\c-sharp-playground\loops\foreach\obj\Debug\netcoreapp2.1\foreach.dll
+F:\repos\c-sharp-playground\loops\foreach\obj\Debug\netcoreapp2.1\foreach.pdb
