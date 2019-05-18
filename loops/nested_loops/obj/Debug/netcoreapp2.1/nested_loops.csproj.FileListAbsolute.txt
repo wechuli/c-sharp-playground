@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\loops\nested_loops\bin\Debug\netcoreapp2.1\nested_loops.deps.json
+F:\repos\c-sharp-playground\loops\nested_loops\bin\Debug\netcoreapp2.1\nested_loops.runtimeconfig.json
+F:\repos\c-sharp-playground\loops\nested_loops\bin\Debug\netcoreapp2.1\nested_loops.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\loops\nested_loops\bin\Debug\netcoreapp2.1\nested_loops.dll
+F:\repos\c-sharp-playground\loops\nested_loops\bin\Debug\netcoreapp2.1\nested_loops.pdb
+F:\repos\c-sharp-playground\loops\nested_loops\obj\Debug\netcoreapp2.1\nested_loops.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\loops\nested_loops\obj\Debug\netcoreapp2.1\nested_loops.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\loops\nested_loops\obj\Debug\netcoreapp2.1\nested_loops.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\loops\nested_loops\obj\Debug\netcoreapp2.1\nested_loops.AssemblyInfo.cs
+F:\repos\c-sharp-playground\loops\nested_loops\obj\Debug\netcoreapp2.1\nested_loops.dll
+F:\repos\c-sharp-playground\loops\nested_loops\obj\Debug\netcoreapp2.1\nested_loops.pdb
