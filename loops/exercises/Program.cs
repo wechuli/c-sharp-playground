@@ -47,6 +47,37 @@ namespace exercises
             }
             Console.WriteLine($"The largest number is {largest} and the smallest is {smallest}");
 
+            //4. Write a program that prints all possible cards from a standard deck of cards
+
+            string[] cardType = { "Diamond", "Hearts", "Spades", "Clubs" };
+            string[] cards = { "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "K", "Q", "A" };
+            int combinations = 0;
+            foreach (var card in cards)
+            {
+                foreach (var type in cardType)
+                {
+                    Console.WriteLine($"{card} {type}");
+                    combinations++;
+                }
+            }
+            Console.WriteLine($"There are a total of {combinations} combinations in the deck");
+
+            //Write a program that reads from the console number N and print the sum
+            // of the first N members of the Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8,
+            // 13, 21, 34, 55, 89, 144, 233, 377, …
+
+            int size = 3;
+            int previous1 = 0;
+            int previous2 = 0;
+
+
+            for (int i = 0; i < size; i++)
+            {
+                
+
+            }
+
+
         }
     }
 }
