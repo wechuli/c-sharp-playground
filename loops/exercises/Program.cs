@@ -66,14 +66,18 @@ namespace exercises
             // of the first N members of the Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8,
             // 13, 21, 34, 55, 89, 144, 233, 377, …
 
-            int size = 3;
+            int size = 1;
             int previous1 = 0;
             int previous2 = 0;
+            int current = 0;
 
 
             for (int i = 0; i < size; i++)
             {
-                
+                for (int j = i + 1; j < i; j++)
+                {
+
+                }
 
             }
 
