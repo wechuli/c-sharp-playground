@@ -39,6 +39,7 @@ namespace basics
 
             ArrayReverse();
             getSymmentricArrays();
+            forEachLoop();
         }
         static void ArrayReverse()
         {
@@ -83,6 +84,14 @@ namespace basics
                 }
             }
             Console.WriteLine($"Is symmentric? {symmetric}");
+        }
+        static void forEachLoop()
+        {
+            string[] capitals = { "Sofia", "Washington", "London", "Paris", "Moscow", "Beijing", "Nairobi", "Kisumu", "Berlin" };
+            foreach (var capital in capitals)
+            {
+                Console.WriteLine($"{capital}");
+            }
         }
     }
 }
