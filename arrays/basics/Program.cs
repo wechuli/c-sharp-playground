@@ -35,6 +35,54 @@ namespace basics
             {
                 Console.WriteLine(daysOfTheWeek[i]);
             }
+            // Trying to access an element out of range will throw an error
+
+            ArrayReverse();
+            getSymmentricArrays();
+        }
+        static void ArrayReverse()
+        {
+            //reversing the elements in an array
+            int[] array = { 1, 2, 3, 4, 5 };
+            //Get array size
+            int length = array.Length;
+            //Decalre and create the reversed array
+            int[] reversed = new int[length];
+            //Initialize the reversed array
+            for (int index = 0; index < length; index++)
+            {
+                reversed[length - index - 1] = array[index];
+            }
+
+            //Print the reversed array
+            for (int index = 0; index < length; index++)
+            {
+                Console.WriteLine(reversed[index] + "");
+            }
+
+        }
+        static void getSymmentricArrays()
+        {
+            Console.Write("Enter a positive integer: ");
+            int n = int.Parse(Console.ReadLine());
+            int[] array = new int[n];
+
+
+            Console.WriteLine("Enter the values of the array: ");
+            for (int i = 0; i < n; i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
+            }
+            bool symmetric = true;
+            for (int i = 0; i < array.Length / 2; i++)
+            {
+                if (array[i] != array[n - i - 1])
+                {
+                    symmetric = false;
+                    break;
+                }
+            }
+            Console.WriteLine($"Is symmentric? {symmetric}");
         }
     }
 }

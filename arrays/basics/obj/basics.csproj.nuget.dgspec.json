@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\repos\\c-sharp-playground\\arrays\\basics\\basics.csproj": {}
+    "E:\\repos\\c-sharp-playground\\arrays\\basics\\basics.csproj": {}
   },
   "projects": {
-    "F:\\repos\\c-sharp-playground\\arrays\\basics\\basics.csproj": {
+    "E:\\repos\\c-sharp-playground\\arrays\\basics\\basics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\repos\\c-sharp-playground\\arrays\\basics\\basics.csproj",
+        "projectUniqueName": "E:\\repos\\c-sharp-playground\\arrays\\basics\\basics.csproj",
         "projectName": "basics",
-        "projectPath": "F:\\repos\\c-sharp-playground\\arrays\\basics\\basics.csproj",
+        "projectPath": "E:\\repos\\c-sharp-playground\\arrays\\basics\\basics.csproj",
         "packagesPath": "C:\\Users\\Wechuli\\.nuget\\packages\\",
-        "outputPath": "F:\\repos\\c-sharp-playground\\arrays\\basics\\obj\\",
+        "outputPath": "E:\\repos\\c-sharp-playground\\arrays\\basics\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
