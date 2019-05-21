@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "f:\\repos\\c-sharp-playground\\arrays\\multidimensional\\multidimensional.csproj": {}
+    "E:\\repos\\c-sharp-playground\\arrays\\multidimensional\\multidimensional.csproj": {}
   },
   "projects": {
-    "f:\\repos\\c-sharp-playground\\arrays\\multidimensional\\multidimensional.csproj": {
+    "E:\\repos\\c-sharp-playground\\arrays\\multidimensional\\multidimensional.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "f:\\repos\\c-sharp-playground\\arrays\\multidimensional\\multidimensional.csproj",
+        "projectUniqueName": "E:\\repos\\c-sharp-playground\\arrays\\multidimensional\\multidimensional.csproj",
         "projectName": "multidimensional",
-        "projectPath": "f:\\repos\\c-sharp-playground\\arrays\\multidimensional\\multidimensional.csproj",
+        "projectPath": "E:\\repos\\c-sharp-playground\\arrays\\multidimensional\\multidimensional.csproj",
         "packagesPath": "C:\\Users\\Wechuli\\.nuget\\packages\\",
-        "outputPath": "f:\\repos\\c-sharp-playground\\arrays\\multidimensional\\obj\\",
+        "outputPath": "E:\\repos\\c-sharp-playground\\arrays\\multidimensional\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

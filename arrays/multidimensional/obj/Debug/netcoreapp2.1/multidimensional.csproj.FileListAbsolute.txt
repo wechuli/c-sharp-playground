@@ -1,0 +1,11 @@
+E:\repos\c-sharp-playground\arrays\multidimensional\bin\Debug\netcoreapp2.1\multidimensional.deps.json
+E:\repos\c-sharp-playground\arrays\multidimensional\bin\Debug\netcoreapp2.1\multidimensional.runtimeconfig.json
+E:\repos\c-sharp-playground\arrays\multidimensional\bin\Debug\netcoreapp2.1\multidimensional.runtimeconfig.dev.json
+E:\repos\c-sharp-playground\arrays\multidimensional\bin\Debug\netcoreapp2.1\multidimensional.dll
+E:\repos\c-sharp-playground\arrays\multidimensional\bin\Debug\netcoreapp2.1\multidimensional.pdb
+E:\repos\c-sharp-playground\arrays\multidimensional\obj\Debug\netcoreapp2.1\multidimensional.csprojAssemblyReference.cache
+E:\repos\c-sharp-playground\arrays\multidimensional\obj\Debug\netcoreapp2.1\multidimensional.csproj.CoreCompileInputs.cache
+E:\repos\c-sharp-playground\arrays\multidimensional\obj\Debug\netcoreapp2.1\multidimensional.AssemblyInfoInputs.cache
+E:\repos\c-sharp-playground\arrays\multidimensional\obj\Debug\netcoreapp2.1\multidimensional.AssemblyInfo.cs
+E:\repos\c-sharp-playground\arrays\multidimensional\obj\Debug\netcoreapp2.1\multidimensional.dll
+E:\repos\c-sharp-playground\arrays\multidimensional\obj\Debug\netcoreapp2.1\multidimensional.pdb
