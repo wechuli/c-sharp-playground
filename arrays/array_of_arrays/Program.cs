@@ -69,6 +69,13 @@ namespace array_of_arrays
                 }
                 Console.WriteLine();
             }
+            Console.WriteLine(new Program().myFunct("Paul", 34));
+        }
+        public float myFunct(string name, int number)
+        {
+
+
+            return 23.5f;
         }
     }
 }
