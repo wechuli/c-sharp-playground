@@ -1,0 +1,11 @@
+E:\repos\c-sharp-playground\arrays\array_of_arrays\bin\Debug\netcoreapp2.1\array_of_arrays.deps.json
+E:\repos\c-sharp-playground\arrays\array_of_arrays\bin\Debug\netcoreapp2.1\array_of_arrays.runtimeconfig.json
+E:\repos\c-sharp-playground\arrays\array_of_arrays\bin\Debug\netcoreapp2.1\array_of_arrays.runtimeconfig.dev.json
+E:\repos\c-sharp-playground\arrays\array_of_arrays\bin\Debug\netcoreapp2.1\array_of_arrays.dll
+E:\repos\c-sharp-playground\arrays\array_of_arrays\bin\Debug\netcoreapp2.1\array_of_arrays.pdb
+E:\repos\c-sharp-playground\arrays\array_of_arrays\obj\Debug\netcoreapp2.1\array_of_arrays.csprojAssemblyReference.cache
+E:\repos\c-sharp-playground\arrays\array_of_arrays\obj\Debug\netcoreapp2.1\array_of_arrays.csproj.CoreCompileInputs.cache
+E:\repos\c-sharp-playground\arrays\array_of_arrays\obj\Debug\netcoreapp2.1\array_of_arrays.AssemblyInfoInputs.cache
+E:\repos\c-sharp-playground\arrays\array_of_arrays\obj\Debug\netcoreapp2.1\array_of_arrays.AssemblyInfo.cs
+E:\repos\c-sharp-playground\arrays\array_of_arrays\obj\Debug\netcoreapp2.1\array_of_arrays.dll
+E:\repos\c-sharp-playground\arrays\array_of_arrays\obj\Debug\netcoreapp2.1\array_of_arrays.pdb
