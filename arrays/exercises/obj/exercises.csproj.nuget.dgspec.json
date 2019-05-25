@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "f:\\repos\\c-sharp-playground\\arrays\\exercises\\exercises.csproj": {}
+    "F:\\repos\\c-sharp-playground\\arrays\\exercises\\exercises.csproj": {}
   },
   "projects": {
-    "f:\\repos\\c-sharp-playground\\arrays\\exercises\\exercises.csproj": {
+    "F:\\repos\\c-sharp-playground\\arrays\\exercises\\exercises.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "f:\\repos\\c-sharp-playground\\arrays\\exercises\\exercises.csproj",
+        "projectUniqueName": "F:\\repos\\c-sharp-playground\\arrays\\exercises\\exercises.csproj",
         "projectName": "exercises",
-        "projectPath": "f:\\repos\\c-sharp-playground\\arrays\\exercises\\exercises.csproj",
+        "projectPath": "F:\\repos\\c-sharp-playground\\arrays\\exercises\\exercises.csproj",
         "packagesPath": "C:\\Users\\Wechuli\\.nuget\\packages\\",
-        "outputPath": "f:\\repos\\c-sharp-playground\\arrays\\exercises\\obj\\",
+        "outputPath": "F:\\repos\\c-sharp-playground\\arrays\\exercises\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
