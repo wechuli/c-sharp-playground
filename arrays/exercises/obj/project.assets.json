@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "f:\\repos\\c-sharp-playground\\arrays\\multidimensional\\multidimensional.csproj",
-      "projectName": "multidimensional",
-      "projectPath": "f:\\repos\\c-sharp-playground\\arrays\\multidimensional\\multidimensional.csproj",
+      "projectUniqueName": "F:\\repos\\c-sharp-playground\\arrays\\exercises\\exercises.csproj",
+      "projectName": "exercises",
+      "projectPath": "F:\\repos\\c-sharp-playground\\arrays\\exercises\\exercises.csproj",
       "packagesPath": "C:\\Users\\Wechuli\\.nuget\\packages\\",
-      "outputPath": "f:\\repos\\c-sharp-playground\\arrays\\multidimensional\\obj\\",
+      "outputPath": "F:\\repos\\c-sharp-playground\\arrays\\exercises\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

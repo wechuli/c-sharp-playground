@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\repos\\c-sharp-playground\\arrays\\basics\\basics.csproj",
+      "projectUniqueName": "f:\\repos\\c-sharp-playground\\arrays\\basics\\basics.csproj",
       "projectName": "basics",
-      "projectPath": "E:\\repos\\c-sharp-playground\\arrays\\basics\\basics.csproj",
+      "projectPath": "f:\\repos\\c-sharp-playground\\arrays\\basics\\basics.csproj",
       "packagesPath": "C:\\Users\\Wechuli\\.nuget\\packages\\",
-      "outputPath": "E:\\repos\\c-sharp-playground\\arrays\\basics\\obj\\",
+      "outputPath": "f:\\repos\\c-sharp-playground\\arrays\\basics\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
