@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\arrays\exercises2\bin\Debug\netcoreapp2.1\exercises2.deps.json
+F:\repos\c-sharp-playground\arrays\exercises2\bin\Debug\netcoreapp2.1\exercises2.runtimeconfig.json
+F:\repos\c-sharp-playground\arrays\exercises2\bin\Debug\netcoreapp2.1\exercises2.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\arrays\exercises2\bin\Debug\netcoreapp2.1\exercises2.dll
+F:\repos\c-sharp-playground\arrays\exercises2\bin\Debug\netcoreapp2.1\exercises2.pdb
+F:\repos\c-sharp-playground\arrays\exercises2\obj\Debug\netcoreapp2.1\exercises2.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\arrays\exercises2\obj\Debug\netcoreapp2.1\exercises2.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\arrays\exercises2\obj\Debug\netcoreapp2.1\exercises2.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\arrays\exercises2\obj\Debug\netcoreapp2.1\exercises2.AssemblyInfo.cs
+F:\repos\c-sharp-playground\arrays\exercises2\obj\Debug\netcoreapp2.1\exercises2.dll
+F:\repos\c-sharp-playground\arrays\exercises2\obj\Debug\netcoreapp2.1\exercises2.pdb
