@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\arrays\exercises\question6\bin\Debug\netcoreapp2.1\question6.deps.json
+F:\repos\c-sharp-playground\arrays\exercises\question6\bin\Debug\netcoreapp2.1\question6.runtimeconfig.json
+F:\repos\c-sharp-playground\arrays\exercises\question6\bin\Debug\netcoreapp2.1\question6.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\arrays\exercises\question6\bin\Debug\netcoreapp2.1\question6.dll
+F:\repos\c-sharp-playground\arrays\exercises\question6\bin\Debug\netcoreapp2.1\question6.pdb
+F:\repos\c-sharp-playground\arrays\exercises\question6\obj\Debug\netcoreapp2.1\question6.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\arrays\exercises\question6\obj\Debug\netcoreapp2.1\question6.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\arrays\exercises\question6\obj\Debug\netcoreapp2.1\question6.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\arrays\exercises\question6\obj\Debug\netcoreapp2.1\question6.AssemblyInfo.cs
+F:\repos\c-sharp-playground\arrays\exercises\question6\obj\Debug\netcoreapp2.1\question6.dll
+F:\repos\c-sharp-playground\arrays\exercises\question6\obj\Debug\netcoreapp2.1\question6.pdb
