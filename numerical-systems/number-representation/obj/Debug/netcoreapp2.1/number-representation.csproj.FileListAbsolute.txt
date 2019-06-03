@@ -1,0 +1,4 @@
+E:\repos\c-sharp-playground\numerical-systems\number-representation\obj\Debug\netcoreapp2.1\number-representation.csprojAssemblyReference.cache
+E:\repos\c-sharp-playground\numerical-systems\number-representation\obj\Debug\netcoreapp2.1\number-representation.csproj.CoreCompileInputs.cache
+E:\repos\c-sharp-playground\numerical-systems\number-representation\obj\Debug\netcoreapp2.1\number-representation.AssemblyInfoInputs.cache
+E:\repos\c-sharp-playground\numerical-systems\number-representation\obj\Debug\netcoreapp2.1\number-representation.AssemblyInfo.cs
