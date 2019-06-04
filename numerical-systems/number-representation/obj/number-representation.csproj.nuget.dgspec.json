@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\repos\\c-sharp-playground\\numerical-systems\\number-representation\\number-representation.csproj": {}
+    "F:\\repos\\c-sharp-playground\\numerical-systems\\number-representation\\number-representation.csproj": {}
   },
   "projects": {
-    "E:\\repos\\c-sharp-playground\\numerical-systems\\number-representation\\number-representation.csproj": {
+    "F:\\repos\\c-sharp-playground\\numerical-systems\\number-representation\\number-representation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\repos\\c-sharp-playground\\numerical-systems\\number-representation\\number-representation.csproj",
+        "projectUniqueName": "F:\\repos\\c-sharp-playground\\numerical-systems\\number-representation\\number-representation.csproj",
         "projectName": "number-representation",
-        "projectPath": "E:\\repos\\c-sharp-playground\\numerical-systems\\number-representation\\number-representation.csproj",
+        "projectPath": "F:\\repos\\c-sharp-playground\\numerical-systems\\number-representation\\number-representation.csproj",
         "packagesPath": "C:\\Users\\Wechuli\\.nuget\\packages\\",
-        "outputPath": "E:\\repos\\c-sharp-playground\\numerical-systems\\number-representation\\obj\\",
+        "outputPath": "F:\\repos\\c-sharp-playground\\numerical-systems\\number-representation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

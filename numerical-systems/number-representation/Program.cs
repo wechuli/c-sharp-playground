@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 
 namespace number_representation
 {
@@ -27,10 +28,34 @@ namespace number_representation
 
             // byte myNumber = 00001b;
             // Console.WriteLine(myNumber);
-            
-            
-        
 
+
+            //Reversed code(one's complement)
+            //is formed from the signed magintude of the number by inversion(replacing all ones with zeros and vice-versa). This code is not convenient for tha arithmetical operations addition and subtraction because it is executed in a different way if subtraction is necessary.
+
+            //Additional code(two's complement) is a number in reversed code which one is added(through addition)
+
+            // Binary Coded Decimal also known as BCD code , 
+
+            //int
+            int integerValue = 25;
+            int integerHexValue = 0x002A;
+            int y = Convert.ToInt32("1001", 2);
+            Console.WriteLine(y);
+
+            //long
+
+            long longValue = 922353666666688666;
+            Console.WriteLine(longValue.GetType());
+
+            //In case the fragment is in an unchecked block, an exception will not be thrown and the output result will be wrong. In case these blocks are not used, the C# compiler works in unchecked mode by default
+            checked
+            {
+                int a = int.MaxValue;
+                a = a + 1;
+                Console.WriteLine(a);
+            }
+            //C# includes unsigned types, which can be useful when a larger range is needed for the variables in the scope of the positive numbers.
         }
     }
 }
