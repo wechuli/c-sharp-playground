@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "f:\\repos\\c-sharp-playground\\numerical-systems\\number-representation\\number-representation.csproj",
+      "projectUniqueName": "E:\\repos\\c-sharp-playground\\numerical-systems\\number-representation\\number-representation.csproj",
       "projectName": "number-representation",
-      "projectPath": "f:\\repos\\c-sharp-playground\\numerical-systems\\number-representation\\number-representation.csproj",
+      "projectPath": "E:\\repos\\c-sharp-playground\\numerical-systems\\number-representation\\number-representation.csproj",
       "packagesPath": "C:\\Users\\Wechuli\\.nuget\\packages\\",
-      "outputPath": "f:\\repos\\c-sharp-playground\\numerical-systems\\number-representation\\obj\\",
+      "outputPath": "E:\\repos\\c-sharp-playground\\numerical-systems\\number-representation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
