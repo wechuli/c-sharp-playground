@@ -47,6 +47,8 @@ namespace number_representation
 
             long longValue = 922353666666688666;
             Console.WriteLine(longValue.GetType());
+            float twoNums = 0.1f + 0.1f;
+            Console.WriteLine(twoNums);
 
             //In case the fragment is in an unchecked block, an exception will not be thrown and the output result will be wrong. In case these blocks are not used, the C# compiler works in unchecked mode by default
             checked
