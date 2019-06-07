@@ -51,13 +51,85 @@ namespace number_representation
             Console.WriteLine(twoNums);
 
             //In case the fragment is in an unchecked block, an exception will not be thrown and the output result will be wrong. In case these blocks are not used, the C# compiler works in unchecked mode by default
-            checked
-            {
-                int a = int.MaxValue;
-                a = a + 1;
-                Console.WriteLine(a);
-            }
+            // checked
+            // {
+            //     int a = int.MaxValue;
+            //     a = a + 1;
+            //     Console.WriteLine(a);
+            // }
             //C# includes unsigned types, which can be useful when a larger range is needed for the variables in the scope of the positive numbers.
+
+
+
+            //The Float and Double Types in C#
+            //In C#, we have at our disposal two types, which can represent floating-point numbers.
+
+            float total = 5.0f;
+            float result = 5.0f;
+            double sum = 10.0;
+            double div = 35.4 / 3.0;
+            double x = 5d;
+
+            Console.WriteLine(sum.GetType());
+
+            // In C#, floating-point numbers literals by default are of the double type
+
+            //Not every real number has an exact representation in the IEEE 754 format, because not each number can be presented as a polynomial of a finite number of addends, which are negative powers of two
+
+            float sumF = 0f;
+
+            for (int i = 0; i < 1000; i++)
+            {
+                sumF += 0.1f;
+            }
+            Console.WriteLine(sumF);
+
+
+            double sumD = 0.0;
+            for (int i = 1; i <= 10; i++)
+            {
+                sumD += 0.1;
+            }
+            Console.WriteLine("{0:r}", sumD);
+            Console.WriteLine(sumD);
+
+            // By default, when printing floating-point numbers in .NET Framework, they are rounded, which seemingly reduces the errors in their inaccurate notation in the IEEE 754 format. The result of the calculation is wrong but after rounding, it looks correct. However, if we add 0.1 a several thousand times, the error will accumulate and the rounding will not be able to compensate it.
+
+            float sumF2 = 0.0f;
+            for (int i = 1; i <= 10; i++)
+            {
+                sumF2 += 0.1f;
+            }
+            Console.WriteLine("{0:r}", sumF2);
+
+            //Double and Float types have a field called Epsilon, which is aconstant, and it contains the smallest value larger than zero, which can be represented by an inctance of  System.Single or System.Double respectively. Each value smaller than Epsilon is considered to be equal to 0;
+
+            //The Decimal Type
+            //this is tens of times slower than double, but is irreplaceable for the execution of financial calculations
+
+            decimal calc = 20.4m;
+
+            decimal sumDecimal = 0.0m;
+            double sumDouble = 0.0;
+
+            for (int i = 1; i <= 10000000; i++)
+            {
+                sumDecimal += 0.0000001m;
+                sumDouble += 0.0000001;
+            }
+            Console.WriteLine(sumDecimal);   //this will be accurate
+            Console.WriteLine(sumDouble);   //this will be inacurate
+
+
+            //Even though the decimal type has a higher precision than the floating-point types, it has a smaller value range and, for example, it cannot be used to represent the following value 1e-50. As a result, an overflow may occur when converting from floating-point numbers to decimal.
+
+            //Character Type
+
+            char ch = 'A';
+            char ch2 = 'B';
+
+            Console.WriteLine((int)ch);
+            Console.WriteLine((int)ch2);
         }
     }
 }
