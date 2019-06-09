@@ -17,6 +17,14 @@ namespace basics
             PrintNumner(numberArg);
             Console.WriteLine($"Number after {numberArg}");
 
+            //arrays
+            int[] arrArg = new int[] { 1, 2, 3 };
+            Console.Write("Before ModifyArray() the argument is: ");
+            PrintArray(arrArg);
+            // Modifying the array's argument
+            ModifyArray(arrArg);
+            Console.Write("After ModifyArray() the argument is: ");
+            PrintArray(arrArg);
         }
 
         static double GetRectangleArea(double width, double height)
@@ -48,6 +56,30 @@ namespace basics
             //Modifying the primitive-type parameter
             number = 5;
             Console.WriteLine(number);
+        }
+
+        //Functions of reference types
+
+        public static void ModifyArray(int[] arrParam)
+        {
+            arrParam[0] = 5;
+            Console.WriteLine("In ModifyArray() the param is: ");
+            PrintArray(arrParam);
+        }
+        public static void PrintArray(int[] arrParam)
+        {
+            Console.Write("[");
+            int length = arrParam.Length;
+
+            if (length > 0)
+            {
+                Console.Write(arrParam[0].ToString());
+                for (int i = 1; i < length; i++)
+                {
+                    Console.Write($",{arrParam[i]}");
+                }
+            }
+            Console.WriteLine("]");
         }
     }
 }
