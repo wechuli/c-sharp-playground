@@ -1,0 +1,11 @@
+E:\repos\c-sharp-playground\methods\examples\tri_with_diff\bin\Debug\netcoreapp2.1\tri_with_diff.deps.json
+E:\repos\c-sharp-playground\methods\examples\tri_with_diff\bin\Debug\netcoreapp2.1\tri_with_diff.runtimeconfig.json
+E:\repos\c-sharp-playground\methods\examples\tri_with_diff\bin\Debug\netcoreapp2.1\tri_with_diff.runtimeconfig.dev.json
+E:\repos\c-sharp-playground\methods\examples\tri_with_diff\bin\Debug\netcoreapp2.1\tri_with_diff.dll
+E:\repos\c-sharp-playground\methods\examples\tri_with_diff\bin\Debug\netcoreapp2.1\tri_with_diff.pdb
+E:\repos\c-sharp-playground\methods\examples\tri_with_diff\obj\Debug\netcoreapp2.1\tri_with_diff.csprojAssemblyReference.cache
+E:\repos\c-sharp-playground\methods\examples\tri_with_diff\obj\Debug\netcoreapp2.1\tri_with_diff.csproj.CoreCompileInputs.cache
+E:\repos\c-sharp-playground\methods\examples\tri_with_diff\obj\Debug\netcoreapp2.1\tri_with_diff.AssemblyInfoInputs.cache
+E:\repos\c-sharp-playground\methods\examples\tri_with_diff\obj\Debug\netcoreapp2.1\tri_with_diff.AssemblyInfo.cs
+E:\repos\c-sharp-playground\methods\examples\tri_with_diff\obj\Debug\netcoreapp2.1\tri_with_diff.dll
+E:\repos\c-sharp-playground\methods\examples\tri_with_diff\obj\Debug\netcoreapp2.1\tri_with_diff.pdb
