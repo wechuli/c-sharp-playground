@@ -1,0 +1,11 @@
+# Best Practices When Using Method
+
+- Each method must resolve a distinct, well defined task. This feature is also know as strong cohesion i.e. to give focus onto one single task, not to several tasks not strongly related logically. A single method, should perform a single task, its code should be well structured, easy to understand and easy to be maintained. One method must NOT solve several tasks!
+- A method has to have a good name, i.e name that is descriptive and from which becomes clear what the method does.
+- Method names should describe an action, so they should contain a verb or a verb + noun.
+- It is assumed that all the method names in C# will start with a capital letter. PascalCase rule is used i.e each new word that is concatenated to the end of the method name must start with a capital letter.
+- A method must do whatever is described in ints name, or it must return an error(throws an exception). The method should not return wrong or unusual results when is has received invalid input data. The method resolves the task it is created for, or returns an error.Any other behavior is incorrect
+- A method must have minimum dependency to the class in which the method is declared and to other methods and classes. This feature of the methods is also known as loose coupling. This means that the method must do its job by using the data that is passed to it as parameters, but not have side effects(for example to change some global variable or print something on the console in the mean time)
+- It is recommended that the methods must be short. Methods that are longer than a computer screen must be avoided. To do so, the logic implemened in the method is divided by functionality, to several smaller sub-methods.These sub-methods are then called from the original place they were cut off.
+- To improve readability of a method and the code structure, it is a good idea that a functionality that is well detached logically be placed in a separate method. The sub method should be separated from the main task
+- 
