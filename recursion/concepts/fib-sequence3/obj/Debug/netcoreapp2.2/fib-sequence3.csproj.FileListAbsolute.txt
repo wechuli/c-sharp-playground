@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\recursion\concepts\fib-sequence3\bin\Debug\netcoreapp2.2\fib-sequence3.deps.json
+F:\repos\c-sharp-playground\recursion\concepts\fib-sequence3\bin\Debug\netcoreapp2.2\fib-sequence3.runtimeconfig.json
+F:\repos\c-sharp-playground\recursion\concepts\fib-sequence3\bin\Debug\netcoreapp2.2\fib-sequence3.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\recursion\concepts\fib-sequence3\bin\Debug\netcoreapp2.2\fib-sequence3.dll
+F:\repos\c-sharp-playground\recursion\concepts\fib-sequence3\bin\Debug\netcoreapp2.2\fib-sequence3.pdb
+F:\repos\c-sharp-playground\recursion\concepts\fib-sequence3\obj\Debug\netcoreapp2.2\fib-sequence3.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\recursion\concepts\fib-sequence3\obj\Debug\netcoreapp2.2\fib-sequence3.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\recursion\concepts\fib-sequence3\obj\Debug\netcoreapp2.2\fib-sequence3.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\recursion\concepts\fib-sequence3\obj\Debug\netcoreapp2.2\fib-sequence3.AssemblyInfo.cs
+F:\repos\c-sharp-playground\recursion\concepts\fib-sequence3\obj\Debug\netcoreapp2.2\fib-sequence3.dll
+F:\repos\c-sharp-playground\recursion\concepts\fib-sequence3\obj\Debug\netcoreapp2.2\fib-sequence3.pdb

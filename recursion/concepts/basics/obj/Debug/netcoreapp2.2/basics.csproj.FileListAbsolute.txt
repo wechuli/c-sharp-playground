@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\recursion\basics\obj\Debug\netcoreapp2.2\basics.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\recursion\basics\obj\Debug\netcoreapp2.2\basics.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\recursion\basics\obj\Debug\netcoreapp2.2\basics.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\recursion\basics\obj\Debug\netcoreapp2.2\basics.AssemblyInfo.cs
+F:\repos\c-sharp-playground\recursion\basics\bin\Debug\netcoreapp2.2\basics.deps.json
+F:\repos\c-sharp-playground\recursion\basics\bin\Debug\netcoreapp2.2\basics.runtimeconfig.json
+F:\repos\c-sharp-playground\recursion\basics\bin\Debug\netcoreapp2.2\basics.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\recursion\basics\bin\Debug\netcoreapp2.2\basics.dll
+F:\repos\c-sharp-playground\recursion\basics\bin\Debug\netcoreapp2.2\basics.pdb
+F:\repos\c-sharp-playground\recursion\basics\obj\Debug\netcoreapp2.2\basics.dll
+F:\repos\c-sharp-playground\recursion\basics\obj\Debug\netcoreapp2.2\basics.pdb
