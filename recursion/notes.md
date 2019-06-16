@@ -56,4 +56,11 @@ do some calculations;
 }
 
 ```
+
 Use recursion for branched recursive calculations(and ensure each value is calculated only once). For linear recursive calculations, prefer using iteration.
+
+## Using Recursion - conclusions
+
+The general conclusion from the problem of searching a path in a labyrithn is already formulated: if you do not understand how recursion works, avoid using it.
+
+Be careful when you write recursive methods. Recursion is apowerful programming technique for solving combinatorial problems(problems in which we have to go through all variants), but it is not for everyone. We can easily make mistakes when using recursion. You may make the program 'hang' or cause stack overflow with bottomless recursion. Always look for iterative solutions, unless you deeply understand hoe to use recursion.
