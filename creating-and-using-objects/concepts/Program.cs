@@ -16,7 +16,9 @@ namespace concepts
             secondCat.SayMiau();
             Console.WriteLine($"Cat {secondCat.Name} is {secondCat.Color}");
 
-
+            int number = Sequence.NextValue();
+            Console.WriteLine(number);
+            Console.WriteLine(Sequence.NextValue());
 
 
         }

@@ -45,3 +45,38 @@ We can access the fields and the properties either to extract data from them, or
 Calling the mthods of a given object is done through the invocation operator() and with the help of the operator .(dot). The operator dot is not obligatory only in case the method is called in the body of another method of the same class. calling a method is performed by its name followed by () or (<parameters>) for the case when we pass it some arguments.
 
 Methods of classes have access modifiers public, private or protected with which the ability to call them could be retricted.The access modifier public does not introduce any restrictions for calling the method i.e makes it publicly available;
+
+## Constructors
+
+The constructor is a special method of the class, which is called automatically when creating an object of this class, and performs initialization of its data.The constructor has no type of returned value and its name is not random, and mandatorily coincides with the class name.The constructor can be with or without parameters. A constructor without parameters is also called parameterless constructor.
+
+### Constructor with Parameters
+
+The constructor can take parameters as well as any other method. Each class can have different count of constructors with onr restriction - the count and type of their parameters have to be different(different signature). When creating an object of this class, one of the constructors is called. The appropriate constructor is chosen automatically by the compiler according to the given set of parameters when creating the object. We use the principle of best match
+
+
+## Static Fields and Methods
+
+In OOP there are special categories fields and methods, which are associated with the data type(class) and not with the specific instance(object). We call them static members because the are independent of concrete objects. Furthermore, they are used without the need of creating an instance of the class in which they are defined. They can be fields, methods and constructors.
+
+A static field or method in a given class is defined with the keyword static, placed before the type of the field or the type of returned value of the method.
+
+We can interpret the class as a category of objects, and the object as a representative of this category. then the static memebers reflect the state and the behavious of the category itself and the non-static members the state and the behaviour of the separate representatives of the category.
+
+
+Static fields are initialized when the data type(the class) is used for the first time, during the execution of the program.
+
+A class that has only private constructors cannot be instantiated. Such class usually has only static members and is called a 'utility class'
+
+## Useful System C# Classes
+
+### System.Environment
+It contains a set of useful fields and methods, which ease getting information about the hardware and the operating system, and some of them, give the ability to interact with the program environment. - information about the processor count, the computer network name, the cersion of the operating system, the name of the current user, the current directory
+
+### System.Math
+Contains methods for performing basic numeric and mathematical operations.
+
+#### Constants
+Constants in C# are immutable variables whose values are assigned during their initialization in the source code of the program and after that they cannot be changed. They are declared with the modifier const. COnstants are written in PascalCase.
+
+## NameSpaces
