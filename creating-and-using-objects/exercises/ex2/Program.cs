@@ -6,7 +6,15 @@ namespace ex2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //Write a program, which generates and prints on the console 10 random numbers in the range [100, 200].
+            Random rand = new Random();
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(rand.Next(100, 201));
+            }
+
         }
+
     }
 }
