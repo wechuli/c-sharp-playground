@@ -7,6 +7,7 @@ namespace system_classes
         static void Main(string[] args)
         {
             int sum = 0;
+            
             int startTime = Environment.TickCount; //The static property TickCount of the class Environment returns as a result the count of milliseconds that hae passed since the computer is on until the time of the method call.
 
             //The code fragment to be tested

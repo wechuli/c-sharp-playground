@@ -80,3 +80,6 @@ Contains methods for performing basic numeric and mathematical operations.
 Constants in C# are immutable variables whose values are assigned during their initialization in the source code of the program and after that they cannot be changed. They are declared with the modifier const. COnstants are written in PascalCase.
 
 ## NameSpaces
+When building an application accoring to the object area, very ofen it is necessary to use the classes of a namespace multiple times. Their is a mechanism for inclusion of a namespace in the current file with a source code.After the given namespace is included, all classes defined in it may be used without the need to use their full names.
+The inclusion of a namespace in the current source code file is executed with the keyword using
+Inclusion of namespaces is not recursive i.e when including a namespace, the classes from the nested namespaces are not included.

@@ -1,0 +1,11 @@
+E:\repos\c-sharp-playground\creating-and-using-objects\exercises\ex1\obj\Debug\netcoreapp2.2\ex1.csprojAssemblyReference.cache
+E:\repos\c-sharp-playground\creating-and-using-objects\exercises\ex1\obj\Debug\netcoreapp2.2\ex1.csproj.CoreCompileInputs.cache
+E:\repos\c-sharp-playground\creating-and-using-objects\exercises\ex1\obj\Debug\netcoreapp2.2\ex1.AssemblyInfoInputs.cache
+E:\repos\c-sharp-playground\creating-and-using-objects\exercises\ex1\obj\Debug\netcoreapp2.2\ex1.AssemblyInfo.cs
+E:\repos\c-sharp-playground\creating-and-using-objects\exercises\ex1\bin\Debug\netcoreapp2.2\ex1.deps.json
+E:\repos\c-sharp-playground\creating-and-using-objects\exercises\ex1\bin\Debug\netcoreapp2.2\ex1.runtimeconfig.json
+E:\repos\c-sharp-playground\creating-and-using-objects\exercises\ex1\bin\Debug\netcoreapp2.2\ex1.runtimeconfig.dev.json
+E:\repos\c-sharp-playground\creating-and-using-objects\exercises\ex1\bin\Debug\netcoreapp2.2\ex1.dll
+E:\repos\c-sharp-playground\creating-and-using-objects\exercises\ex1\bin\Debug\netcoreapp2.2\ex1.pdb
+E:\repos\c-sharp-playground\creating-and-using-objects\exercises\ex1\obj\Debug\netcoreapp2.2\ex1.dll
+E:\repos\c-sharp-playground\creating-and-using-objects\exercises\ex1\obj\Debug\netcoreapp2.2\ex1.pdb
