@@ -1,4 +1,6 @@
 ﻿using System;
+using CreatingAndUsingObjects;
+using CreatingAndUsingObjects.inner;
 
 namespace ex7
 {
@@ -6,7 +8,10 @@ namespace ex7
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            caller newClassCaller = new caller();
+            newClassCaller.DisplayMethods();
+            newClassCaller.DisplayMethods();
+
         }
     }
 }

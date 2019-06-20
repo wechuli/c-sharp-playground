@@ -70,8 +70,32 @@ namespace CreatingAndUsingObjects
     {
         public class caller
         {
-            Cat newCat = new Cat();
-            
+
+            private string hello = "Hello I am a property";
+            public string Hello
+            {
+                get
+                {
+                    return hello;
+                }
+                set
+                {
+                    this.hello = "another hello";
+                }
+            }
+            public caller()
+            {
+
+            }
+            public void DisplayMethods()
+            {
+                Cat newCat = new Cat();
+
+
+                newCat.SayMiau();
+                Console.WriteLine(Sequence.NextValue());
+            }
+
         }
     }
 }
