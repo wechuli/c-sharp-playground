@@ -50,3 +50,7 @@ catch(ExceptionType objectName)
 //Code handling an exception
 }
 ```
+
+The try-catch constructs consists of one try block and one or more catch blocks. Within the try block we put code that cold throw excpetions. The ExceptionType in the catch block must be a type, derived from System.Exception or the code wouldn't compile. the expression within brackets after catch is also a declaration of a variable, thus inside the catch block, we can use objectName to use the properties of the excpetion or call its methods
+
+## the Stack trace
