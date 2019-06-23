@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\repos\\c-sharp-playground\\exception-handling\\concepts\\concept1\\concepts.csproj": {}
+    "F:\\repos\\c-sharp-playground\\exception-handling\\concepts\\nested-exceptions\\nested-exceptions.csproj": {}
   },
   "projects": {
-    "F:\\repos\\c-sharp-playground\\exception-handling\\concepts\\concept1\\concepts.csproj": {
+    "F:\\repos\\c-sharp-playground\\exception-handling\\concepts\\nested-exceptions\\nested-exceptions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\repos\\c-sharp-playground\\exception-handling\\concepts\\concept1\\concepts.csproj",
-        "projectName": "concepts",
-        "projectPath": "F:\\repos\\c-sharp-playground\\exception-handling\\concepts\\concept1\\concepts.csproj",
+        "projectUniqueName": "F:\\repos\\c-sharp-playground\\exception-handling\\concepts\\nested-exceptions\\nested-exceptions.csproj",
+        "projectName": "nested-exceptions",
+        "projectPath": "F:\\repos\\c-sharp-playground\\exception-handling\\concepts\\nested-exceptions\\nested-exceptions.csproj",
         "packagesPath": "C:\\Users\\Wechuli\\.nuget\\packages\\",
-        "outputPath": "F:\\repos\\c-sharp-playground\\exception-handling\\concepts\\concept1\\obj\\",
+        "outputPath": "F:\\repos\\c-sharp-playground\\exception-handling\\concepts\\nested-exceptions\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

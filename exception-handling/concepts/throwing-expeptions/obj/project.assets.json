@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\repos\\c-sharp-playground\\exception-handling\\concepts\\concept1\\concepts.csproj",
-      "projectName": "concepts",
-      "projectPath": "F:\\repos\\c-sharp-playground\\exception-handling\\concepts\\concept1\\concepts.csproj",
+      "projectUniqueName": "F:\\repos\\c-sharp-playground\\exception-handling\\concepts\\throwing-expeptions\\throwing-expeptions.csproj",
+      "projectName": "throwing-expeptions",
+      "projectPath": "F:\\repos\\c-sharp-playground\\exception-handling\\concepts\\throwing-expeptions\\throwing-expeptions.csproj",
       "packagesPath": "C:\\Users\\Wechuli\\.nuget\\packages\\",
-      "outputPath": "F:\\repos\\c-sharp-playground\\exception-handling\\concepts\\concept1\\obj\\",
+      "outputPath": "F:\\repos\\c-sharp-playground\\exception-handling\\concepts\\throwing-expeptions\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

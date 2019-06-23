@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\exception-handling\concepts\throwing-expeptions\bin\Debug\netcoreapp2.2\throwing-expeptions.deps.json
+F:\repos\c-sharp-playground\exception-handling\concepts\throwing-expeptions\bin\Debug\netcoreapp2.2\throwing-expeptions.runtimeconfig.json
+F:\repos\c-sharp-playground\exception-handling\concepts\throwing-expeptions\bin\Debug\netcoreapp2.2\throwing-expeptions.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\exception-handling\concepts\throwing-expeptions\bin\Debug\netcoreapp2.2\throwing-expeptions.dll
+F:\repos\c-sharp-playground\exception-handling\concepts\throwing-expeptions\bin\Debug\netcoreapp2.2\throwing-expeptions.pdb
+F:\repos\c-sharp-playground\exception-handling\concepts\throwing-expeptions\obj\Debug\netcoreapp2.2\throwing-expeptions.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\exception-handling\concepts\throwing-expeptions\obj\Debug\netcoreapp2.2\throwing-expeptions.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\exception-handling\concepts\throwing-expeptions\obj\Debug\netcoreapp2.2\throwing-expeptions.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\exception-handling\concepts\throwing-expeptions\obj\Debug\netcoreapp2.2\throwing-expeptions.AssemblyInfo.cs
+F:\repos\c-sharp-playground\exception-handling\concepts\throwing-expeptions\obj\Debug\netcoreapp2.2\throwing-expeptions.dll
+F:\repos\c-sharp-playground\exception-handling\concepts\throwing-expeptions\obj\Debug\netcoreapp2.2\throwing-expeptions.pdb

@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\exception-handling\concepts\nested-exceptions\bin\Debug\netcoreapp2.2\nested-exceptions.deps.json
+F:\repos\c-sharp-playground\exception-handling\concepts\nested-exceptions\bin\Debug\netcoreapp2.2\nested-exceptions.runtimeconfig.json
+F:\repos\c-sharp-playground\exception-handling\concepts\nested-exceptions\bin\Debug\netcoreapp2.2\nested-exceptions.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\exception-handling\concepts\nested-exceptions\bin\Debug\netcoreapp2.2\nested-exceptions.dll
+F:\repos\c-sharp-playground\exception-handling\concepts\nested-exceptions\bin\Debug\netcoreapp2.2\nested-exceptions.pdb
+F:\repos\c-sharp-playground\exception-handling\concepts\nested-exceptions\obj\Debug\netcoreapp2.2\nested-exceptions.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\exception-handling\concepts\nested-exceptions\obj\Debug\netcoreapp2.2\nested-exceptions.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\exception-handling\concepts\nested-exceptions\obj\Debug\netcoreapp2.2\nested-exceptions.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\exception-handling\concepts\nested-exceptions\obj\Debug\netcoreapp2.2\nested-exceptions.AssemblyInfo.cs
+F:\repos\c-sharp-playground\exception-handling\concepts\nested-exceptions\obj\Debug\netcoreapp2.2\nested-exceptions.dll
+F:\repos\c-sharp-playground\exception-handling\concepts\nested-exceptions\obj\Debug\netcoreapp2.2\nested-exceptions.pdb

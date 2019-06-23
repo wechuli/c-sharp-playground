@@ -9,3 +9,14 @@ F:\repos\c-sharp-playground\exception-handling\concepts\obj\Debug\netcoreapp2.2\
 F:\repos\c-sharp-playground\exception-handling\concepts\obj\Debug\netcoreapp2.2\concepts.AssemblyInfo.cs
 F:\repos\c-sharp-playground\exception-handling\concepts\obj\Debug\netcoreapp2.2\concepts.dll
 F:\repos\c-sharp-playground\exception-handling\concepts\obj\Debug\netcoreapp2.2\concepts.pdb
+F:\repos\c-sharp-playground\exception-handling\concepts\concept1\bin\Debug\netcoreapp2.2\concepts.deps.json
+F:\repos\c-sharp-playground\exception-handling\concepts\concept1\bin\Debug\netcoreapp2.2\concepts.runtimeconfig.json
+F:\repos\c-sharp-playground\exception-handling\concepts\concept1\bin\Debug\netcoreapp2.2\concepts.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\exception-handling\concepts\concept1\bin\Debug\netcoreapp2.2\concepts.dll
+F:\repos\c-sharp-playground\exception-handling\concepts\concept1\bin\Debug\netcoreapp2.2\concepts.pdb
+F:\repos\c-sharp-playground\exception-handling\concepts\concept1\obj\Debug\netcoreapp2.2\concepts.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\exception-handling\concepts\concept1\obj\Debug\netcoreapp2.2\concepts.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\exception-handling\concepts\concept1\obj\Debug\netcoreapp2.2\concepts.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\exception-handling\concepts\concept1\obj\Debug\netcoreapp2.2\concepts.AssemblyInfo.cs
+F:\repos\c-sharp-playground\exception-handling\concepts\concept1\obj\Debug\netcoreapp2.2\concepts.dll
+F:\repos\c-sharp-playground\exception-handling\concepts\concept1\obj\Debug\netcoreapp2.2\concepts.pdb
