@@ -1,0 +1,11 @@
+E:\repos\c-sharp-playground\exception-handling\concepts\handling_at_diff_levels\bin\Debug\netcoreapp2.2\handling_at_diff_levels.deps.json
+E:\repos\c-sharp-playground\exception-handling\concepts\handling_at_diff_levels\bin\Debug\netcoreapp2.2\handling_at_diff_levels.runtimeconfig.json
+E:\repos\c-sharp-playground\exception-handling\concepts\handling_at_diff_levels\bin\Debug\netcoreapp2.2\handling_at_diff_levels.runtimeconfig.dev.json
+E:\repos\c-sharp-playground\exception-handling\concepts\handling_at_diff_levels\bin\Debug\netcoreapp2.2\handling_at_diff_levels.dll
+E:\repos\c-sharp-playground\exception-handling\concepts\handling_at_diff_levels\bin\Debug\netcoreapp2.2\handling_at_diff_levels.pdb
+E:\repos\c-sharp-playground\exception-handling\concepts\handling_at_diff_levels\obj\Debug\netcoreapp2.2\handling_at_diff_levels.csprojAssemblyReference.cache
+E:\repos\c-sharp-playground\exception-handling\concepts\handling_at_diff_levels\obj\Debug\netcoreapp2.2\handling_at_diff_levels.csproj.CoreCompileInputs.cache
+E:\repos\c-sharp-playground\exception-handling\concepts\handling_at_diff_levels\obj\Debug\netcoreapp2.2\handling_at_diff_levels.AssemblyInfoInputs.cache
+E:\repos\c-sharp-playground\exception-handling\concepts\handling_at_diff_levels\obj\Debug\netcoreapp2.2\handling_at_diff_levels.AssemblyInfo.cs
+E:\repos\c-sharp-playground\exception-handling\concepts\handling_at_diff_levels\obj\Debug\netcoreapp2.2\handling_at_diff_levels.dll
+E:\repos\c-sharp-playground\exception-handling\concepts\handling_at_diff_levels\obj\Debug\netcoreapp2.2\handling_at_diff_levels.pdb

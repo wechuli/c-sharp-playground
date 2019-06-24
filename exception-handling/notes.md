@@ -117,3 +117,55 @@ There could be various reasons why A cannot simply throw a B exception:
 - Component A users should not even know Component B exists
 - Component A had not declared it would throw Component B exceptions;
 - Component A users are not prepared to receive Component B exceptions. They expect component A exceptions only.
+
+### Which Exceptions to Handle and Which Not?
+
+        A method should only handle exceptions which it expects and which it knows how to process. All the other exceptions must be left to the calling method.
+
+If we follow this rule and every method leaves the exceptions it is not competent to process to the calling method, eventually we would reach the Main() method(or the starting method of the respective thread of execution) and if this method does not catch the exception, the CLR will display the error on the console and will terminate the program.
+
+A method is competent to handle an exception if it expects this exception, it has information why the exception has been thrown and what to do in this situation.If we have a method that must read a text file and return its contents as a string, that method might catch FileNotFoundException and return an empty string in this case. Still, this same method will hardly be able to correctly handle OutOfMemoryException. What should the method do in case of insufficient memory? Return an empty string? Throw some other exception? Do something completely different? So apparently the method is not competent to handle such exception and thus the best way is to pass the exception up to the calling method so it could (hopefully) be handled at some other level by a method competent to do it. Using this simple philosophy allows exception handling to be done in a structured and systematic way.
+
+Throwing exceptions from the Main() method is generally not a good practice. Instead it is better all exceptions to be caught in Main(). Every exception which is not handled in Main() is eventually caught by the CLR and visualized by printing the stack trace on the console output or in some other way. While for small applications it is not such a problem, big complex applications generally should not crash in such ungraceful manner.
+
+### Catching Exceptions at Different Levels
+
+The ability to pass(or bubble) exceptions through a given method up to the calling method allows structured exception handling to be done at multiple levels. This means that we can catch certain types of exceptions in given methods and pass all other exceptions to the previous leve;s in the call-stack.
+
+### The try-finally Construct
+
+Every try block could contain a respective finally block. The code within the finally block is always executed, no matter how the program flow leaves the try block. This gurantees that the finally block will be executed even if an exception is thrown or a return statement is executed within the try block.
+
+```C#
+try
+{
+// some code that could or could not cause an exception
+}
+finally
+{
+// Code here will always execute
+}
+```
+
+Every try block may have zero or more catch blocks and at most one finally block. It is possible to have multiple catch blocks and a finally block in the same try-catch-finally constructs
+
+```C#
+try
+{
+//some code
+}
+catch (…)
+{
+// Code handling an exception
+}
+catch (…)
+{
+// Code handling another exception
+}
+finally
+{
+// This code will always execute
+}
+```
+
+### Why Should We Use try-finally?
