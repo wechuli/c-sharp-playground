@@ -1,0 +1,11 @@
+E:\repos\c-sharp-playground\exception-handling\concepts\try_finally\bin\Debug\netcoreapp2.2\try_finally.deps.json
+E:\repos\c-sharp-playground\exception-handling\concepts\try_finally\bin\Debug\netcoreapp2.2\try_finally.runtimeconfig.json
+E:\repos\c-sharp-playground\exception-handling\concepts\try_finally\bin\Debug\netcoreapp2.2\try_finally.runtimeconfig.dev.json
+E:\repos\c-sharp-playground\exception-handling\concepts\try_finally\bin\Debug\netcoreapp2.2\try_finally.dll
+E:\repos\c-sharp-playground\exception-handling\concepts\try_finally\bin\Debug\netcoreapp2.2\try_finally.pdb
+E:\repos\c-sharp-playground\exception-handling\concepts\try_finally\obj\Debug\netcoreapp2.2\try_finally.csprojAssemblyReference.cache
+E:\repos\c-sharp-playground\exception-handling\concepts\try_finally\obj\Debug\netcoreapp2.2\try_finally.csproj.CoreCompileInputs.cache
+E:\repos\c-sharp-playground\exception-handling\concepts\try_finally\obj\Debug\netcoreapp2.2\try_finally.AssemblyInfoInputs.cache
+E:\repos\c-sharp-playground\exception-handling\concepts\try_finally\obj\Debug\netcoreapp2.2\try_finally.AssemblyInfo.cs
+E:\repos\c-sharp-playground\exception-handling\concepts\try_finally\obj\Debug\netcoreapp2.2\try_finally.dll
+E:\repos\c-sharp-playground\exception-handling\concepts\try_finally\obj\Debug\netcoreapp2.2\try_finally.pdb

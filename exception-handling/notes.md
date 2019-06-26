@@ -169,3 +169,34 @@ finally
 ```
 
 ### Why Should We Use try-finally?
+
+In many applications, we have to work with external resources in our programs. Examples of external resources include files, network connections, graphical elements, pipes and streams to or from different hardware devices. When we deal with such external resources, it is critically important to free up the resources as early as possible when the resource is no longer needed. For example, when we open a file to read its contents, we must close the file right after we have read the contents. If we leave the file open, the operating system will prevent other users and applications from making changes on the file.
+
+The finally block is priceless when we need to free an external resource or make any other cleanup. The finally block guarantees that the cleanup operations will not be accidentally skipped because of the unexpected exception or because of return, continue or break. Proper resource management is an important concept in programming.
+
+#### Mutlpitple Resources Cleanup
+
+Sometimes we need to free more than one resource. It is a good practice to free the resources in reverse order in respect to their allocation.
+
+```C#
+static void readFile(string filename)
+{
+   Resource r1 = new Resource1();
+try
+{
+Resource r2 = new Resource2();
+try
+{
+// Use r1 and r2
+}
+finally
+{
+r2.Release();
+}
+}
+finally
+{
+r1.Release();
+}
+
+```
