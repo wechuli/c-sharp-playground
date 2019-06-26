@@ -200,3 +200,8 @@ r1.Release();
 }
 
 ```
+
+## IDisposable and the "using" Statement
+
+### IDisposable
+The main use of IDisposable interface is to release resources. In .NET such resources are window handles, files, streams and other. 
