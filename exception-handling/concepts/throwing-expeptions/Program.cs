@@ -7,6 +7,7 @@ namespace throwing_expeptions
         static void Main(string[] args)
         {
             Exception e = new Exception("There was a problem");
+            
             throw e;
             ApplicationException appEx = new ApplicationException();
         }

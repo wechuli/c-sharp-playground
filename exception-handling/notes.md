@@ -204,4 +204,101 @@ r1.Release();
 ## IDisposable and the "using" Statement
 
 ### IDisposable
-The main use of IDisposable interface is to release resources. In .NET such resources are window handles, files, streams and other. 
+
+The main use of IDisposable interface is to release resources. In .NET such resources are window handles, files, streams and other. For now, we may consider interface as an indication that given type of objects(for example streams for reading files) support a certain number of operations.
+
+The important method in IDisposable interface is Dispose(). The main thing we need to know about the method is that is releases the resources of the class that implements it.In cases when resources are streams, readers or files releasing resorces can be done using the Dispose() method from IDisposable interface, which calls their Close() method. This method closes them and relesea their resources.
+
+```C#
+StreamReader reader = new StreamReader(fileName);
+try
+{
+    //Use the reader here
+}
+finally
+{
+    if(reader != null)
+    {
+        reader.Dispose();
+    }
+}
+```
+
+The previous example can be written in shorter form with the help of the using keyword in C#
+
+```C#
+using(StreamReader reader = new StreamReader(fileName))
+{
+    //Use the reader here
+}
+```
+
+The above simplified form of the 'dispose pattern' is simple to write, simple to use and simple to read and is guaranteed to release correctly the allocated resources specified in the brackets of the using statement.
+
+It is not necessary to have try-finally or to explicitly call any method to release the resources. The compiler takes care to automatically put try-finally block and the used resources are released by calling the Dispose() method after leaving the using block.
+
+It is important to mention that using statement is not related to exception handling. Its only purpose is to release the resources no matter whether exceptions are thrown or not. It does not handle exception.
+
+Use the **using** statement with all classes that implement the IDidposable interface. When a class implements IDisposable interface this means the creator of this class expects it can be used with the using statement and the class contains some expensive resources that should not be left unreleased. Implementing IDisposable also means that it should be released immediately after we finnish using the class and the easiest way to do this in C# is with using statement.
+
+### Advantages of Using Exceptions
+
+1. **Separationg of the Exception Handling Code** - Using exceptions allow us to separate the code, which describes the normal execution of the program from code required for unexpected execution of the code for error handling. Exceptions not only save us the effort of finding and processing errors but give us more elegant, short, clear and efficient way to do it.
+2. **Grouping Different Error Types** - The hierarchial nature of exceptions allows us to catch and handle whole groups of exceptions at one time. When using catch we are not only catching the given type of exception but the whole hierarchy of exception types that are inheritors of the declarred type.
+
+```C#
+   catch (IOException e)
+{
+// Handle IOException and all its descendants
+}
+```
+The example above will catch not only the IOException, but all of its descendants including FileNotFoundException, EndOfStreamException, PathTooLongException and many others. In the same time exceptions like UnauthorizedAccessException and OutOfMemoryException will not be caught, because they don’t inherit from IOException. We can look in MSDN for the exceptions hierarchy if we wander which exceptions to catch.
+It is not a good practice, but it is possible to catch all exceptions:
+```C#
+catch (Exception e)
+{
+// A (too) general exception handler
+}
+```
+Catching Exception and all of its inheritors is not a good practice. It is better to catch more specific groups of exceptions like IOIException or just one type of exception like for example FileNotFoundException.
+
+3. **Catching Exceptions at the Most Appropriate Place** - The ability to catch exceptions at multiple locations is extremely convenient. It allows us to handle the exceptioin at the most appropriate place. It is good to remeber the most important rule: every method should catch only exceptions that it can handle and skip all the others.
+
+
+## Best Practices when using Exceptions
+### When to Rely on Exceptions
+It is not a good practixe to rely on exceptions for excpected events for another reason: performance. Throwing an exception is a time consuming. An object has to be created to hold the exception, the stack trace has to be initialized and handler for this exception has to be found and so on.
+
+### Throw Exceptions to the End User?
+Exceptions are confusing for most users. They give the impression of a poorly written program that 'has bugs'. It is recommended when exceptions are not caught by anyone(such exceptions can only be runtime errors) to be caught by a global exception handler which saves them on the disk and shows user friendly messages such as 'An error occurred, please try again later'. It is a good practice to show not only a user friendly message but also technocal information(stack trace) available on demand.
+
+### Throw Exceptions at the Approprtiate Level of Abstraction
+When we throw our own exceptions we must keep in mind the abstractions in the context our methods work. For example if our method works with arrays we can throw IndexOutOfRangeException or NullReferenceException because our method works at low level and directly operates with the memory and the array elements. But if our method is doing accumulating of interests at all accounts in a bank it should not throw IndexOutOfRangeException because this exception is not from the business area of the banking sector. It would be normal accumulation of interests in a bank software to throw InvalidInterestException exception with an appropriate error message where the original IndexOutOfRangeException exception to be attached.
+
+Let’s give another example: we call a method that sorts an array of integers and throws an exception TransactionAbortedException. This is also an inappropriate exception just as NullReferenceException was in accumu-lation of interests in the bank software. That is why we should consider the abstraction level where our method works when we throw our exception.
+
+### If Your Exception Has a Source, Use It!
+When we catch an exception and throw a new one with a higher level of abstarction, we should always attach the original exception to it. This way the user of our code will be able to easily find the exact reason for the error and the location where it occurred at the first place. 
+Each exception should carry detailed information about the problem. From the rule above many rules come out: we should have a relevant error message, the error type should match the problem and the exceptions should hold its source as inner exception.
+
+### Give a detailed descriptive Error Message!
+The error message that every exceptions holds is extremely important. In most cases it is enough to give us information of what the problem is. If the message is not good enough, users of your methods will not be able to quickly solve the problem.
+
+Be careful not to show messages with incorrect content.
+
+### Never Ignore the Exceptions You Catch
+Never ignore the exceptions you catch without handling them
+
+### Dump the Error Messages in Extreme cases Only
+
+        **A method should either do the work it is created for or throw an exception. In case of wrong input, the method should throw an exception and should not return a wrong result!
+
+A method is created to do a certain job. What the mthod is doing should be clear from its name. If we cannot give an appropriate name to the method, it means that it is doing too many things and we should split so everything is in a separate method. If the method cannot do the work it is created for it should throw an exception.
+
+### Don't Catch All Exceptions
+
+A very common mistake with exceptions is to catch all exceptions no matter what type they are.
+
+### Only Catch Exceptions You Know How to Process
+
+We should handle only errors that we expect and we are prepared for.We should leave the other exceptions so that they are caught by another method that knows how to handle them. A methos should not catch all exceptions- it should only catch the ones it can process correctly.
