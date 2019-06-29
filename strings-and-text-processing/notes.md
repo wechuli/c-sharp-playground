@@ -60,7 +60,6 @@ The method CompareTo(…) from the String class returns a negative value, 0 or p
 
 If we have to compare the strings lexicographically, namely to ignore the letters casing, then we could use string.Compare(string strA, string strB, bool ignoreCase).
 
-
 Please note that according to the methods Compare(…) and CompareTo(…) the small letters are lexicographically before the capital ones. The correctness of this rule is quite controversial as in the Unicode table the capital letters are before the small ones. For example due to the standard Unicode, the letter “A” has a code 65, which is smaller than the code of the letter “a” (97).
 
 ### The == and != Operators
@@ -68,6 +67,7 @@ Please note that according to the methods Compare(…) and CompareTo(…) the sm
 In the C# language the operators == and =! work for strings through an internal calling of Equals(…). We will go through some examples for using those two operators with variables from the string type:
 
 ## Memory Optimization for Strings
+
 there is an optimization in the C# compiler and in CLR, which saves the memory from creating duplicated strings. This
 optimization is called strings interning and thanks to it the two variables in the memory will be pointed to the same common block of memory. This reduces the memory space usage and optimizes certain operations such as comparing two completely matching strings. They are written in the memory in the following way:
 
@@ -82,3 +82,18 @@ Strings are immutable! Any chhange of a variable of type string creates a new st
 ### String Concatentation
 
 We can concatentate other data with strings. Any data, which can be presented in a text form can be appended to a string
+
+### Upper and LowerCase
+
+### Seraching Strings
+
+When we have a string with a specified content, it is often necessary to process only a part of its value. The .NET platform provides us with two methods to search a string within another string: IndexOf(…) and LastIndexOf(…). They search into the string and check whether the passed as a parameter substring occurs in its content. The result of those methods is an integer. If the result is not a negative value, then this is the position where the first character of the substring is found. If the method returns value of -1, it means that the substring was not found. Remember that in C# indexing into strings start from 0.
+
+The methods IndexOf(…) and LastIndexOf(…) search the contents of the text sequence, but in a different direction. The search with the first method starts from the beginning of the string towards the end, while the second method – the search is done backwards. If we are interested in the first encountered match, then we use IndexOf(…). If we want to search the string from its end (for example to detect the last dot in a file name or the last slash in an URL address), then we use LastIndexOf(…).
+
+When calling IndexOf(…) and LastIndexOf(…) a second parameter could be passed, which will specify the position, which the searching should start from. This is useful if we want to search part of a string, not the entire string.
+
+
+The methods IndexOf(…) and LastIndexOf(…) distinguish between uppercase and lowercase letters. If we want to ignore this difference, we can write text in a new variable and turn it to a text with entirely lower or entirely uppercase, and then we can perform the search in it, independently from the letters casing.
+
+### Extracting a Portion of A string

@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\upper_and_lower\bin\Debug\netcoreapp2.2\upper_and_lower.deps.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\upper_and_lower\bin\Debug\netcoreapp2.2\upper_and_lower.runtimeconfig.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\upper_and_lower\bin\Debug\netcoreapp2.2\upper_and_lower.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\upper_and_lower\bin\Debug\netcoreapp2.2\upper_and_lower.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\upper_and_lower\bin\Debug\netcoreapp2.2\upper_and_lower.pdb
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\upper_and_lower\obj\Debug\netcoreapp2.2\upper_and_lower.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\upper_and_lower\obj\Debug\netcoreapp2.2\upper_and_lower.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\upper_and_lower\obj\Debug\netcoreapp2.2\upper_and_lower.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\upper_and_lower\obj\Debug\netcoreapp2.2\upper_and_lower.AssemblyInfo.cs
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\upper_and_lower\obj\Debug\netcoreapp2.2\upper_and_lower.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\upper_and_lower\obj\Debug\netcoreapp2.2\upper_and_lower.pdb

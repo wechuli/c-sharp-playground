@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\searchingStrings\bin\Debug\netcoreapp2.2\searchingStrings.deps.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\searchingStrings\bin\Debug\netcoreapp2.2\searchingStrings.runtimeconfig.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\searchingStrings\bin\Debug\netcoreapp2.2\searchingStrings.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\searchingStrings\bin\Debug\netcoreapp2.2\searchingStrings.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\searchingStrings\bin\Debug\netcoreapp2.2\searchingStrings.pdb
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\searchingStrings\obj\Debug\netcoreapp2.2\searchingStrings.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\searchingStrings\obj\Debug\netcoreapp2.2\searchingStrings.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\searchingStrings\obj\Debug\netcoreapp2.2\searchingStrings.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\searchingStrings\obj\Debug\netcoreapp2.2\searchingStrings.AssemblyInfo.cs
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\searchingStrings\obj\Debug\netcoreapp2.2\searchingStrings.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\searchingStrings\obj\Debug\netcoreapp2.2\searchingStrings.pdb
