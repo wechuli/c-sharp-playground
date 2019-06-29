@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\concepts1\bin\Debug\netcoreapp2.2\concepts1.deps.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\concepts1\bin\Debug\netcoreapp2.2\concepts1.runtimeconfig.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\concepts1\bin\Debug\netcoreapp2.2\concepts1.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\concepts1\bin\Debug\netcoreapp2.2\concepts1.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\concepts1\bin\Debug\netcoreapp2.2\concepts1.pdb
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\concepts1\obj\Debug\netcoreapp2.2\concepts1.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\concepts1\obj\Debug\netcoreapp2.2\concepts1.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\concepts1\obj\Debug\netcoreapp2.2\concepts1.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\concepts1\obj\Debug\netcoreapp2.2\concepts1.AssemblyInfo.cs
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\concepts1\obj\Debug\netcoreapp2.2\concepts1.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\concepts1\obj\Debug\netcoreapp2.2\concepts1.pdb

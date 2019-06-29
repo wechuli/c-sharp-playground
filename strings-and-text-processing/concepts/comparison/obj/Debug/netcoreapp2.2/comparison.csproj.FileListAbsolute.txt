@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\comparison\bin\Debug\netcoreapp2.2\comparison.deps.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\comparison\bin\Debug\netcoreapp2.2\comparison.runtimeconfig.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\comparison\bin\Debug\netcoreapp2.2\comparison.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\comparison\bin\Debug\netcoreapp2.2\comparison.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\comparison\bin\Debug\netcoreapp2.2\comparison.pdb
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\comparison\obj\Debug\netcoreapp2.2\comparison.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\comparison\obj\Debug\netcoreapp2.2\comparison.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\comparison\obj\Debug\netcoreapp2.2\comparison.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\comparison\obj\Debug\netcoreapp2.2\comparison.AssemblyInfo.cs
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\comparison\obj\Debug\netcoreapp2.2\comparison.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\comparison\obj\Debug\netcoreapp2.2\comparison.pdb

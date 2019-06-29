@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringConcatenation\bin\Debug\netcoreapp2.2\stringConcatenation.deps.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringConcatenation\bin\Debug\netcoreapp2.2\stringConcatenation.runtimeconfig.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringConcatenation\bin\Debug\netcoreapp2.2\stringConcatenation.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringConcatenation\bin\Debug\netcoreapp2.2\stringConcatenation.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringConcatenation\bin\Debug\netcoreapp2.2\stringConcatenation.pdb
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringConcatenation\obj\Debug\netcoreapp2.2\stringConcatenation.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringConcatenation\obj\Debug\netcoreapp2.2\stringConcatenation.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringConcatenation\obj\Debug\netcoreapp2.2\stringConcatenation.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringConcatenation\obj\Debug\netcoreapp2.2\stringConcatenation.AssemblyInfo.cs
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringConcatenation\obj\Debug\netcoreapp2.2\stringConcatenation.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringConcatenation\obj\Debug\netcoreapp2.2\stringConcatenation.pdb
