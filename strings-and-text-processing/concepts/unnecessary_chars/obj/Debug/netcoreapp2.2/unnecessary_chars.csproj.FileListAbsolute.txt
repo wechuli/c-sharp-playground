@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\unnecessary_chars\bin\Debug\netcoreapp2.2\unnecessary_chars.deps.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\unnecessary_chars\bin\Debug\netcoreapp2.2\unnecessary_chars.runtimeconfig.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\unnecessary_chars\bin\Debug\netcoreapp2.2\unnecessary_chars.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\unnecessary_chars\bin\Debug\netcoreapp2.2\unnecessary_chars.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\unnecessary_chars\bin\Debug\netcoreapp2.2\unnecessary_chars.pdb
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\unnecessary_chars\obj\Debug\netcoreapp2.2\unnecessary_chars.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\unnecessary_chars\obj\Debug\netcoreapp2.2\unnecessary_chars.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\unnecessary_chars\obj\Debug\netcoreapp2.2\unnecessary_chars.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\unnecessary_chars\obj\Debug\netcoreapp2.2\unnecessary_chars.AssemblyInfo.cs
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\unnecessary_chars\obj\Debug\netcoreapp2.2\unnecessary_chars.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\unnecessary_chars\obj\Debug\netcoreapp2.2\unnecessary_chars.pdb

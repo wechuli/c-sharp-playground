@@ -114,3 +114,7 @@ The method `Replace()` replaces all the occurrences of a given substring with an
 ## Regular Expressions
 
 Regular expressions are a powerful tool for text procesing and allow searching matches by a pattern. Regular expressions make text processing easier and more accurate: extracting some resources from texts, searhcing for phone numbers, finding email addresses in a text, splitting all the words in a sentence, data validation etc.
+
+### Removing Unnecessary Characters at the Beginning and at the End of a String
+
+When entering text in a file or to the console, you can often find some "parasitic" spaces (white-space) at the beginning or at the end of the text - some other space or a tab that cannot be observed at first glance. This may not be essential but if we do not validate the user data, there would be a problem in terms of checking the contents of the input information. In order to solve this problem, we can use the method Trim(). It is responnsible for eliminating (trimming) the white spaces at the beginning or at the end of a string. The white spaces can be spaces, tabs, line breaks etc

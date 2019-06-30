@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\regular_expressions\bin\Debug\netcoreapp2.2\regular_expressions.deps.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\regular_expressions\bin\Debug\netcoreapp2.2\regular_expressions.runtimeconfig.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\regular_expressions\bin\Debug\netcoreapp2.2\regular_expressions.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\regular_expressions\bin\Debug\netcoreapp2.2\regular_expressions.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\regular_expressions\bin\Debug\netcoreapp2.2\regular_expressions.pdb
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\regular_expressions\obj\Debug\netcoreapp2.2\regular_expressions.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\regular_expressions\obj\Debug\netcoreapp2.2\regular_expressions.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\regular_expressions\obj\Debug\netcoreapp2.2\regular_expressions.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\regular_expressions\obj\Debug\netcoreapp2.2\regular_expressions.AssemblyInfo.cs
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\regular_expressions\obj\Debug\netcoreapp2.2\regular_expressions.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\regular_expressions\obj\Debug\netcoreapp2.2\regular_expressions.pdb
