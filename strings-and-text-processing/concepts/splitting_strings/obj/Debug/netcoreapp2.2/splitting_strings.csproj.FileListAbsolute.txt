@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\splitting_strings\bin\Debug\netcoreapp2.2\splitting_strings.deps.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\splitting_strings\bin\Debug\netcoreapp2.2\splitting_strings.runtimeconfig.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\splitting_strings\bin\Debug\netcoreapp2.2\splitting_strings.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\splitting_strings\bin\Debug\netcoreapp2.2\splitting_strings.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\splitting_strings\bin\Debug\netcoreapp2.2\splitting_strings.pdb
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\splitting_strings\obj\Debug\netcoreapp2.2\splitting_strings.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\splitting_strings\obj\Debug\netcoreapp2.2\splitting_strings.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\splitting_strings\obj\Debug\netcoreapp2.2\splitting_strings.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\splitting_strings\obj\Debug\netcoreapp2.2\splitting_strings.AssemblyInfo.cs
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\splitting_strings\obj\Debug\netcoreapp2.2\splitting_strings.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\splitting_strings\obj\Debug\netcoreapp2.2\splitting_strings.pdb

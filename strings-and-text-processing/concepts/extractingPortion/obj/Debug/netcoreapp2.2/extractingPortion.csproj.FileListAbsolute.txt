@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\extractingPortion\bin\Debug\netcoreapp2.2\extractingPortion.deps.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\extractingPortion\bin\Debug\netcoreapp2.2\extractingPortion.runtimeconfig.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\extractingPortion\bin\Debug\netcoreapp2.2\extractingPortion.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\extractingPortion\bin\Debug\netcoreapp2.2\extractingPortion.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\extractingPortion\bin\Debug\netcoreapp2.2\extractingPortion.pdb
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\extractingPortion\obj\Debug\netcoreapp2.2\extractingPortion.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\extractingPortion\obj\Debug\netcoreapp2.2\extractingPortion.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\extractingPortion\obj\Debug\netcoreapp2.2\extractingPortion.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\extractingPortion\obj\Debug\netcoreapp2.2\extractingPortion.AssemblyInfo.cs
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\extractingPortion\obj\Debug\netcoreapp2.2\extractingPortion.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\extractingPortion\obj\Debug\netcoreapp2.2\extractingPortion.pdb

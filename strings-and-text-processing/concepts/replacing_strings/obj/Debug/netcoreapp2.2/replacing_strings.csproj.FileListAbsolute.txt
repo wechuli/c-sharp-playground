@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\replacing_strings\bin\Debug\netcoreapp2.2\replacing_strings.deps.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\replacing_strings\bin\Debug\netcoreapp2.2\replacing_strings.runtimeconfig.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\replacing_strings\bin\Debug\netcoreapp2.2\replacing_strings.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\replacing_strings\bin\Debug\netcoreapp2.2\replacing_strings.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\replacing_strings\bin\Debug\netcoreapp2.2\replacing_strings.pdb
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\replacing_strings\obj\Debug\netcoreapp2.2\replacing_strings.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\replacing_strings\obj\Debug\netcoreapp2.2\replacing_strings.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\replacing_strings\obj\Debug\netcoreapp2.2\replacing_strings.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\replacing_strings\obj\Debug\netcoreapp2.2\replacing_strings.AssemblyInfo.cs
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\replacing_strings\obj\Debug\netcoreapp2.2\replacing_strings.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\concepts\replacing_strings\obj\Debug\netcoreapp2.2\replacing_strings.pdb

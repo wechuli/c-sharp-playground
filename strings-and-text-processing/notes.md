@@ -93,7 +93,24 @@ The methods IndexOf(…) and LastIndexOf(…) search the contents of the text se
 
 When calling IndexOf(…) and LastIndexOf(…) a second parameter could be passed, which will specify the position, which the searching should start from. This is useful if we want to search part of a string, not the entire string.
 
-
 The methods IndexOf(…) and LastIndexOf(…) distinguish between uppercase and lowercase letters. If we want to ignore this difference, we can write text in a new variable and turn it to a text with entirely lower or entirely uppercase, and then we can perform the search in it, independently from the letters casing.
 
 ### Extracting a Portion of A string
+
+We can use the method Substring(). By using it, we can extract a part of the string(substring) by a given starting position in the text and its length. If the length is omitted, a portion from the text will be extracted, starting from the initial position to the string's end.
+
+Calling the method Substring(startIndex,length) extracts a substring from a string, which is located betwen startIndex and (startIndex + length-1) inclusively.
+
+### Splitting the String by a Separator
+
+One of the most flexible methods for working with strings is Split(). It allows us to split a string by a separator or an array of possible separators
+
+### Replacing a Substring
+
+The text processing in .NET Framework provides ready methods for replacing a substring with another.
+
+The method `Replace()` replaces all the occurrences of a given substring with another substring, not just the first.
+
+## Regular Expressions
+
+Regular expressions are a powerful tool for text procesing and allow searching matches by a pattern. Regular expressions make text processing easier and more accurate: extracting some resources from texts, searhcing for phone numbers, finding email addresses in a text, splitting all the words in a sentence, data validation etc.
