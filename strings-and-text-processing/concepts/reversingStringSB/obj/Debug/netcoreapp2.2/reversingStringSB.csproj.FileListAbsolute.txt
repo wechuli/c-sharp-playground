@@ -1,0 +1,11 @@
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\reversingStringSB\bin\Debug\netcoreapp2.2\reversingStringSB.deps.json
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\reversingStringSB\bin\Debug\netcoreapp2.2\reversingStringSB.runtimeconfig.json
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\reversingStringSB\bin\Debug\netcoreapp2.2\reversingStringSB.runtimeconfig.dev.json
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\reversingStringSB\bin\Debug\netcoreapp2.2\reversingStringSB.dll
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\reversingStringSB\bin\Debug\netcoreapp2.2\reversingStringSB.pdb
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\reversingStringSB\obj\Debug\netcoreapp2.2\reversingStringSB.csprojAssemblyReference.cache
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\reversingStringSB\obj\Debug\netcoreapp2.2\reversingStringSB.csproj.CoreCompileInputs.cache
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\reversingStringSB\obj\Debug\netcoreapp2.2\reversingStringSB.AssemblyInfoInputs.cache
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\reversingStringSB\obj\Debug\netcoreapp2.2\reversingStringSB.AssemblyInfo.cs
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\reversingStringSB\obj\Debug\netcoreapp2.2\reversingStringSB.dll
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\reversingStringSB\obj\Debug\netcoreapp2.2\reversingStringSB.pdb

@@ -118,3 +118,49 @@ Regular expressions are a powerful tool for text procesing and allow searching m
 ### Removing Unnecessary Characters at the Beginning and at the End of a String
 
 When entering text in a file or to the console, you can often find some "parasitic" spaces (white-space) at the beginning or at the end of the text - some other space or a tab that cannot be observed at first glance. This may not be essential but if we do not validate the user data, there would be a problem in terms of checking the contents of the input information. In order to solve this problem, we can use the method Trim(). It is responnsible for eliminating (trimming) the white spaces at the beginning or at the end of a string. The white spaces can be spaces, tabs, line breaks etc
+The method Trim() can accept an array of characters , which we want to remove from the string.
+
+## Constructing Strings: the StringBuilder Class
+
+Strings are immutable, this means that any adjustments applied to an existing string do not change it but return a new string. They allocate a new area in the memory where the new content is saved. This behavior has many advantages but is some cases can cause performance problems.
+
+### String Concatentation in a Loop: Never Do This!
+
+Serious performance problems may be encountered when trying to concatenate strings in a loop. The problem is directly related to the strings handling and dynamic memory, which is used to store them.
+
+```C#
+string str1 = "Super";
+string str2 = "Star";
+string result = str1 + str2;
+```
+
+What will happen with the memory? Creating the variable result will alocate a new area in dynamic memory, which will record the outcome of the str1 + str2 which is 'SuperStar'. Then the variable itself will keep the address of the allocated area. As a result we will have three areas in memory and 3 references to them. This is convenient , but allocating a new area, recording a value, creating a new variable and referencing it in memory is a time consuming process that would be problem when repeated many times typically inside a loop.
+
+Unlike some programming languages, in C#, it is not necessary to manually dispose the objecs stored in memory. There is a special mechanism called a garbage collector(memory cleaning system), which takes care of clearing the unused memory and resources. The garbage collector is responsible for disposing of objects in dynamic memory when they are no longer used. Creation of many objects containing multiple references in dynamic memory is bad, because it fills memory and then the garbage collector is automatically enforced to start execution. It takes quite some time and slows the overal performance of the process. Furthermore, transferring characters from one place to another in memory (when string concatenation is executed) is slow, especially if the strings are long.
+
+#### Processing Strings in Memory
+
+The problem with time-consuming loop processing is related to the way strings work in memory. Each iteration creates a new object in the heap and point the reference to it. This process requires a certain physical time.
+
+Several things happen at each step:
+
+1. An area of memory is allocated for recording the next number concatenation result. This memory is used only temporarily while concatentating, and is called a buffer.
+2. The old string is moved into the new buffer. If the string is long (say 500KB,5MB), it can be quite slow!
+3. Next number is concatenated to the buffer.
+4. The buffer is converted to a string
+5. The old string and the temporary buffer become unused. Later they are destroyed by the garbage collector. This may also be a slow operation.
+
+Much more elegant and appropriate way to concatenate strings in a Loop is using the StringBuilder class. Let’s see how it works.
+
+#### Building and Changing Strings with StringBuilder
+
+StringBuilder is a class that serves to build and change strings. It overcomes the performance problems that arise when concatenating strings of type `string`. The class is built in the form of an array of characters and what we need to know about it is that the information in it can be freely changed. Changes that are required in the variables of type `StringBuilder` are carried out in the same area of memory(buffer), which saves time and resources. Changing the content does not create a new object but simply changes the current.
+
+##### How Does the StringBuilder Class Work?
+
+The `StringBuilder` class is an implementation of a string in C#, but different than the class `String`. Unlike the already familiar strings, the objects of the StringBuilder class are not immutable, namely edit operations do not require creating a new object in the memory. This reduces the unnecessary transfer of data in memory when performing basic operations aas string concatenation.
+
+StringBuilder keeps a buffer with a certain capacity (16 characters by default). The buffer is implemented as an array of characters that is provided to the developer by a user-friendly interface – methods that quickly and easily add and edit elements of the string. At any moment part of the characters in the buffer are used and the rest stay in reserve. This allows the addition to work very quickly. Other operations also operate faster than the class string, because the changes do not create a new object.
+Once the internal buffer of the StringBuilder is full, it automatically is doubled (the internal buffer is resized to increase its capacity while its content is kept unchanged). Resizing is a slow operation but is happens rarely so the total performance is good.
+
+#### StringBuilder - More Important Methods
