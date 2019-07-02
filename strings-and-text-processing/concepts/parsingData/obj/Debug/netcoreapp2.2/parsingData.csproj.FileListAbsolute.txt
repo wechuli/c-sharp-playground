@@ -1,0 +1,11 @@
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\parsingData\obj\Debug\netcoreapp2.2\parsingData.csprojAssemblyReference.cache
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\parsingData\obj\Debug\netcoreapp2.2\parsingData.csproj.CoreCompileInputs.cache
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\parsingData\obj\Debug\netcoreapp2.2\parsingData.AssemblyInfoInputs.cache
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\parsingData\obj\Debug\netcoreapp2.2\parsingData.AssemblyInfo.cs
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\parsingData\bin\Debug\netcoreapp2.2\parsingData.deps.json
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\parsingData\bin\Debug\netcoreapp2.2\parsingData.runtimeconfig.json
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\parsingData\bin\Debug\netcoreapp2.2\parsingData.runtimeconfig.dev.json
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\parsingData\bin\Debug\netcoreapp2.2\parsingData.dll
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\parsingData\bin\Debug\netcoreapp2.2\parsingData.pdb
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\parsingData\obj\Debug\netcoreapp2.2\parsingData.dll
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\parsingData\obj\Debug\netcoreapp2.2\parsingData.pdb

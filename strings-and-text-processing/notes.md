@@ -164,3 +164,57 @@ StringBuilder keeps a buffer with a certain capacity (16 characters by default).
 Once the internal buffer of the StringBuilder is full, it automatically is doubled (the internal buffer is resized to increase its capacity while its content is kept unchanged). Resizing is a slow operation but is happens rarely so the total performance is good.
 
 #### StringBuilder - More Important Methods
+
+The `StringBuilder` class provides us with a set of methods that help us to easily and efficiently edit text data and construct text.
+
+- `StringBuilder(int capacity)` - constructor with an initial capacity parameter.It may be used to set the buffer size in advance if we have estimates of the number of iterations and concatenations, which will be performed. This way we can save unnecessary dynamic memory allocations
+- `Capacity` - returns the buffer size (total number of used and unused positions in the buffer)
+- `Length` - returns the length of string saved in the variable(number of used postitions in the buffer)
+- `Index[int index]` -return the character stored in given position
+- `Append(..)` -appends string, number or other value after the last charcter in the buffer
+- `Clear(...)` - removes all characters from the buffer
+- `Remove(int startIndex,int length)` - removes(deletes) string from the buffer with a given position and length
+- `Insert(int offset,string str)` - insert a string in agiven start position(offset)
+- `Replace(string oldValue,string newValue)` - replaces all occurences of a given substring with another substring
+- `ToString()` - returns the StringBuilder object content as a string
+
+### String Formatting
+.NET Framework provides the developer with mechanisms for formatting strings, numbers and dates.
+
+#### ToString(...)
+One of the interesting concepts in .NET is that practically every object of a class and primitive variables can be presented as text. This is done by the method ToString(...), which is present in all .NET objects. It is implicit in the defintion of the object class - the base class that all .NET data types inherit directly or indirectly. Thus the definition of the method appears in each class and we can use it to bring the content of each object in some text form.
+
+The method ToString(…) is called automatically when we print objects from different classes to the console
+
+The default implementation of the ToString(...) method in the object class returns the full name of the class. All classes that do not explicitly redefine the bahaviour of the ToString(...) are using this implementation. Most classes in C# have their own implementation of the method, which represents readable and understandable content in text form.
+
+#### String.Format(..)
+`String.Format(...)` is a static method by which we can format text and other data through a template(formatting string). The templates contain text and declared parameters (placeholders) and are used to obtain formatted text after replacing the parameters with specific values.
+
+### Parsing Data
+
+The reverse operation of data formatting is data parsing. Parsing of data(data parsing) means to obtain a value of a given type from the text represantation of this value in a specific format i.e converting from text to some other data type, the opposite of ToString().
+
+Often working with applications with graphical user interface requires the user input to be passed in variables of type string. This way, we can work well with numbers and charcters as well as text and dates, formatted in a user's preferred way. It is up to the developer's experience to represent the expected input data into the right way for the user. The data is then converted to a specific data type and processed.
+
+When converting types, we should not rely only on trusting the user. Always check the correctness of the input user data! Otherwise there could be an exception that could change the normal program logic.
+
+In case the passed to the `Parse(...)` method value is invalid for the type(e.g. we pass 'John' when parsing a number), an exception is thrown.
+
+### Parsing Dates
+
+Parsing to a date is similar to parsing to a numeric type, but it is recommended to set a specific date format. If we want to set a format explicitly, which does not depend on the culture, we can use the method DateTime.ParseExact(..) and specify particular formatting pattern of our choice
+
+```C#
+string text = "11/12/2001";
+string format = "MM/dd/yyyy";
+DateTime parsedDate = DateTime.ParseExact(
+text, format, CultureInfo.InvariantCulture);
+Console.WriteLine("Day: {0}\nMonth: {1}\nYear: {2}",
+parsedDate.Day, parsedDate.Month, parsedDate.Year);
+// Day: 12
+// Month: 11
+// Year: 2001
+
+```
+When parsing with an explicitly set format, it is required to pass a specific culture from which to take information about date format and separators between days and years. Since we want the parsing not to depend on a particular culture, we explicitly specify the neutral culture to be used: CultureInfo.InvariantCulture. To use the class CultureInfo, we must include the namespace System.Globalization in the beginning of our C# source code.

@@ -1,0 +1,11 @@
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringBuilder2\obj\Debug\netcoreapp2.2\stringBuilder2.csprojAssemblyReference.cache
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringBuilder2\obj\Debug\netcoreapp2.2\stringBuilder2.csproj.CoreCompileInputs.cache
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringBuilder2\obj\Debug\netcoreapp2.2\stringBuilder2.AssemblyInfoInputs.cache
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringBuilder2\obj\Debug\netcoreapp2.2\stringBuilder2.AssemblyInfo.cs
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringBuilder2\bin\Debug\netcoreapp2.2\stringBuilder2.deps.json
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringBuilder2\bin\Debug\netcoreapp2.2\stringBuilder2.runtimeconfig.json
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringBuilder2\bin\Debug\netcoreapp2.2\stringBuilder2.runtimeconfig.dev.json
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringBuilder2\bin\Debug\netcoreapp2.2\stringBuilder2.dll
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringBuilder2\bin\Debug\netcoreapp2.2\stringBuilder2.pdb
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringBuilder2\obj\Debug\netcoreapp2.2\stringBuilder2.dll
+E:\repos\c-sharp-playground\strings-and-text-processing\concepts\stringBuilder2\obj\Debug\netcoreapp2.2\stringBuilder2.pdb
