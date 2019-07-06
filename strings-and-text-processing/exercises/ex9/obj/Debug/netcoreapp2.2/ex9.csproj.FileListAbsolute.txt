@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex9\bin\Debug\netcoreapp2.2\ex9.deps.json
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex9\bin\Debug\netcoreapp2.2\ex9.runtimeconfig.json
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex9\bin\Debug\netcoreapp2.2\ex9.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex9\bin\Debug\netcoreapp2.2\ex9.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex9\bin\Debug\netcoreapp2.2\ex9.pdb
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex9\obj\Debug\netcoreapp2.2\ex9.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex9\obj\Debug\netcoreapp2.2\ex9.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex9\obj\Debug\netcoreapp2.2\ex9.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex9\obj\Debug\netcoreapp2.2\ex9.AssemblyInfo.cs
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex9\obj\Debug\netcoreapp2.2\ex9.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex9\obj\Debug\netcoreapp2.2\ex9.pdb

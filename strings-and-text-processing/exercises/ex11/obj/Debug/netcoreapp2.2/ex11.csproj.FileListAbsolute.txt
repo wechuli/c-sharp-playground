@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex11\bin\Debug\netcoreapp2.2\ex11.deps.json
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex11\bin\Debug\netcoreapp2.2\ex11.runtimeconfig.json
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex11\bin\Debug\netcoreapp2.2\ex11.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex11\bin\Debug\netcoreapp2.2\ex11.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex11\bin\Debug\netcoreapp2.2\ex11.pdb
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex11\obj\Debug\netcoreapp2.2\ex11.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex11\obj\Debug\netcoreapp2.2\ex11.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex11\obj\Debug\netcoreapp2.2\ex11.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex11\obj\Debug\netcoreapp2.2\ex11.AssemblyInfo.cs
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex11\obj\Debug\netcoreapp2.2\ex11.dll
+F:\repos\c-sharp-playground\strings-and-text-processing\exercises\ex11\obj\Debug\netcoreapp2.2\ex11.pdb
