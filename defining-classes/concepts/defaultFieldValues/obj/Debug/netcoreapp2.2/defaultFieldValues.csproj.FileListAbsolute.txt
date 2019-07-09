@@ -1,0 +1,11 @@
+E:\repos\c-sharp-playground\defining-classes\concepts\defaultFieldValues\obj\Debug\netcoreapp2.2\defaultFieldValues.csprojAssemblyReference.cache
+E:\repos\c-sharp-playground\defining-classes\concepts\defaultFieldValues\obj\Debug\netcoreapp2.2\defaultFieldValues.csproj.CoreCompileInputs.cache
+E:\repos\c-sharp-playground\defining-classes\concepts\defaultFieldValues\obj\Debug\netcoreapp2.2\defaultFieldValues.AssemblyInfoInputs.cache
+E:\repos\c-sharp-playground\defining-classes\concepts\defaultFieldValues\obj\Debug\netcoreapp2.2\defaultFieldValues.AssemblyInfo.cs
+E:\repos\c-sharp-playground\defining-classes\concepts\defaultFieldValues\bin\Debug\netcoreapp2.2\defaultFieldValues.deps.json
+E:\repos\c-sharp-playground\defining-classes\concepts\defaultFieldValues\bin\Debug\netcoreapp2.2\defaultFieldValues.runtimeconfig.json
+E:\repos\c-sharp-playground\defining-classes\concepts\defaultFieldValues\bin\Debug\netcoreapp2.2\defaultFieldValues.runtimeconfig.dev.json
+E:\repos\c-sharp-playground\defining-classes\concepts\defaultFieldValues\bin\Debug\netcoreapp2.2\defaultFieldValues.dll
+E:\repos\c-sharp-playground\defining-classes\concepts\defaultFieldValues\bin\Debug\netcoreapp2.2\defaultFieldValues.pdb
+E:\repos\c-sharp-playground\defining-classes\concepts\defaultFieldValues\obj\Debug\netcoreapp2.2\defaultFieldValues.dll
+E:\repos\c-sharp-playground\defining-classes\concepts\defaultFieldValues\obj\Debug\netcoreapp2.2\defaultFieldValues.pdb

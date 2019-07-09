@@ -4,8 +4,13 @@ namespace sampleClass
 {
     class Program
     {
+        public static int defaultVal;
         static void Main(string[] args)
         {
+
+
+            Console.WriteLine(defaultVal);
+
             string firstDogName = null;
             Console.Write("Enter first dog name: ");
             firstDogName = Console.ReadLine();
@@ -31,6 +36,11 @@ namespace sampleClass
             {
                 dog.Bark();
             }
+        }
+
+        public static void TestMethod()
+        {
+            string testString;
         }
     }
 
