@@ -239,3 +239,54 @@ Dog myDog = null;
 // … Other code …
 }
 ```
+
+#### Modifiers 'const' and 'readonly'
+
+In the declaration of one field is allowed to use the modifications **const** and **readonly**. The fields, declared as **const** or **readonly** are called constants. They are used when a certain value is used several times. These values are declared only once without repetitions
+
+##### Constants Based on "const"
+
+The fields, declared with **const** have to be initialized during the de facto declaration and afterwards their value cannot be changed. They can be accessed without creating an instance(object) of te class and they are commong for all created objects in our program.
+
+##### Constants Based on "readonly"
+
+The modifier **readonly** creates fields, which values cannot be changed once they are assigned. Fields, declared as **readonly** allow one-time initialization either in the moment of the declaration or in the class constructor
+
+### Methods
+
+Declaring of Class Method
+
+```C#
+// Method definition
+[<modifiers>] [<return_type>] <method_name>([<parameters_list>])
+{
+// … Method's body …
+[<return_statement>];
+}
+```
+
+#### Accessing Non-Static Fields from Non-Static Method
+
+We know that the word **this** is a reference to the current object, in which the method resides. Formally, the declaration of access to a field in the boundaries of a class is the following
+
+        this.<field_name>
+
+This access option is possible only from non-static code i.e method or block, which is without **static** modifier. Apart from retrieving of the value of one field, we can use the reserved word **this** for modification of the field.
+
+#### Calling Non-Static Methods
+
+Like the fields, which do have **static** modifier in their declarations, the methods, which are also non-static, can be called in the body of a class via the reserved word **this**.
+
+        this.<"method_name">(..)
+
+#### Skip _this_ Keyword When Accessing Non-Static Data
+
+When we access the fields of a class or we call its non-static methods, it is possible to omit the reserved word this. the reserved word _this_ is used to indicate explicitly that we want to have access to a non-static field of a class or to call some of its non-static methods.
+
+#### Hiding Fields with Local Variables
+
+As mentioned, the scope of one field starts from the line where the declaration is made to the closing curly bracket of the class. On the other hand, when we implement the body of one method, we have to declare local variables which we will use for the work of the method. The scope of a local variable begins from the line where it is declared to the closing bracket of the body of the method.
+
+Sometimes the name of the local variable can overlap with the name of some field. In this case there is a collision. C# allows defining local variables, which names match with fields of the class. If this happens, we say that the scope of the local variable overlays the field variable (scope overlapping).
+
+Despite this, sometimes it is required use the field instead the local variable with the same name. In this case, to retrieve the value of the field, we use the reserved word this. For this purpose we access the field by using the "dot" operator, applied to the reserved word this. In this way, we say deliberately that we want to use the field of the class, and not the local variable with the same name.

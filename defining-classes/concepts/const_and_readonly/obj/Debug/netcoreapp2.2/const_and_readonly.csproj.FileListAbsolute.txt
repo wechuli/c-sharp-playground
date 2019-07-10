@@ -1,0 +1,4 @@
+E:\repos\c-sharp-playground\defining-classes\concepts\const_and_readonly\obj\Debug\netcoreapp2.2\const_and_readonly.csprojAssemblyReference.cache
+E:\repos\c-sharp-playground\defining-classes\concepts\const_and_readonly\obj\Debug\netcoreapp2.2\const_and_readonly.csproj.CoreCompileInputs.cache
+E:\repos\c-sharp-playground\defining-classes\concepts\const_and_readonly\obj\Debug\netcoreapp2.2\const_and_readonly.AssemblyInfoInputs.cache
+E:\repos\c-sharp-playground\defining-classes\concepts\const_and_readonly\obj\Debug\netcoreapp2.2\const_and_readonly.AssemblyInfo.cs
