@@ -290,3 +290,87 @@ As mentioned, the scope of one field starts from the line where the declaration 
 Sometimes the name of the local variable can overlap with the name of some field. In this case there is a collision. C# allows defining local variables, which names match with fields of the class. If this happens, we say that the scope of the local variable overlays the field variable (scope overlapping).
 
 Despite this, sometimes it is required use the field instead the local variable with the same name. In this case, to retrieve the value of the field, we use the reserved word this. For this purpose we access the field by using the "dot" operator, applied to the reserved word this. In this way, we say deliberately that we want to use the field of the class, and not the local variable with the same name.
+
+### Visibility of Fields and Methods
+
+Separate from the declaration of a class, when we declare fields and methods in the class we can use four access levels - **public**, **protected**,**internal**, and **private**.
+
+#### Access Level 'public'
+
+When a method or a value of a class is declared with access level **public**, it can be used from any other class, regardless of whether the calling class is declared in the same namespace, assembly or outside it.
+
+#### Access Level 'internal'
+
+When a memeber of some class is declared with access level **internal**, then this element from the class can be accessed from every class in the same assembly(i.e in the same project in Visual Studio), but not from classes outside it (i.e from other projects in Visual Studio- from the same solution or from a different solution)
+Not that if we have a Visual Studio project, all classes in it are from the same assembly and classes defined in different Visual Studio projects (in the same or in a different solution) are from different assemblies
+
+#### Access Level 'private'
+
+The access level, which is the most restrictive, is private. The elements of the class, wich are declared with access modifier private(or without any because private is the default one), cannot be accessed outside of the class in which they are declared.
+
+When assigning access modifiers to a field, one or more of these have to be **private** because this ensures that the highest level of security is applied to the field. The access and the modification of the values from other classes(if it is required) will be done only via properties or methods.
+
+## Constructors
+
+In object-oriented programming, when creating an object from a given class, it is necessary to call a special method of the class known as a constructor. The constructor is a pseudo-method, which does not have a return type, has the name of the class and is called using the keyword new. The task of the constructor is to initialize the memory, allocated for the object where its fields will be stored(those which are not static ones)
+
+The only way to call a constructor in C# is through the keyword new. It allocates memory for the new object(in the stack or in the heap, depending on whther the object is a value type or a reference type), resets its fields to zero, calls their constructors(or chain of constructors, formed in succession), and at the end returns a reference to the newly created object
+
+### Process of Creating a new Object by the Constructor
+
+- First, **memory is allocated** for the object
+- Next, its fields (if any) are initialized with the default values for their respective types
+- If the creation of the new object is successfully completed, the **constructor** returns a reference to it, which is assigned to a variable from the object's Class type.
+
+### Declaring a Constructor
+
+        [<modifiers>] <class_name>([<parameters_list>])
+
+Constructors are similar to methods, but they do not have a return type.
+
+In C#, it is mandatory that the name of every constructor matches the name of the class in which it resides - <"class_name">. It is not possible to declare a method whose name matches the name of the class.
+
+### Parameter List
+
+Similar to the methods, if we need extra data to create an object, the constructor gets it through a parameter list - <"parameters_list">
+Of course, after the declaration of the constructor its body is following, which is like every method body in C#, but generally contains mostly initialization logic, i.e. setting the initial values of the fields of the class.
+
+### Visibility of the Constructors
+
+Similar to the methods and the fields, the constructors can be declared with levels of visiblity: public, protected, internal, protected and private.
+
+### Order of Initialization of the Fields
+
+- First memory is allocated for the respective field in the heap and this memory is initialized with the default value of the field type.
+- After the initialization of the fields with the default value for the respective type, the second step in CLR (Common Language Runtime) is to assign a value to the field if such has been set when declaring the field.
+
+Only after these two steps of initializing the fields of the class (default value initialization and possibly the value set by the programmer during the declaration of the field) the constructor of the class is called. At this time, the fields get the values, which are set in the body of the constructor.
+
+### Declaring a Constructor with Parameters
+
+Very often, during the declaration of the constructor, we don't know what values the various fields will take. To tackle this problem, the required information, similar to the methods with paramteres, the fields are assigned the values, given to them in the body of the constructor e.g
+
+```C#
+public Dog(string dogName,int dogAge,double dogLength)
+{
+        name = dogName;
+        age = dogAge;
+        length = dogLength;
+        collar = new Collar();
+}
+```
+
+Similarly, the call of a constructor with parameters is done in the same way as the call of method with parameters - the required values are supplied as a list, the elements are separated with commas.
+
+```C#
+static void Main()
+{
+Dog myDog = new Dog("Moby", 2, 0.4); // Passing parameters
+Console.WriteLine("My dog " + myDog.name +
+" is " + myDog.age + " year(s) old. " +
+" and it has length: " + myDog.length + " m.");
+}
+
+```
+
+There is no limitation for the number of constructors of a class in C#. The only requirement is that they differ in their signature

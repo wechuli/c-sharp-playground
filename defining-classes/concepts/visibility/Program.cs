@@ -13,7 +13,7 @@ namespace visibility
     public class Dog
     {
         private string name = "doggy";
-        public string name
+        public string Name
         {
             get { return this.name; }
         }

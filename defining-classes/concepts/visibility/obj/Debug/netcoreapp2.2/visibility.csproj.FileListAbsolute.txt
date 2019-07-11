@@ -1,0 +1,4 @@
+E:\repos\c-sharp-playground\defining-classes\concepts\visibility\obj\Debug\netcoreapp2.2\visibility.csprojAssemblyReference.cache
+E:\repos\c-sharp-playground\defining-classes\concepts\visibility\obj\Debug\netcoreapp2.2\visibility.csproj.CoreCompileInputs.cache
+E:\repos\c-sharp-playground\defining-classes\concepts\visibility\obj\Debug\netcoreapp2.2\visibility.AssemblyInfoInputs.cache
+E:\repos\c-sharp-playground\defining-classes\concepts\visibility\obj\Debug\netcoreapp2.2\visibility.AssemblyInfo.cs
