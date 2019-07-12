@@ -374,3 +374,67 @@ Console.WriteLine("My dog " + myDog.name +
 ```
 
 There is no limitation for the number of constructors of a class in C#. The only requirement is that they differ in their signature
+
+### Scope of Parameters of the Constructor
+
+The variables declared in the parameter list of one constructor have a scope throughout the body of the constructor. Very often, when we declare a constructor with parameters it is possible to name the variables from the parameter list with the same names as the names of the fields, which are going to be initialized.
+
+```C#
+public Dog(string name, int age, double length)
+{
+name = name;
+age = age;
+length = length;
+collar = new Collar();
+}
+```
+
+to avoid this problem we should access the field, to which we want to assign a value, using the keyword this:
+e.g.
+
+```C#
+public Dog(string name, int age, double length)
+{
+this.name = name;
+this.age = age;
+this.length = length;
+this.collar = new Collar();
+}
+```
+
+### Constructor with Variable Number of Arguments
+
+Constructors can also be declared with a parameter for a variable number of arguments.
+Rules:-
+
+- When we declare a constructor with variable number of arguments, we must use the reserved word params, and then insert the type of the parameters, followed by square parentheses. Finally the name of the array follows, in which array the arguments used for the calling of the method are stored. For example for whole number arguments we can use params int[] numbers.
+- It is allowed for the constructor with a variable number of arguments to have other parameters too in the parameter list.
+- The parameter for the variable number of arguments must be the last in the parameter list of the constructor.
+
+e.g
+
+```C#
+public Lecture(string subject, params string[] studentsNames)
+{
+// … Initialization of the instance variables …
+}
+```
+
+### Constructor Overloading
+
+We can declare constructors with parameters. This gives us a possiblity of declaring constructors with different signatures(number and order of the parameters) with the purpose of providing convenience to those who will create objects from our class. Creating constructors with different signatures is called constructor overloading.
+
+### Reusing Constructors
+
+Dpending on the needs for creating objects of our class, we can declare different variants of the constructors.
+In C#, a mechanism exists through which one constructor can call another one declared in the same class. This is done again with the keyword **this**, but used in another syntax structure in declaring the constructors:
+
+                [<modifiers>] <class_name>([<parameters_list_1>]): this([<parameters_list_2>])
+
+### Default Constructor
+
+As it often happens, when a class is without a single constructor, this issue is resolved by C#. When we do not declare any constructors, the compiler will create one for us and this one will be used to create objects of our class type. This constructor is calles **default implicit constructor** and it will not have any parameters and will be empty(i.e. it will not do anything in addition to the default zeroing of the object fields)
+
+If we declare at least one constructor in a given class, then the compiler will not create a default constructor. Although the default constructor and the one without parameters are similar in signature, they are completely different.
+
+The difference is that the default implicit constructor is created by the compiler, if we do not declare any constructor in our class, and the constructor without parameters is declared by us. Another difference is that the default constructor will always have access level **protected** or **public**, depending on the access modifier of the class while the level of access of the constructor without parameters all depends on us - we define it.
