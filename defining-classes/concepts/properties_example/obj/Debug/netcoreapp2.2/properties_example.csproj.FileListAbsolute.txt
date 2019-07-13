@@ -1,0 +1,4 @@
+F:\repos\c-sharp-playground\defining-classes\concepts\properties_example\obj\Debug\netcoreapp2.2\properties_example.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\defining-classes\concepts\properties_example\obj\Debug\netcoreapp2.2\properties_example.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\defining-classes\concepts\properties_example\obj\Debug\netcoreapp2.2\properties_example.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\defining-classes\concepts\properties_example\obj\Debug\netcoreapp2.2\properties_example.AssemblyInfo.cs

@@ -438,3 +438,181 @@ As it often happens, when a class is without a single constructor, this issue is
 If we declare at least one constructor in a given class, then the compiler will not create a default constructor. Although the default constructor and the one without parameters are similar in signature, they are completely different.
 
 The difference is that the default implicit constructor is created by the compiler, if we do not declare any constructor in our class, and the constructor without parameters is declared by us. Another difference is that the default constructor will always have access level **protected** or **public**, depending on the access modifier of the class while the level of access of the constructor without parameters all depends on us - we define it.
+
+## Properties
+
+In the world of object-oriented programming, there is an element of the classes called property, which is somewhere between a field and a method and serves to better protect the stste in the class. The creation of a property in programming is done by declaring two methods - one for access(reading) and one for modifying(setting) the value of the respective property.
+
+The main objective of the properties is to ensure the encapsulation of the state of the class in which they are declared i.e. to protect the class from falling into invalid state.Encapsulation is hiding of the physical representation of data in one class so that if we subsequenctly change this presentation, it will not reflect on other classes, which use this class.
+
+Properties allow further control over the data in the class and they can check whether the assigned values are correct according to some criteria.
+
+### Physical Presentation of the Properties in a Class
+
+The information about the properties of the class is saved in a field of the class, which has the most rigorous level of visiblity - **private**
+
+### Declaring Properties
+
+To declare a property in C#, we have to declare access methods(for reading and changin) of the respective property and to decide how we will store the information related to the property in the class.
+
+Before we declare the methods, however, we have to declare the property of the class. Formal declaration of properties appears in the following way:
+
+              [<modifiers>] <property_type> <property_name>
+
+The type of the property <'property_type'> specifies the type of the values of the property. It may be either a primitive type (e.g. int), or a reference type (e.g. array).
+Respectively, <'property_name'> is the name of the property
+e.g
+
+```C#
+// MyValue property
+public int MyValue { get; set; }
+// Color property
+public string Color { get; set; }
+// X-coordinate property
+public double X { get; set; }
+```
+
+#### Getters
+
+        get { <accessor_body> }
+
+The content of the block surrounded by the braces (<'accessor_body'>) is similar to the contents of any method. The actions, which should be performed to return the result of the method, are declared in it.
+
+The method of reading the value of a property must end with a return or throw operation. The type of the value, which is returned as a result of this method, has to be the same as <'property_type'> described in the property declaration.
+
+#### Setters
+
+Like the method of reading the property’s value we can also declare the method of changing (modifying) the value of a property (in the literature known as setter). It is declared in the body of a property with void return value and the assigned value is accessible through an implicit parameter value.
+The declaration is made in the body of the property through the following syntax:
+
+        set { <accessor_body> }
+
+The contents of the block surrounded by arrow brackets – <'accessor_body'> are similar to the content of any method. It declares the actions that must be performed to change the value of the property. The method uses a hidden parameter called value, which is available in C# by default and contains the new value of the property. The type of the parameter is the same as the type of the property.
+
+To protect itself from invalid data, a class must verify the input values for all properties and constructors submitted to the setter methods, as well as all methods, which can change a field of a class. This programming practice to protect classes from invalid data and invalid internal state is widely used and is a part of the 'defensive programming' concept.
+
+#### Automatic Properties in C
+
+In C#, we could define properties without explicitly defining the underlying field behind them. This is called automatic properties.
+
+```C#
+using System;
+class Point
+{
+public double X { get; set; }
+public double Y { get; set; }
+public Point(int x, int y)
+{
+this.X = x;
+this.Y = y;
+}
+}
+class PointTest
+{
+static void Main()
+{
+Point myPoint = new Point(2, 3);
+Console.WriteLine("The X coordinate is: " + myPoint.X);
+Console.WriteLine("The Y coordinate is: " + myPoint.Y);
+}
+}
+```
+
+The above example declares a class Point with two automatic properties: X and Y. These properties do not have explicitly defined underlying fields and the compiler defines them during the compilation. It looks like the get and set methods are empty but in fact the compiler defines an underlying field and fills the body of the get and set accessors with some code to read / write the automatically defined underlying field.
+Use automatic properties for simple classes where you want to write less code but have in mind that when you use automatic properties your control over the assigned values is limited. You might have difficulties to add checks for invalid data
+
+#### Types of Properties
+
+Depending on their definition, we can classify the properties as follows
+
+1. **Read-only** i.e. these properties have only a **get** method
+2. **Write-only** i.e these properties only have a **set** method, but no method for reading the value of the property
+3. And the most common case is **read-write**, where the property has methods both for reading and for changing the value.
+
+## Static Classes and Static Members
+
+We call an element static when it is declared with the modifier _static_. In C#, we can declare fields, methods, properties, constructors and classes as static.
+
+### What is a Static Member
+
+Formally speaking, a static member of the class is every field, property, method or other member, which has a static modifier in its declaration. That means that fields, methods and properties, marked as static, belong to the particular class rather than to any particular object of the given class.
+
+Therefore, when we mark a field, method or property as static, we can use them without creating any object of the given class. All we need is to have access(visibility) to the class so that we can call the object's static methods or its static fields and properties.
+
+On the other hand, if we have created objects of the given class then its static fields and properties will be shared and there will be only one copy of the static field or property which will be shared among all objects of the given class.
+
+We say that the static fields are class associated, rather than associated with any object from the particular class. That means that allobjects, created by the description of a class share the static fields of the class
+
+#### Declaration of Static Fields
+
+The static fields are declared the same way as the class fields. If there is access modifier, the keyword **static** should be added after it
+
+        [<access_modifier>] static <field_type> <field_name>
+
+```C#
+public class Dog
+{
+// Static (class) variable
+static int dogCount;
+// Instance variables
+private string name;
+private int age;
+}
+```
+
+#### Modification of the Static Field Values
+
+As we said before, the static variables are shared between all objects of the class and do not belong to any object of the particular class. That way any object can access and modify the static field values and in the same time other objects can “see” the modified values.
+
+### Constants
+
+in C# special fields of a class called constants can be created. Once declared and initialized constants always have the same value for all objects of a particular type.
+
+In C# constants are of two types:
+
+1. Constants the values of which are extracted during the compilation of the program (compile-time constants).
+2. Constants the values of which are extracted during the execution of the program (run-time constants).
+
+#### Compile-Time Constants(sonst)
+
+Constants, which are calculated at compile time (compile-time constants), are declared as follows, using modifier const:
+[<access_modifiers>] const <'type'> <'name'>;
+
+Constants, which are declared with special word const, are static fields. Nevertheless, the use of modifier static is not required (nor allowed by the compiler) in their declaration. Although the constants declared with a modifier const are static fields, they must not and cannot use the static modifier in their declaration. The value we assign to a particular constant can be an expression, which has to be calculated by the compiler at compile time
+
+If we do not give a value to a constant at its declaration, but later, we will get a compilation error. Constants declared with modifier const must be initialized at the moment of their declaration.
+
+#### Assigning Constant Values at Runtime
+
+C# constants declared with the modifier const, can only be one o the following types:
+
+1. Primitive types: sbyte, byte, short, ushort, int, uint, long, ulong, char, float, double, decimal, bool.
+2. Enumerated types (discussed in section "Enumerations" at the end of this chapter).
+3. Reference types (mostly the type string).
+
+Constants declared with modifier const must be of primitive, enumeration or reference type, and if they are of reference type, this type must be either a string or the value, that we assign to the constant, must be null.
+
+#### Runtime Constants(readonly)
+
+When we want to declare reference type constants , which cannot be calculated during compilation of the program, we must use a combinatetion of **static readonly** modifiers instead of const modifier
+
+        [<access_modifiers>] static readonly <reference-type> <name>;
+
+Accordingly, <'reference-type'> is a type the value of which cannot be calculated at compilation time.
+
+e.g
+
+```C#
+public static readonly Color Black = new Color(0, 0, 0);
+public static readonly Color White = new Color(255, 255, 255);
+```
+
+The constants names in C# follow the PascalCase rule. If the constant is composed of several words, each new word after the first one begins with a capital letter
+
+The examples made it clear that the difference between const and static readonly fields is in the moment of their value assignments. The compile-time constants (const) must be initialized at the moment of declaration, while the run-time constants (static readonly) can be initialized at a later stage,
+
+### Using Constants
+
+Constants are used in programming to avoid repetition of numbers, strings or other common values (literals) in the program and to enable them to change easily. T
+
+## Static Methods

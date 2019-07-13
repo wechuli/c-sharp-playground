@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\defining-classes\concepts\assertions_with_properties\bin\Debug\netcoreapp2.2\assertions_with_properties.deps.json
+F:\repos\c-sharp-playground\defining-classes\concepts\assertions_with_properties\bin\Debug\netcoreapp2.2\assertions_with_properties.runtimeconfig.json
+F:\repos\c-sharp-playground\defining-classes\concepts\assertions_with_properties\bin\Debug\netcoreapp2.2\assertions_with_properties.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\defining-classes\concepts\assertions_with_properties\bin\Debug\netcoreapp2.2\assertions_with_properties.dll
+F:\repos\c-sharp-playground\defining-classes\concepts\assertions_with_properties\bin\Debug\netcoreapp2.2\assertions_with_properties.pdb
+F:\repos\c-sharp-playground\defining-classes\concepts\assertions_with_properties\obj\Debug\netcoreapp2.2\assertions_with_properties.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\defining-classes\concepts\assertions_with_properties\obj\Debug\netcoreapp2.2\assertions_with_properties.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\defining-classes\concepts\assertions_with_properties\obj\Debug\netcoreapp2.2\assertions_with_properties.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\defining-classes\concepts\assertions_with_properties\obj\Debug\netcoreapp2.2\assertions_with_properties.AssemblyInfo.cs
+F:\repos\c-sharp-playground\defining-classes\concepts\assertions_with_properties\obj\Debug\netcoreapp2.2\assertions_with_properties.dll
+F:\repos\c-sharp-playground\defining-classes\concepts\assertions_with_properties\obj\Debug\netcoreapp2.2\assertions_with_properties.pdb
