@@ -25,7 +25,7 @@ namespace properties_example
             this.x = x;
             this.y = y;
         }
-        public double x
+        public double X
         {
             get
             {

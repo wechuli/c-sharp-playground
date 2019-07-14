@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\defining-classes\concepts\access_static_non_static\obj\Debug\netcoreapp2.2\access_static_non_static.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\defining-classes\concepts\access_static_non_static\obj\Debug\netcoreapp2.2\access_static_non_static.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\defining-classes\concepts\access_static_non_static\obj\Debug\netcoreapp2.2\access_static_non_static.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\defining-classes\concepts\access_static_non_static\obj\Debug\netcoreapp2.2\access_static_non_static.AssemblyInfo.cs
+F:\repos\c-sharp-playground\defining-classes\concepts\access_static_non_static\bin\Debug\netcoreapp2.2\access_static_non_static.deps.json
+F:\repos\c-sharp-playground\defining-classes\concepts\access_static_non_static\bin\Debug\netcoreapp2.2\access_static_non_static.runtimeconfig.json
+F:\repos\c-sharp-playground\defining-classes\concepts\access_static_non_static\bin\Debug\netcoreapp2.2\access_static_non_static.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\defining-classes\concepts\access_static_non_static\bin\Debug\netcoreapp2.2\access_static_non_static.dll
+F:\repos\c-sharp-playground\defining-classes\concepts\access_static_non_static\bin\Debug\netcoreapp2.2\access_static_non_static.pdb
+F:\repos\c-sharp-playground\defining-classes\concepts\access_static_non_static\obj\Debug\netcoreapp2.2\access_static_non_static.dll
+F:\repos\c-sharp-playground\defining-classes\concepts\access_static_non_static\obj\Debug\netcoreapp2.2\access_static_non_static.pdb

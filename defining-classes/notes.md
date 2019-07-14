@@ -616,3 +616,42 @@ The examples made it clear that the difference between const and static readonly
 Constants are used in programming to avoid repetition of numbers, strings or other common values (literals) in the program and to enable them to change easily. T
 
 ## Static Methods
+
+Like static fields, we declare a method as static if we want it to be associated only with the class and not with a particular class object.
+
+        [<access_modifier>] static <return_type> <method_name>()
+
+Like static fields, static methods can be accessed with the 'dot' notation(the dot operator) applied to the name of the class and the class name can be skipped oof the calling is performed by the same class, in which the static method is declared.
+
+In most cases, static methods are used to access static fields in the class they have been defined.
+
+- Non-static methods can access non-static fields anfd other non-static methods of the class.
+- We can acess static fields and static methods of the class from non-static methods. This is possible because static methods and variables are bound by class rather than a specific method and the static elements can be accessed from any object of the class, even of ecternal classes (as long as they are visible to them)
+- We can call a static method or static field of the class from another static method without any problems.
+- We should know that from static methods, we can neither access non-static fields, nor call non-static methods. This is because static methods are bound to the class and do not "know" any object of the class. Therefore, the keyword **this** cannot be used in static methods - it is bound to a specific instance of the class. Wehn we try to access non-static elements of the class(fields or methods) from static methods, we will always get a compilation error. We must initialize an instance of the class in a static method before using a non-static(instance) method
+
+### Static Properties of the Class
+
+These posses the same characteristics as the properties related to the particular object of a particular class but with the difference that the static properties refer to the class(not its objects)
+
+All we need to do to turn a simple property into a static one is to add the static keyword in its declaration
+
+        [<modifiers>] static <property_type> <property_name>
+       {
+        // … Property's accessors methods go here
+        }
+
+Like the static fields and methods, static properties can be accessed by "dot" notation, applied only to the name of the class in which they are declared. Static properties can be accessed only through dot notation applied to the name of the class in which they are declared.
+
+## Static Classes
+
+We can also declare classes as static. Similar to static members, a class is static, when the keyword **static** is used in its declaration. Whena class is declared as static, it is an indication that this class contains only static members(i.e. static fields, methods, properties) and cannot be instantiated.
+
+The use of static classes is rare and most often associated with the use of static methods and constants, which do not belong to any particular object
+
+### Static Constructors
+Classes may also have static constructors. Static constructors can be declared both in static and in non-static classes. They are executed only once when the first of the following two events occurs for the first time:
+1. An object of class is created
+2. A static element of the class is accessed(field,method,property)
+
+Most often static constructors are used for initialization of static fields.

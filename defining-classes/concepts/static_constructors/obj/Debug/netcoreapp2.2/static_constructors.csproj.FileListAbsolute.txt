@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\defining-classes\concepts\static_constructors\obj\Debug\netcoreapp2.2\static_constructors.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\defining-classes\concepts\static_constructors\obj\Debug\netcoreapp2.2\static_constructors.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\defining-classes\concepts\static_constructors\obj\Debug\netcoreapp2.2\static_constructors.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\defining-classes\concepts\static_constructors\obj\Debug\netcoreapp2.2\static_constructors.AssemblyInfo.cs
+F:\repos\c-sharp-playground\defining-classes\concepts\static_constructors\bin\Debug\netcoreapp2.2\static_constructors.deps.json
+F:\repos\c-sharp-playground\defining-classes\concepts\static_constructors\bin\Debug\netcoreapp2.2\static_constructors.runtimeconfig.json
+F:\repos\c-sharp-playground\defining-classes\concepts\static_constructors\bin\Debug\netcoreapp2.2\static_constructors.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\defining-classes\concepts\static_constructors\bin\Debug\netcoreapp2.2\static_constructors.dll
+F:\repos\c-sharp-playground\defining-classes\concepts\static_constructors\bin\Debug\netcoreapp2.2\static_constructors.pdb
+F:\repos\c-sharp-playground\defining-classes\concepts\static_constructors\obj\Debug\netcoreapp2.2\static_constructors.dll
+F:\repos\c-sharp-playground\defining-classes\concepts\static_constructors\obj\Debug\netcoreapp2.2\static_constructors.pdb
