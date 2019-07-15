@@ -650,8 +650,64 @@ We can also declare classes as static. Similar to static members, a class is sta
 The use of static classes is rare and most often associated with the use of static methods and constants, which do not belong to any particular object
 
 ### Static Constructors
+
 Classes may also have static constructors. Static constructors can be declared both in static and in non-static classes. They are executed only once when the first of the following two events occurs for the first time:
+
 1. An object of class is created
 2. A static element of the class is accessed(field,method,property)
 
 Most often static constructors are used for initialization of static fields.
+
+## Structures
+
+In C# and .NET Framework, there are two implementations of the concept of "class" from object-oriented programming: classes and structures. Classes are defined through the keyword **class** while the structures are defined through the keyword **struct**. The main difference between a structure and a class is that
+
+- Classes are reference types(references to some address in the heap which holds their members)
+- Structures(structs) are value types(they directly hold their members in the program execution stack). Being value types means they cannot be null and they are passed by value when taken as a method parameters. When passed as parameters to a method their fields are copied (just like int parameters) and when changed inside the method, the change affects only the copy, not the original
+
+## Class or Structure ?
+
+General guidelines to decide if you want a class or a structure:
+
+- **Use structures** to hold simple data structures consisting of few fields that come together. Examples are coorfinates, sizes, locations,colors etc. Structures are not supposed to have functionality inside(no methods except simple ones like ToString() and comparators). Use structures for small data structures consisting of set fields that should be passed by value.
+
+- **Use classes** for complex scenarios where you combine data and programming logic into a class. If you have logic, use a class. If you have more than few simple fields, use a class. If you need to pass variables by reference, use a class. If you need to assign a null value, prefer using a class
+
+## Enumerations
+
+**Enumeration** is a structure, which resembles a class but differs from it in that in the class body we can declare only constants. Enumerations can take values only from constants listed in the type. An enumerated variable can have as a value one of the listed in the type constants but cannot have value null.
+
+Formally, enumerations can be declared using the reserved word **enum** instead of **class**
+
+        [<modifiers>] enum <enum_name>
+
+        {
+        constant1 [, constant2 [, [, … [, constantN]]
+        }
+
+Under <'modifiers'> we understand the access modifiers public, internal and private. The identifier **<'enum_name'>** follows the rules for class names in C#.
+
+The **enum** keyword is used to declare an enumeration, a distinct type that consists of a set of named constants called the enumerator list. Usually it is best to define an enum directly within a namespace so that all classes in the namespace can access it with equal convenience. However, an enum can also be nested within a class or struct.
+
+By default, the first enumerator has the value 0, and the value of each successive enumerator is increased by 1.Every enumeration type has an underlying type, which can be any integral numeric type. The char type cannot be an underlying type of an enum. The default underlying type of enumeration elements is int. To declare an enum of another integral type, such as byte, use a colon after the identifier followed by the type,as shown in the following example.
+
+```C#
+enum Day:byte
+{
+Sat=1,Sun,Mon,Tue,Wed,Thu,Fri
+};
+```
+
+Note that each of the constants listed in the enumeration is of type this enumaration
+The values, associated with constants of a particular enumerated type by default are the indices in the list of constants of this type, i.e numbers from 0 to the number of constants in the type less 1.
+
+Each constant in one enumeration is actually a textual representation of an integer. By default this number is the constant’s index in the list of constants of a particular enumeration type.
+
+Despite the integer nature of constants in a particular enumeration, when we try to print a particular constant, its textual representation at the time of the constant’s declaration will be printed:
+
+It is possible to change the **numerical value of constants in an enumeration**. This is done when we assign the values we prefer to each of the constants at the time of declaration.
+
+        [<modifiers>] enum <enum_name>
+        {
+                constant1[=value1] [, constant2[=value2] [, … ]]
+        }
