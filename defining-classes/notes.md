@@ -711,3 +711,65 @@ It is possible to change the **numerical value of constants in an enumeration**.
         {
                 constant1[=value1] [, constant2[=value2] [, … ]]
         }
+
+### Use of Enumerations
+
+The main purpose of the enumerations is to replace the numeric values, which we would use, if there were no enumeration types. In this way the code becomes simpler and easier to read.
+
+Another very important application of the enumerations is the pressure exercised by the compiler to use constants from the enumerations and not just numbers. Thus we minimize future errors in the code.For example, if we use an int variable instead of a variable from enumerations and a set of constants for the valid values, nothing prevents us from assigning the variable any value, e.g. -6723. Constants in the enumeration type can be used in **switch-case** structures. They can be submitted as values of the operator **switch** and accordingly - as operands of the operator **case**
+Whenever possible, use enumerations instead of set of constants declared in a class. When we modify the list of constants in an existing enumeration, we should be careful not to break the logic of the code that already exists and uses the constants, declared so far.
+
+## Inner Classes (Nested Classes)
+
+In C# an inner (nested) class is a class that is declared inside the body of another class. Accordingly, the class that encloses the inner class is called an outer class.
+
+The main reason to declare one class inside another are:
+
+- To better organize the code when working with objects in the real world, among which have a special relationship and one cannot exist without the other
+- To hide a class in another class, so that the inner class cannot be used outside the class wrapped it.
+
+In general, inner classes are rarely used because they complicate the structure of the code and increase the nested levels.
+
+The inner classes are declared in the same way as normal classes, but are located within another class. Allowed modifiers in the declaration of the class are:
+
+1. **public** - an inner class is accessible from any assembly
+2. **internal** - an inner class is available in the current assembly, in which is located the outer class
+3. **private** - access is restricted only to the class holding the inner class
+4. **static** - an inner class contains only static members.
+
+The keyword **this** to an inner class has relation only to the internal class, but not to the outside. Fields of the outside class cannot be accessed using the reference **this**.If necessary fields of the outer class can be accessed by the internal, it needs in creating the internal class to submit a reference to an outer class.
+Static members (fields, methods, properties) of the outer class are accessible from the inner class regardless of their level of access.
+
+Non-static inner class methods have access to their own body **this** as well as the sinstance of the outside class **parent** (through syntax **this.parent**, if the parent reference is added by the developer)
+
+#### Usage of Inner Classes
+
+When the connection between the two classes is a composition, the class, which consequently is a part of another class, is convenient to be declared as an inner class.
+
+Consider an example. Let's have a class for car - **Car**. Each car has an engine and doors. Unlike the car's door, however, the engine makes no sense regarded as being outside the car, because without it, the car cannot run, i.e. we have a composition. Therefore, if you declare the class for a car: Car would be appropriate to create an inner class Engine, which will reflect the appropriate concept for the car engine:
+
+```C#
+class Car
+{
+Door FrontRightDoor;
+Door FrontLeftDoor;
+Door RearRightDoor;
+Door RearLeftDoor;
+Engine engine;
+public Car()
+{
+engine = new Engine();
+engine.horsePower = 2000;
+}
+public class Engine
+{
+        public int horsePower;
+}
+}
+```
+
+### Declaring Enumeration in a Class
+
+It should be noted that sometimes enumeration should and can be declared within a class in order for better encapsultaiotn of the class.
+
+## Generics

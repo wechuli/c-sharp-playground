@@ -1,0 +1,11 @@
+E:\repos\c-sharp-playground\defining-classes\concepts\inner_classes\obj\Debug\netcoreapp2.2\inner_classes.csprojAssemblyReference.cache
+E:\repos\c-sharp-playground\defining-classes\concepts\inner_classes\obj\Debug\netcoreapp2.2\inner_classes.csproj.CoreCompileInputs.cache
+E:\repos\c-sharp-playground\defining-classes\concepts\inner_classes\obj\Debug\netcoreapp2.2\inner_classes.AssemblyInfoInputs.cache
+E:\repos\c-sharp-playground\defining-classes\concepts\inner_classes\obj\Debug\netcoreapp2.2\inner_classes.AssemblyInfo.cs
+E:\repos\c-sharp-playground\defining-classes\concepts\inner_classes\bin\Debug\netcoreapp2.2\inner_classes.deps.json
+E:\repos\c-sharp-playground\defining-classes\concepts\inner_classes\bin\Debug\netcoreapp2.2\inner_classes.runtimeconfig.json
+E:\repos\c-sharp-playground\defining-classes\concepts\inner_classes\bin\Debug\netcoreapp2.2\inner_classes.runtimeconfig.dev.json
+E:\repos\c-sharp-playground\defining-classes\concepts\inner_classes\bin\Debug\netcoreapp2.2\inner_classes.dll
+E:\repos\c-sharp-playground\defining-classes\concepts\inner_classes\bin\Debug\netcoreapp2.2\inner_classes.pdb
+E:\repos\c-sharp-playground\defining-classes\concepts\inner_classes\obj\Debug\netcoreapp2.2\inner_classes.dll
+E:\repos\c-sharp-playground\defining-classes\concepts\inner_classes\obj\Debug\netcoreapp2.2\inner_classes.pdb
