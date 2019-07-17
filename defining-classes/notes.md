@@ -773,3 +773,113 @@ public class Engine
 It should be noted that sometimes enumeration should and can be declared within a class in order for better encapsultaiotn of the class.
 
 ## Generics
+
+As we know if a method needs additional information to operate properly, this information is passed to the method using parameters. During the execution of the program, when calling this particular method, we pass arguments to the method, which are assigned to its parameters and then used in the method's body.
+
+Like the methods, when we know that the functionality(actions) encapsulated into a class, can be applied not only to objects of one, but to may (heterogenous) types, and these types are not known at the time of declaring the class, we can use a functionilty of the C# language called **generics**(generic types).
+
+It allows us to declare parameters of thic class by indicating an unknown type that the class will eventually work with. Then, when we instantiate our generic class, we replace the unknown with a particular type. Accordingly, the newly created object will only work with objects of this type that we have assigned at its initialization. The specific type can be any data type that the compiler recognizes, including class, structure, enumeration or another generic class.
+
+Typifying a class (creating a generic class) means to add to the declaration of a class parameter(replacement) of unknown type, which the class will use during its operation. Subsequently, when the class is instantiated, this parameter is replaced with the name of some specific type.
+
+Generics allow you to define the specification of the data type of programming elements in a class or a method, unitl it is actually used in the program. In other words, generics alow you to write a class or method that can work with any data type.
+
+You write the specification for the class or method, with substitute parameters for data types. When the compiler encounters a constructor for the class or a function call for the method, it generates code to handle the specific data type.
+
+Formally, the parameterizing of a class is done by adding \<**T**\> to the declaration of the class, after its name, where **T** is the substitute(parameter) of the type, which will be used later:
+
+        [<modifiers>] class <class_name><T>
+        {
+
+        }
+
+A particular class may have more than one substitute(to be parameterized by more than one type), depending on its needs.
+
+        [<modifiers>] class <class_name><T1 [, T2, [… [, Tn]]]>
+        {
+
+        }
+
+If the class needs **several different unknown types**, these types should be listed by a comma between the characters '<' and '>' in the declaration of the class, as each of the substitutes used must be have a different identifier(e.g a different letter) - in the definition they are indicated T1,T2,...,Tn.
+
+### Specifying Generic Classes
+
+        <class_name><concrete_type><variable_name> =
+        new <class_name><concrete_type>();
+
+Again, similar to T substitution in the declaration of our class, the characters '<' and '>' surrounding a particular class concrete_type, are required.
+
+Example
+
+```C#
+AnimalShelter<Dog> dogsShelter = new AnimalShelter<Dog>();
+AnimalShelter<Cat> catsShelter = new AnimalShelter<Cat>();
+```
+
+In this way, we ensure that the shelter **dogShelter** will always contain objects of a type **Dog** and the variable **catShelter** will always operate with objects of type **Cat**.
+
+### Using UnKnown Types by Declaring Fields
+
+Once used during the class declaration, the parameters that are used to indicate the unknown types are visible in the whole body of the class, therefore they can be used to declare the field as each other type:
+
+        [<modifiers>] T <field_name>;
+
+Accordingly, wehn we want to initialize a particular field in the constructor of our class, we should do it as usual - creating an array, using substitution of the unknown type - **T**:
+
+```C#
+public AnimalShelter(int placesNumber)
+{
+animalList = new T[placesNumber]; // Initialization
+usedPlaces = 0;
+}
+```
+
+### Using Unknown Types in a Method's Declaration
+
+As an **unknown type** used in the declaration of a generic class is visible from opening to closing brace of the class body, except for field's declaration, it can be used in a method declartion, namely:
+
+        <return_type> MethodWithParamsOfT(T param)
+
+As a result of implementation of the method:
+
+        T MethodWithReturnTypeOfT(<params>)
+
+As we already guessed, using our example, we can adapt the methods Shelter(…) and Release(…), respectively:
+
+- As a method of unknown type parameter **T**:
+
+```C#
+public void Shelter(T newAnimal)
+{
+// Method's body goes here …
+}
+```
+
+- And a method, which returns a result of unknown type T:
+
+```C#
+public T Release(int i)
+{
+// Method's body goes here …
+}
+```
+
+As we already know, when we create an object from our class shelter and replace the unknown type with a specific one(e.g. Cat), during the execution of the program, the above methods will have the following form:
+
+- The parameter of method **Shelter** will be of type **Cat**:
+
+```C#
+public void Shelter(Cat newAnimal)
+{
+// Method's body goes here …
+}
+```
+
+- The method **Release** will return a result of type **Cat**
+
+```C#
+public Cat Release(int i)
+{
+// Method's body goes here …
+}
+```
