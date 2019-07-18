@@ -883,3 +883,170 @@ public Cat Release(int i)
 // Method's body goes here …
 }
 ```
+### Typifying (Generics) - Behind the Scenes
+
+First we declare our generic class **MyClass\<T\>** . Then the compiler translates our code to an intermediate language(MSIL), as translated code contains information that the class is generic i.e. it works with undefined types until now. At runtime, when someone tries to work with our generic class and tries to use it with a specific type, a new description of the class is created, which is identical to the generic clas, with the difference that where T has been used, is now replaced by a specific type. The interesting thing here is that to create this object, the description of the class, which was created in the meantime(specific type class description), will be used. Instantiating of a generic class by given specific types of its parameters is called "specialization of the type" or "extension of generic class"
+
+### Generic Methods
+Like classes, when the type of method's parameters cannot be specified, we can parameterize(typify) the method. Accordingly, the indication of a specific type will happen during the invocation of the method, replacing the unknown type with a specific one, as we did in the classes.
+
+Typifying of a method is done, when after the name and before the opening bracket of the method, we add \<**K**\>, where K is the replacement of the type that will be used later:
+
+        <return_type><methods_name><K>(<params>)
+
+Accordingly, we can use unknown type **K** for parameters in the parameter's list of method \<params\>, whose type is unknown and also for return value or to declare variables of type substitute K in the body of the method
+
+e.g
+```C#
+public void Swap<K>(ref K a, ref K b)
+{
+K oldA = a;
+a = b;
+b = oldA;
+}
+```
+
+We notice that in the list of parameters we have used the keyword **ref**. This concerns the specification of the method - namely, to exchange the values of two references. By using the keyword **ref**, the method will use the same reference that was given by the calling method. This way, all changes on this variable made by our method, will remain after the method exits.
+
+We should know that by calling a generic method, we can miss the explicit declaration of a specific type(in our example \<int\>) because the compiler will automatically detect the type of the given parameters
+
+We should know that the compiler will be able to recognize what is the specific type, only if this type is involved in the parameter’s list. The compiler cannot recognize what is the specific type of a generic method only by the type its return value or if it does not have parameters
+
+#### Features by Declaration of Generic Methods in Generic Classes
+
+```C#
+public class AnimalShelter<T>
+{
+// … The rest of the code …
+public void Shelter(T newAnimal)
+{
+// Method body here
+}
+public T Release(int i)
+{
+// Method body here
+}
+}
+```
+
+If we try to reuse the variable, which is used to mark unknown type of the generic class, for example as T, in the declaration of the generic method, then when we try to compile the class we will ge a warning **CS0693**. This is happening because the scope of the action of the unknown type T, defines in the declaration of the method, overlaps the scope of action of the unknown type T, in class declaration
+
+```C#
+public class CommonOperations<T>
+{
+// CS0693
+public void Swap<T>(ref T a, ref T b)
+{
+        T oldA = a;
+a = b;
+b = oldA;
+}
+}
+```
+
+So if we want our code to be flexible, and our generic method to be safely called with a specific type, different from that in the generic class by instantiating it, we just have to declare the replacement of the unknown type in the declaration of the generic method to be different than the parameter for the unknown type in the class declaration
+
+```C#
+public class CommonOperations<T>
+{
+// No warning
+public void Swap<K>(ref K a, ref K b)
+{
+K oldA = a;
+a = b;
+b = oldA;
+}
+}
+
+```
+
+Thus, always make sure that there will be no overlapping of substitutes of the unknown types of method and class.
+
+#### Using a Keyword 'default' in a Generic Source Code
+
+Example 
+```C#
+public class AnimalShelter<T>
+{
+private const int DefaultPlacesCount = 20;
+private T[] animalList;
+private int usedPlaces;
+public AnimalShelter() : this(DefaultPlacesCount)
+{
+}
+public AnimalShelter(int placesCount)
+{
+this.animalList = new T[placesCount];
+this.usedPlaces = 0;
+}
+public void Shelter(T newAnimal)
+{
+if (this.usedPlaces >= this.animalList.Length)
+{
+throw new InvalidOperationException("Shelter is full.");
+}
+this.animalList[this.usedPlaces] = newAnimal;
+this.usedPlaces++;
+}
+public T Release(int index)
+{
+if (index < 0 || index >= this.usedPlaces)
+{
+throw new ArgumentOutOfRangeException(
+"Invalid cell index: " + index);
+}
+T releasedAnimal = this.animalList[index];
+for (int i = index; i <this.usedPlaces - 1; i++)
+{
+this.animalList[i] = this.animalList[i + 1];
+}
+this.animalList[this.usedPlaces - 1] = null;
+this.usedPlaces--;
+return releasedAnimal;
+}
+}
+```
+
+Everything looks to work properly, unitl we try to compile the class. Then we get the following error:
+
+        Cannot convert null to type parameter 'T' because it could be a non-nullable value type. Consider using 'default(T)' instead.
+
+The error is inside the method **Release()** and it is related to the recording a **null** value in the last released(rightmost) cell in the shelter. The problem is that we a re trying to use the default value for a reference type, but we are not sure whether this type is a reference type or a primitive. Therefore the compiler displays the errors above. If the type **AnimalShelter** is instantiated by a structure and not by a class, then the null value is not valid.
+
+To handle this problem, in our code, we have to use the construct **default(T)** instead of **null**, which returns the default value for the particular type that will be used instead og **T**. As we know, the default value for reference type is **null**, and for numeric types - zero. 
+
+```C#
+// this.animalList[this.usedPlaces - 1] = null;
+this.animalList[this.usedPlaces - 1] = default(T);
+
+```
+
+#### Advantages and Disadvantages of Generics
+Generic classes and methods increase the reusability of the code, the security and the performance compared to other non-generic alternatives.
+
+As a general rule, the programmer should strive to create and use generic classes, wehnever possible. The more generic types are used, the higher level of abstraction there is in the program and the source code becomes more flexible and resusable.
+
+However, we should keep in mind, that overuse of generics can lead to over-generalization and the code may become unreadable and difficult to understand by other programmers.
+
+#### Naming the Parameters of the Generic Types
+
+- If there is just one unknown type in the generic, it is common to use the letter T, as a substitute for that unknown type. As an example we can give our class declaration AnimalShelter<T>, which we used until now.
+- To the substitutes should be given the most descriptive names, unless a letter is not a sufficiently descriptive and well-chosen name, this will not improve readability of the source code. For instance, we can modify our example, replacing the letter T, with the more descriptive substitute for Animal:
+
+example
+```C#
+public class AnimalShelter<Animal>
+{
+// … The rest of the code …
+public void Shelter(Animal newAnimal)
+{
+// Method body here
+}
+public Animal Release(int i)
+{
+// Method body here
+}
+}
+```
+
+When we use descriptive names of substitutes instead of a letter, it is better to add T at the beginning of the name, to distinguish it more easily from the class names in our application. In other words, instead of using a substitute Animal in the previous example, we should use TAnimal (T comes from the word "template" which means a parameterized / generic type).
