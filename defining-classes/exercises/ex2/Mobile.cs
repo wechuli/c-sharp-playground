@@ -1,10 +1,12 @@
 using System;
-
+using System.Collections.Generic;
 namespace ex2
 {
     class MobilePhone
     {
 
+
+        private List<Call> callHistory = new List<Call>();
         private static Model nokiaN95 = new Model("Nokia N95");
         private Model model;
         private Manufacturer manufacturer;
@@ -15,6 +17,7 @@ namespace ex2
 
         public MobilePhone(Model model, Manufacturer manufacturer, Owner owner, Battery battery, Screen screen, double price)
         {
+
             this.model = model;
             this.manufacturer = manufacturer;
             this.owner = owner;
@@ -23,9 +26,38 @@ namespace ex2
             this.price = price;
         }
 
+        public List<Call> CallHistory
+        {
+            get
+            {
+                return this.callHistory;
+            }
+        }
+
         public static void DisplayStaticModelInfo()
         {
             Console.WriteLine(nokiaN95.Name);
+        }
+
+        public List<Call> AddCallRecord(Call callRecord)
+        {
+
+            callHistory.Add(callRecord);
+
+            return callHistory;
+        }
+
+        public List<Call> DeleteCallRecord()
+        {
+            callHistory.RemoveAt(0);
+
+            return callHistory;
+        }
+
+        public List<Call> DeleteAllCallRecords()
+        {
+            callHistory.Clear();
+            return callHistory;
         }
 
         public override string ToString()
