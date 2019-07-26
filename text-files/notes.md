@@ -23,3 +23,41 @@ Today's modern web sites cannot do without the so-called streaming, which repres
 - We can say that streams are like pipes that connect two points. From one side we pour data in and from the other data leaks out. The one who pours data is not concerned of how it is transfered, but can be sure that what he has poured will out the same on the other side. Those who use streams do not care how the data reaches them. They know that if someone poured something on the other side, it will reach them. Therefore, we can consider streams as a data transport channel, such as pipes.
 
 ## Basic Operations with Streams
+
+You can do the following operations with streams: creation/opening, reading data, writing data, seeking/positioning, closing/disconnecting
+
+### Creation
+
+To create or open a stream means to connect the stream to a data source, a mechanism for data transfer or another stream. For example, wehn we have a file stream, then we pass the file name and the file mode in which it is to be opened(reading,writing or reading and writing simultanesouly).
+
+### Reading
+
+Reading means extracting data from a stream. Reading is always performed sequentially from the current position of the stream. Reading is a blocking operation. A delay may occur if we try to read from a stream where the other party has not sent any data.
+
+### Writing
+
+Writing means sending data to the stream in a specific way. The writing is performed from the current position of the stream. Writing may be a potentially blocking operation, before the data is sent on its way. For example, if you send bulk data via a network stream, the operation may be delayed while the data is travelling over the network.
+
+### Positioning
+
+Positioning or seeking in the stream means to move the current position of the stream. Moving is done according to the current position, where we can position according to the current position, beginning of the stream or the end of the stream.Moving can be done only in streams that support positioning.
+
+### Closing
+
+To close or disconnect a stream means to complete the work with the stream and release the occupied resources. Closing must take place as soon as possible after the stream has served its purpose, because a resource opened by a user, cannot usually be used by another user(including other programs on the same computer that run parallel to our program)
+
+## Streams in .NET - Basic Classes
+
+In .NET Framework classes for working with streams are located in the namespace **System.IO**.
+We can distinguish two main types of streams - those who work with binary data and those which work with text data.
+At the top of the stream hierarchy stands an abstract input-output stream class. It cannot be instantiated but defines the basic functionality that all the other streams have.
+
+These are buffered streams that do not add any extra functionality but use a buffer for reading and writing data, which significantly enhances perfomance.
+
+Some streams add additional functionality to reading and writing data. For example, there are streams that compress/decompress data sent to them and streams that encrypt/decrypt data. These streams are connected to another stream(such as file or network stream) and add additional processing to its functionality.
+
+The main classes in the **System.IO** namespace are **Stream**(abstract base class for all streams in .NET Framework), BufferedStream, FileStream, MemoryStream, GZIPStream and NetworkStream.
+
+All streams in C# have one thing in common - it is mandatory to close them after we have finished working with them. Otherwise we risk damaging the data in the stream or file that we have opened.
+
+Always close the streams and files you work with! Leaving an open stream or file leads to loss of resources and can block the work of other users or processes in your system.
