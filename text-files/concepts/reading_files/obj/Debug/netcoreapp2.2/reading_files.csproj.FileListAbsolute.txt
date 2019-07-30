@@ -1,0 +1,11 @@
+E:\repos\c-sharp-playground\text-files\concepts\reading_files\bin\Debug\netcoreapp2.2\reading_files.deps.json
+E:\repos\c-sharp-playground\text-files\concepts\reading_files\bin\Debug\netcoreapp2.2\reading_files.runtimeconfig.json
+E:\repos\c-sharp-playground\text-files\concepts\reading_files\bin\Debug\netcoreapp2.2\reading_files.runtimeconfig.dev.json
+E:\repos\c-sharp-playground\text-files\concepts\reading_files\bin\Debug\netcoreapp2.2\reading_files.dll
+E:\repos\c-sharp-playground\text-files\concepts\reading_files\bin\Debug\netcoreapp2.2\reading_files.pdb
+E:\repos\c-sharp-playground\text-files\concepts\reading_files\obj\Debug\netcoreapp2.2\reading_files.csprojAssemblyReference.cache
+E:\repos\c-sharp-playground\text-files\concepts\reading_files\obj\Debug\netcoreapp2.2\reading_files.csproj.CoreCompileInputs.cache
+E:\repos\c-sharp-playground\text-files\concepts\reading_files\obj\Debug\netcoreapp2.2\reading_files.AssemblyInfoInputs.cache
+E:\repos\c-sharp-playground\text-files\concepts\reading_files\obj\Debug\netcoreapp2.2\reading_files.AssemblyInfo.cs
+E:\repos\c-sharp-playground\text-files\concepts\reading_files\obj\Debug\netcoreapp2.2\reading_files.dll
+E:\repos\c-sharp-playground\text-files\concepts\reading_files\obj\Debug\netcoreapp2.2\reading_files.pdb

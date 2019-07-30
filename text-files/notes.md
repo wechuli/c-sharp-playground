@@ -61,3 +61,46 @@ The main classes in the **System.IO** namespace are **Stream**(abstract base cla
 All streams in C# have one thing in common - it is mandatory to close them after we have finished working with them. Otherwise we risk damaging the data in the stream or file that we have opened.
 
 Always close the streams and files you work with! Leaving an open stream or file leads to loss of resources and can block the work of other users or processes in your system.
+
+## Binary and Text Streams
+
+### Binary Streams
+
+Binary streams, as their name suggests, work with binary(raw) data. They can be used to read information from all sorts of files(images, music and multimedia files, text files etc)
+The main classes that we use to read and write from and to binary streans are : FileStream, BinaryReader and BinaryWriter
+
+The class FileStream provides us with various methods for reading and writing from a binary file(read/write one byte and a sequence of bytes), skipping a number of bytes, checking the number of bytes available and of course a method for closing the stream. We can get an object of that class by calling its contructor with a file name as an argument.
+
+The class BinaryWriter enables you to write primitive types and binary values in a specific encoding to a stream. It has one main method – Write(…), which allows recording of any primitive data types – integers, characters, Booleans, arrays, strings and more.
+
+BinaryReader allows you to read primitive data types and binary values recorded using a BinaryWriter. Its main methods allow us to read a character, an array of characters, integers, floating point, etc. Like the previous two classes, we can get on object of that class by calling its constructor.
+
+### Text Streams
+
+Text streams are very similar to binary, but only work with text data or rather a sequence of charachetrs(chars) and strings(string). Text streams are ideal for working with text files. On the other hand, this makes them unusable when working with any binaries.
+
+The main classes for working with text streams in .NET are TextReader and TextWriter. They are abstract classes and they cannot be instantiated. These classes define the basic functionality for reading and writing for the classes that inherit them. Their more important methods are:
+
+- **ReadLine()** - reads one line of text and returns a atring
+- **ReadToEnd()**- reads the entire stream to its end and returns a string
+- **Write()** - writes a tring to the stream
+- **WriteLine()** - writes one line of text into the stream
+
+The characters in .NET are Unicode characters, but streams can also work with Unicode and other encodings like the standard encoding for Cyrillic languages
+
+The classes, to which we will turn our attention to in this chapter, are StreamReader and StreamWriter. They directly inherit the TextReader and TextWriter classes and implement functionality for reading and writing textual information to and from a file.
+To create an object of type StreamReader or StreamWriter, we need a file or a string, containing the file path. Working with these classes, we can use all of the methods that we are already familiar with, to work with the console. Reading and writing to the console is much like reading and writing respectively with StreamReader and StreamWriter.
+
+### Relationship between Text and Binary Streams
+
+When writing text, hidden from us, the class **StreamWriter** transforms the text into bytes before recoding it at the current position in the file. For this purpose, it uses the character encoding, which is set during its creation. The StreamReader class works similarly. It uses StringBuilder internally and when reading binary data from a file, it converts the received bytes to text before sending the text back as a result from reading.
+
+Rememeber that the operation systems have not concepts of "text file". The file is alwyas a sequence of bytes, but whether it is text or binary depends on the interpretion of these bytes. If we want to look at a file or stream as text, we must read and write to it with text streams.
+
+Bear in mind that text streams work with text lines, that is, they interpret binary data as a sequence of text lines, separated from each other with a new line separators.
+
+The character for the new line is not the same for different platforms and operating systems. For UNIX and Linux it is LF (0x0A), for Windows and DOS it is CR + LF (0x0D + 0x0A), and for Mac OS (up to version 9) it is CR (0x0A). Reading one line of text from a given file or a stream means reading a sequence of bytes until reading one of the characters CR or LF and converting these bytes to text according to the encoding, used by the stream. Similarly, writing one line of text to a text file or stream means writing the binary representation of the text (according to the current encoding), followed by the character (or characters) for a new line for the current operating system (such as CR + LF).
+
+It is recommended to avoid full paths and work with relative paths! This makes your application portable and easy for installation and maintenance. Using the full path to a file(e.g. C:\Temp\test.txt) is bad practice because it makes your application dependent on the environmanet and also non-transferable.
+
+Remember that when you start the C# program, the current directory is the one, in which the executable (.exe) file is located. Most often this is the subdirectory bin\Debug or bin\Release directory to the root of the project. Therefore, to open the file example.txt from the root directory of your Visual Studio project, you should use a relative path ..\..\example.txt.
