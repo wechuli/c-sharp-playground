@@ -7,10 +7,10 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("reading_files")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("encoding")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("reading_files")]
-[assembly: System.Reflection.AssemblyTitleAttribute("reading_files")]
+[assembly: System.Reflection.AssemblyProductAttribute("encoding")]
+[assembly: System.Reflection.AssemblyTitleAttribute("encoding")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

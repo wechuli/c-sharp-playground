@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\text-files\concepts\encoding\bin\Debug\netcoreapp2.2\encoding.deps.json
+F:\repos\c-sharp-playground\text-files\concepts\encoding\bin\Debug\netcoreapp2.2\encoding.runtimeconfig.json
+F:\repos\c-sharp-playground\text-files\concepts\encoding\bin\Debug\netcoreapp2.2\encoding.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\text-files\concepts\encoding\bin\Debug\netcoreapp2.2\encoding.dll
+F:\repos\c-sharp-playground\text-files\concepts\encoding\bin\Debug\netcoreapp2.2\encoding.pdb
+F:\repos\c-sharp-playground\text-files\concepts\encoding\obj\Debug\netcoreapp2.2\encoding.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\text-files\concepts\encoding\obj\Debug\netcoreapp2.2\encoding.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\text-files\concepts\encoding\obj\Debug\netcoreapp2.2\encoding.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\text-files\concepts\encoding\obj\Debug\netcoreapp2.2\encoding.AssemblyInfo.cs
+F:\repos\c-sharp-playground\text-files\concepts\encoding\obj\Debug\netcoreapp2.2\encoding.dll
+F:\repos\c-sharp-playground\text-files\concepts\encoding\obj\Debug\netcoreapp2.2\encoding.pdb

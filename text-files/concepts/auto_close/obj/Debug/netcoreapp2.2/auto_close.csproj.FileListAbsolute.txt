@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\text-files\concepts\auto_close\bin\Debug\netcoreapp2.2\auto_close.deps.json
+F:\repos\c-sharp-playground\text-files\concepts\auto_close\bin\Debug\netcoreapp2.2\auto_close.runtimeconfig.json
+F:\repos\c-sharp-playground\text-files\concepts\auto_close\bin\Debug\netcoreapp2.2\auto_close.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\text-files\concepts\auto_close\bin\Debug\netcoreapp2.2\auto_close.dll
+F:\repos\c-sharp-playground\text-files\concepts\auto_close\bin\Debug\netcoreapp2.2\auto_close.pdb
+F:\repos\c-sharp-playground\text-files\concepts\auto_close\obj\Debug\netcoreapp2.2\auto_close.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\text-files\concepts\auto_close\obj\Debug\netcoreapp2.2\auto_close.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\text-files\concepts\auto_close\obj\Debug\netcoreapp2.2\auto_close.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\text-files\concepts\auto_close\obj\Debug\netcoreapp2.2\auto_close.AssemblyInfo.cs
+F:\repos\c-sharp-playground\text-files\concepts\auto_close\obj\Debug\netcoreapp2.2\auto_close.dll
+F:\repos\c-sharp-playground\text-files\concepts\auto_close\obj\Debug\netcoreapp2.2\auto_close.pdb

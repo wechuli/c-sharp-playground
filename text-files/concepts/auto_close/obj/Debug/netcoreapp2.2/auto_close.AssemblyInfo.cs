@@ -7,10 +7,10 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("reading_files")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("auto_close")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("reading_files")]
-[assembly: System.Reflection.AssemblyTitleAttribute("reading_files")]
+[assembly: System.Reflection.AssemblyProductAttribute("auto_close")]
+[assembly: System.Reflection.AssemblyTitleAttribute("auto_close")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -104,3 +104,51 @@ The character for the new line is not the same for different platforms and opera
 It is recommended to avoid full paths and work with relative paths! This makes your application portable and easy for installation and maintenance. Using the full path to a file(e.g. C:\Temp\test.txt) is bad practice because it makes your application dependent on the environmanet and also non-transferable.
 
 Remember that when you start the C# program, the current directory is the one, in which the executable (.exe) file is located. Most often this is the subdirectory bin\Debug or bin\Release directory to the root of the project. Therefore, to open the file example.txt from the root directory of your Visual Studio project, you should use a relative path ..\..\example.txt.
+
+If you use full paths, where you pass the full path to a file, do not forget to apply escaping of slashes, which is used to separate the folders.In C# you can do this in two ways – with a double slash or with a quoted string beginning with @ before the string literal
+
+```JavaScript
+string fileName = "C:\\Temp\\work\\test.txt";
+string theSamefileName = @"C:\Temp\work\test.txt";
+
+```
+
+### Automatic Closing of the Stream after Working with It
+
+The correct way to handle the file closing is through the **using** keyword:
+
+```C#
+using (<stream object>){ ... }
+```
+
+The C# construct `using(...)` ensures that after leaving its body, the method **Close()** will automatically be called. This will happen even if an exception occurs when reading the file. Always use the `using` construct in C# in order to properly close files and streams.
+
+### File Encodings
+
+Everything in memory is stored in binary form. This means that it is necessary for text files to be represented digitally, so that they can be stored in memory, as well as on the hard disk. The process is called encoding files or more correctly, encoding the characters stored in text files.
+
+The encoding process consists of replacing the text characters(letter, digits, panctuation, etc) with specific sequences of binary values. You can imagine this as a large table in which each character corresponds to a certain value(sequence of bytes)
+
+Character encodings specify the rules for converting from text to sequence of bytes and vice versa. An encoding scheme is a table of charcters along with their numbers, but may also contain special rules.For example, the character "accent" (U + 0300) is special and sticks to the last character that precedes it. It is encoded as one or more bytes (depending on the character encoding scheme), and it does not correspond to any character, but to a part of the character
+
+UTF-8 is a universal encoding scheme, which supports all languages and alphabets in the world. In UTF-8, the most commonly used charcters(Latin alphabet, numerals and special characters) are encoded in one byte, rearely used Unicode characters(such as Cyrillic, Greek and Arabic). are encoded in two bytes and all other characters (Chinese, Japanese and many others) are encoded in 3 or 4 bytes. UTF-8 encoding can convert any Unicode text in binary form and back and support all of the 100,000 characters of Unicode standard. UTF-8 encoding is universal and suitable for any language alphabet.
+
+Another commonly used encoding is Windows-1251, which is usually used for encoding of Cyrillic texts (such as messages sent by e-mail). It contains 256 characters, including the Latin alphabet, Cyrillic alphabet and some commonly used signs. It uses one byte for each character, but at the expense of some characters that cannot be stored in it (as the Chinese alphabet characters), and are lost in an attempt of doing so.
+
+If you do not explicitly set the encoding scheme(encoding) for the file read, the .NET Framework, the default encoding **UTF-8** will be used.
+
+If you use the wrong encoding when reading or writing to a file:
+
+- If you use read / write only Latin letters, everything will work normally.
+- If you write Cyrillic letters, to a files open with encoding, which does not support the Cyrillic alphabet (e.g. ASCII), Cyrillic letters will be permanently replaced by the character "?" (question mark).
+
+In any case, these are unpleasant problems which cannot be immediately noticed. To avoid problems with incorrect encoding of files, always check the encoding explicitly. Otherwise, you may work incorrectly or break at a later stage.
+
+Unicode is an industry standard that allows computers and other electronic devices always to present and manipulate text, which was written in most of the world's literacies. It consists of over 100,000 characters as well as various encoding schemes(encodings). The unification of different characters which Unicode offers, leads to its greater distribution.
+
+To read characters, stored in Unicode, we must use one of the supported encoding schemes for this standard. The most popular and widely used is UTF-8. We can set it as a code scheme with an already familiar way:
+
+```C#
+StreamReader reader = new StreamReader("test.txt",
+Encoding.GetEncoding("UTF-8"));
+```

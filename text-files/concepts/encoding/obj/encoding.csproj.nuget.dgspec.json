@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\repos\\c-sharp-playground\\text-files\\concepts\\reading_files\\reading_files.csproj": {}
+    "F:\\repos\\c-sharp-playground\\text-files\\concepts\\encoding\\encoding.csproj": {}
   },
   "projects": {
-    "F:\\repos\\c-sharp-playground\\text-files\\concepts\\reading_files\\reading_files.csproj": {
+    "F:\\repos\\c-sharp-playground\\text-files\\concepts\\encoding\\encoding.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\repos\\c-sharp-playground\\text-files\\concepts\\reading_files\\reading_files.csproj",
-        "projectName": "reading_files",
-        "projectPath": "F:\\repos\\c-sharp-playground\\text-files\\concepts\\reading_files\\reading_files.csproj",
+        "projectUniqueName": "F:\\repos\\c-sharp-playground\\text-files\\concepts\\encoding\\encoding.csproj",
+        "projectName": "encoding",
+        "projectPath": "F:\\repos\\c-sharp-playground\\text-files\\concepts\\encoding\\encoding.csproj",
         "packagesPath": "C:\\Users\\Wechuli\\.nuget\\packages\\",
-        "outputPath": "F:\\repos\\c-sharp-playground\\text-files\\concepts\\reading_files\\obj\\",
+        "outputPath": "F:\\repos\\c-sharp-playground\\text-files\\concepts\\encoding\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
