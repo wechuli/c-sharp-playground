@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\text-files\concepts\exceptions_with_files\bin\Debug\netcoreapp2.2\exceptions_with_files.deps.json
+F:\repos\c-sharp-playground\text-files\concepts\exceptions_with_files\bin\Debug\netcoreapp2.2\exceptions_with_files.runtimeconfig.json
+F:\repos\c-sharp-playground\text-files\concepts\exceptions_with_files\bin\Debug\netcoreapp2.2\exceptions_with_files.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\text-files\concepts\exceptions_with_files\bin\Debug\netcoreapp2.2\exceptions_with_files.dll
+F:\repos\c-sharp-playground\text-files\concepts\exceptions_with_files\bin\Debug\netcoreapp2.2\exceptions_with_files.pdb
+F:\repos\c-sharp-playground\text-files\concepts\exceptions_with_files\obj\Debug\netcoreapp2.2\exceptions_with_files.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\text-files\concepts\exceptions_with_files\obj\Debug\netcoreapp2.2\exceptions_with_files.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\text-files\concepts\exceptions_with_files\obj\Debug\netcoreapp2.2\exceptions_with_files.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\text-files\concepts\exceptions_with_files\obj\Debug\netcoreapp2.2\exceptions_with_files.AssemblyInfo.cs
+F:\repos\c-sharp-playground\text-files\concepts\exceptions_with_files\obj\Debug\netcoreapp2.2\exceptions_with_files.dll
+F:\repos\c-sharp-playground\text-files\concepts\exceptions_with_files\obj\Debug\netcoreapp2.2\exceptions_with_files.pdb

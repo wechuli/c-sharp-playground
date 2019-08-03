@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\text-files\concepts\writing_basics\bin\Debug\netcoreapp2.2\writing_basics.deps.json
+F:\repos\c-sharp-playground\text-files\concepts\writing_basics\bin\Debug\netcoreapp2.2\writing_basics.runtimeconfig.json
+F:\repos\c-sharp-playground\text-files\concepts\writing_basics\bin\Debug\netcoreapp2.2\writing_basics.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\text-files\concepts\writing_basics\bin\Debug\netcoreapp2.2\writing_basics.dll
+F:\repos\c-sharp-playground\text-files\concepts\writing_basics\bin\Debug\netcoreapp2.2\writing_basics.pdb
+F:\repos\c-sharp-playground\text-files\concepts\writing_basics\obj\Debug\netcoreapp2.2\writing_basics.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\text-files\concepts\writing_basics\obj\Debug\netcoreapp2.2\writing_basics.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\text-files\concepts\writing_basics\obj\Debug\netcoreapp2.2\writing_basics.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\text-files\concepts\writing_basics\obj\Debug\netcoreapp2.2\writing_basics.AssemblyInfo.cs
+F:\repos\c-sharp-playground\text-files\concepts\writing_basics\obj\Debug\netcoreapp2.2\writing_basics.dll
+F:\repos\c-sharp-playground\text-files\concepts\writing_basics\obj\Debug\netcoreapp2.2\writing_basics.pdb

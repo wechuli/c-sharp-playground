@@ -152,3 +152,27 @@ To read characters, stored in Unicode, we must use one of the supported encoding
 StreamReader reader = new StreamReader("test.txt",
 Encoding.GetEncoding("UTF-8"));
 ```
+
+## Writing to a Text File
+
+Text files are very convenient for storing various types of information. For example, we can record the results of a program. We can use text files to make something like a journal(log) for the program - a convenient way to monitor it at runtime.
+
+**StreamWriter** is used for writing to text files. It resembles the class **StreamReader** but instead of methods for reading, it offers similar methods for writing to a text file. Unlike other streams, before writing data to the desired destination, **StreamWriter** turns it into bytes. **StreamWriter** enables us to set a preferred character encoding at the time it is created.
+
+```C#
+StreamWriter writer = new StreamWriter("test.txt",
+false, Encoding.GetEncoding("Windows-1251"));
+```
+
+In this example, we pass a file path as the first parameter. As a second parameter, we pass a Boolean variable that indicates whether to overwrite the file or to append the data at the end of the file. As a third parameter, we pass an encoding scheme (charset).
+
+
+## Input/Output Exception Handling
+
+Many of the operations related to files can cause exceptional situations.
+
+- Perhaps the most common exception when working with files is the **FileNotFoundException**. As its name infers, it is thrown when the desired file is not found. It can occur when creating **StreamReader**.
+- When setting a specified encoding by the creation of a **StreamReader** or a **StreamWriter** object, an **ArgumentException** can be thrown. This means that the encoding we have chosen is not supported
+- Another common mistake is **IOException**. This is the base class for all IO errors when working with streams.
+
+The standard approach for handling exceptions when working with files is the following: declare variables of class **StreamReader** or **StreamWriter** in `try-catch` block. Initialize them with the necessary values in the block and hanle the potential exceptions properly. To close the stream, we use the structure **using**.
