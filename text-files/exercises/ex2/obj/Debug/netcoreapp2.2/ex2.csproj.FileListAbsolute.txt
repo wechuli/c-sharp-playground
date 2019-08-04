@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\text-files\exercises\ex2\bin\Debug\netcoreapp2.2\ex2.deps.json
+F:\repos\c-sharp-playground\text-files\exercises\ex2\bin\Debug\netcoreapp2.2\ex2.runtimeconfig.json
+F:\repos\c-sharp-playground\text-files\exercises\ex2\bin\Debug\netcoreapp2.2\ex2.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\text-files\exercises\ex2\bin\Debug\netcoreapp2.2\ex2.dll
+F:\repos\c-sharp-playground\text-files\exercises\ex2\bin\Debug\netcoreapp2.2\ex2.pdb
+F:\repos\c-sharp-playground\text-files\exercises\ex2\obj\Debug\netcoreapp2.2\ex2.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\text-files\exercises\ex2\obj\Debug\netcoreapp2.2\ex2.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\text-files\exercises\ex2\obj\Debug\netcoreapp2.2\ex2.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\text-files\exercises\ex2\obj\Debug\netcoreapp2.2\ex2.AssemblyInfo.cs
+F:\repos\c-sharp-playground\text-files\exercises\ex2\obj\Debug\netcoreapp2.2\ex2.dll
+F:\repos\c-sharp-playground\text-files\exercises\ex2\obj\Debug\netcoreapp2.2\ex2.pdb
