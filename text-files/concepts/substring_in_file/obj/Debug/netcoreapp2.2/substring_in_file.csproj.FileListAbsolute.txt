@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\text-files\concepts\substring_in_file\obj\Debug\netcoreapp2.2\substring_in_file.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\text-files\concepts\substring_in_file\obj\Debug\netcoreapp2.2\substring_in_file.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\text-files\concepts\substring_in_file\obj\Debug\netcoreapp2.2\substring_in_file.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\text-files\concepts\substring_in_file\obj\Debug\netcoreapp2.2\substring_in_file.AssemblyInfo.cs
+F:\repos\c-sharp-playground\text-files\concepts\substring_in_file\bin\Debug\netcoreapp2.2\substring_in_file.deps.json
+F:\repos\c-sharp-playground\text-files\concepts\substring_in_file\bin\Debug\netcoreapp2.2\substring_in_file.runtimeconfig.json
+F:\repos\c-sharp-playground\text-files\concepts\substring_in_file\bin\Debug\netcoreapp2.2\substring_in_file.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\text-files\concepts\substring_in_file\bin\Debug\netcoreapp2.2\substring_in_file.dll
+F:\repos\c-sharp-playground\text-files\concepts\substring_in_file\bin\Debug\netcoreapp2.2\substring_in_file.pdb
+F:\repos\c-sharp-playground\text-files\concepts\substring_in_file\obj\Debug\netcoreapp2.2\substring_in_file.dll
+F:\repos\c-sharp-playground\text-files\concepts\substring_in_file\obj\Debug\netcoreapp2.2\substring_in_file.pdb

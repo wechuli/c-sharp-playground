@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\text-files\concepts\editing_subtitles\bin\Debug\netcoreapp2.2\editing_subtitles.deps.json
+F:\repos\c-sharp-playground\text-files\concepts\editing_subtitles\bin\Debug\netcoreapp2.2\editing_subtitles.runtimeconfig.json
+F:\repos\c-sharp-playground\text-files\concepts\editing_subtitles\bin\Debug\netcoreapp2.2\editing_subtitles.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\text-files\concepts\editing_subtitles\bin\Debug\netcoreapp2.2\editing_subtitles.dll
+F:\repos\c-sharp-playground\text-files\concepts\editing_subtitles\bin\Debug\netcoreapp2.2\editing_subtitles.pdb
+F:\repos\c-sharp-playground\text-files\concepts\editing_subtitles\obj\Debug\netcoreapp2.2\editing_subtitles.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\text-files\concepts\editing_subtitles\obj\Debug\netcoreapp2.2\editing_subtitles.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\text-files\concepts\editing_subtitles\obj\Debug\netcoreapp2.2\editing_subtitles.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\text-files\concepts\editing_subtitles\obj\Debug\netcoreapp2.2\editing_subtitles.AssemblyInfo.cs
+F:\repos\c-sharp-playground\text-files\concepts\editing_subtitles\obj\Debug\netcoreapp2.2\editing_subtitles.dll
+F:\repos\c-sharp-playground\text-files\concepts\editing_subtitles\obj\Debug\netcoreapp2.2\editing_subtitles.pdb
