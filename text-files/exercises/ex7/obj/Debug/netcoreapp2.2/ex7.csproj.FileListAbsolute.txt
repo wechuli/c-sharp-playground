@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\text-files\exercises\ex7\bin\Debug\netcoreapp2.2\ex7.deps.json
+F:\repos\c-sharp-playground\text-files\exercises\ex7\bin\Debug\netcoreapp2.2\ex7.runtimeconfig.json
+F:\repos\c-sharp-playground\text-files\exercises\ex7\bin\Debug\netcoreapp2.2\ex7.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\text-files\exercises\ex7\bin\Debug\netcoreapp2.2\ex7.dll
+F:\repos\c-sharp-playground\text-files\exercises\ex7\bin\Debug\netcoreapp2.2\ex7.pdb
+F:\repos\c-sharp-playground\text-files\exercises\ex7\obj\Debug\netcoreapp2.2\ex7.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\text-files\exercises\ex7\obj\Debug\netcoreapp2.2\ex7.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\text-files\exercises\ex7\obj\Debug\netcoreapp2.2\ex7.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\text-files\exercises\ex7\obj\Debug\netcoreapp2.2\ex7.AssemblyInfo.cs
+F:\repos\c-sharp-playground\text-files\exercises\ex7\obj\Debug\netcoreapp2.2\ex7.dll
+F:\repos\c-sharp-playground\text-files\exercises\ex7\obj\Debug\netcoreapp2.2\ex7.pdb
