@@ -1,30 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "F:\\repos\\c-sharp-playground\\linear-data-structures\\concepts\\array_list_implem\\array_list_implem.csproj": {}
+    "/Users/wechuli/repos/c-sharp-playground/linear-data-structures/concepts/array_list_implem/array_list_implem.csproj": {}
   },
   "projects": {
-    "F:\\repos\\c-sharp-playground\\linear-data-structures\\concepts\\array_list_implem\\array_list_implem.csproj": {
+    "/Users/wechuli/repos/c-sharp-playground/linear-data-structures/concepts/array_list_implem/array_list_implem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\repos\\c-sharp-playground\\linear-data-structures\\concepts\\array_list_implem\\array_list_implem.csproj",
+        "projectUniqueName": "/Users/wechuli/repos/c-sharp-playground/linear-data-structures/concepts/array_list_implem/array_list_implem.csproj",
         "projectName": "array_list_implem",
-        "projectPath": "F:\\repos\\c-sharp-playground\\linear-data-structures\\concepts\\array_list_implem\\array_list_implem.csproj",
-        "packagesPath": "C:\\Users\\Wechuli\\.nuget\\packages\\",
-        "outputPath": "F:\\repos\\c-sharp-playground\\linear-data-structures\\concepts\\array_list_implem\\obj\\",
+        "projectPath": "/Users/wechuli/repos/c-sharp-playground/linear-data-structures/concepts/array_list_implem/array_list_implem.csproj",
+        "packagesPath": "/Users/wechuli/.nuget/packages/",
+        "outputPath": "/Users/wechuli/repos/c-sharp-playground/linear-data-structures/concepts/array_list_implem/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Wechuli\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/wechuli/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

@@ -1,0 +1,11 @@
+/Users/wechuli/repos/c-sharp-playground/linear-data-structures/concepts/array_list_implem/obj/Debug/netcoreapp2.2/array_list_implem.csprojAssemblyReference.cache
+/Users/wechuli/repos/c-sharp-playground/linear-data-structures/concepts/array_list_implem/obj/Debug/netcoreapp2.2/array_list_implem.csproj.CoreCompileInputs.cache
+/Users/wechuli/repos/c-sharp-playground/linear-data-structures/concepts/array_list_implem/obj/Debug/netcoreapp2.2/array_list_implem.AssemblyInfoInputs.cache
+/Users/wechuli/repos/c-sharp-playground/linear-data-structures/concepts/array_list_implem/obj/Debug/netcoreapp2.2/array_list_implem.AssemblyInfo.cs
+/Users/wechuli/repos/c-sharp-playground/linear-data-structures/concepts/array_list_implem/bin/Debug/netcoreapp2.2/array_list_implem.deps.json
+/Users/wechuli/repos/c-sharp-playground/linear-data-structures/concepts/array_list_implem/bin/Debug/netcoreapp2.2/array_list_implem.runtimeconfig.json
+/Users/wechuli/repos/c-sharp-playground/linear-data-structures/concepts/array_list_implem/bin/Debug/netcoreapp2.2/array_list_implem.runtimeconfig.dev.json
+/Users/wechuli/repos/c-sharp-playground/linear-data-structures/concepts/array_list_implem/bin/Debug/netcoreapp2.2/array_list_implem.dll
+/Users/wechuli/repos/c-sharp-playground/linear-data-structures/concepts/array_list_implem/bin/Debug/netcoreapp2.2/array_list_implem.pdb
+/Users/wechuli/repos/c-sharp-playground/linear-data-structures/concepts/array_list_implem/obj/Debug/netcoreapp2.2/array_list_implem.dll
+/Users/wechuli/repos/c-sharp-playground/linear-data-structures/concepts/array_list_implem/obj/Debug/netcoreapp2.2/array_list_implem.pdb

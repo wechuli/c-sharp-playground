@@ -6,7 +6,10 @@ namespace array_list_implem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            CustomArrayList<string> myList = new CustomArrayList<string>(45);
+            myList.Add("It works");
+            Console.WriteLine(myList.Count);
+
         }
     }
 
@@ -58,5 +61,99 @@ namespace array_list_implem
             this.count++;
 
         }
+
+        //Doubles the size of this.arr(grow) if it is full
+
+        private void GrowIfArrIsFull()
+        {
+            if (this.count + 1 > this.arr.Length)
+            {
+                T[] extendedArr = new T[this.arr.Length * 2];
+                Array.Copy(this.arr, extendedArr, this.count);
+                this.arr = extendedArr;
+            }
+        }
+
+        //Clears the list(remove everything)
+
+        public void Clear()
+        {
+            this.arr = new T[INITIAL_CAPACITY];
+            this.count = 0;
+        }
+
+        //Returns the index of the first occurence of the specified element in this list(or -1 if it does not exist)
+
+        public int IndexOf(T item)
+        {
+            for (int i = 0; i < this.arr.Length; i++)
+            {
+                if (object.Equals(item, this.arr[i]))
+                {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+
+        // Checks if an element exists
+
+        public bool Contains(T item)
+        {
+            int index = IndexOf(item);
+            bool found = (index != -1);
+            return found;
+        }
+
+
+        //Indexer:access to element at a given index
+
+        public T this[int index]
+        {
+            get
+            {
+                if (index >= this.count || index < 0)
+                {
+                    throw new ArgumentOutOfRangeException("Invalid index: " + index);
+                }
+                return this.arr[index];
+            }
+            set
+            {
+                if (index >= this.count || index < 0)
+                {
+                    throw new ArgumentOutOfRangeException("Invalid index: " + index);
+                }
+                this.arr[index] = value;
+            }
+        }
+
+        public T RemoveAt(int index)
+        {
+            if (index >= this.count || index < 0)
+            {
+                throw new ArgumentOutOfRangeException(
+    "Invalid index: " + index);
+            }
+
+            T item = this.arr[index];
+            Array.Copy(this.arr, this.count + 1, this.arr, index, this.count - index - 1);
+            this.arr[this.count - 1] = default(T);
+            this.count--;
+            return item;
+        }
+        // Removes the specified item
+
+        public int Remove(T item)
+        {
+            int index = IndexOf(item);
+            if (index != -1)
+            {
+                this.RemoveAt(index);
+            }
+            return index;
+        }
+
     }
 }
