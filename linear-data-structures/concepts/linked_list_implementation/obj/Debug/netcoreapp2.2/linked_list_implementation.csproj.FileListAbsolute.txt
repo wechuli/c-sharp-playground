@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\linear-data-structures\concepts\linked_list_implementation\bin\Debug\netcoreapp2.2\linked_list_implementation.deps.json
+F:\repos\c-sharp-playground\linear-data-structures\concepts\linked_list_implementation\bin\Debug\netcoreapp2.2\linked_list_implementation.runtimeconfig.json
+F:\repos\c-sharp-playground\linear-data-structures\concepts\linked_list_implementation\bin\Debug\netcoreapp2.2\linked_list_implementation.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\linear-data-structures\concepts\linked_list_implementation\bin\Debug\netcoreapp2.2\linked_list_implementation.dll
+F:\repos\c-sharp-playground\linear-data-structures\concepts\linked_list_implementation\bin\Debug\netcoreapp2.2\linked_list_implementation.pdb
+F:\repos\c-sharp-playground\linear-data-structures\concepts\linked_list_implementation\obj\Debug\netcoreapp2.2\linked_list_implementation.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\linear-data-structures\concepts\linked_list_implementation\obj\Debug\netcoreapp2.2\linked_list_implementation.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\linear-data-structures\concepts\linked_list_implementation\obj\Debug\netcoreapp2.2\linked_list_implementation.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\linear-data-structures\concepts\linked_list_implementation\obj\Debug\netcoreapp2.2\linked_list_implementation.AssemblyInfo.cs
+F:\repos\c-sharp-playground\linear-data-structures\concepts\linked_list_implementation\obj\Debug\netcoreapp2.2\linked_list_implementation.dll
+F:\repos\c-sharp-playground\linear-data-structures\concepts\linked_list_implementation\obj\Debug\netcoreapp2.2\linked_list_implementation.pdb

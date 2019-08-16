@@ -55,4 +55,50 @@ Arrays perform many of the features of the ADT list, but there is a significant 
 
 Despite of that, an implementation of list is possible with an array, which automatically increments its size.
 
+### Linked List (Dynamic Implementation)
 
+The static list has a serious disadvantage - the operations for inserting and removing items from the inside of the array requires rearrangement of the elements. When frequenctly inserting and removing items(especially a large number of items), this can lead to low performance. In such cases, it is advisable to use the so called linked lists. The difference in them is the structure of elements - while in the static list the element contains only the specific object, with the dynamix list, the elements keep information about their next element.
+
+For the dynamic implementation of the linked list, we will need two classes: the class ListNode, which will hold a single element of the list along with its next element, and the main list class `DynamicList<T>` which will hold a sequence of elements as well as the **head** and the **tail** of the list.
+
+```C#
+using System;
+namespace linked_list_implementation
+{
+    public class DynamicList<T>
+    {
+        private class ListNode
+        {
+            public T Element { get; set; }
+            public ListNode NextNode { get; set; }
+
+            public ListNode(T element)
+            {
+                this.Element = element;
+                NextNode = null;
+            }
+            public ListNode(T element, ListNode prevNode)
+            {
+                this.Element = element;
+                prevNode.NextNode = this;
+            }
+        }
+        private ListNode head;
+        private ListNode tail;
+        private int count;
+       public DynamicList()
+{
+this.head = null;
+this.tail = null;
+this.count = 0;
+} 
+    }
+  
+}
+```
+
+First, let's consider the recursive class `ListNode`. It holds a single element and a reference(pointer) to the next element which is of the same class **ListNode**. So **ListNode** is an example of recursive data structure that is defeined by referincing itself. It is an inner class to the **`DynamicList<T>`** - it is declared as a private member and is therefore accessible only to it. For our **`DynamicList<T>`** , we create 3 fields: **head** - pointer to the first element, **tail** - pointer to the last element and count - counter of the elements.
+
+Upon the initial construction, the list is empty and for this reason, we assign **head=tail=null** and **count=0**.
+
+We are going to implement all basic operations: adding and removing items, as well as searching for an element and accessing the elements by index.
