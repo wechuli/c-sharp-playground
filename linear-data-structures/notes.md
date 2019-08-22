@@ -102,3 +102,13 @@ First, let's consider the recursive class `ListNode`. It holds a single element 
 Upon the initial construction, the list is empty and for this reason, we assign **head=tail=null** and **count=0**.
 
 We are going to implement all basic operations: adding and removing items, as well as searching for an element and accessing the elements by index.
+
+### Comparing the Static and the Dynamic Lists
+
+We implemented the abstract type(ADT) list in two ways: static(array list) and dynamic (linked list). Once written, these two implementations can be used in almost excatly the same way. Thus, certain ADT could be implemented in several conceptually different ways and the users may not notice the difference betwwen them. Still, different implementations could have different performance and could take different amount of memory.
+
+### Doubly-Linked List
+
+In the so called doubly-linked lists, each element contains its value and two pointers - to the previous and to the next element (or null if there is no such element). This allows us to traverse the list forward and backward and some operations to be implemented more efficiently.
+
+![](doubly.PNG)

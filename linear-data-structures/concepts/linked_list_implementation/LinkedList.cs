@@ -19,9 +19,9 @@ namespace linked_list_implementation
                 prevNode.NextNode = this;
             }
         }
-        private T head;
+        private ListNode head;
         private ListNode tail;
-        private ListNode count;
+        private int count;
 
         public DynamicList()
         {
@@ -100,10 +100,108 @@ namespace linked_list_implementation
                 prevNode.NextNode = node.NextNode;
             }
             //Fix the tail in case it was removed
-            if (object.ReferenceEquals(this.tail, noe))
+            if (object.ReferenceEquals(this.tail, node))
             {
                 this.tail = prevNode;
             }
+        }
+
+        //Removes the specified item and return its index
+
+        public int Remove(T item)
+        {
+            //Find the element containing the searched item
+            int currentIndex = 0;
+            ListNode currentNode = this.head;
+            ListNode prevNode = null;
+            while (currentNode != null)
+            {
+                if (object.Equals(currentNode.Element, item))
+                {
+                    break;
+                }
+                prevNode = currentNode;
+                currentNode = currentNode.NextNode;
+                currentIndex++;
+            }
+            if (currentNode != null)
+            {
+                // The element is found in the list -> remove it
+                RemoveListNode(currentNode, prevNode);
+                return currentIndex;
+            }
+            else
+            {
+                //The element is not found in the list -> return -1
+                return -1;
+            }
+        }
+
+        //Searches for given element in the list
+
+        public int IndexOf(T item)
+        {
+            int index = 0;
+            ListNode currentNode = this.head;
+            while (currentNode != null)
+            {
+                if (object.Equals(currentNode.Element, item))
+                {
+                    return index;
+                }
+                currentNode = currentNode.NextNode;
+                index++;
+            }
+            return -1;
+        }
+
+        //Checks if the specified element exists in thenlist
+
+        public bool Contains(T item)
+        {
+            int index = IndexOf(item);
+            bool found = (index != -1);
+            return found;
+        }
+
+
+        //Gets or sets the element at the specified position
+
+        public T this[int index]
+        {
+            get
+            {
+                if (index >= count || index < 0)
+                {
+                    throw new ArgumentOutOfRangeException("Invalid index: " + index);
+                }
+                ListNode currentNode = this.head;
+                for (int i = 0; i < index; i++)
+                {
+                    currentNode = currentNode.NextNode;
+                }
+                return currentNode.Element;
+            }
+            set
+            {
+                if (index >= count || index < 0)
+                {
+                    throw new ArgumentOutOfRangeException("Invalid index: " + index);
+                }
+                ListNode currentNode = this.head;
+                for (int i = 0; i < index; i++)
+                {
+                    currentNode = currentNode.NextNode;
+                }
+                currentNode.Element = value;
+            }
+        }
+
+        //Gets the count of elements in the list
+
+        public int Count
+        {
+            get { return this.count; }
         }
     }
 }
