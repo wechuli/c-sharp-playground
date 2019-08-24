@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\linear-data-structures\concepts\arrayList\bin\Debug\netcoreapp2.2\arrayList.deps.json
+F:\repos\c-sharp-playground\linear-data-structures\concepts\arrayList\bin\Debug\netcoreapp2.2\arrayList.runtimeconfig.json
+F:\repos\c-sharp-playground\linear-data-structures\concepts\arrayList\bin\Debug\netcoreapp2.2\arrayList.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\linear-data-structures\concepts\arrayList\bin\Debug\netcoreapp2.2\arrayList.dll
+F:\repos\c-sharp-playground\linear-data-structures\concepts\arrayList\bin\Debug\netcoreapp2.2\arrayList.pdb
+F:\repos\c-sharp-playground\linear-data-structures\concepts\arrayList\obj\Debug\netcoreapp2.2\arrayList.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\linear-data-structures\concepts\arrayList\obj\Debug\netcoreapp2.2\arrayList.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\linear-data-structures\concepts\arrayList\obj\Debug\netcoreapp2.2\arrayList.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\linear-data-structures\concepts\arrayList\obj\Debug\netcoreapp2.2\arrayList.AssemblyInfo.cs
+F:\repos\c-sharp-playground\linear-data-structures\concepts\arrayList\obj\Debug\netcoreapp2.2\arrayList.dll
+F:\repos\c-sharp-playground\linear-data-structures\concepts\arrayList\obj\Debug\netcoreapp2.2\arrayList.pdb

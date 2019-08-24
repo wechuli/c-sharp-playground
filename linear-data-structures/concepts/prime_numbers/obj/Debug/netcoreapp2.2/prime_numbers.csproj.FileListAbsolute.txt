@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\linear-data-structures\concepts\prime_numbers\bin\Debug\netcoreapp2.2\prime_numbers.deps.json
+F:\repos\c-sharp-playground\linear-data-structures\concepts\prime_numbers\bin\Debug\netcoreapp2.2\prime_numbers.runtimeconfig.json
+F:\repos\c-sharp-playground\linear-data-structures\concepts\prime_numbers\bin\Debug\netcoreapp2.2\prime_numbers.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\linear-data-structures\concepts\prime_numbers\bin\Debug\netcoreapp2.2\prime_numbers.dll
+F:\repos\c-sharp-playground\linear-data-structures\concepts\prime_numbers\bin\Debug\netcoreapp2.2\prime_numbers.pdb
+F:\repos\c-sharp-playground\linear-data-structures\concepts\prime_numbers\obj\Debug\netcoreapp2.2\prime_numbers.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\linear-data-structures\concepts\prime_numbers\obj\Debug\netcoreapp2.2\prime_numbers.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\linear-data-structures\concepts\prime_numbers\obj\Debug\netcoreapp2.2\prime_numbers.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\linear-data-structures\concepts\prime_numbers\obj\Debug\netcoreapp2.2\prime_numbers.AssemblyInfo.cs
+F:\repos\c-sharp-playground\linear-data-structures\concepts\prime_numbers\obj\Debug\netcoreapp2.2\prime_numbers.dll
+F:\repos\c-sharp-playground\linear-data-structures\concepts\prime_numbers\obj\Debug\netcoreapp2.2\prime_numbers.pdb
