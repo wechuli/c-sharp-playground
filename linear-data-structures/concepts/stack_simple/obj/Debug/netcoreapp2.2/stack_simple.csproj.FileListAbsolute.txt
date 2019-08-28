@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\linear-data-structures\concepts\stack_simple\bin\Debug\netcoreapp2.2\stack_simple.deps.json
+F:\repos\c-sharp-playground\linear-data-structures\concepts\stack_simple\bin\Debug\netcoreapp2.2\stack_simple.runtimeconfig.json
+F:\repos\c-sharp-playground\linear-data-structures\concepts\stack_simple\bin\Debug\netcoreapp2.2\stack_simple.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\linear-data-structures\concepts\stack_simple\bin\Debug\netcoreapp2.2\stack_simple.dll
+F:\repos\c-sharp-playground\linear-data-structures\concepts\stack_simple\bin\Debug\netcoreapp2.2\stack_simple.pdb
+F:\repos\c-sharp-playground\linear-data-structures\concepts\stack_simple\obj\Debug\netcoreapp2.2\stack_simple.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\linear-data-structures\concepts\stack_simple\obj\Debug\netcoreapp2.2\stack_simple.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\linear-data-structures\concepts\stack_simple\obj\Debug\netcoreapp2.2\stack_simple.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\linear-data-structures\concepts\stack_simple\obj\Debug\netcoreapp2.2\stack_simple.AssemblyInfo.cs
+F:\repos\c-sharp-playground\linear-data-structures\concepts\stack_simple\obj\Debug\netcoreapp2.2\stack_simple.dll
+F:\repos\c-sharp-playground\linear-data-structures\concepts\stack_simple\obj\Debug\netcoreapp2.2\stack_simple.pdb

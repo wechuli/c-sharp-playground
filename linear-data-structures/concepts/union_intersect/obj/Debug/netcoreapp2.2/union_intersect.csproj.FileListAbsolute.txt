@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\linear-data-structures\concepts\union_intersect\bin\Debug\netcoreapp2.2\union_intersect.deps.json
+F:\repos\c-sharp-playground\linear-data-structures\concepts\union_intersect\bin\Debug\netcoreapp2.2\union_intersect.runtimeconfig.json
+F:\repos\c-sharp-playground\linear-data-structures\concepts\union_intersect\bin\Debug\netcoreapp2.2\union_intersect.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\linear-data-structures\concepts\union_intersect\bin\Debug\netcoreapp2.2\union_intersect.dll
+F:\repos\c-sharp-playground\linear-data-structures\concepts\union_intersect\bin\Debug\netcoreapp2.2\union_intersect.pdb
+F:\repos\c-sharp-playground\linear-data-structures\concepts\union_intersect\obj\Debug\netcoreapp2.2\union_intersect.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\linear-data-structures\concepts\union_intersect\obj\Debug\netcoreapp2.2\union_intersect.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\linear-data-structures\concepts\union_intersect\obj\Debug\netcoreapp2.2\union_intersect.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\linear-data-structures\concepts\union_intersect\obj\Debug\netcoreapp2.2\union_intersect.AssemblyInfo.cs
+F:\repos\c-sharp-playground\linear-data-structures\concepts\union_intersect\obj\Debug\netcoreapp2.2\union_intersect.dll
+F:\repos\c-sharp-playground\linear-data-structures\concepts\union_intersect\obj\Debug\netcoreapp2.2\union_intersect.pdb

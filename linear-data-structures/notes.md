@@ -150,3 +150,64 @@ The `List<T>` class uses a inner array for keeping the elements and the array do
 - When adding a new element, sometimes we have to increase the capacity of the array, which is a slow operation, but it happens seldom and the average speed of insertion to List does not depend on the count of elements, i.e. it works very fast.
 
         Use List<T> when you don't expect frequent insertion and deletion of elements but you expect to add new elements at the end of the list or to access elements by index.
+
+##### Union and Intersection of Lists
+
+Let's consider a more interesting example - let's write a program, which can find the union and the intersection of two sets of numbers.
+
+#### Converting a List to Array and Vice Versa
+
+In C#, the conversion of a list to an array is easy by using the given method **ToArray()**. For the opposite operation, we could use the contructor of **`List<T>(Sytem.Array)`**
+
+```C#
+static void Main()
+{
+int[] arr = new int[] { 1, 2, 3 };
+List<int> list = new List<int>(arr);
+int[] convertedArray = list.ToArray();
+}
+```
+
+#### The LinkedList<T> Class
+
+The class is a dynamic implementation of a doubly linked list built in .NET Framework. Its elements contain a certain value and a pointer to the previous and the next element.
+
+With a view to the structure of the linked list, we have to have the following in mind
+
+- The append operation is very fast, because the list always knows its last element(tail)
+- Inserting a new element at a random position in the list is very fast(unlike List<T>) if we have a pointer to this position e.g if we insert at the list start or at the list end
+- Searching for elements by index or by value in LinkedList is a slow operation as we have to scan all elements consecutively beginning from the start of the list.
+- Removing elements is a slow operation, because it includes searching
+
+##### When Should We Use LinkedList<T>?
+
+Using LinkedList<T> is prefereble when we have to add/remove elements at both ends of the list and when the access to the elements is consequential.
+
+However, when we have to access the elements by index, then List<T> is a more appropriate choice.
+
+Considering memory, LinkedList<T> generally takes more space because it holds the value and several additional pointers for each element. List<T> also takes additional space because it allocates memory for more elements than it actually uses (it keeps bigger capacity than the number of its elements).
+
+#### Stack
+
+The stack is a data structure which implements the behaviour "last in - first out"(LIFO). The Stack ADT provides 3 major operations: push(add an element at the top of the stack), pop(take the last added element from the top of the stack) and peek(get the element from the top of the stack without removing it)
+
+The data structure stack can also have different implementations, such as dynamic and static implementation.
+
+Like with the static list we can use an array to keep the elements of the stack. We can keep an index or a pointer to the element, which is at the top.
+
+For the dynamic implementation of stack we use elements, which keep a value and a pointer to the next element. This linked-list based implementation does not require an internal buffer, does not need to grow when the buffer is
+full and has virtually the same performance for the major operations like the static implementation
+
+##### The Stack<T> Class
+
+In C#, we could use the standard implementation of the class in .NET Framework System.Collections.Generics.Stack<T>.It is implemented statically with an array, as the array is resized when needed.
+
+All basic operations for working with a stack are implemented:
+
+- Push(T) – adds a new element on the top of the stack
+- Pop() – returns the highest element and removes it from the stack
+- Peek() – returns the highest element without removing it
+- Count – returns the count of elements in the stack
+- Clear() – retrieves all elements from the stack
+- Contains(T) – check whether the stack contains the element
+- ToArray() – returns an array, containing all elements of the stack
