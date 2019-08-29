@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\linear-data-structures\exercises\ex3\obj\Debug\netcoreapp2.2\ex3.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\linear-data-structures\exercises\ex3\obj\Debug\netcoreapp2.2\ex3.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\linear-data-structures\exercises\ex3\obj\Debug\netcoreapp2.2\ex3.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\linear-data-structures\exercises\ex3\obj\Debug\netcoreapp2.2\ex3.AssemblyInfo.cs
+F:\repos\c-sharp-playground\linear-data-structures\exercises\ex3\bin\Debug\netcoreapp2.2\ex3.deps.json
+F:\repos\c-sharp-playground\linear-data-structures\exercises\ex3\bin\Debug\netcoreapp2.2\ex3.runtimeconfig.json
+F:\repos\c-sharp-playground\linear-data-structures\exercises\ex3\bin\Debug\netcoreapp2.2\ex3.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\linear-data-structures\exercises\ex3\bin\Debug\netcoreapp2.2\ex3.dll
+F:\repos\c-sharp-playground\linear-data-structures\exercises\ex3\bin\Debug\netcoreapp2.2\ex3.pdb
+F:\repos\c-sharp-playground\linear-data-structures\exercises\ex3\obj\Debug\netcoreapp2.2\ex3.dll
+F:\repos\c-sharp-playground\linear-data-structures\exercises\ex3\obj\Debug\netcoreapp2.2\ex3.pdb
