@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\linear-data-structures\concepts\check_brackets_stack\bin\Debug\netcoreapp2.2\check_brackets_stack.deps.json
+F:\repos\c-sharp-playground\linear-data-structures\concepts\check_brackets_stack\bin\Debug\netcoreapp2.2\check_brackets_stack.runtimeconfig.json
+F:\repos\c-sharp-playground\linear-data-structures\concepts\check_brackets_stack\bin\Debug\netcoreapp2.2\check_brackets_stack.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\linear-data-structures\concepts\check_brackets_stack\bin\Debug\netcoreapp2.2\check_brackets_stack.dll
+F:\repos\c-sharp-playground\linear-data-structures\concepts\check_brackets_stack\bin\Debug\netcoreapp2.2\check_brackets_stack.pdb
+F:\repos\c-sharp-playground\linear-data-structures\concepts\check_brackets_stack\obj\Debug\netcoreapp2.2\check_brackets_stack.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\linear-data-structures\concepts\check_brackets_stack\obj\Debug\netcoreapp2.2\check_brackets_stack.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\linear-data-structures\concepts\check_brackets_stack\obj\Debug\netcoreapp2.2\check_brackets_stack.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\linear-data-structures\concepts\check_brackets_stack\obj\Debug\netcoreapp2.2\check_brackets_stack.AssemblyInfo.cs
+F:\repos\c-sharp-playground\linear-data-structures\concepts\check_brackets_stack\obj\Debug\netcoreapp2.2\check_brackets_stack.dll
+F:\repos\c-sharp-playground\linear-data-structures\concepts\check_brackets_stack\obj\Debug\netcoreapp2.2\check_brackets_stack.pdb

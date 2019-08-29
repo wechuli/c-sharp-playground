@@ -211,3 +211,35 @@ All basic operations for working with a stack are implemented:
 - Clear() – retrieves all elements from the stack
 - Contains(T) – check whether the stack contains the element
 - ToArray() – returns an array, containing all elements of the stack
+
+#### Queue
+
+The "queue" data structure is created to model queues, for example a queue of waiting for printing documents, waiting processes to access a common resource, and others. Such queues are very conenient and are naturally modeled via the structure "queue". In queues, we can add elements only on the back and retrieve elements only at the front.
+
+The abstract data structure "queue" satisfies the behaviour "first in - first out" (FIFO). Elements added to the queue are appended at the end of the queue, and when elements are extracted, they are taken from the beginning of the queue (in the order they were added). Thus the queus behaves like a list with two ends (head and tail), just like queues for tickets.
+
+Like with the lists, the ADT queue could be implemented statically (as a resizable array) and dynamically (as ponter-based linked list)
+
+##### Static Queue (Array-Based Implementation)
+
+In the static queue, we could use an array for keeping the elements. When adding an element. it is inserted at the index, which follows the end of queus. After that, the end points at the newly added element. When removing an element, we take the element, which is pointed by the head of the quess. After that, the head starts to point at the next element. Thus the queue moves to the end of the array. When it reaches the end of the array, when adding a new element, it is inserted at the beginning of the array. That is why the implementation is called "looped queue", as we mentally stick the beginning and the end of the array and the queue orbits it:
+
+Static queue keeps an internal buffer with bigger capacity than the actual number of elements in the queue. Like in the static list implementation, when the space allocated for the queue elements is finished, the internal buffer
+grows (usually doubles its size).The major operations in the queue ADT are enqueue (append at the end of the queue) and dequeue (retrieve an element from the start of the queue).
+
+##### Linked Queue (Dynamic Implementation)
+
+The dynamic implementation of queue ADT looks like the implementation of the linked list. Like in the linked list, the elements consist of two parts – a value and a pointer to the next element:However, here elements are added at the end of the queue (tail), and are retrieved from its beginning (head), while we have no permission to get or add elements at any another position.
+
+#### The Queue<T> Class
+
+In C#, we use the static implementation of queue via the Queue<T> class. Here, we could indicate the types of the elements we are going to work with, as thw queue and the linked list are generic types.
+
+Queue<T> class provides the basic operations, specific for the data structure queus.
+
+- Enqueue(T) – inserts an element at the end of the queue
+- Dequeue() – retrieves the element from the beginning of the queue and removes it
+- Peek() – returns the element from the beginning of the queue without removing it
+- Clear() – removes all elements from the queue
+- Contains(T) – checks if the queue contains the element
+- Count – returns the amount of elements in the queue
