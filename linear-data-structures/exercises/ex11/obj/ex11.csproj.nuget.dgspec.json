@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "restore": {
+    "F:\\repos\\c-sharp-playground\\linear-data-structures\\exercises\\ex11\\ex11.csproj": {}
+  },
+  "projects": {
+    "F:\\repos\\c-sharp-playground\\linear-data-structures\\exercises\\ex11\\ex11.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "F:\\repos\\c-sharp-playground\\linear-data-structures\\exercises\\ex11\\ex11.csproj",
+        "projectName": "ex11",
+        "projectPath": "F:\\repos\\c-sharp-playground\\linear-data-structures\\exercises\\ex11\\ex11.csproj",
+        "packagesPath": "C:\\Users\\Wechuli\\.nuget\\packages\\",
+        "outputPath": "F:\\repos\\c-sharp-playground\\linear-data-structures\\exercises\\ex11\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Wechuli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
