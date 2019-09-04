@@ -93,6 +93,7 @@ namespace linked_list_implementation
             {
                 //The head node was removed --> update the head
                 this.head = node.NextNode;
+                
             }
             else
             {

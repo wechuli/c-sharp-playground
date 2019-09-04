@@ -89,6 +89,10 @@ namespace ex11
 
             // Remove the found element from the list of nodes
 
+            RemoveDoublyLinkedListNode(currentNode, prevNode);
+            // returned the removed element
+            return currentNode.Element;
+
         }
 
         // Remove the specified node from the list of node
@@ -106,18 +110,123 @@ namespace ex11
             {
                 //The head node was removed -- > update the head
                 this.head = node.NextNode;
+                node.PreviousNode = null;
+            }
+            else
+            {
+                //REdirect the pointers to skip the removed node
+                prevNode.NextNode = node.NextNode;
+
+                if (node.NextNode != null)
+                {
+                    node.NextNode.PreviousNode = prevNode;
+                }
+            }
+            // Fix the tail in case it was removed
+
+            if (object.ReferenceEquals(this.tail, node))
+            {
+                this.tail = prevNode;
+                this.tail.NextNode = null;
             }
         }
-        public T RemoveItem(T item)
+
+        // Removes the specified item and return its index
+        public int Remove(T item)
         {
+            // Find the element containing the searched item
+            int currentIndex = 0;
+            DoublyLinkedListNode currentNode = this.head;
+            DoublyLinkedListNode prevNode = null;
+
+            while (currentNode != null)
+            {
+                if (object.Equals(currentNode.Element, item))
+                {
+                    break;
+                }
+                prevNode = currentNode;
+                currentNode = currentNode.NextNode;
+                currentIndex++;
+            }
+            if (currentNode != null)
+            {
+                //The element is found in the list -> remove it
+                RemoveDoublyLinkedListNode(currentNode, prevNode);
+                return currentIndex;
+            }
+            else
+            {
+                // The element is not found in the list -> return -1
+                return -1;
+            }
 
         }
 
+        public int IndexOf(T item)
+        {
+            int index = 0;
+            DoublyLinkedListNode currentNode = this.head;
+            while (currentNode != null)
+            {
+                if (object.Equals(currentNode.Element, item))
+                {
+                    return index;
+                }
+                currentNode = currentNode.NextNode;
+                index++;
+            }
+            return -1;
+        }
+
+
+        //Checks if the specified element exists in the list
         public bool Contains(T item)
         {
-
+            int index = IndexOf(item);
+            bool found = (index != -1);
+            return found;
         }
 
+        // Gets or sets the element at the specified position
+        public T this[int index]
+        {
+            get
+            {
+                if (index >= count || index < 0)
+                {
+                    throw new ArgumentOutOfRangeException("Invalid index: " + index);
+                }
+                DoublyLinkedListNode currentNode = this.head;
+                for (int i = 0; i < index; i++)
+                {
+                    currentNode = currentNode.NextNode;
+                }
+                return currentNode.Element;
+            }
+            set
+            {
+                if (index >= count || index < 0)
+                {
+                    throw new ArgumentOutOfRangeException("Invalid index: " + index);
+                }
+                DoublyLinkedListNode currentNode = this.head;
+                for (int i = 0; i < index; i++)
+                {
+                    currentNode = currentNode.NextNode;
+                }
+                currentNode.Element = value;
+            }
+        }
 
+        //Gets the count of elements in the list
+
+        public int Count
+        {
+            get
+            {
+                return this.count;
+            }
+        }
     }
 }
