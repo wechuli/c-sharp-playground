@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\treeADT\bin\Debug\netcoreapp2.2\treeADT.deps.json
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\treeADT\bin\Debug\netcoreapp2.2\treeADT.runtimeconfig.json
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\treeADT\bin\Debug\netcoreapp2.2\treeADT.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\treeADT\bin\Debug\netcoreapp2.2\treeADT.dll
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\treeADT\bin\Debug\netcoreapp2.2\treeADT.pdb
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\treeADT\obj\Debug\netcoreapp2.2\treeADT.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\treeADT\obj\Debug\netcoreapp2.2\treeADT.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\treeADT\obj\Debug\netcoreapp2.2\treeADT.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\treeADT\obj\Debug\netcoreapp2.2\treeADT.AssemblyInfo.cs
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\treeADT\obj\Debug\netcoreapp2.2\treeADT.dll
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\treeADT\obj\Debug\netcoreapp2.2\treeADT.pdb

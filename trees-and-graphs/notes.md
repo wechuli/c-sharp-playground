@@ -37,7 +37,13 @@ Tree is a recursive data structure, which consists of nodes, connected with edge
 - Each node has at most one parent. There is only one special node without a parent - the root (if the tree is not empty)
 - All nodes are reachable from the root - there is a path from the root top each node in the tree.
 
-**The Heigh of a tree** - is the maximu depth of all its nodes. In our example the tree height is 2.
+**The Height of a tree** - is the maximu depth of all its nodes. In our example the tree height is 2.
 **The Degree** of the node is the _number of direct children_ of the given node. The degree of "19" and "7" is three, but the degree of "14" is two. The leaves have degree zero.
 
 **Branching factor** is the maximu of the degrees of all nodes in the tree. In our example, the maximu degree of the nodes is 3, so the branching factor is 3.
+
+
+### Tree Implementation - Example
+Our tree will contain numbers inside its nodes, and each node will have a list of zero or more children, which are trees too (following our recursive definition)
+
+Each node is recursively defined using itself. Each node of the tree (**`TreeNode<T>`**) contains a list of children, which are nodes. The tree itself is another class **`Tree<T>`** which can be empty or can have a root node.
