@@ -42,8 +42,34 @@ Tree is a recursive data structure, which consists of nodes, connected with edge
 
 **Branching factor** is the maximu of the degrees of all nodes in the tree. In our example, the maximu degree of the nodes is 3, so the branching factor is 3.
 
-
 ### Tree Implementation - Example
+
 Our tree will contain numbers inside its nodes, and each node will have a list of zero or more children, which are trees too (following our recursive definition)
 
 Each node is recursively defined using itself. Each node of the tree (**`TreeNode<T>`**) contains a list of children, which are nodes. The tree itself is another class **`Tree<T>`** which can be empty or can have a root node.
+
+#### How Does the Implementation Work
+
+The function associated with a node, like creating a node, adding a child node to this node, and getting the number of children are implemented at the level of **`TreeNode<T>`**.
+
+The rest of the functionality (traversing the tree fo rexample) is implemented at the level of **`Tree<T>`**. Logically dividing the fucntionality between the two classes makes our implementation more flexible.
+
+The reason we divide the implementation in two classes is that some operations are typical for each separate node(adding a child for example), while others are about the whole tree (searching a node by its number). In this variant of the implementation, the tree is a class that knows its root and each node knows its children. In this implementation we can have an empty tree (when root =null).
+
+#### Depth-First-Search (DFS) Traversal
+
+The Depth-First-Search algorithm aims to visit each of the tree nodes exactly once. Such a visit of all nodes is called tree traversal.
+
+The DFS algorithm starts from a given node and goes as deep in the tree hierarchy as it can. Whenit reaches a node, which has no children to visit or all have been visited, it returns to the previous node. We can describe the depth-first search algorithm by the following simple steps:
+
+- Traverse the current node - e.g print it on the console or process it in some way
+- Sequentially traverse recursively each of the current nodes' child nodes (traverse the sub-trees of the current node).This can be done by a recursive call to the same method for each child node.
+
+We make creating a tree easier by defining a special constructor, which takes for input parameters a node value and a list of its sub-trees. That allows us to give any number of type **`Tree<T>`** (sub-trees)
+
+#### Traverse the Hard Drive Directories
+
+
+### Bread-Frist Search (BFS)
+
+
