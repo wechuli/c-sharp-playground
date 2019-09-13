@@ -32,6 +32,7 @@ namespace traverse_hard_drive
 
         public static void TraverseDir(string directoryPath)
         {
+          
             TraverseDir(new DirectoryInfo(directoryPath),string.Empty);
         }
     }

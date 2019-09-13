@@ -65,11 +65,25 @@ The DFS algorithm starts from a given node and goes as deep in the tree hierarch
 - Traverse the current node - e.g print it on the console or process it in some way
 - Sequentially traverse recursively each of the current nodes' child nodes (traverse the sub-trees of the current node).This can be done by a recursive call to the same method for each child node.
 
+The DFS algorithm is a recursive algorithm that uses the idea of backtracking. It involves exhaustive searches of all the nodes by going ahead if possible, else by backtracking.
+
+Here, the word backtrack means that when you are moving forward and there are no more nodes along the current path, you move backwards on the same path to dind nodes to traverse. All the nodes will be visited on the current path till all the unvisited nodes have been traversed after which the next path will be selected.
+
 We make creating a tree easier by defining a special constructor, which takes for input parameters a node value and a list of its sub-trees. That allows us to give any number of type **`Tree<T>`** (sub-trees)
 
 #### Traverse the Hard Drive Directories
 
 
 ### Bread-Frist Search (BFS)
+
+**Breadth-First Search(BFS)** is an algorithm for traversing branched data structures (like trees and graphs). The BFS algorithm first traverses the start node, then all its direct children, then their direct children and so on. This approach is also known as the wavefront traversal, because it looks like the waves caused by a stone thrown into a lake.
+
+The **Breadth-Frist Search (BFS) algorithm** consists of the following steps:
+1. Enqueue the start node in queue Q
+2. While Q is not empty, repeat the following steps
+     - Dequeue the next node v from Q and print it
+     - Add all children of v in the queue
+
+The BFS algorithm is very simple and always traverses first the nodes that are closest to the start node, and then the more distant and so on until it reaches the furthest. The BFS algorithm is very widely used in problem solving e.g for finding the shortest path in labyrinth.
 
 

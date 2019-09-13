@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\traverse_hard_drive_BFS\bin\Debug\netcoreapp2.2\traverse_hard_drive_BFS.deps.json
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\traverse_hard_drive_BFS\bin\Debug\netcoreapp2.2\traverse_hard_drive_BFS.runtimeconfig.json
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\traverse_hard_drive_BFS\bin\Debug\netcoreapp2.2\traverse_hard_drive_BFS.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\traverse_hard_drive_BFS\bin\Debug\netcoreapp2.2\traverse_hard_drive_BFS.dll
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\traverse_hard_drive_BFS\bin\Debug\netcoreapp2.2\traverse_hard_drive_BFS.pdb
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\traverse_hard_drive_BFS\obj\Debug\netcoreapp2.2\traverse_hard_drive_BFS.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\traverse_hard_drive_BFS\obj\Debug\netcoreapp2.2\traverse_hard_drive_BFS.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\traverse_hard_drive_BFS\obj\Debug\netcoreapp2.2\traverse_hard_drive_BFS.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\traverse_hard_drive_BFS\obj\Debug\netcoreapp2.2\traverse_hard_drive_BFS.AssemblyInfo.cs
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\traverse_hard_drive_BFS\obj\Debug\netcoreapp2.2\traverse_hard_drive_BFS.dll
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\traverse_hard_drive_BFS\obj\Debug\netcoreapp2.2\traverse_hard_drive_BFS.pdb

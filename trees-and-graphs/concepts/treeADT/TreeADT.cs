@@ -105,7 +105,7 @@ namespace treeADT
         {
             foreach (Tree<T> child in children)
             {
-                this.root.AddChild(child.root);
+                this.root.AddChild(child.Root);
             }
         }
 
