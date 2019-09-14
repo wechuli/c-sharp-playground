@@ -73,17 +73,34 @@ We make creating a tree easier by defining a special constructor, which takes fo
 
 #### Traverse the Hard Drive Directories
 
-
 ### Bread-Frist Search (BFS)
 
 **Breadth-First Search(BFS)** is an algorithm for traversing branched data structures (like trees and graphs). The BFS algorithm first traverses the start node, then all its direct children, then their direct children and so on. This approach is also known as the wavefront traversal, because it looks like the waves caused by a stone thrown into a lake.
 
 The **Breadth-Frist Search (BFS) algorithm** consists of the following steps:
+
 1. Enqueue the start node in queue Q
 2. While Q is not empty, repeat the following steps
-     - Dequeue the next node v from Q and print it
-     - Add all children of v in the queue
+   - Dequeue the next node v from Q and print it
+   - Add all children of v in the queue
 
 The BFS algorithm is very simple and always traverses first the nodes that are closest to the start node, and then the more distant and so on until it reaches the furthest. The BFS algorithm is very widely used in problem solving e.g for finding the shortest path in labyrinth.
 
+### Binary Trees
 
+This type of tree turns out to be very useful in programming. The terminology for trees is also valid about binary trees
+Binary Tree is a tree which nodes have a degree equal or less than 2. Because every node's children are at most 2, we call them left child and right child. They are the roots of the left sub-tree and the right sub-tree of their parent node. Some nodes may have only left or only right child, not both. Some nodes may have no children and are called leaves.
+
+Binary tree can be recursively defined as follows: a single node is a binary tree and can have left and right children which are also binary trees.
+
+![](binary.PNG)
+
+We have to note that there is one very big difference in the definition of binary tree from the definition od the classical tree - the order of the children of each node. Although we take binary trees as a special case of a tree structure, we have to notice that the condition for particular order of children nodes makes them a completely different structure.
+
+The traversal of binary tree is a classic problem which has classical solutions. Generally, there are few ways to traverse a binary tree recursively:
+
+- In-order (Left-Root-Right) - the traversal algorithm first traverses the left sub-tree, then the root and last the right sub-tree.
+- Pre-order (Root-Left-Right) - in this case the algorithm first traveses the root, then the left sub-tree and last the right sub-tree.
+- Post-order(Left-Right-Root) - here we first traverse the left subtree, then the right one last the root.
+
+### Ordered Binary Search Trees

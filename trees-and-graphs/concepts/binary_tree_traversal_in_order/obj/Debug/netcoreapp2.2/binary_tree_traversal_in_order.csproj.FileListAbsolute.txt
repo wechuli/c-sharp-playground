@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\binary_tree_traversal_in_order\bin\Debug\netcoreapp2.2\binary_tree_traversal_in_order.deps.json
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\binary_tree_traversal_in_order\bin\Debug\netcoreapp2.2\binary_tree_traversal_in_order.runtimeconfig.json
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\binary_tree_traversal_in_order\bin\Debug\netcoreapp2.2\binary_tree_traversal_in_order.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\binary_tree_traversal_in_order\bin\Debug\netcoreapp2.2\binary_tree_traversal_in_order.dll
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\binary_tree_traversal_in_order\bin\Debug\netcoreapp2.2\binary_tree_traversal_in_order.pdb
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\binary_tree_traversal_in_order\obj\Debug\netcoreapp2.2\binary_tree_traversal_in_order.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\binary_tree_traversal_in_order\obj\Debug\netcoreapp2.2\binary_tree_traversal_in_order.csproj.CoreCompileInputs.cache
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\binary_tree_traversal_in_order\obj\Debug\netcoreapp2.2\binary_tree_traversal_in_order.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\binary_tree_traversal_in_order\obj\Debug\netcoreapp2.2\binary_tree_traversal_in_order.AssemblyInfo.cs
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\binary_tree_traversal_in_order\obj\Debug\netcoreapp2.2\binary_tree_traversal_in_order.dll
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\binary_tree_traversal_in_order\obj\Debug\netcoreapp2.2\binary_tree_traversal_in_order.pdb
