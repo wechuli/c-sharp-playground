@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace binary_tree_traversal_pre_order
+namespace ordered_binary_search_tree
 {
     class Program
     {

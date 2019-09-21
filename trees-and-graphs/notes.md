@@ -104,3 +104,35 @@ The traversal of binary tree is a classic problem which has classical solutions.
 - Post-order(Left-Right-Root) - here we first traverse the left subtree, then the right one last the root.
 
 ### Ordered Binary Search Trees
+
+We have seen how to build traditional and binary trees. These structures are very summarized in themselves and it will be difficult for us to use them for a bigger project. Practically, in computer science, special and programming variants of binary and ordinary trees are used that have certain special characteristics, like order, minimal depth and others.
+
+As examples for a useful properties we can give the ability to quickly search for an element by given value (Red-Black tree); order of elements in the tree (ordered search trees); balanced depth(balanced trees);possiblity to store an ordered tree in persistent storage so that searching an element to be fast with as little as possible read operations(B-tree)
+
+They use one often met property of the nodes in the binary trees - unique identification key in every node. Important property of these keys is that they are comparable.
+
+#### Comparability between Objects
+
+Comparability - we call two objects A and B comparable, if exactly one of the following 3 dependencies exists:
+
+- A is less than B
+- A is bigger than B
+- A is equal to B
+
+The nodes of a tree can contain different fields but we think about only thier unique keys , which we want to be comparable.
+
+And we arrive to the definition of the ordered binary seach tree:
+
+- **Ordered Binary Tree(binary search tree)** is a binary tree, in which every node has a unique key, every two of the keys are comparbale and the tree is organized in a way that for every node the following is satisfied
+
+- All keys in the left sub-tree are smaller than its key
+- All keys in the right sub-tree are bigger than its key
+
+#### Properties of the Ordered Binary Search Trees
+
+![](ordered.PNG)
+
+By definition, we know that the left sub-tree of every node consts of  elements which are smaller than itself. While the right sub-tree, there are only bigger elements. This means that if we want to find a given element, starting from the root, either we have found it or should search it respectively in its left or right sub-tree, which will save unneccessary comparisons.
+
+From the elements' order follwos that the smallest element in the tree is the leftmost successor of the root, if there is such or the root itself, if it does not have a left successor. Next useful property from this is, that every single element from the left sub-tree of the given node is smaller than every single element from the right sub-tree of the same node.
+

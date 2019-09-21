@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\repos\\c-sharp-playground\\trees-and-graphs\\concepts\\binary_tree_traversal_pre_order\\binary_tree_traversal_pre_order.csproj",
-      "projectName": "binary_tree_traversal_pre_order",
-      "projectPath": "F:\\repos\\c-sharp-playground\\trees-and-graphs\\concepts\\binary_tree_traversal_pre_order\\binary_tree_traversal_pre_order.csproj",
+      "projectUniqueName": "F:\\repos\\c-sharp-playground\\trees-and-graphs\\concepts\\ordered_binary_search_tree\\ordered_binary_search_tree.csproj",
+      "projectName": "ordered_binary_search_tree",
+      "projectPath": "F:\\repos\\c-sharp-playground\\trees-and-graphs\\concepts\\ordered_binary_search_tree\\ordered_binary_search_tree.csproj",
       "packagesPath": "C:\\Users\\Wechuli\\.nuget\\packages\\",
-      "outputPath": "F:\\repos\\c-sharp-playground\\trees-and-graphs\\concepts\\binary_tree_traversal_pre_order\\obj\\",
+      "outputPath": "F:\\repos\\c-sharp-playground\\trees-and-graphs\\concepts\\ordered_binary_search_tree\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
