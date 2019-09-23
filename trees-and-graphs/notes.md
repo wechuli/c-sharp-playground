@@ -132,7 +132,14 @@ And we arrive to the definition of the ordered binary seach tree:
 
 ![](ordered.PNG)
 
-By definition, we know that the left sub-tree of every node consts of  elements which are smaller than itself. While the right sub-tree, there are only bigger elements. This means that if we want to find a given element, starting from the root, either we have found it or should search it respectively in its left or right sub-tree, which will save unneccessary comparisons.
+By definition, we know that the left sub-tree of every node consts of elements which are smaller than itself. While the right sub-tree, there are only bigger elements. This means that if we want to find a given element, starting from the root, either we have found it or should search it respectively in its left or right sub-tree, which will save unneccessary comparisons.
 
 From the elements' order follwos that the smallest element in the tree is the leftmost successor of the root, if there is such or the root itself, if it does not have a left successor. Next useful property from this is, that every single element from the left sub-tree of the given node is smaller than every single element from the right sub-tree of the same node.
 
+#### Comparability betwwen Objects in C
+
+What does "comparability between objects" mean for us as developers? It means that we must somehow oblige everyone who uses our data structure, to create it passing it a type, which is comparable.
+
+        T : IComparable<T>
+
+The interface `IComparable<T>`, located in the namespace `Sys
