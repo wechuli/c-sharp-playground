@@ -142,4 +142,19 @@ What does "comparability between objects" mean for us as developers? It means th
 
         T : IComparable<T>
 
-The interface `IComparable<T>`, located in the namespace `Sys
+The interface `IComparable<T>`, located in the namespace `System`, specifies the method `CompareTo(T obj)`, which returns a negative integer number, zero or a pasitive intgeger number respectively if the current object is less, equal or bigger than the one which is given to the method for comparing.
+
+On one hand, the implementation of this interface by given class ensures that its instances are comparable. On the other hand, we need those nodes, described by `BinaryTreeNode<T>` class to be comparable between each other. That is why it implements `IComparable<T>` too. The implementation of `IComparable<T>` to the `BinaryTreeNode<T>` class calls the type T's implemntation internally.
+
+Now, we go to the implementation of the class, describing an ordered binary tree - `BinarySearchTree<T>`. The tree by itself as a structure cconsists of a root node of type `BinaryTreeNode<T>`, which contains internally its successors - left and right. Internally, they also contain their successors, thus recursively down unitl it reaches the leaves.
+
+An important thing is the definition `BinarySearchTree<T>` where T : `IComparable<T>`. This constraint of the type T is necessary because of the requirement of our internal class, which works only with types, implementing `IComparable<T>`. Due to this restriction we can use `BinarySearchTree<int>` and `BinarySearchTree<string>`, but cannot use `BinarySearchTree<int[]>` and `BinarySearchTree<StreamReader>`, because int[] and StreamReader are not comparable, while int and string are.
+
+We are to implement the following operations on the orderd binary tree - insert,searching,remobing
+- **insert** - Inserting(or adding) an element in a binary search tree means to put a new element somewhere in the tree so that the tree must stay orded. 
+If the tree is empty, we add the new element as a root:
+- If the element is smaller than the root, we call recurssively the same method to add the element in the left sub-tree
+- If the element is bigger than the root, we call recursivley to the same method to add the element in the right sub-tree
+- If the element is equal to the root, we don't do anything and exit from the recursion.
+
+We can clearly see how the algorithm for inserting a node conforms to the rule "elemnts in the left sub-tree are less than the root and the elements in the right sub-tree are bigger than the root".

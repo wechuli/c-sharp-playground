@@ -1,0 +1,10 @@
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\ordered_binary_search_tree\obj\Debug\netcoreapp2.2\ordered_binary_search_tree.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\ordered_binary_search_tree\obj\Debug\netcoreapp2.2\ordered_binary_search_tree.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\ordered_binary_search_tree\obj\Debug\netcoreapp2.2\ordered_binary_search_tree.AssemblyInfo.cs
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\ordered_binary_search_tree\bin\Debug\netcoreapp2.2\ordered_binary_search_tree.deps.json
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\ordered_binary_search_tree\bin\Debug\netcoreapp2.2\ordered_binary_search_tree.runtimeconfig.json
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\ordered_binary_search_tree\bin\Debug\netcoreapp2.2\ordered_binary_search_tree.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\ordered_binary_search_tree\bin\Debug\netcoreapp2.2\ordered_binary_search_tree.dll
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\ordered_binary_search_tree\bin\Debug\netcoreapp2.2\ordered_binary_search_tree.pdb
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\ordered_binary_search_tree\obj\Debug\netcoreapp2.2\ordered_binary_search_tree.dll
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\ordered_binary_search_tree\obj\Debug\netcoreapp2.2\ordered_binary_search_tree.pdb

@@ -6,7 +6,9 @@ namespace ordered_binary_search_tree
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            int firstNumber = 12;
+            int secondNumber = 58;
+            Console.WriteLine(firstNumber.CompareTo(secondNumber));
         }
     }
 }

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "ordered_binary_search_tree/1.0.0": {
+        "runtime": {
+          "ordered_binary_search_tree.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ordered_binary_search_tree/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
