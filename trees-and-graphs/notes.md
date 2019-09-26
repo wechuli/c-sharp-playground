@@ -151,10 +151,33 @@ Now, we go to the implementation of the class, describing an ordered binary tree
 An important thing is the definition `BinarySearchTree<T>` where T : `IComparable<T>`. This constraint of the type T is necessary because of the requirement of our internal class, which works only with types, implementing `IComparable<T>`. Due to this restriction we can use `BinarySearchTree<int>` and `BinarySearchTree<string>`, but cannot use `BinarySearchTree<int[]>` and `BinarySearchTree<StreamReader>`, because int[] and StreamReader are not comparable, while int and string are.
 
 We are to implement the following operations on the orderd binary tree - insert,searching,remobing
-- **insert** - Inserting(or adding) an element in a binary search tree means to put a new element somewhere in the tree so that the tree must stay orded. 
-If the tree is empty, we add the new element as a root:
+
+- **insert** - Inserting(or adding) an element in a binary search tree means to put a new element somewhere in the tree so that the tree must stay orded.
+  If the tree is empty, we add the new element as a root:
 - If the element is smaller than the root, we call recurssively the same method to add the element in the left sub-tree
 - If the element is bigger than the root, we call recursivley to the same method to add the element in the right sub-tree
 - If the element is equal to the root, we don't do anything and exit from the recursion.
 
 We can clearly see how the algorithm for inserting a node conforms to the rule "elemnts in the left sub-tree are less than the root and the elements in the right sub-tree are bigger than the root".
+
+#### Searching for an Element
+
+Searching in a binary search tree is an operation which is more intuitive. The algorithm starts with element node, pointing to the root. After that, we do the following:
+
+- If the element is equal to the node, we have found the searched element and return it.
+- If the element is smaller than the node, we assigne to node its left successor i.e we continue the searching in the left sub-tree.
+- If the element is bigger than the node, we assign to node its right successor i.e we continue the searching in the right sub-tree
+
+At the end, the algorithm returns the found node or null if there is no such node in the tree. Additionally, we define a Boolean method that checks if certain value belongs to the tree
+
+#### Removing an Element
+
+Removing an element is the most complicated operation from the basic binary search tree operations. After it the tree must keep its order.
+
+The first step before we remove an element from the tree is to find it. We already know how it happens:
+
+- If the node is a leaf - we point its parent's reference to null. If the element has no parent, it means that it is a root and we just removed it.
+- If the node has only one sub-tree - left or right, it is replacing with the root of this sub-tree
+- If the node has two sub-trees. Then we have to find the smallest node in the right sub-tree and swap with it. After this exchange, the node will have one sub-tree at most and then we remove it grounded on some of the above two rules
+
+### Balanced Trees

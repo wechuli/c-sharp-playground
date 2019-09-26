@@ -1,8 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\arrays",
     "\\arrays\\exercises",
-    "\\arrays\\exercises\\question-5"
+    "\\arrays\\exercises\\question-5",
+    "\\creating-and-using-objects",
+    "\\creating-and-using-objects\\concepts"
   ],
+  "SelectedNode": "\\arrays\\exercises",
   "PreviewInSolutionExplorer": false
 }
