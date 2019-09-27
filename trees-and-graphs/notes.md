@@ -181,3 +181,48 @@ The first step before we remove an element from the tree is to find it. We alrea
 - If the node has two sub-trees. Then we have to find the smallest node in the right sub-tree and swap with it. After this exchange, the node will have one sub-tree at most and then we remove it grounded on some of the above two rules
 
 ### Balanced Trees
+
+As we have seen, the ordered binary trees are a very comfortable structure to search within. Defined in this way, the operations for creating and deleting the tree have a hidden flaw: they don't balance the tree and its depth could become very big
+
+Think about it, what will happen if we sequentially include the elements: 1,2,3,4,5,6? The ordered binary tree will look like this:
+
+![](binarytree.PNG)
+
+In this case, the binary tree degenrates into a linked list. Because of this the searching in this tree is going to be much slower (with N steps not with log(N), as to check whether an item is inside, in the worst case we will have to go through all elements)
+
+There exists data structures which save the logarithmic behavious of the operations adding , searching and removing an element in the common case
+
+- **Balanced binary tree** - a binary tree in which no leaf is at 'much greater' depth than any other leaf. The definition 'much greater' is roughh and depends on the specific balancing scheme.
+- **Perfectly balanced binary tree** - binary tree in which the difference in then left and right tree nodes' count of any node is at most one.
+
+Without going in details, we will mention that when given binary search tree is balanced, even when not perfectly balanced, then the operations of adding, searching and removing an element in it will run in approximtely a logarithmic number of steps even in the worst case. To avoid imbalance in the tree to search, apply operations that rearrange some elements of the tree when adding or removing an item from it. These operations are called rotations in most of the cases. The type of rotation should be further specified and depends on the implementation of the specific data structure. As examples for structures like these, we can give Red-Black tree, AVL-tree, AA-tree, Splay-ree and others.
+
+Balanced search trees allow quickly(in general case for approximately log(n) number of steps) to perform the operations like searching, adding and deleting of elements. This is due to two main reasons
+
+- Balanced search trees keep their elements ordered internally
+- Balanced search trees keep themselves balanced, i.e. their depth is always in order of log(n)
+
+Balanced search trees can be binary or non-binary.
+
+Balanced binary search trees have multiple implementations like Red-Black Trees, AA Trees and AVL Trees. All of them are ordered, balanced and binary, so they perform insert/search/delete operations very fast.
+
+Non-binary balanced search trees also have multiple implementations with different special properties. Examples are B-Trees, B+ Trees and Interval Trees. All of them are ordered, balanced, but not binary. Their nodes can typically hold more than one key and can have more than two child nodes. These trees also perform operations like insert/search/delete very fast.
+
+## Graphs
+
+Graphs are a very useful and fairly common data structure. They are used to describe a wide variety of relationships betwween objects and in practice can be related to almost everything.Trees are a subset of graphs, lists are a special case if trees and thus graphs i.e the graph data structure represents a generalized structure that allows modelling of very large set or real-world situations.
+
+### Graphs - Basic Concepts
+
+![](graph.PNG)
+
+The circle of this scheme we will call vertices(nodes) and the arrows connecting them we will call directed edged. The vertex of which the arrow comes out we will call predecessor of that the arrow points. For example "19" is a predecessor of "1". In this case, "1" is a successor of "19". Unlike the structure tree, here each vertex can have more than one predecessor. Like 21, it has three - 19,1,7. If two of the vertices are connected with edge, then we say these two vertices are adjacent through this edge.
+
+### Finite directed graph
+
+A directed graph(or digraph) is a graph that is made up of a set of vertices connected by edges, where the edges have a direction associated with them.
+In formal terms, a directed graph is an ordered pair G=(V,A) where:
+- V is a set whose elements are called vertices, nodes or points
+- A is a set of ordered pairs of vertices, called arrows, directed edges(sometimes simple edges with the corresponnding set named E instead of A), directed arcs or directed lines
+
+The aforementioned definition does not allow a directed graph to have a multiple arrows with the same source and target nodes/
