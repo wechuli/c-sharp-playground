@@ -225,4 +225,10 @@ In formal terms, a directed graph is an ordered pair G=(V,A) where:
 - V is a set whose elements are called vertices, nodes or points
 - A is a set of ordered pairs of vertices, called arrows, directed edges(sometimes simple edges with the corresponnding set named E instead of A), directed arcs or directed lines
 
-The aforementioned definition does not allow a directed graph to have a multiple arrows with the same source and target nodes/
+The aforementioned definition does not allow a directed graph to have a multiple arrows with the same source and target nodes.
+
+Finite directed graph is called the couple(V,E) in which V is a finite set of vertices and E is a finite set of directed edges. Each edge e that belongs to E is an ordered couple of vertices u and v or e=(u,v), which are defining it in a unique way..
+
+For better understanding of this definition, think of the vertices as they are cities, and the directed edges as one-way roads. That way, if one of the vertices is sofia and theother is Paris, the one-way path(edge) will be called Sofia-Paris. 
+
+If instead of arrows, the vertices are connected with segments, then the segments will be called undirected edges and the graph- undirected. Practically, we can imagine than an undirected edge from vertex A to vertex B is two-way edge and equivalent to two opposite directed edges between the same two vertices.
