@@ -222,6 +222,7 @@ The circle of this scheme we will call vertices(nodes) and the arrows connecting
 
 A directed graph(or digraph) is a graph that is made up of a set of vertices connected by edges, where the edges have a direction associated with them.
 In formal terms, a directed graph is an ordered pair G=(V,A) where:
+
 - V is a set whose elements are called vertices, nodes or points
 - A is a set of ordered pairs of vertices, called arrows, directed edges(sometimes simple edges with the corresponnding set named E instead of A), directed arcs or directed lines
 
@@ -229,6 +230,60 @@ The aforementioned definition does not allow a directed graph to have a multiple
 
 Finite directed graph is called the couple(V,E) in which V is a finite set of vertices and E is a finite set of directed edges. Each edge e that belongs to E is an ordered couple of vertices u and v or e=(u,v), which are defining it in a unique way..
 
-For better understanding of this definition, think of the vertices as they are cities, and the directed edges as one-way roads. That way, if one of the vertices is sofia and theother is Paris, the one-way path(edge) will be called Sofia-Paris. 
+For better understanding of this definition, think of the vertices as they are cities, and the directed edges as one-way roads. That way, if one of the vertices is sofia and theother is Paris, the one-way path(edge) will be called Sofia-Paris.
 
 If instead of arrows, the vertices are connected with segments, then the segments will be called undirected edges and the graph- undirected. Practically, we can imagine than an undirected edge from vertex A to vertex B is two-way edge and equivalent to two opposite directed edges between the same two vertices.
+
+Two vertices connected with an edge are called neighbors(adjacent). For the edges, a weigh function can be assigned , that associate each edge to a real number. These numbers we will call weights(costs). For example, for weights, we can mention some distance between neighboring cities or the length of the directed connections between two neighboring cities or the crossing funcion of a pipe. A graph that has weights on the edges is called weighted.
+
+![](weighted.PNG)
+
+#### Path in a graph
+
+is a sequence of vertices V1,V2,...,Vn such as there is an edge from Vi to Vi+1 for every i from 1 to n-1. e.g 1,12,19,21 is a path.
+
+#### Length of path
+
+is the number of edges connecting vertices in the sequence of the vertices in the path. This number is equal to the number of vertices in the path minus one.
+
+#### Cost of path
+
+in a weighted graph, we call the sum of the weights(costs) of the edges involved in the path.
+
+#### Loop
+
+is a path in which the initial and final vertex of the path match.
+
+#### Looping edge
+
+we will call an edge which starts and ends in the same vertex
+
+#### Connected undirected graph
+
+we call an undirected graph in which there is a path from each node to each other.
+
+A **tree** is therefore a special kind of a graph. It is an undirected connected graph without loops.
+
+### Graphs - Presentations
+
+There are a lot of different ways to present a graph in computer programming. Different representations have different properties and what exactly should be selected depends on the particular algorithm that we want to apply. In other words- we present the graph in a way so that the operations that our algorithm does on it to be as fast as possible.
+
+- **List of successors** - in this representation for each vertex v a list of successor vertices is kept(like the tree's child nodes). Here again, if the graph is weighted, then to each element of the list of successors an additional field is added indicating the weight of the edge to it.
+- **Adjacency matrix** - the graph is represented as a square matrix **`g[N][N]`**, where if there is an edge from vi to vj, then the position **`g[i][j]`** is contains the value 1. If such as edge does not exist, the field **`g[i][j]`** contains the value 0. If the graph is weightes, in the position we record the weigh of the edge and matrix is called a matrix of weights. If between two nodes in this matrix there is no edge, then it is recorded a special value meaning infinity. If the graph is undirected, the adjacency matrix will be symmetrical.
+- **List of the edges**- it is represented through the list of ordered pairs (Vi,Vj) where there is an edge from vi to vj. If the graph is weighted, instead ordered pair we have ordered tripe and its third element shows what the weight of the edge is.
+- **Matrix of incidence between vertices and edges** - in this case again, we are using a matrix but with dimensions **`g[M][N]`**, where N is the number of vertices and M is the number of edges. Each column represents one edge, and each row a vertex. Then the column corresponding to the edge (vi, vj) will contain 1 only at position i and position j, and other items in this column will contain 0. If the edge is a loop, i.e. is (vi, vi), then on position i we record 2. If the graph we want to represent is oriented and we want to introduce edge from vi to vj, then to position i we write 1 and to the position j we write -1.
+
+The most commonly used representation of graphs is the list of successors.
+
+### Graphs - Basic Operations
+
+The basic operations in a graph are:
+
+- Creating a graph
+- Adding/removing a vertex/edge
+- Check whether an edge exists between two vertices
+- Finding the successors of a given vertex
+
+The sample graph inplementation of the graph is given as a list of successors. This kind of implementation is good when most often operation we need is to get the list of all successors(child nodes ) for a certain vertex. This graph representation needs a memory of order N+M where N is the number of vertices and M is the number of edges in the graph.
+
+In essence, the vertices are numbered from 0 to N-1 and our Graph class holds for each vertex a list of the numbers of all its child vertices. It does not work with the nodes but with their numbers in the range [0...N-1]

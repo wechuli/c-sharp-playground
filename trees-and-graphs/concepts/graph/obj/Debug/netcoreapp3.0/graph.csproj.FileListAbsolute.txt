@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\graph\bin\Debug\netcoreapp3.0\graph.exe
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\graph\bin\Debug\netcoreapp3.0\graph.deps.json
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\graph\bin\Debug\netcoreapp3.0\graph.runtimeconfig.json
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\graph\bin\Debug\netcoreapp3.0\graph.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\graph\bin\Debug\netcoreapp3.0\graph.dll
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\graph\bin\Debug\netcoreapp3.0\graph.pdb
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\graph\obj\Debug\netcoreapp3.0\graph.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\graph\obj\Debug\netcoreapp3.0\graph.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\graph\obj\Debug\netcoreapp3.0\graph.AssemblyInfo.cs
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\graph\obj\Debug\netcoreapp3.0\graph.dll
+F:\repos\c-sharp-playground\trees-and-graphs\concepts\graph\obj\Debug\netcoreapp3.0\graph.pdb
