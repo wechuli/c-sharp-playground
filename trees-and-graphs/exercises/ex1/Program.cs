@@ -1,12 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
+using treeADT;
 
-namespace treeADT
+namespace ex1
 {
     class Program
     {
         static void Main(string[] args)
         {
+
+            //1. Write a program that finds the number of occurrences of a number in a tree of numbers.
+
             // Create the tree from the sample
             Tree<int> tree = new Tree<int>(7,
             new Tree<int>(19, new Tree<int>(1), new Tree<int>(12), new Tree<int>(31)),
