@@ -20,7 +20,8 @@ namespace ex1
 
             //Traverse and print the tree using Depth-First-Search
 
-            tree.TraverseDFS();
+            //tree.TraverseDFS();
+            tree.FindNumberOfOccurencesOfObjectInTree(7);
         }
     }
 }

@@ -136,17 +136,36 @@ namespace treeADT
                 printDFS(child, spaces + " ");
             }
         }
+        private void printDFS(TreeNode<T> root, string spaces, List<T> accumulator, T element)
+        {
+            if (object.Equals(this.root.Value, element))
+            {
+                accumulator.Add(element);
+                Console.WriteLine(spaces + root.Value);
+            }
+
+        
+            TreeNode<T> child = null;
+            for (int i = 0; i < root.ChildrenCount; i++)
+            {
+                child = root.GetChild(i);
+                printDFS(child, spaces + " ", accumulator, element);
+            }
+            // Console.WriteLine(accumulator.Count);
+
+        }
 
 
         public void TraverseDFS()
         {
-            
+
             this.printDFS(this.root, string.Empty);
         }
 
-        public int FindNumberOfOccurencesOfObjectInTree(T object)
+        public void FindNumberOfOccurencesOfObjectInTree(T element)
         {
-            
+            List<T> accumulator = new List<T>();
+            this.printDFS(this.root, string.Empty, accumulator, element);
         }
     }
 }
