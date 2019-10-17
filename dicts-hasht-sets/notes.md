@@ -34,3 +34,27 @@ A red-black tree is an ordered binary balanced search tree, that's used for sear
 The usage of the binary search tree gives us a great advantage: the keys in the dictionary are stored ordered. Thanks to this feature, if we need the data ordered by keys, we don't need to perform any additional sorting. Actually, this is the only advantage this dictionary implementation compared to the hash-table
 
 A things that should be mentioned is that keeping the keys ordered comes with its price. Searching for the elements using an ordered balanced tree is slower (typically takes log(n) steps) than using a hash-table (O(1)). Because of this, if there is no requirement for the keys to be ordered, its better to use **`Dictionary<K,V>`**
+
+##### IComparable<K> Interface
+
+When using `SortedDictionary<K,V>` the keys are required to be **comparable**. In our example we use objects of type **string**.
+The class **string** implements the interface **IComparable** and the comparison between the elements is done lexicographically. By default, the strings in .NET are case sensitive. This means that words that start with a lowercase letter will be before the ones with an uppercase letter. This definition comes from the implementation of the method **CompareTo(object)**, through which the **string** class implements the interface **IComparable**.
+
+##### IComparer<T> Interface
+
+What should we do when we are not happy with the default implementation of comparison? For example, what should we so when we want uppercase and lowercase chracters to be treated as equal ?
+
+For the comparison of objects with an exclusively defined order in `SortedDictionary<K,V>` in .NET, we will use the interface `IComparable<T>`. It defines a comparison function **int Compare(T x, T y)** that is an alternative to the already defined order.
+
+When we create an object of type `SortedDictionary<K,V>`, we can pass to its constructor a reference to `IComparable<K>` so that it can use it for the key comparison (key elements should be objects of type K).
+
+After using `IComparerer<E>`, we changed the definition for ordering keys in our dictionary. If, for a key, we used a class, defined by us, for example - **Student**, that implements `IComparable<E>`, we would get the same result if we were to alter the method `CompareTo(Student)`. There is also one additional requirement, when implementin `IComparable<K>`:
+When two objects are equal (Equals(object) returns true), CompareTo(E) should return 0.
+
+Meeting this requirement would allow us to use the objects of a custom class as keys, just as in the implementation of a balanced tree.
+
+#### Dictionary Implmentation with Hash-Table
+
+With a hash-table implementation, the time for accessing the elements in the dictionary is theoretically independent from their count. This is a very important advantage. With hash-tables, if we have a key, the number of comparisons that we would need to do to find out if there is a key with this calue, is constant and it does not depend on the number of elements.
+
+##### What is a Hash Table?

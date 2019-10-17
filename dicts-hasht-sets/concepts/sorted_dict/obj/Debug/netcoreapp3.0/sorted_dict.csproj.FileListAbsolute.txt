@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\sorted_dict\bin\Debug\netcoreapp3.0\sorted_dict.exe
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\sorted_dict\bin\Debug\netcoreapp3.0\sorted_dict.deps.json
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\sorted_dict\bin\Debug\netcoreapp3.0\sorted_dict.runtimeconfig.json
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\sorted_dict\bin\Debug\netcoreapp3.0\sorted_dict.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\sorted_dict\bin\Debug\netcoreapp3.0\sorted_dict.dll
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\sorted_dict\bin\Debug\netcoreapp3.0\sorted_dict.pdb
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\sorted_dict\obj\Debug\netcoreapp3.0\sorted_dict.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\sorted_dict\obj\Debug\netcoreapp3.0\sorted_dict.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\sorted_dict\obj\Debug\netcoreapp3.0\sorted_dict.AssemblyInfo.cs
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\sorted_dict\obj\Debug\netcoreapp3.0\sorted_dict.dll
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\sorted_dict\obj\Debug\netcoreapp3.0\sorted_dict.pdb
