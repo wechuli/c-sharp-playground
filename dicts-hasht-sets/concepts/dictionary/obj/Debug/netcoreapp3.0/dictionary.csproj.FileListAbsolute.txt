@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\dictionary\bin\Debug\netcoreapp3.0\dictionary.exe
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\dictionary\bin\Debug\netcoreapp3.0\dictionary.deps.json
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\dictionary\bin\Debug\netcoreapp3.0\dictionary.runtimeconfig.json
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\dictionary\bin\Debug\netcoreapp3.0\dictionary.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\dictionary\bin\Debug\netcoreapp3.0\dictionary.dll
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\dictionary\bin\Debug\netcoreapp3.0\dictionary.pdb
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\dictionary\obj\Debug\netcoreapp3.0\dictionary.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\dictionary\obj\Debug\netcoreapp3.0\dictionary.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\dictionary\obj\Debug\netcoreapp3.0\dictionary.AssemblyInfo.cs
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\dictionary\obj\Debug\netcoreapp3.0\dictionary.dll
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\dictionary\obj\Debug\netcoreapp3.0\dictionary.pdb

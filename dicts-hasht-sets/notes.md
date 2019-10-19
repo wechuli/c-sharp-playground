@@ -58,3 +58,48 @@ Meeting this requirement would allow us to use the objects of a custom class as 
 With a hash-table implementation, the time for accessing the elements in the dictionary is theoretically independent from their count. This is a very important advantage. With hash-tables, if we have a key, the number of comparisons that we would need to do to find out if there is a key with this calue, is constant and it does not depend on the number of elements.
 
 ##### What is a Hash Table?
+
+The data structure hash-table is usually implemented internally with an array. It consists of numerated elements (cells), each either holding a key-value pair or is empty (null).
+
+In computing, a **hash table (hash map)** is a data structure that implements an associative array abstract data type, a structure that can map keys to values. An associative array (map/symbol table/dictionary) is an abstract data type composed of a collection of key,value pairs, such that each possible key appears at most once in the collection.
+
+Operations associated with associative arrays are:
+
+- the addition of a pair to the collection
+- the removal of a pair from the collection
+- the modification of an existing pair
+- the lookup of a value associated with a particular key
+
+A hash table uses a hash function to complete an index, also called a hash code, into an array of buckets or slots, from which the desired value can be found. Ideally , the hash function will assign each key to a unique bucket, but most hash table designs employ an imperfect hash function, which might cause hash collisions where the hash function generates the same index for more than one key. Such collisions must be accomodated in some way.
+
+In a well-dimensioned hash table, the average cost (number of instructions) for each lookup is independent of the number of elements stored in the table. Many hash table designs also allow arbitrary insertions and deletions of key-value pairs, at (amortized) constant average cost per operation.
+
+The size of the internal storage array of the hash-table is called capacity. The load factor is a real number between 0 and 1, which stands for the ratio between the occupied elements and the current capacity. For example, if we have a hash-table with 3 eolements and capacity m, the load factor for this hash-table would be 3/m.
+
+When adding or searching for elements, a method for hashing the key(hash function) is executed, this returns a number we call a hash-code. When we take the division remainder of this hash-code and the capacity m, we get a number between 0 and m-1
+
+        index = hash(key) % m
+
+The figure below shows a hash-table T with capacity m and hash-function hash(key)
+
+![](hash.PNG)
+
+This value hash(k) gives us the position in the array at which we search or add a certain key-value pair having this k.If the hash function distributes the keys uniformly, in most cases every key will have a different hash value assigned. In this way, every cell of the array will have at most one key. Ultimately, we get an extremely fast search and insertion of the elements: just calculate the hash function and obtain the cell assigned for the key. Of course, it may occur that different keys would have the same hash code.
+
+The internal table's capacity is increased when the number of elements in the hash-table becomes greater or equal to a certain constant called fill factor (load factor, the maximal degree of filling). When increasing the capacity (usually doubling it), all of the elements are reordered by the hash code of their keys and their assigned cell is calculated according to the new capacity. The load factor is significantly decreased after the reordering. This operation is time-consuming, but it is executed relatively rare, so it will ot impact the overall performance of the add operation.
+
+Hash tables (unlike balanced trees), the elements are not kept sorted.
+
+#### Class Dictionary<K,V>
+
+The class `Dictionary<K,V>` is a standard implementation of dictionary based on hash-table in .NET Framework.
+
+#### Hashing and Hash-Fucntions
+
+The hash-code is a number returned by the hash-function, used for the hashing of the key. This number should be different for every key, or atleast there should be a high chance for that.
+
+##### Hash-Functions
+
+There is the concept of the perfect hash-function. One hash-function is perfect, if for example you have N keys, and for each of them the function would add a different number in a reasonable interval. Finding such a function in the common case is a very hard, almost impossible task. It's worth to use such functions when using sets of keys with predefined elements or when the set of keys is rearely changed.
+
+In practice, there are also other, not so 'perfect' hash-functions.
