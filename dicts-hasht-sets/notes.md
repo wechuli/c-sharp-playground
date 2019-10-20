@@ -103,3 +103,34 @@ The hash-code is a number returned by the hash-function, used for the hashing of
 There is the concept of the perfect hash-function. One hash-function is perfect, if for example you have N keys, and for each of them the function would add a different number in a reasonable interval. Finding such a function in the common case is a very hard, almost impossible task. It's worth to use such functions when using sets of keys with predefined elements or when the set of keys is rearely changed.
 
 In practice, there are also other, not so 'perfect' hash-functions.
+
+##### GetHashCode() Method in .NET Framework
+
+Every .NET class has a method called GetHashCode() that returns a value of type **int**. This method is inherited by the class **Object**, which is the root member in the hierarchy of .NET classes.
+
+The implementation in the class **Object** of the method **GetHashCode()** does not guarantee the unique value of the result. This means that the descendant classes need to ensure that GetHashCode() is implemented in order to use it for a key in a hash-table.
+
+The hash-function needs to distribute the keys evenly amongst the possible hash-code values.
+
+##### Collisions with Hash-Functions
+
+The situation where two different keys have the same hash-code is called coliision. The simplest solution to collision is to order the pairs that have keys with the same hash-codes in a list or other data structure. Thus we don't solve the collisions but we accept them and we just put several key-value pairs in the same element in the underlying array in the hash-table. This approach for collision resolution is known as chaining
+
+##### Implementing the Method GetHashCode()
+
+First we need to choose which fields of the class will take part in the implementation of the **Equals(object)** method. This is necessary because every time when **Equals()** returns true, the result from GetHashCode() should always return the same value.
+
+This way the fields that do not take part in **Equals()**, should not take part in **GetHashCode()** as well.
+
+After we choose which fields will take part in the calculation of **GetHashCode()**, we need to receive values from them(of type int). Here is a sample scheme:
+- If the field is bool, for true, we take 1 and for false we take 0 (or directly call method **GetHashCode()** on bool)
+- If the field is of type int,byte,short,char, we can convert it toint with the cast operator int (or we could directly call **GetHashCode()**)
+- If the field is type **long** **float** or **double**, we could use the result from their own implmentations of **GetHashCode()**
+- If the field in not a primitive type, we could call the method **GetHashCode()** of this object. If the field value is null, we can return 0.
+- If the field is an array or a collection, we take the hash-code from every element of this collection.
+
+In the end, we sum all the received **int** values and before each addition, we multiply the temporary result with a prime number number(for example 83), while ignoring the eventual overflow of type int. For example, if we have 3 fields and their hash codes are f1,f2 and f3, our hash function could combine them through the formula hash = (((f1*83) + f2) )+ f3.
+
+At the end we obtaun a hash-code, which is very well distributed in the range of all 32-bit values, we can expect, that with a hash-code calculated this way, collisions would be rare, becuase evry change is some of the fields taking part in GetHashCode() leads to a major change in the hash code and thus reduces the chance for collision.
+
+##### Interface IEqualityComparer<T>

@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\gethashcodeimp\bin\Debug\netcoreapp3.0\gethashcodeimp.exe
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\gethashcodeimp\bin\Debug\netcoreapp3.0\gethashcodeimp.deps.json
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\gethashcodeimp\bin\Debug\netcoreapp3.0\gethashcodeimp.runtimeconfig.json
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\gethashcodeimp\bin\Debug\netcoreapp3.0\gethashcodeimp.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\gethashcodeimp\bin\Debug\netcoreapp3.0\gethashcodeimp.dll
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\gethashcodeimp\bin\Debug\netcoreapp3.0\gethashcodeimp.pdb
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\gethashcodeimp\obj\Debug\netcoreapp3.0\gethashcodeimp.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\gethashcodeimp\obj\Debug\netcoreapp3.0\gethashcodeimp.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\gethashcodeimp\obj\Debug\netcoreapp3.0\gethashcodeimp.AssemblyInfo.cs
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\gethashcodeimp\obj\Debug\netcoreapp3.0\gethashcodeimp.dll
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\gethashcodeimp\obj\Debug\netcoreapp3.0\gethashcodeimp.pdb
