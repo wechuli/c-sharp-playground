@@ -123,14 +123,32 @@ First we need to choose which fields of the class will take part in the implemen
 This way the fields that do not take part in **Equals()**, should not take part in **GetHashCode()** as well.
 
 After we choose which fields will take part in the calculation of **GetHashCode()**, we need to receive values from them(of type int). Here is a sample scheme:
+
 - If the field is bool, for true, we take 1 and for false we take 0 (or directly call method **GetHashCode()** on bool)
 - If the field is of type int,byte,short,char, we can convert it toint with the cast operator int (or we could directly call **GetHashCode()**)
 - If the field is type **long** **float** or **double**, we could use the result from their own implmentations of **GetHashCode()**
 - If the field in not a primitive type, we could call the method **GetHashCode()** of this object. If the field value is null, we can return 0.
 - If the field is an array or a collection, we take the hash-code from every element of this collection.
 
-In the end, we sum all the received **int** values and before each addition, we multiply the temporary result with a prime number number(for example 83), while ignoring the eventual overflow of type int. For example, if we have 3 fields and their hash codes are f1,f2 and f3, our hash function could combine them through the formula hash = (((f1*83) + f2) )+ f3.
+In the end, we sum all the received **int** values and before each addition, we multiply the temporary result with a prime number number(for example 83), while ignoring the eventual overflow of type int. For example, if we have 3 fields and their hash codes are f1,f2 and f3, our hash function could combine them through the formula hash = (((f1\*83) + f2) )+ f3.
 
 At the end we obtaun a hash-code, which is very well distributed in the range of all 32-bit values, we can expect, that with a hash-code calculated this way, collisions would be rare, becuase evry change is some of the fields taking part in GetHashCode() leads to a major change in the hash code and thus reduces the chance for collision.
 
 ##### Interface IEqualityComparer<T>
+
+One of the most important things that we have learned so far is that in order to use instance of class as keys for a dictionary, the class needs to properly implement **GetHashCode()** and **Equals()**. But what should we do if we want to use a class, that we cannot inherit or change ? In this case, the interface **`IEqualityComparer<T>`** comes to our aid.
+
+It defines the following two operations:
+
+- **bool Equals(T obj1, T obj2)** - returns true if obj1 and obj2 are equal
+- **int GetHashCode(T obj)** - returns the hash-code of given object
+
+As you might have already guessed, the dictionaires in .NET can use an instance of **`IQualityComparer<T>`**, instead of using the corresponding methods of the given class that should be assigned for a key.
+
+#### Resolving the Collision Problem
+
+In practice, collissions happen almost always, excluding some rare and specific cases. There are several strategies for dealing with collisions:
+
+##### Chaining in a List
+
+The most widespread method to resolve collisions problem is called chaining. Its major concept consists of storing in a list all the pairs (key, value), which have the same hash-code for the key.

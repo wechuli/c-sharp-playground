@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace gethashcodeimp
 {
@@ -17,6 +18,19 @@ namespace gethashcodeimp
             Console.WriteLine(point4.GetHashCode());
             Console.WriteLine(point2.Equals(point3));
             Console.WriteLine(point1.Equals(point4));
+
+
+            IEqualityComparer<Point3D> comparer = new Point3DEqualityComparer();
+            Dictionary<Point3D, int> dict = new Dictionary<Point3D, int>(comparer);
+            dict[new Point3D(4, 2, 5)] = 5;
+            dict[new Point3D(1, 2, 3)] = 1;
+            dict[new Point3D(3, 1, -1)] = 3;
+            dict[new Point3D(1, 2, 3)] = 10;
+            foreach (var entry in dict)
+            {
+                Console.WriteLine("{0} --> {1}", entry.Key, entry.Value);
+            }
+
 
 
         }
@@ -66,6 +80,25 @@ namespace gethashcodeimp
                 result = result * prime + Z.GetHashCode();
             }
 
+            return result;
+        }
+    }
+    public class Point3DEqualityComparer : IEqualityComparer<Point3D>
+    {
+        public bool Equals(Point3D point1, Point3D point2)
+        {
+            if (point1 == point2) return true;
+            if (point1 == null || point2 == null) return false;
+            if (!point1.X.Equals(point2.X)) return false;
+            if (!point1.Y.Equals(point2.Y)) return false;
+            if (!point1.Z.Equals(point2.Z)) return false;
+            return true;
+        }
+        public int GetHashCode(Point3D obj)
+        {
+            Point3D point = obj as Point3D; if (point == null) { return 0; }
+            int prime = 83;
+            int result = 1; unchecked { result = result * prime + point.X.GetHashCode(); result = result * prime + point.Y.GetHashCode(); result = result * prime + point.Z.GetHashCode(); }
             return result;
         }
     }
