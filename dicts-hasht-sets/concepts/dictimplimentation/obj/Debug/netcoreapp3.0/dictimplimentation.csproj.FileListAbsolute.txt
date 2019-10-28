@@ -1,0 +1,3 @@
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\dictimplimentation\obj\Debug\netcoreapp3.0\dictimplimentation.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\dictimplimentation\obj\Debug\netcoreapp3.0\dictimplimentation.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\dictimplimentation\obj\Debug\netcoreapp3.0\dictimplimentation.AssemblyInfo.cs

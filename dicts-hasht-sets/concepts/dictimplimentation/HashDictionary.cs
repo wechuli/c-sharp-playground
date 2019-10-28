@@ -70,15 +70,126 @@ namespace dictimplimentation
 
         /// <summary>Assigns a value to certain key. If the key /// exists, its value is replaced. If the key does not /// exist, it is first created. Works very fast</summary> /// <returns>the old (replaced) value or null</returns>
 
-        public V Set(K key,V value)
+        public V Set(K key, V value)
         {
-            if(this.size >= this.threshold)
+            if (this.size >= this.threshold)
             {
                 this.Expand();
             }
-            List<KeyValuePair<K,V>> chain = this.FindChain(key,true);
+            List<KeyValuePair<K, V>> chain = this.FindChain(key, true);
+            for (int i = 0; i < chain.Count; i++)
+            {
+                KeyValuePair<K, V> entry = chain[i];
+                if (entry.Key.Equals(key))
+                {
+                    // Key found -> replace its value with the new value
+                    KeyValuePair<K, V> newEntry = new KeyValuePair<K, V>(key, value);
+                    chain[i] = newEntry;
+                    return entry.Value;
+                }
+            }
+            chain.Add(new KeyValuePair<K, V>(key, value));
+            this.size++;
+            return default(V);
         }
 
+        /// <summary> Gets/sets the value by given key.Get returns null when the key is not found.false Set replaces the existing value or created a new key-value pair i fthe key does not exist, works very fast</summary>
+        public V this[K key]
+        {
+            get
+            {
+                return this.Get(key);
+            }
+            set
+            {
+                this.Set(key, value);
+            }
+        }
+
+
+        /// <summary>Removes a key-value pair specified /// by certain key from the hash table.</summary> /// <returns>true if the pair was found removed /// or false if the key was not found</returns>
+
+        public bool Remove(K key)
+        {
+            List<KeyValuePair<K, V>> chain = this.FindChain(key, false);
+            if (chain != null)
+            {
+                for (int i = 0; i < chain.Count; i++)
+                {
+                    KeyValuePair<K, V> entry = chain[i];
+                    if (entry.Key.Equals(key))
+                    {
+                        //Key found -> remove it
+                        chain.RemoveAt(i);
+                        this.size--;
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        /// <summary>Returns the number of key-value pairs /// in the hash table (its size)</summary>
+        public int Count
+        {
+            get
+            {
+                return this.size;
+            }
+        }
+
+        /// <summary>Clears all ements of the hash table</summary>
+        public void Clear()
+        {
+            this.table = new List<KeyValuePair<K, V>>[this.initialCapacity];
+            this.size = 0;
+        }
+
+        /// <summary>Expands the underlying hash-table. Creates 2 /// times bigger table and transfers the old elements /// into it. This is a slow (linear) operation</summary>
+
+        private void Expand()
+        {
+            int newCapacity = 2 * this.table.Length;
+            List<KeyValuePair<K, V>>[] oldTable = this.table;
+            this.table = new List<KeyValuePair<K, V>>[newCapacity];
+            this.threshold = (int)(newCapacity * this.loadFactor);
+            foreach (List<KeyValuePair<K, V>> oldChain in oldTable)
+            {
+                if (oldTable != null)
+                {
+                    foreach (KeyValuePair<K, V> KeyValuePair in oldChain)
+
+                    {
+                        List<KeyValuePair<K, V>> chain = FindChain(KeyValuePair.Key, true);
+                        chain.Add(KeyValuePair);
+                    }
+                }
+            }
+            {
+
+            }
+        }
+        /// <summary>Implements the IEnumerable<KeyValuePair<K, V>> /// to allow iterating over the key-value pairs in the hash /// table in foreach-loops</summary>
+
+        IEnumerator<KeyValuePair<K, V>> IEnumerable<KeyValuePair<K, V>>.GetEnumerator()
+        {
+            foreach (List<KeyValuePair<K, V>> chain in this.table)
+            {
+                if (chain != null)
+                {
+                    foreach (KeyValuePair<K, V> entry in chain)
+                    {
+                        yield return entry;
+                    }
+                }
+            }
+        }
+
+        /// <summary>Implements IEnumerable (non-generic) /// as part of IEnumerable<KeyValuePair<K, V>></summary> 
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return ((IEnumerable<KeyValuePair<K, V>>)this).GetEnumerator();
+        }
     }
 
 }

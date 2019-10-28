@@ -132,7 +132,7 @@ After we choose which fields will take part in the calculation of **GetHashCode(
 
 In the end, we sum all the received **int** values and before each addition, we multiply the temporary result with a prime number number(for example 83), while ignoring the eventual overflow of type int. For example, if we have 3 fields and their hash codes are f1,f2 and f3, our hash function could combine them through the formula hash = (((f1\*83) + f2) )+ f3.
 
-At the end we obtaun a hash-code, which is very well distributed in the range of all 32-bit values, we can expect, that with a hash-code calculated this way, collisions would be rare, becuase evry change is some of the fields taking part in GetHashCode() leads to a major change in the hash code and thus reduces the chance for collision.
+At the end we obtain a hash-code, which is very well distributed in the range of all 32-bit values, we can expect, that with a hash-code calculated this way, collisions would be rare, because every change is some of the fields taking part in GetHashCode() leads to a major change in the hash code and thus reduces the chance for collision.
 
 ##### Interface IEqualityComparer<T>
 
@@ -143,12 +143,14 @@ It defines the following two operations:
 - **bool Equals(T obj1, T obj2)** - returns true if obj1 and obj2 are equal
 - **int GetHashCode(T obj)** - returns the hash-code of given object
 
-As you might have already guessed, the dictionaires in .NET can use an instance of **`IQualityComparer<T>`**, instead of using the corresponding methods of the given class that should be assigned for a key.
+As you might have already guessed, the dictionaries in .NET can use an instance of **`IQualityComparer<T>`**, instead of using the corresponding methods of the given class that should be assigned for a key.
 
 #### Resolving the Collision Problem
 
-In practice, collissions happen almost always, excluding some rare and specific cases. There are several strategies for dealing with collisions:
+In practice, collisions happen almost always, excluding some rare and specific cases. There are several strategies for dealing with collisions:
 
 ##### Chaining in a List
 
 The most widespread method to resolve collisions problem is called chaining. Its major concept consists of storing in a list all the pairs (key, value), which have the same hash-code for the key.
+
+##### Open Addressing Methods for Collision Resolution
