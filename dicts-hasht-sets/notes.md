@@ -154,3 +154,76 @@ In practice, collisions happen almost always, excluding some rare and specific c
 The most widespread method to resolve collisions problem is called chaining. Its major concept consists of storing in a list all the pairs (key, value), which have the same hash-code for the key.
 
 ##### Open Addressing Methods for Collision Resolution
+
+In general, in case of collision, we try to put the new pair in a table position, which is free. These methods differentiate from each other in the way they choose where to look for a free position for the new pair. Moreover, the new pair must be easily located at its new place.
+
+###### Linear Probing
+
+This is one of the easiest methods for implementation. **Linear probing** in general, can be presented with the following code:
+
+```C#
+int newPosition = (oldPosition + i) % capacity;
+```
+
+Here, capacity is the internal table capacity, oldPosition is the position where collision occurs and i is a number for the next probing.If the new position is free, then we place the new pair there. Otherwise we try again (probing), incrementing i. Probing can be either forward or backwards. Backward probing is when instead of adding, we are subtracting i from the position we have collision for.
+The advantage of this method is the relatively quick way to find of a new position. Unfortunately, if there was a collision at a certain place, there is an extremely high probability collision to occur again at the same place. So this, in practice, leads to a high inefficiency.
+
+###### Quadratic Probing
+
+Quadratic probing is a classic method for collision resolution. The main difference between quadratic probing and linear probing is that it uses a quadratic function of i (the number of the next probing) to find new position. Possible quadratic probing function is shown below:
+
+```C#
+int newPosition = (oldPosition + c1*i + c2*i*i) % capacity;
+```
+
+The given example uses two constants: c1 and c2, such that c2 must not be 0, otherwise we are going back to linear probing.
+By choosing c1 and c2 we define the position we are going to probe, compared to the starting position. For instance, if c1 and c2 are equal to 1, we are going to probe consequently oldPosition, oldPosition + 2, oldPosition + 6, … For a hash-table with capacity of the kind 2n, the best is to choose c1 and c2 equal to 0.5.
+Quadratic probing is more efficient than linear the linear probing.
+
+###### Double Hashing
+
+As the name implies, the double hashing method uses two different hash functions. The main concept is that, the second hash function is used for the elements that fall into a collision. This method is better than the linear and quadratic probing, because all the next probing depends of the value of the key and not of the table position inside the hash-table. It makes sense, because the position of a given key depends on the current capacity of the hash-table.
+
+###### Cuckoo Hashing
+
+Cuckoo hashing is a relatively new method for collision resolution, using an open addressing. It was firstly presented by R. Pagh and F. Rodler in 2001. Its name comes from the behavior, observed with some kinds of cuckoos. The mother cuckoos push out the eggs and/or the nests out of other birds, in order to put their own eggs there and the other birds mistakenly care for the cuckoos' eggs in that way. (Also for the nests, after the incubation)
+The main idea of this method is the use of two hash-functions instead of one. In this way, we have not one, but two positions to place the element inside the hash-table. If one of the positions is free, then we just put the element there. If both are taken, then we put the new element in one of them and it "kicks out" the element, which was already there. In turn, the "kicked" element is going to his alternative position and "kicks" another element out, if necessary. The new "kicked out" is repeating the procedure, and in that way until reaching a free position or we fall into a loop. In the last case, the whole hash table is built again with greater size and new hash-functions.
+On the figure bellow it is shown an example scheme of a hash-table using cuckoo hashing. Every position, containing an element, has a link to the alternative position for the key inside. Now, let’s play out different situations of adding an element.
+If, at least one of the two hash functions result is a free cell, there is no problem. We put the element in one of them. Let both hash functions result is a taken cell and we randomly have been choosing one of them.
+Some researches show, the cuckoo hashing and its modifications could be much more efficient than the widely spread today chaining in a list and open addressing methods. Nevertheless, this method is still not well adopted in the industry and not used internally in .NET Framework. The main stopper is the need of two hash functions, which means that the class System.Object should introduce two GetHashCode() methods.
+
+### The Set Data Structure
+
+Sets are collections of unique elements (without any repeating elements). In the .NET context, it means, for every set object, calling its Equals() method and passing another object from the set as argument, will always result in false.
+
+Some sets allow their elements to be null, while others do not allow.
+
+Besides not allowing the repetition of objects, another important thing, that distinguishes sets from lists and arrays is that the set element has no index. The elements of the set cannot be accessed by any key, as it is with dictionaries. The elements themselves are the keys.
+
+The only way to access an object from a set is by having available either the object itself or another object, which us equal to it. That is why, in practice we access all the elements of a given set at once, while iterating by using the foreach loop construct.
+
+In .NET, there is an interface `ISet<T>` representing the ADT "set" and it has two standard implementation classes:
+
+- **`HashSet<T>`** - hash-table based implementation of set
+- **`SortedSet<T>`** - red-black tree based implementation of set
+
+The main operations, defined by the `ISet<T>` interface (abstract data structure set), are the following
+
+- bool Add(element) – adding the element to the set and returning false if the element is already present inside the set, otherwise returning true.
+- bool Contains(element) – checks if the set already contains the element passed as an argument. If yes, returns true as a result, otherwise returns false.
+- bool Remove(element) – removes the element from the set. Returns Boolean if the element has been present inside the set.
+- void Clear() – removes all the elements from the set.
+- void IntersectWith(Set other) – inside the current set remain only the elements of the intersection of both sets – the result is a set, containing the elements, which are present in both sets at the same time – the set, calling the method and the other, passed as parameter.
+- void UnionWith(Set other) – inside the current set remain only the elements of the sets union – the result is a set, containing the elements of either one or the other, or both sets.
+- bool IsSubsetOf(Set other) – checks if the current set is a subset of the other set. Returns true, if yes and false, if no.
+- bool IsSupersetOf(Set other) – checks if the other set is a subset of the current one. Returns true, if yes and false, if no.
+- int Count – a property, which returns the current number of elements inside the set.
+
+#### HashSet<T>
+
+The hash-table implementation od set in .NET is the `HashSet<T>` class. This class, like `Dictionary<K,V>` has constructors by which we might pass a list of elements as well as an **IEqualityComparer** implementation.
+
+#### SortedSet<T>
+
+The standard .NET class `SortedSet<T>` is a set, implemented by a balanced search tree (red-black tree). Because of this, its elements are internally kept in an increasing order. For that reason, we can only add elements which are comparable.
+We remind that in .NET it typically means the objects are instances of a class, implementing IComparable<T>.

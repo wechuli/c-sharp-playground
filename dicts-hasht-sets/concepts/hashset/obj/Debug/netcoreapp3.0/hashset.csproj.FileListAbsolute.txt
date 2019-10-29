@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\hashset\bin\Debug\netcoreapp3.0\hashset.exe
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\hashset\bin\Debug\netcoreapp3.0\hashset.deps.json
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\hashset\bin\Debug\netcoreapp3.0\hashset.runtimeconfig.json
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\hashset\bin\Debug\netcoreapp3.0\hashset.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\hashset\bin\Debug\netcoreapp3.0\hashset.dll
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\hashset\bin\Debug\netcoreapp3.0\hashset.pdb
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\hashset\obj\Debug\netcoreapp3.0\hashset.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\hashset\obj\Debug\netcoreapp3.0\hashset.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\hashset\obj\Debug\netcoreapp3.0\hashset.AssemblyInfo.cs
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\hashset\obj\Debug\netcoreapp3.0\hashset.dll
+F:\repos\c-sharp-playground\dicts-hasht-sets\concepts\hashset\obj\Debug\netcoreapp3.0\hashset.pdb
