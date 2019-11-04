@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\data-structures-algos\concepts\subsets\bin\Debug\netcoreapp3.0\subsets.exe
+F:\repos\c-sharp-playground\data-structures-algos\concepts\subsets\bin\Debug\netcoreapp3.0\subsets.deps.json
+F:\repos\c-sharp-playground\data-structures-algos\concepts\subsets\bin\Debug\netcoreapp3.0\subsets.runtimeconfig.json
+F:\repos\c-sharp-playground\data-structures-algos\concepts\subsets\bin\Debug\netcoreapp3.0\subsets.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\data-structures-algos\concepts\subsets\bin\Debug\netcoreapp3.0\subsets.dll
+F:\repos\c-sharp-playground\data-structures-algos\concepts\subsets\bin\Debug\netcoreapp3.0\subsets.pdb
+F:\repos\c-sharp-playground\data-structures-algos\concepts\subsets\obj\Debug\netcoreapp3.0\subsets.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\data-structures-algos\concepts\subsets\obj\Debug\netcoreapp3.0\subsets.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\data-structures-algos\concepts\subsets\obj\Debug\netcoreapp3.0\subsets.AssemblyInfo.cs
+F:\repos\c-sharp-playground\data-structures-algos\concepts\subsets\obj\Debug\netcoreapp3.0\subsets.dll
+F:\repos\c-sharp-playground\data-structures-algos\concepts\subsets\obj\Debug\netcoreapp3.0\subsets.pdb

@@ -102,3 +102,37 @@ Queue is a linear data structure in which there are two operations defined: addi
 The queue's behavior is FIFO (first in, first out). The operations searching and accessing through index are not supported. Queue can naturally model a list of waiting people, tasks or other objects, which have to be processed in the same order as they were added (enqueued).
 
 As an example of using a queue we can point out the implementation of the BFS (breadth-first search) algorithm, in which we start from an initial element and all its neighbors are added to a queue. After that they are processed in the order they were added and their neighbors are added to the queue too. This operation is repeated until we reach the element we are looking for or we process all elements.
+
+#### Dictionary, Implemented with a Hash-Table (Dictionary<K,T>)
+
+The data structure "dictionary" suggests storing key-value pairs and provides a quick search by key. The implementation with a hash table has a very fast add, search and remove of elements - constant complexity at the average case.The operation access through index is not available, because the elements in the hash-table have no order, i.e. an almost random order.
+
+From time to time one key will have to keep multiple values. This is not standardly supported but we can store the values matching this key is a list `List<T>` as a sequence of elements.
+
+Hash-table is recommended to be used every time we need fast addition and fast search by key.
+
+#### Dictionary, Implemented with a Balanced Tree (SortedDictionary<K,T>)
+
+The implementation of the data structure "dictionary" as a red-black tree (the class `SortedDictionary<K,T`) is a structure storing key-value pairs where keys are ordered increasingly (sorted). The structure provides a fast execution of basic operations (add an element, search by key and remove an element). The complexity of these operations is logarithmic – O(log(N)).
+
+Unlike hash-tables, where we can reach linear complexity if we pick a bad hash-function, in SortedDictionary<K,T> the count of the steps of the basic operations in the average and worst case are the same – log2(N). When we work with balanced trees, there is no hashing, no collisions and no risk of using a bad hash-function.
+
+Again, as in the hash-tables, one key can be stored at most once in the structure. If we want to associate several values with one key, we should use some kind of a list for the values, for example `List<T>`.
+`SortedDictionary<K,T>` holds internally its values in a red-black balanced tree ordered by key. This means if we traverse the structure (using its iterator or foreach loop in C#) we will get the elements sorted in ascending order by key. Sometimes this can be very useful property.
+Use `SortedDictionary<K,T>` when you need a structure which can add, search and remove an element fast and you also need to extract the elements sorted in ascending order. In general `Dictionary<K,T>` works a bit faster than `SortedDictionary<K,T>` and is preferable.
+As an example of using a `SortedDictionary<K,T>`, we can give the following task: find all the words in a text file, which occur exactly 10 times, and print them alphabetically. This is a task that we can solve as successful with `Dictionary<K,T>` too, but we will have to do an additional sorting at the
+
+#### Set, Implemented with a Hash-Table (HashSet<T>)
+
+The data structure "set" is a collection of elements with no duplicates. The basic operations are adding an element to the set, checking if an element belongs to the set (searching) and removing an element to the set.
+
+Set, implemented with a hash-table (the class `HashSet<T>`) is a special case of a hash-table, in which we have only keys. The values associated with these keys do not matter.
+As in the hash-table, the basic operations in the data structure `HashSet<T>` are implemented with a constant complexity O(1). Another similarity to hash-table is if we choose a bad hash-function, we can reach a linear complexity executing the basic operations. Fortunately in practice this almost never happens.
+As an example of using a `HashSet<T>`, we can point out the task of finding all the different words in a text file.
+
+#### Set, Implemented with a Balanced Tree (SortedSet<T>)
+
+The data structure set, implemented with a red-black tree, is a special case of `SortedDictionary<K,T>` in which keys and values coincide.
+Similar to `SortedDictionary<K,T>`, the basic operations in `SortedSet<T>` are executed with logarithmic complexity O(log(N)), which is the same in the average and worst case.
+
+As an example of using a `SortedSet<T>` we can point out the task of finding all the different words in a given text file and printing them alphabetically ordered.

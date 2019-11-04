@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_phone_book\obj\Debug\netcoreapp3.0\sorting_phone_book.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_phone_book\obj\Debug\netcoreapp3.0\sorting_phone_book.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_phone_book\obj\Debug\netcoreapp3.0\sorting_phone_book.AssemblyInfo.cs
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_phone_book\bin\Debug\netcoreapp3.0\sorting_phone_book.exe
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_phone_book\bin\Debug\netcoreapp3.0\sorting_phone_book.deps.json
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_phone_book\bin\Debug\netcoreapp3.0\sorting_phone_book.runtimeconfig.json
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_phone_book\bin\Debug\netcoreapp3.0\sorting_phone_book.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_phone_book\bin\Debug\netcoreapp3.0\sorting_phone_book.dll
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_phone_book\bin\Debug\netcoreapp3.0\sorting_phone_book.pdb
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_phone_book\obj\Debug\netcoreapp3.0\sorting_phone_book.dll
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_phone_book\obj\Debug\netcoreapp3.0\sorting_phone_book.pdb

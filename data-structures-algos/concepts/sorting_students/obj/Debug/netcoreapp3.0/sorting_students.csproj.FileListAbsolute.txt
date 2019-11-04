@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_students\bin\Debug\netcoreapp3.0\sorting_students.exe
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_students\bin\Debug\netcoreapp3.0\sorting_students.deps.json
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_students\bin\Debug\netcoreapp3.0\sorting_students.runtimeconfig.json
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_students\bin\Debug\netcoreapp3.0\sorting_students.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_students\bin\Debug\netcoreapp3.0\sorting_students.dll
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_students\bin\Debug\netcoreapp3.0\sorting_students.pdb
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_students\obj\Debug\netcoreapp3.0\sorting_students.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_students\obj\Debug\netcoreapp3.0\sorting_students.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_students\obj\Debug\netcoreapp3.0\sorting_students.AssemblyInfo.cs
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_students\obj\Debug\netcoreapp3.0\sorting_students.dll
+F:\repos\c-sharp-playground\data-structures-algos\concepts\sorting_students\obj\Debug\netcoreapp3.0\sorting_students.pdb
