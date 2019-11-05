@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\data-structures-algos\concepts\searching_phonebook\obj\Debug\netcoreapp3.0\searching_phonebook.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\data-structures-algos\concepts\searching_phonebook\obj\Debug\netcoreapp3.0\searching_phonebook.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\data-structures-algos\concepts\searching_phonebook\obj\Debug\netcoreapp3.0\searching_phonebook.AssemblyInfo.cs
+F:\repos\c-sharp-playground\data-structures-algos\concepts\searching_phonebook\bin\Debug\netcoreapp3.0\searching_phonebook.exe
+F:\repos\c-sharp-playground\data-structures-algos\concepts\searching_phonebook\bin\Debug\netcoreapp3.0\searching_phonebook.deps.json
+F:\repos\c-sharp-playground\data-structures-algos\concepts\searching_phonebook\bin\Debug\netcoreapp3.0\searching_phonebook.runtimeconfig.json
+F:\repos\c-sharp-playground\data-structures-algos\concepts\searching_phonebook\bin\Debug\netcoreapp3.0\searching_phonebook.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\data-structures-algos\concepts\searching_phonebook\bin\Debug\netcoreapp3.0\searching_phonebook.dll
+F:\repos\c-sharp-playground\data-structures-algos\concepts\searching_phonebook\bin\Debug\netcoreapp3.0\searching_phonebook.pdb
+F:\repos\c-sharp-playground\data-structures-algos\concepts\searching_phonebook\obj\Debug\netcoreapp3.0\searching_phonebook.dll
+F:\repos\c-sharp-playground\data-structures-algos\concepts\searching_phonebook\obj\Debug\netcoreapp3.0\searching_phonebook.pdb

@@ -136,3 +136,7 @@ The data structure set, implemented with a red-black tree, is a special case of 
 Similar to `SortedDictionary<K,T>`, the basic operations in `SortedSet<T>` are executed with logarithmic complexity O(log(N)), which is the same in the average and worst case.
 
 As an example of using a `SortedSet<T>` we can point out the task of finding all the different words in a given text file and printing them alphabetically ordered.
+
+### External Libraries with .NET Collections
+- Power Collections for .NET
+- C5 Collections for .NET
