@@ -70,4 +70,6 @@ The keyword base can be used epxlicitly for clarity. **base.Method(...)** calls 
 
 When inheriting a class, our contructors must call the base class constructor, so that it can initialize its member variables. If we do not do this explicitly, the compiler will place a call to the parameterless base class constructor "**:base()**"
 
-If the base class has no default constructor (one without parameters) or that constructor is hidden, our
+If the base class has no default constructor (one without parameters) or that constructor is hidden, our constructors need to explicitly call one of the other base class constructors. The ommission of such a call will result in a compile error.
+
+If a class has private constructors only, then it cannot be inherited. If a class has private constructors only, then this could indicate many other things. For example, no-one (other than that class itself) can create instances of such a class. Actually, that's how one of the most popular design patterns (Singleton) is implemented.
