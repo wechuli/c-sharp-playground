@@ -1,0 +1,11 @@
+/Users/wechuli/repos/c-sharp-playground/oop-principles/concepts/simpleinheritence/bin/Debug/netcoreapp3.0/simpleinheritence
+/Users/wechuli/repos/c-sharp-playground/oop-principles/concepts/simpleinheritence/bin/Debug/netcoreapp3.0/simpleinheritence.deps.json
+/Users/wechuli/repos/c-sharp-playground/oop-principles/concepts/simpleinheritence/bin/Debug/netcoreapp3.0/simpleinheritence.runtimeconfig.json
+/Users/wechuli/repos/c-sharp-playground/oop-principles/concepts/simpleinheritence/bin/Debug/netcoreapp3.0/simpleinheritence.runtimeconfig.dev.json
+/Users/wechuli/repos/c-sharp-playground/oop-principles/concepts/simpleinheritence/bin/Debug/netcoreapp3.0/simpleinheritence.dll
+/Users/wechuli/repos/c-sharp-playground/oop-principles/concepts/simpleinheritence/bin/Debug/netcoreapp3.0/simpleinheritence.pdb
+/Users/wechuli/repos/c-sharp-playground/oop-principles/concepts/simpleinheritence/obj/Debug/netcoreapp3.0/simpleinheritence.csprojAssemblyReference.cache
+/Users/wechuli/repos/c-sharp-playground/oop-principles/concepts/simpleinheritence/obj/Debug/netcoreapp3.0/simpleinheritence.AssemblyInfoInputs.cache
+/Users/wechuli/repos/c-sharp-playground/oop-principles/concepts/simpleinheritence/obj/Debug/netcoreapp3.0/simpleinheritence.AssemblyInfo.cs
+/Users/wechuli/repos/c-sharp-playground/oop-principles/concepts/simpleinheritence/obj/Debug/netcoreapp3.0/simpleinheritence.dll
+/Users/wechuli/repos/c-sharp-playground/oop-principles/concepts/simpleinheritence/obj/Debug/netcoreapp3.0/simpleinheritence.pdb
