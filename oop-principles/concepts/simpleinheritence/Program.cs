@@ -36,6 +36,11 @@ namespace simpleinheritence
                 this.male = value;
             }
         }
+
+        private void LionRoar()
+        {
+            Console.WriteLine("Roar");
+        }
     }
     public class Lion : Felidae
     {
@@ -67,6 +72,23 @@ namespace simpleinheritence
             {
                 this.name = value;
             }
+        }
+
+        public bool GetLionGender()
+        {
+
+        }
+    }
+
+    public class AfricanLion : Lion
+    {
+        public AfricanLion(bool male, int weight) : base(male, weight)
+        {
+
+        }
+        public override string ToString()
+        {
+            return string.Format("(AfricanLion, male: {0}, weight: {1}", this.Male, this.Weight);
         }
     }
 }
