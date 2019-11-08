@@ -7,6 +7,7 @@ namespace simpleinheritence
         static void Main(string[] args)
         {
             Lion simba = new Lion(true, 456, "Simba");
+            AfricanLion mufasa = new AfricanLion(true, 400, "Mufasa");
 
             Console.WriteLine($"{simba.Name}, {simba.Male}, {simba.Weight}");
         }
@@ -82,7 +83,7 @@ namespace simpleinheritence
 
     public class AfricanLion : Lion
     {
-        public AfricanLion(bool male, int weight) : base(male, weight)
+        public AfricanLion(bool male, int weight, string name) : base(male, weight, name)
         {
 
         }

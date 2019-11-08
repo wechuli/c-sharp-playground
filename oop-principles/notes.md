@@ -84,6 +84,7 @@ There is public, private and internal. Additional, protected and protected inter
 - **protected internal** - defines class members which are both internal i.e. visible within the entire assembly, and protected i.e. not visible outside the assembly, but visible to classes who inherit it (even outside the assembly)
 
 When a base class is inherited:
+
 - All of its **public**,**protected** and **protected internal** members (methods, properties) as visible to the inheriting class.
 - All of its private methods, properties and member-variables are not visible to the inheriting class
 - All of its internal members are visible to the inheriting class, only if the base class and the inheriting class are in the same assembly
@@ -104,4 +105,68 @@ In .NET, there are a lot of predefined classes. These classes are part of the .N
 
 .NET also provides a lot of libraries, which can be referenced additionally, and it stands to reason that they are called class libraries or external libraries.
 
+### The Base Type Object Upcasting and Downcasting
 
+```C#
+public class ObjectExample
+{
+    static void Main()
+    {
+        AfricanLion africanLion = new AfricanLion(true,80);
+        //Impilicit casting
+        object obj = africanLion;
+    }
+}
+
+```
+
+In this example, we cast an **AfricanLion** to **Object**. This operation is called upcasting and is permitted because **AfricanLion** is an indirect child of **Object** class.
+
+```C#
+
+AfricanLion africanLion = new AfricanLion(true,80);
+//Implicit casting
+object obj = africanLion;
+
+try{
+    //Explicit casting
+    AfricanLion castedLion = (AfricanLion)obj;
+}
+catch(InvalidCastException ice)
+{
+    Console.WriteLine("obj cannot be downcasted to AfricanLion");
+}
+
+```
+
+In this example, we cast an Object to AfricanLion. This operation is called downcasting and is permitted only if we indicate the type we want to cast to, because Object is a parent class of AfricanLion and it is not clear if the variable obj is of type AfricanLion. If it is nor, an InvalidCastException will be thrown.
+
+##### The Object.ToString() method
+
+One of the most commonly used methods, originating from the class **Object** is **ToString()**. It returns a textual representation of an object.
+
+Notice that ToString() is invoked implicitly. When we pass an object to the WriteLine() method, that object provides its string representation using ToString() and only then it is printed to the output stream. That way, there’s no need to explicitly get string representations of objects when printing them.
+
+#### Virtual Methods: the "override" and "new" Keywords
+
+We need to explicitly instruct the compiler that we want our method to **override** another. In order to do this, we use the **override keyword**.
+
+When we use the keyword **new**, we create a new method, which hides the old one. The old method can then only be called with an upcast.
+
+It turns out that when we override a method, we cannot access the old implementation even if we use upcasting. This is becasue there are no longer two **ToString()** methods, but rather only the one we overrode.
+
+A method, which can be overridden is called **virtual**. In .NET, methods are not virtual by default. If we want a method to be overridable, we can do so by including the keyword **virtual** in the declaration of the method.
+
+The explicit instructions to the compiler that we want to override a method (by using override) is a protection against ,mistakes. If there's a typo in the method's name or the types of its parameters, the compiler will inform us immediately of this mistake. It will know something is not right when it cannot find a method with the same signature in any of the base classes.
+
+#### Transitive Properties of Inheritance
+
+In mathematics, transitivity indicates transferability of relationships. Let's take the indicator "larger than" (>) as an example. If A>B and B>C, we can conclude that A > C. This means that the relation "larger than" (>) is transitive, because we can unequivocally determine whether A is larger or smaller than C and vice versa.
+
+If the class **Lion** inherits the class **Felidae** and the class **AfricanLion** inherits **Lion**, then this implies that **AfricanLion** inherits **Felidae**. Therefore **AfricanLion** has the property **Male** which is defined in **Felidae**. This useful property allows a particular functionality to be defined in the most appropriate class.
+
+It is because of the transitive property of inheritance that we can be sure that all classes include the method **ToString()** and all other methods of **Object** regardless of which class they inherit.
+
+#### Inheritance Hierarchy
+
+If we try to describe all big cats, then, sooner or later, we will end up with a relatively large group of classes which inherit one another. All these classes, combined with the base classes, form a hierarchy of big cat classes. The easiest wat to describe such hierarchies is by using class diagrams.
