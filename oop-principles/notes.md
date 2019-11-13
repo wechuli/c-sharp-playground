@@ -170,3 +170,42 @@ It is because of the transitive property of inheritance that we can be sure that
 #### Inheritance Hierarchy
 
 If we try to describe all big cats, then, sooner or later, we will end up with a relatively large group of classes which inherit one another. All these classes, combined with the base classes, form a hierarchy of big cat classes. The easiest wat to describe such hierarchies is by using class diagrams.
+
+#### Class Diagrams
+
+A class Diagram is one of several types of diagrams defined in UML. UML (Unified Modeling Language) is a notation for visualizing different processes and objects to software development.
+
+It is commonly accepted to draw class diagrams as rectangles with name attributes (member variables) and operations (methods). The connections between them are denoted with various types of arrows.
+Pieces of terminology
+
+- Generalization - is a term signifying the inheritance of a class or the implementation of an interface
+- The other term is association. An association, would be, e.g "The Lion has paws", where Paw is another class. Association is has-a relationship.
+
+This is what a sample class diagram looks like:
+![](assets/class.PNG)
+
+The class is represented as a **rectangle**, divided in 3 boxes one under another. The name of the class is at the top. Next, there are the attributes (UML term) of the class (in .NET they are called member variables and properties). At the very bottom are the operations (UML term) or methods (in .NET jargon). The plus/minus signs indicate whether an attribute /operation is visible  (+ means public) or not visible (-  means private). Protected members are marked with #.
+
+Associations denote connections between classes. They model mutual relations. They define multiplicity.
+
+#### Aggregation
+
+Aggregation is a special type of association. It models the relationship of kind "whole/part". We refer to the parent class as an aggregate. The aggregated classes are called components.
+
+Composition is an aggregation where the components cannot exist without the aggregate.
+
+
+### Abstraction
+
+Abstraction means working with something we know how to use without knowing how it works internally. Abstraction is an important concept in OOP. It allows us to write code, which works with abstract data structures (like dictionaries, lists, arrays and others). We can work with an abstract data type by using its interface without concerning ourselves with its implementation.
+
+Abstraction allows us to do something very important - define an interface for our applications i.e. to define all tasks the program is capable of executing and their respective input and output data. That way, we can make a couple of small programs, each handling a smaller task. When we combine this with the ability to work with abstract data, we achieve great flexibility in integrating these small programs and much more opportunities for code reuse.
+
+#### Interfaces
+In the C# languages, the interface is a definition of a role (a group of abstract actions). It defines what sort of behavior a certain object must exhibit without specifying how this behavior should be implemented. Interfaces are also know as contract or specifications.
+
+An object can have multiple roles (or implement multiple interfaces/contracts) and its users can utilize it from different points of view.
+
+An interface can only declare methods and constants. A method signature is the combination of a method's name and a description of its parameters(type and order). A declaration is the combination of a method's return type and its signature. The return type only specifies what the method returns.
+
+A class / method implementation is the source code of a class/method.

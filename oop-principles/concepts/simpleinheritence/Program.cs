@@ -9,6 +9,7 @@ namespace simpleinheritence
             Lion simba = new Lion(true, 456, "Simba");
             AfricanLion mufasa = new AfricanLion(true, 400, "Mufasa");
 
+
             Console.WriteLine($"{simba.Name}, {simba.Male}, {simba.Weight}");
         }
     }
@@ -92,4 +93,6 @@ namespace simpleinheritence
             return string.Format("(AfricanLion, male: {0}, weight: {1}", this.Male, this.Weight);
         }
     }
+
+    
 }
