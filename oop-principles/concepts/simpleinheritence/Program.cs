@@ -44,7 +44,7 @@ namespace simpleinheritence
             Console.WriteLine("Roar");
         }
     }
-    public class Lion : Felidae
+    public class Lion : Felidae, IReproducible<Lion>
     {
         private int weight;
         private string name;
@@ -76,10 +76,12 @@ namespace simpleinheritence
             }
         }
 
-        public bool GetLionGender()
+        public Lion[] IReproducible<Lion>.Reproduce(Lion mate)
         {
-
+            return new Lion[] { new Lion(true, 12, "Charlie"), new Lion(false, 10, "Rose") };
         }
+
+
     }
 
     public class AfricanLion : Lion
@@ -94,5 +96,5 @@ namespace simpleinheritence
         }
     }
 
-    
+
 }

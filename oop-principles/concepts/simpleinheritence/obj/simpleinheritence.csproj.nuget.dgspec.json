@@ -1,28 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/wechuli/repos/c-sharp-playground/oop-principles/concepts/simpleinheritence/simpleinheritence.csproj": {}
+    "F:\\repos\\c-sharp-playground\\oop-principles\\concepts\\simpleinheritence\\simpleinheritence.csproj": {}
   },
   "projects": {
-    "/Users/wechuli/repos/c-sharp-playground/oop-principles/concepts/simpleinheritence/simpleinheritence.csproj": {
+    "F:\\repos\\c-sharp-playground\\oop-principles\\concepts\\simpleinheritence\\simpleinheritence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/wechuli/repos/c-sharp-playground/oop-principles/concepts/simpleinheritence/simpleinheritence.csproj",
+        "projectUniqueName": "F:\\repos\\c-sharp-playground\\oop-principles\\concepts\\simpleinheritence\\simpleinheritence.csproj",
         "projectName": "simpleinheritence",
-        "projectPath": "/Users/wechuli/repos/c-sharp-playground/oop-principles/concepts/simpleinheritence/simpleinheritence.csproj",
-        "packagesPath": "/Users/wechuli/.nuget/packages/",
-        "outputPath": "/Users/wechuli/repos/c-sharp-playground/oop-principles/concepts/simpleinheritence/obj/",
+        "projectPath": "F:\\repos\\c-sharp-playground\\oop-principles\\concepts\\simpleinheritence\\simpleinheritence.csproj",
+        "packagesPath": "C:\\Users\\Wechuli\\.nuget\\packages\\",
+        "outputPath": "F:\\repos\\c-sharp-playground\\oop-principles\\concepts\\simpleinheritence\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/Users/wechuli/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Wechuli\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -53,7 +57,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

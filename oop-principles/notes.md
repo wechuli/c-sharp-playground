@@ -209,3 +209,27 @@ An object can have multiple roles (or implement multiple interfaces/contracts) a
 An interface can only declare methods and constants. A method signature is the combination of a method's name and a description of its parameters(type and order). A declaration is the combination of a method's return type and its signature. The return type only specifies what the method returns.
 
 A class / method implementation is the source code of a class/method.
+
+In an interface, methods are only declared; the implementation is coded in the class implementing the interface. The class that implements a certain interface must implement all methods in it. The only exception is when the class is abstract. Then it can implement none, some or all of the methods. All remaining methods have to be implemented in some of the inheriting classes.
+
+#### Abstraction and Interfaces
+
+The best way to achieve abstraction is by working through interfaces. A component works with interfaces which another implements. That way, a change in the second component will not affect the first one as long as the new component implements the old interface. The interface is also called a contract. Every component upholds a certain contract (the signature of certain methods). That way, two components upholding a contract can communicate with each other without knowing how their counterpart works.
+
+Some important interfaces from the Common Type System (CTS) are the list and collection interfaces: `System.Collections.Generic.IList<T>` and `System.Collections.Generic.ICollection<T>`. All of the standard .NET collection classes implement these interfaces and the various components pass different implementations (arrays, linked lists, hash tables, etc.) to one another using a common interface.
+Collections are an excellent example of an object-oriented library with classes and interfaces that actively use all core principles of OOP: abstraction, inheritance, encapsulation and polymorphism.
+
+##### When Should We Use Abstraction and Interfaces
+ 
+The answer to this question is: always when we want to achieve abstraction of data or actions, whose implementation can change later on. Code, which communicates with a other piece of code through interfaces is much more resilient to changes than code written using specific classes. Working through interfaces is common and a highly recommended practice.
+
+It is always a good idea to use interfaces when functionality is exposed to another component. In the interface, we include only the functionality (in the form of a declaration) that others need to see.
+
+Internally, a program/ component can use interfaces for defining roles. That way, an object can be used by different classes through different roles.
+
+### Encapsulation
+
+Encapsulation is one of the main concepts in OOP. It is also called "information hiding". An object has to provide its users only with the essential information for manipulation, without the internal details.
+
+The person writing the class has to decide what should be hidden and what not. When we program, we must define as **private** every method or field which other classes should not be able to access.
+

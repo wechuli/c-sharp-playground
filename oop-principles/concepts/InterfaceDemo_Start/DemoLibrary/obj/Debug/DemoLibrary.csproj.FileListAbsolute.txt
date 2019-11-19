@@ -1,0 +1,5 @@
+F:\repos\c-sharp-playground\oop-principles\concepts\InterfaceDemo_Start\DemoLibrary\bin\Debug\DemoLibrary.dll
+F:\repos\c-sharp-playground\oop-principles\concepts\InterfaceDemo_Start\DemoLibrary\bin\Debug\DemoLibrary.pdb
+F:\repos\c-sharp-playground\oop-principles\concepts\InterfaceDemo_Start\DemoLibrary\obj\Debug\DemoLibrary.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\oop-principles\concepts\InterfaceDemo_Start\DemoLibrary\obj\Debug\DemoLibrary.dll
+F:\repos\c-sharp-playground\oop-principles\concepts\InterfaceDemo_Start\DemoLibrary\obj\Debug\DemoLibrary.pdb

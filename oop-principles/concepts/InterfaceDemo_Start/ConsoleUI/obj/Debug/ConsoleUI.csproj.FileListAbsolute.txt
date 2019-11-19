@@ -1,0 +1,9 @@
+F:\repos\c-sharp-playground\oop-principles\concepts\InterfaceDemo_Start\ConsoleUI\bin\Debug\ConsoleUI.exe.config
+F:\repos\c-sharp-playground\oop-principles\concepts\InterfaceDemo_Start\ConsoleUI\bin\Debug\ConsoleUI.exe
+F:\repos\c-sharp-playground\oop-principles\concepts\InterfaceDemo_Start\ConsoleUI\bin\Debug\ConsoleUI.pdb
+F:\repos\c-sharp-playground\oop-principles\concepts\InterfaceDemo_Start\ConsoleUI\bin\Debug\DemoLibrary.dll
+F:\repos\c-sharp-playground\oop-principles\concepts\InterfaceDemo_Start\ConsoleUI\bin\Debug\DemoLibrary.pdb
+F:\repos\c-sharp-playground\oop-principles\concepts\InterfaceDemo_Start\ConsoleUI\obj\Debug\ConsoleUI.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\oop-principles\concepts\InterfaceDemo_Start\ConsoleUI\obj\Debug\ConsoleUI.csproj.CopyComplete
+F:\repos\c-sharp-playground\oop-principles\concepts\InterfaceDemo_Start\ConsoleUI\obj\Debug\ConsoleUI.exe
+F:\repos\c-sharp-playground\oop-principles\concepts\InterfaceDemo_Start\ConsoleUI\obj\Debug\ConsoleUI.pdb
