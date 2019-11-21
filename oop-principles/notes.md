@@ -229,7 +229,9 @@ Internally, a program/ component can use interfaces for defining roles. That way
 
 ### Encapsulation
 
-Encapsulation is one of the main concepts in OOP. It is also called "information hiding". An object has to provide its users only with the essential information for manipulation, without the internal details.
+In object oriented programming languages, encapsulation refers to one of two related but distinct notions, and sometimes to the combination thereof:
+- A language mechanism for restricting direct access to some of the object's components
+- A language construct that facilitates the bundling of data with the methods(or other functions) operating on that data
 
 The person writing the class has to decide what should be hidden and what not. When we program, we must define as **private** every method or field which other classes should not be able to access.
 
