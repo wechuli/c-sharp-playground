@@ -184,7 +184,7 @@ Pieces of terminology
 This is what a sample class diagram looks like:
 ![](assets/class.PNG)
 
-The class is represented as a **rectangle**, divided in 3 boxes one under another. The name of the class is at the top. Next, there are the attributes (UML term) of the class (in .NET they are called member variables and properties). At the very bottom are the operations (UML term) or methods (in .NET jargon). The plus/minus signs indicate whether an attribute /operation is visible  (+ means public) or not visible (-  means private). Protected members are marked with #.
+The class is represented as a **rectangle**, divided in 3 boxes one under another. The name of the class is at the top. Next, there are the attributes (UML term) of the class (in .NET they are called member variables and properties). At the very bottom are the operations (UML term) or methods (in .NET jargon). The plus/minus signs indicate whether an attribute /operation is visible (+ means public) or not visible (- means private). Protected members are marked with #.
 
 Associations denote connections between classes. They model mutual relations. They define multiplicity.
 
@@ -194,7 +194,6 @@ Aggregation is a special type of association. It models the relationship of kind
 
 Composition is an aggregation where the components cannot exist without the aggregate.
 
-
 ### Abstraction
 
 Abstraction means working with something we know how to use without knowing how it works internally. Abstraction is an important concept in OOP. It allows us to write code, which works with abstract data structures (like dictionaries, lists, arrays and others). We can work with an abstract data type by using its interface without concerning ourselves with its implementation.
@@ -202,6 +201,7 @@ Abstraction means working with something we know how to use without knowing how 
 Abstraction allows us to do something very important - define an interface for our applications i.e. to define all tasks the program is capable of executing and their respective input and output data. That way, we can make a couple of small programs, each handling a smaller task. When we combine this with the ability to work with abstract data, we achieve great flexibility in integrating these small programs and much more opportunities for code reuse.
 
 #### Interfaces
+
 In the C# languages, the interface is a definition of a role (a group of abstract actions). It defines what sort of behavior a certain object must exhibit without specifying how this behavior should be implemented. Interfaces are also know as contract or specifications.
 
 An object can have multiple roles (or implement multiple interfaces/contracts) and its users can utilize it from different points of view.
@@ -220,7 +220,7 @@ Some important interfaces from the Common Type System (CTS) are the list and col
 Collections are an excellent example of an object-oriented library with classes and interfaces that actively use all core principles of OOP: abstraction, inheritance, encapsulation and polymorphism.
 
 ##### When Should We Use Abstraction and Interfaces
- 
+
 The answer to this question is: always when we want to achieve abstraction of data or actions, whose implementation can change later on. Code, which communicates with a other piece of code through interfaces is much more resilient to changes than code written using specific classes. Working through interfaces is common and a highly recommended practice.
 
 It is always a good idea to use interfaces when functionality is exposed to another component. In the interface, we include only the functionality (in the form of a declaration) that others need to see.
@@ -230,8 +230,47 @@ Internally, a program/ component can use interfaces for defining roles. That way
 ### Encapsulation
 
 In object oriented programming languages, encapsulation refers to one of two related but distinct notions, and sometimes to the combination thereof:
+
 - A language mechanism for restricting direct access to some of the object's components
 - A language construct that facilitates the bundling of data with the methods(or other functions) operating on that data
 
 The person writing the class has to decide what should be hidden and what not. When we program, we must define as **private** every method or field which other classes should not be able to access.
 
+### Polymorphism
+
+Polymorphism is the provision of a single interface to entities of different types. Polymorphism allows treating objects of a derived class as objects of its base class.
+
+Polymorphism can bear strong resemblance to abstraction, but it is mostly related to overriding methods in derived classes, in order to change their original behavior inherited from the base class. Abstraction is associated with creating an interface of a component or functionality (defining a role).
+
+#### Abstract Classes
+
+The abstract modifier indicates that the thing being modified has a missing or incomplete implementation. The abstract modifier can be used with classes, methods, properties, indexers, and events. Use the abstract modifier in a class declaration to indicate that a class is intended only to be a base class of other classes, not instantiated on its own. Members marked as abstract must be implemented by non-abstract classes that derive from the abstract class.
+
+Abstract classes have the following features:
+
+- An abstract class cannot be instantiated
+- An abstract class may contain abstract methods and accessors.
+- It is not possible to modify an abstract class with the sealed modifier because because the two modifiers have opposite meanings. The `sealed` modifier prevents a class from being inherited and the `abtract` modifier requires a class to be inherited.
+- A non-abstract class derived from an abstract class must include actual implementations of all inherited abstract methods and accessors.
+
+Use the `abstract` modifier in a method or property declaration to indicate that the method or property does not contain implementation
+
+Abstract methods have the following features:
+
+- An abstract method is implicitly a virtual method
+- Abstract method declarations are only permitted in abstract classes
+- Because an abstract method declaration provides no actual implementation, there is not method body; the method declaration simply ends with a semicolon and there are no curly braces following the signature.
+- It is an error to use the `static` or `virtual` modifiers in an abstract method declaration.
+  Each class with at least one abstract method must be abstract. It is possible to define a class as an abstarct one, even when there are no abstract methods in it.
+
+Abstract classes are something in the middle between classes and interfaces. They can define ordinary methods and abstract methods. Ordinary methods have an implementation, whereas abstract methods are empty (without an implementation) and remain to be implemented later by the derived classes.
+
+A pure abstract class is an abstract class, which has no implemented methods and no member variables. It is very similar to an interface. The fundamental difference is that a class can implement many interfaces and inherit only one class (even if that class is abstract).
+
+Initially, interfaces were not necessary in the presence of "multiple inheritance". They had to be conceived as a means to supersede it in specifying the numerous roles of an object.
+
+#### Virtual Methods
+
+A method which can be overridden in a derived class , is called a **virtual method**. Methods in .NET aren't virtual by default. If we want to make a virtual method, we mark it with the keyword **virtual**. Then the derived class can declare and define a method with the same signature. Virtual methods are important for **method overriding**, which lies at the hear of polymorphism.
+
+Virtual methods as well as abstract methods can be overriden. Abstract methods are actually virtual methods without a specific implementation. All methods defined in an interface are abstract and therefore virtual, although this is not explicitly defined.

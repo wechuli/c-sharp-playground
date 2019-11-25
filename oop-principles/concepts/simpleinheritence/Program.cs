@@ -39,6 +39,11 @@ namespace simpleinheritence
             }
         }
 
+        public virtual void Walk()
+        {
+
+        }
+
         private void LionRoar()
         {
             Console.WriteLine("Roar");
@@ -48,6 +53,8 @@ namespace simpleinheritence
     {
         private int weight;
         private string name;
+
+
         public Lion(bool male, int weight, string name) : base(male)
         {
             this.weight = weight;
