@@ -274,3 +274,100 @@ Initially, interfaces were not necessary in the presence of "multiple inheritanc
 A method which can be overridden in a derived class , is called a **virtual method**. Methods in .NET aren't virtual by default. If we want to make a virtual method, we mark it with the keyword **virtual**. Then the derived class can declare and define a method with the same signature. Virtual methods are important for **method overriding**, which lies at the hear of polymorphism.
 
 Virtual methods as well as abstract methods can be overriden. Abstract methods are actually virtual methods without a specific implementation. All methods defined in an interface are abstract and therefore virtual, although this is not explicitly defined.
+
+#### The Difference between Virtual and Non-Virtual Methods
+
+**Virtual methods** are used when we expect the derived classes to change / complement / alter some of the inherited functionality. Then, even if we work with an object not directly, but rather by upcasting it to **Object**, we use the overwritten implementation of the virtual methods.
+
+**Sealing of methods** is done when we rely on a piece of functionality and we don't want it to be altered. Methods are sealed by default. But if we want a base class' virtual method to become sealed in a derived class, we use **override sealed**.
+
+#### When Should We Use Polymorphism
+
+- Whenever we want to enable changing a method's implementation in a derived class.
+
+It's a goof rule to work with the most basic class possible or directly with an interface. That way, changes in used classes reflect to a much lesser extent in classes written by us. The less a program know about its surrounding classes, the fewer changes (if any) it would have to undergo.
+
+### Cohesion and Coupling
+
+#### Cohesion
+
+The concept of cohesion shows to what degree a program's or a component's various tasks and responsibilities are related to one another i.e. how much a program is focused on solving a single problem. Cohesion is divided into strong cohesion and weak cohesion.
+
+##### Strong Cohesion
+
+Strong cohesion indicates that the responsibilities and tasks of a piece of code (a method, class, component or a program) are related to one another and intended to solve a common problem. This is something we must always aim for. Strong cohesion is a typical characteristic of high-quality software.
+
+Strong cohesion in a class indicates that the class defines only one entity. Each of these roles is defined in the same class. Strong cohesion indicates that the class solves only one task, one problem and not many at the same time. A class, which does many things at the same time, is difficult to understand and maintain.
+
+A method is well written when it performs only one task and performs it well. A method, which does a lot of work related to different things , has bad cohesion. It has to be broken down into simpler methods, each solving only one task.
+
+##### Weak Cohesion
+
+Weak cohesion is observed along with methods, which perform several unrelated tasks.Such methods take several different groups of parameters in order to perform different tasks. Sometimes, this requires logically unrelated data to be unified for the sake of such methods. Weak cohesion is harmful and must be avoided.
+
+#### Best Practices with Cohesion
+
+Strong cohesion is quite logically the "good" way of writing code. The concept is associated with simpler and clearer source code - code that is easier to maintain and reuse.
+
+Contrarily, with weak cohesion each change is a ticking time bomb, because it could affect other functionality. Sometimes a logical task is spread out to several different modules and thus changing it is more labor intensive. Code reuse is also difficult, because a component does several unrelated tasks and to reuse it the exact same conditions must be met which is hard to achieve.
+
+#### Coupling
+
+Coupling mostly describes the extent to which components / classes depend on one another. It is broken down into loose coupling and tight coupling. Loose coupling usually correlates with strong cohesion and vice versa.
+
+##### Loose Coupling
+
+Loose coupling is defined by a piece of code's (program/class/component) communication with other code through clearly defined interfaces (contracts). A change in the implementation of a loosely coupled component doesn't reflect on the others it communicates with. When you write source code, you must not rely on inner characteristics of components (specific behavior that is not described by interfaces).
+
+The contract has to be maximally simplified and define only the required behavior for this component's work by hiding all unnecessary details.
+
+##### Tight Coupling
+
+We achieve tight coupling when there are many input parameters and output parameters; when we use undocumented(in the contract) characteristics of another component (for example, a dependency on static fields in another class); and when we use many of the so called control parameters that indicate behavior with actual data. Tight coupling between two or more methods, classes or components means they cannot work independently of one another and that a change in one of them will also affect the rest. This leads to difficult to read code and big problems with maintenance.
+
+##### Best Practices with Coupling
+
+The most common and advisable way of invoking a well written module's functionality is through interfaces. That way, the functionality can be substituted without clients f the code requiring changes. The jargon expression for this is "programming against interfaces"
+
+Most commonly, an interface describes a "contract" observed by this module. It is good practice not to rely on anything else other than what's described by this contract. The use of inner classes, which are not part of the public interface of a module , is not recommended because their implementation can be substituted without substituting the contract.
+
+It is good practice that the methods are made flexible and ready to work with all components, which observe their interfaces, and not only work with definitive ones. The latter would mean that these methods expect something specific from the components they can work with. It is also good practice that all dependencies are clearly described and visible. Otherwise, the maintenance of such code becomes difficult.
+
+#### Spaghetti Code
+
+Spaghetti code is unstructured code with unclear logic; it is difficult to read, understand and maintain; it violates and mixes up consistency; it has weak cohesion and tight coupling. Such code is associated with spaghetti, because it is just as tangled and twisted. When you pull out a strand of spaghetti (i.e. a class or method), the whole dish of spaghetti can turn out tangled in it (i.e. changes in one method or class lead to dozens of other changes because of the strong dependence between them). It is almost impossible to reuse spaghetti code, since there is no way to separate that part of the code, which is practically applicable.
+
+Spaghetti code is achieved when you have written code, supplement it and have to readapt it again and again every time the requirements change. Time passes by until a moment comes when it has to be rewritten from scratch.
+
+You classes must do only one thing, do it well, bind them minimally to other classes (or not link them at all whenever that's possible), have a clear interface and good abstraction and to hide the details of their internal workings.
+
+### Object-Oriented Modeling (OOM)
+
+Object-oriented modeling (OOM) is a process associated with OOP where all objects related to the problem we are solving are brought out (a model is created). Only the classes' characteristics which are important for solving this particular problem are elicited. The rest is ignored. That way, we create a new reality, a simplified version of the original one (its model) such that is allows us to solve the problem or task. In object-oriented modeling, the model is created by means of OOP: via classes, class attributes, class methods, objects, relations between classes
+
+#### Steps in Object-Oriented Modeling
+
+- Identification of classes
+- Identification of class attributes
+- Identification of operations on classes
+- Identification of relations between classes.
+
+##### Identification of Classes
+
+The names of the classes are the nouns in the text, usually common nouns in singular like Student, Message, Lion. Avoid names that don’t come from the text, such as: StrangeClass, AddressTheStudentHas. Sometimes it's difficult to determine whether some subject or phenomena from the real world has to be a class.The better we explore the problem, the easier it will be to decide which entities must be represented as classes. When a class becomes large and complicated it has to be broken down into several smaller classes.
+
+##### Identification of Class Attributes
+
+Classes have attributes (characteristics), for example the class Student has a name, institution and a list of courses. Not all characteristics are important for a software system. For example, as far as the class Student is concerned eye color is a non-essential characteristic. Only essential characteristics have to be modeled.
+
+##### Identification of Operations on Classes
+
+Each class must have clearly defined responsibilities – what objects or processes from the real world it identifies and what tasks it performs. Each action in the program is performed by one or several methods in some class. The actions are modeled as operations (methods).
+
+A combination of verb + noun is used for the name of a method, e.g. PrintReport(), ConnectToDatabase(). We cannot define all methods of a given class immediately. Firstly, we define the most important methods – those that implement the basic responsibilities of the class. Over time additional methods appear.
+
+##### Identification of Relationships between classes
+
+If a student is from a faculty and this is important for the task we are solving, then student and faculty are related, i.e. the Faculty class has a list of Students. These relations are called associations
+
+### UML Notation
