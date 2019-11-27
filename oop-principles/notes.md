@@ -371,3 +371,33 @@ A combination of verb + noun is used for the name of a method, e.g. PrintReport(
 If a student is from a faculty and this is important for the task we are solving, then student and faculty are related, i.e. the Faculty class has a list of Students. These relations are called associations
 
 ### UML Notation
+
+The UML (Unified Modeling Language) notation defines several additional types of diagrams.
+
+#### Use Case Diagrams
+
+They are used when we elicit the requirements for the description of possible actions. Actors represent roles (types of users).
+
+Use cases describe interaction between the actors and the system. The use case model is a group of use cases - it provides a complete description of a system's functionality.
+
+A use case describes a single functionality of the system, a single action can be performed by some actors. It has a unique name and is related to actors
+
+#### Sequence Diagrams
+
+Sequence diagrams are used when modeling the requirements of process specification and describing use case scenarios more extensively. They allow describing additional participants in the process and the sequence of the actions over time. They are used in designing the descriptions of system interfaces.
+
+Sequence diagrams describe what happens over time, the interactions over time, the dynamic view of the system, a sequence of steps just like an algorithm.
+
+### Design Patterns
+
+Few years after the onset of the object-oriented paradigm, it was found that there are many situations, which occur frequently during software development, such as a class which must have only one instance within the entire application.
+
+Design patterns appeared as proven and highly-efficient solutions to the most common problems of object-oriented modeling.
+
+#### The Singleton Design Pattern
+
+This is the most popular and most frequently used design pattern. It allows a class to have only one instance and defines where it has to be taken from.
+
+#### The Factory Method Design Pattern
+
+Factory method is another very common design pattern. It is intended for 'producing' objects. The instantiation of an object is not performed directly, but rather by the factory method. This allows the factory method to decide which specific instance to create from a family of classes implementing a common interface. the solution can depend on the environment, a parameter or some system setting.
