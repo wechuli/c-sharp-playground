@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\oop-principles\exercises\ex4\obj\Debug\netcoreapp3.0\ex4.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\oop-principles\exercises\ex4\obj\Debug\netcoreapp3.0\ex4.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\oop-principles\exercises\ex4\obj\Debug\netcoreapp3.0\ex4.AssemblyInfo.cs
+F:\repos\c-sharp-playground\oop-principles\exercises\ex4\bin\Debug\netcoreapp3.0\ex4.exe
+F:\repos\c-sharp-playground\oop-principles\exercises\ex4\bin\Debug\netcoreapp3.0\ex4.deps.json
+F:\repos\c-sharp-playground\oop-principles\exercises\ex4\bin\Debug\netcoreapp3.0\ex4.runtimeconfig.json
+F:\repos\c-sharp-playground\oop-principles\exercises\ex4\bin\Debug\netcoreapp3.0\ex4.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\oop-principles\exercises\ex4\bin\Debug\netcoreapp3.0\ex4.dll
+F:\repos\c-sharp-playground\oop-principles\exercises\ex4\bin\Debug\netcoreapp3.0\ex4.pdb
+F:\repos\c-sharp-playground\oop-principles\exercises\ex4\obj\Debug\netcoreapp3.0\ex4.dll
+F:\repos\c-sharp-playground\oop-principles\exercises\ex4\obj\Debug\netcoreapp3.0\ex4.pdb

@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\oop-principles\exercises\ex5\obj\Debug\netcoreapp3.0\ex5.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\oop-principles\exercises\ex5\obj\Debug\netcoreapp3.0\ex5.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\oop-principles\exercises\ex5\obj\Debug\netcoreapp3.0\ex5.AssemblyInfo.cs
+F:\repos\c-sharp-playground\oop-principles\exercises\ex5\bin\Debug\netcoreapp3.0\ex5.exe
+F:\repos\c-sharp-playground\oop-principles\exercises\ex5\bin\Debug\netcoreapp3.0\ex5.deps.json
+F:\repos\c-sharp-playground\oop-principles\exercises\ex5\bin\Debug\netcoreapp3.0\ex5.runtimeconfig.json
+F:\repos\c-sharp-playground\oop-principles\exercises\ex5\bin\Debug\netcoreapp3.0\ex5.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\oop-principles\exercises\ex5\bin\Debug\netcoreapp3.0\ex5.dll
+F:\repos\c-sharp-playground\oop-principles\exercises\ex5\bin\Debug\netcoreapp3.0\ex5.pdb
+F:\repos\c-sharp-playground\oop-principles\exercises\ex5\obj\Debug\netcoreapp3.0\ex5.dll
+F:\repos\c-sharp-playground\oop-principles\exercises\ex5\obj\Debug\netcoreapp3.0\ex5.pdb
