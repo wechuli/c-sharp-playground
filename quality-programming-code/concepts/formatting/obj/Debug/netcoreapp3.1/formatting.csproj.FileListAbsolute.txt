@@ -1,0 +1,11 @@
+F:\repos\c-sharp-playground\quality-programming-code\concepts\formatting\bin\Debug\netcoreapp3.1\formatting.exe
+F:\repos\c-sharp-playground\quality-programming-code\concepts\formatting\bin\Debug\netcoreapp3.1\formatting.deps.json
+F:\repos\c-sharp-playground\quality-programming-code\concepts\formatting\bin\Debug\netcoreapp3.1\formatting.runtimeconfig.json
+F:\repos\c-sharp-playground\quality-programming-code\concepts\formatting\bin\Debug\netcoreapp3.1\formatting.runtimeconfig.dev.json
+F:\repos\c-sharp-playground\quality-programming-code\concepts\formatting\bin\Debug\netcoreapp3.1\formatting.dll
+F:\repos\c-sharp-playground\quality-programming-code\concepts\formatting\bin\Debug\netcoreapp3.1\formatting.pdb
+F:\repos\c-sharp-playground\quality-programming-code\concepts\formatting\obj\Debug\netcoreapp3.1\formatting.csprojAssemblyReference.cache
+F:\repos\c-sharp-playground\quality-programming-code\concepts\formatting\obj\Debug\netcoreapp3.1\formatting.AssemblyInfoInputs.cache
+F:\repos\c-sharp-playground\quality-programming-code\concepts\formatting\obj\Debug\netcoreapp3.1\formatting.AssemblyInfo.cs
+F:\repos\c-sharp-playground\quality-programming-code\concepts\formatting\obj\Debug\netcoreapp3.1\formatting.dll
+F:\repos\c-sharp-playground\quality-programming-code\concepts\formatting\obj\Debug\netcoreapp3.1\formatting.pdb
