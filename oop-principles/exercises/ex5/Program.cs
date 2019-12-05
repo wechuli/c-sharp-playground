@@ -10,8 +10,26 @@ namespace ex5
 
             Customer individualCustomer = new Individual("Paul", "Wechuli");
             Customer companyCustomer = new Company("Microsoft");
-            Console.WriteLine(individualCustomer);
-            Console.WriteLine(companyCustomer);
+            
+
+
+            //    Create DepositAccount - individual
+            DepositAccount individualDepositAccount = new DepositAccount(individualCustomer);
+     
+
+
+            //    Create DepositAccount - company
+
+
+            //    Create LoanAccount - individual
+
+            //    Create LoanAccount - company
+
+
+            //    Create MortgageAccount - individual
+
+            //    Create MortgageAccount - company
+
         }
     }
 }

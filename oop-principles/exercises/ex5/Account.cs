@@ -10,7 +10,7 @@ namespace ex5
         public Guid AccountId { get; protected set; }
         // day the account was opened
         public DateTime accountOpenDate { get; protected set; }
-        private double balance;
+        private double balance = 0;
         public double Balance
         {
             get
@@ -43,6 +43,15 @@ namespace ex5
     {
 
         public static double interestRate = 14.2;
+
+
+        public LoanAccount(Customer customer)
+        {
+            this.accountCustomer = customer;
+            this.InterestRate = LoanAccount.interestRate;
+            this.AccountId = Guid.NewGuid();
+            this.accountOpenDate = DateTime.Now;
+        }
         public override double CalculateInterest(int numberOfMonths)
         {
 
@@ -87,6 +96,15 @@ namespace ex5
 
         public static double interestRate = 8;
 
+
+        public DepositAccount(Customer customer)
+        {
+            this.accountCustomer = customer;
+            this.InterestRate = DepositAccount.interestRate;
+            this.AccountId = Guid.NewGuid();
+            this.accountOpenDate = DateTime.Now;
+
+        }
         public double WithDrawFromAccount(double amountToWithdraw)
         {
             if (amountToWithdraw > this.Balance)
@@ -115,6 +133,16 @@ namespace ex5
     {
 
         public static double interestRate = 4.5;
+
+
+        public DepositAccount(Customer customer)
+        {
+            this.accountCustomer = customer;
+            this.InterestRate = MortgageAccount.interestRate;
+            this.AccountId = Guid.NewGuid();
+            this.accountOpenDate = DateTime.Now;
+
+        }
 
         public override double CalculateInterest(int numberOfMonths)
         {
