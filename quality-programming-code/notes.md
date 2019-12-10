@@ -161,5 +161,54 @@ The longer a method, the more complex it becomes. Consequent modifications becom
 ## Proper Use of Variables
 
 ### Returning a Result
-Whenever a result is returned, it should first be saved in a variable, before being returned. There are a few reasons for saving the result before returning it. 
+
+Whenever a result is returned, it should first be saved in a variable, before being returned. There are a few reasons for saving the result before returning it.
+
 - For one, the additional variable contributes to self-documenting the code and makes it clear what is returned.
+- Another reason is tracing the returned value when debugging - we can stop the program from execution as soon as the value is computed and then inspect it.
+- It also helps to avoid long expressions, which can become quite convoluted.
+
+### Principles for Initialization
+
+In .NET, all member-variables (fields) belonging to a class are initialized automatically at the time of being declared. This is managed by the runtime and provides for a safer environment, less prone to errors caused from incorrectly initialized memory.All reference type variables are initialized to null and all primitive types to 0 (false for bool).
+
+The compiler forces the explicit initialization of all local variables; otherwise a compile-time error is given. A good practice is to initialize all variables explicitly at the time of their declaration.
+
+A local variable should be declared at the beginning of its enclosing block or method.
+
+### Scope, Lifetime and Span of
+
+In .NET, three layers of variable scope exist: **static** variables, member-variables of a class (**fields**), and **local variables** inside a method.
+
+The wider the scope of a variable, the higher the probability that more code will be tied to it, thereby increasing the level of coupling. Since strong coupling is not desirable, variable scope should be as narrow as possible.
+
+A good approach in using variables is to initially declare them with the minimal scope and extend it only when necessary. This is a natural way of assigning a variable the scope it needs.
+
+#### Minimizing the Variable Span
+
+The span of a variable corresponds to the average amount of lines between its occurrences in the code. Considering minimal variable span, variables should be declared and initialized as close as possible to their first occurrence in the code, and not necessarily in the beginning of a method or a code block.
+
+Keep the variable span as small as possible! This improves the code quality, readability, understandability and maintainability because less code needs to be inspected in order to read and understand the code.
+
+#### Minimizing the Variable Lifetime
+
+The lifetime of a local variable inside a method lasts between the place of its declaration (the beginning of a block, most usually), until the end of the enclosing block. Class fields (member-variables) exist as long as their class is instantiated. Static variables last throughout the entire execution of the program.
+
+As you may guess, the lifetime should be kept minimal. This reduces the lines of code that you should consider at the same time when reading the code. This will maximized the portion of the code you can safely ignore when you read the code. This will reduce the total complexity in your brain, because it works better with smaller and simpler pieces of code, right?
+
+It is important that the programmer tracks the usage of a particular variable, along with its scope, span and lifetime. The main objective is to reduce the scope, the lifetime and the span as much as possible. This leads to an important rule about correctly using variables:
+
+        Declare local variables as late as possible, immediately before using them for the first time. Initialize them at the time of declaration.
+
+Variables with a wider scope and a longer lifetime should have more descriptive names, such as totalStudentsCount instead of count. That is because they occur at more locations within a larger piece of code, and hence the context around them is not going to be entirely clear.
+
+Variables that span across just 4-5 lines can have short and simple names, for example count. They do not need long names because their purpose becomes clear from their limited context (a few lines), and ambiguities can rarely arise there.
+
+
+A very important rule is to use a variable for one purpose only. The excuse that memory is conserved the other way is not generally convincing. If a variable is used for multiple different purposes, what name can we give it?
+
+
+        Use one variable for a single purpose only. Otherwise, an appropriate name cannot be found.
+
+Unused local variables should not be present in the code. Their declarations alone are useless. Fortunately, most of the decent development environments do warn you about such anomalies.
+The use of local variables with hidden meaning should be avoided.
