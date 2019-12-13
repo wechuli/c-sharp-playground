@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Diagnostics;
 
 namespace defensive_prog
 {
@@ -7,9 +8,15 @@ namespace defensive_prog
     {
         static void Main(string[] args)
         {
-            
-            
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Programm Starting");
+            FakeMethodToAssertStuff("fakestring");
+        }
+
+        public static void FakeMethodToAssertStuff(string fileName)
+        {
+            bool templatefileExist = File.Exists(fileName);
+            Debug.Assert(templatefileExist, $"Can't load templates file {fileName}");
+
         }
     }
 }

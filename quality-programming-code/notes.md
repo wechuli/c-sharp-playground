@@ -260,3 +260,21 @@ Defensive programming is implemented through assertions, exceptions and other me
 ### Assertions
 
 Assertions are special conditions that should always be met. If not met, they throw an error message and the program terminates.
+
+### Assertions vs. Exceptions
+
+Exceptions are announcements for an error of for an unexpected event. They inform the programmer using the code for an error. Exceptions can be caught and program execution can still continue.
+
+Assertions produce fatal errors. They cannot be caught or handled because they are meant to indicate a bug in the code. A failed assertion causes the program to terminate.
+
+Assertions can be turned off. The concept is to have them turned on only at the time of developing, in order to find as many bugs as possible. When turned off, the conditions are no longer checked. Turning off the assertions is plausible when the software goes to production, since these checks are affecting the performance and the messages are not always meaningful to the end user.
+
+If a particular check should continue to exist when the software goes to production (for example, checking the input that comes from the user), it should not be implemented as an assertion in the first place. Exceptions should be used in such cases instead. Assertions should only be used for conditions that, if not met, it is due to a bug in the program.
+
+### Defensive Programming with Exceptions
+
+Exceptions provide a powerful mechanism for centralized handling of error and unusual conditions. Exceptions allow problematic situations to be handled at many levels. They ease the writing and the maintenance of reliable program code.
+
+Another difference between exceptions and assertions is that, in defensive programming, exceptions are mainly used for protecting the public interface of a class or component. This provides for a fail-safe mechanism.
+
+Exceptions should be used to inform other parts of the code for problems that should not be ignored. Throwing an exception is reasonable only in situations when an abnormal condition has occurred. If a particular problem can be handled locally, the handling should be performed in the method itself, and no exceptions should be thrown. If a problem cannot be handled locally, the exception should be thrown to the caller. The thrown exceptions should be at an appropriate level of abstraction.

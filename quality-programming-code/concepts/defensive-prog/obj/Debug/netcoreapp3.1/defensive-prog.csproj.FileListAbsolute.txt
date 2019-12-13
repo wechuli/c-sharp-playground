@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\quality-programming-code\concepts\defensive-prog\bin\Debug\netcoreapp3.1\defensive-prog.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\quality-programming-code\concepts\defensive-prog\bin\Debug\netcoreapp3.1\defensive-prog.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\quality-programming-code\concepts\defensive-prog\bin\Debug\netcoreapp3.1\defensive-prog.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\quality-programming-code\concepts\defensive-prog\bin\Debug\netcoreapp3.1\defensive-prog.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\quality-programming-code\concepts\defensive-prog\bin\Debug\netcoreapp3.1\defensive-prog.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\quality-programming-code\concepts\defensive-prog\bin\Debug\netcoreapp3.1\defensive-prog.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\quality-programming-code\concepts\defensive-prog\obj\Debug\netcoreapp3.1\defensive-prog.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\quality-programming-code\concepts\defensive-prog\obj\Debug\netcoreapp3.1\defensive-prog.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\quality-programming-code\concepts\defensive-prog\obj\Debug\netcoreapp3.1\defensive-prog.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\quality-programming-code\concepts\defensive-prog\obj\Debug\netcoreapp3.1\defensive-prog.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\quality-programming-code\concepts\defensive-prog\obj\Debug\netcoreapp3.1\defensive-prog.pdb
