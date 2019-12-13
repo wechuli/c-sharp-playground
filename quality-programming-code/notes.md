@@ -204,11 +204,59 @@ Variables with a wider scope and a longer lifetime should have more descriptive 
 
 Variables that span across just 4-5 lines can have short and simple names, for example count. They do not need long names because their purpose becomes clear from their limited context (a few lines), and ambiguities can rarely arise there.
 
-
 A very important rule is to use a variable for one purpose only. The excuse that memory is conserved the other way is not generally convincing. If a variable is used for multiple different purposes, what name can we give it?
-
 
         Use one variable for a single purpose only. Otherwise, an appropriate name cannot be found.
 
 Unused local variables should not be present in the code. Their declarations alone are useless. Fortunately, most of the decent development environments do warn you about such anomalies.
 The use of local variables with hidden meaning should be avoided.
+
+## Proper Use of Expressions
+
+When using expressions, the simple rule is: avoid complex expressions! A complex expression is one that performs more than one thing.
+
+There are many reasons to avoid the use of complex expressions:
+
+- Code becomes hard to read.
+- Code is hard to maintain
+- Code is hard to fix in case of defects.
+- Code is hard to debug
+
+Instead of a single complex expression, we can write a few less complex ones and save them in variables with descriptive names. In this way, the code becomes simpler, easier to read and understand and easier to maintain, debug and fix.
+
+## Use of Constants
+
+Well written code should not contain "magic numbers" and "magic strings". Such constants are all the literals in a program having a value other than 0,-1,1,"" and null.
+
+### When to Use Constants
+
+The use of constants allows us to avoid the use of "magic numbers" and strings in our programs, and enable us to give names to the numbers and strings we use.
+
+Constants should be used whenever we need to use numbers or strings whose origin and meaning are not obvious. Constants should generally be defined for every number or string that is used more than once in a program.
+e.g
+
+- For filenames the program operates on.They need to be frequently changed and it is convenient to have them as named constants at the beginning of the program.
+- For constants taking part in mathematical expressions.
+- For buffer sizes and sizes of memory blocks
+
+## Proper Use of Control Flow Statements
+
+Control flow statements are represented by loops and conditional statements.
+
+- Always enclose the body of loops and conditional statements in curly brackets – { and }.
+- Deep nesting of **if** statements is a bad practice because it obstructs the comprehensibility of the code. Extracting parts of the code into separate methods is the easiest and most efficient way to reduce the level of nesting of a group of conditional statements, while preserving their logic.
+- If we need a loop that will execute a fixed number of times, a for-loop is a good fit. If it is necessary to check some conditions in order to stop the execution of the loop, then it is probably better to pick a **while** loop. A while loop is suitable in cases where the exact number of iterations is not known. The execution there continues until the exit condition has been encountered. If the prerequisites for using a while loop are in place, but the loop body must unconditionally execute at least once, a do-while loop should be used instead.
+- As with conditional statements, deep nesting of loops is a bad practice. Deep nesting usually happens because of a large number of loops and conditional statements residing in one another. This makes the code hard to read and maintain. Such code can easily be improved by moving away parts of it into separate methods.
+
+## Defensive Programming
+
+Defensive programming is a term denoting a practice towards defending the code from incorrect data. Defensive programming keeps the code from errors that nobody expects. It is implemented by checking the validity of all input data. This is the data coming from external sources, input parameters of methods, configuration files and settings, input from the user, and even the data from another local method.
+
+The main idea behind defensive programming is that methods should check their input parameters (and other input data) and inform the caller when the object's internal state or the input parameters are incorrect
+
+Defensive programming requires that all data is checked, even if it is coming from a trusted source. If the trusted source happens to have a bug, the bug will be found earlier and more easily.
+Defensive programming is implemented through assertions, exceptions and other means of error handling.
+
+### Assertions
+
+Assertions are special conditions that should always be met. If not met, they throw an error message and the program terminates.
