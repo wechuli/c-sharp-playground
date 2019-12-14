@@ -332,3 +332,6 @@ A good practice is to avoid magic numbers scattered throughout the code. They sh
 
 Within a longer method, all tasks that are unrelated to its main purpose are better moved into separate methods. Similar tasks should be grouped in common classes, similar classes – in a common package. If a group of classes have common functionality, it should be moved into a base class.
 Circular dependencies between the classes should not exist, they should be removed. In most cases the more common class has a reference to the more specialized class (parent-child relationship).
+
+## Unit Testing
+
