@@ -278,3 +278,40 @@ Exceptions provide a powerful mechanism for centralized handling of error and un
 Another difference between exceptions and assertions is that, in defensive programming, exceptions are mainly used for protecting the public interface of a class or component. This provides for a fail-safe mechanism.
 
 Exceptions should be used to inform other parts of the code for problems that should not be ignored. Throwing an exception is reasonable only in situations when an abnormal condition has occurred. If a particular problem can be handled locally, the handling should be performed in the method itself, and no exceptions should be thrown. If a problem cannot be handled locally, the exception should be thrown to the caller. The thrown exceptions should be at an appropriate level of abstraction.
+
+## Code Documentation
+
+### Self-Documenting Code
+
+A very important point to remember is that comments in the code are not the primary source of documentation. Good programming style provides the best documentation. Self-documenting code rarely needs comments because its intention becomes clear directly by reading it.
+
+#### Properties of Self-Documenting Code
+
+Self-documenting code boasts a good structure. In order to qualify our code as self-documenting, there are few questions we should ask ourselves:
+
+- Is the class name appropriate and does it describe its main purpose?
+- Is the **public interface** of the class intuitive to use ?
+- Does the name of a method describe its main purpose ?
+- Is every method performing a single, well-defined task?
+- Are the names of the variables corresponding to the intent of their use ?
+- Are loops performing only a single task?
+- Are conditional statements deeply nested ?
+- Does the organization of the code illustrate its logical structure ?
+- Is the design clear and unambiguous ?
+- Are implementation details hidden as much as possible ?
+
+### Effective Comments
+
+Comments can sometimes do more harm than good. Good comments do not repeat the code and do not explain it line by line: they rather clarify its idea. Comments should describe as a higher level what our intentions are. Comments enable use to think better about what we want to implement.
+
+Comments should be written at the time the code is written, not after that. Productivity is never a good excuse for not writing comments. Everything that is not instantly obvious should be documented. Writing too much unnecessary comments is as bad as not having any at all. Bad code cannot be improved by putting more comments. It should instead be rewritten or refactored.
+
+### XML Documentation in C
+
+This is an in-built style in C#. It is enclosed in triple comments /// and uses few special XML tags: to document a type / method summary (`<summary>`), to describe method's parameters (`<param name="">`), to describe a method's return value (`<returns>`) to document exceptions that eventually might be thrown (`<exception cref="…"`), to make a cross-reference link to related type (`<seealso cref="…"/>`), to describe some remarks (`<remarks>`), to give an example how to use the type / method (`<example>`), etc.
+
+Using XML-style documentation in the source code has several advantages
+
+- The XML documentation is built-in the source code itself
+- The XML documentation is automatically processed by Visual Studio and is displayed in its autocomplete feature.
+- The XML documentation can be complied into an MSDN-style web site or e-book.
