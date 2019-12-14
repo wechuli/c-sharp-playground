@@ -315,3 +315,20 @@ Using XML-style documentation in the source code has several advantages
 - The XML documentation is built-in the source code itself
 - The XML documentation is automatically processed by Visual Studio and is displayed in its autocomplete feature.
 - The XML documentation can be complied into an MSDN-style web site or e-book.
+
+## Code Refactoring
+
+- A program needs refactoring in case of code duplication.Code duplication is dangerous because a change in one place requires that all the other duplicated code be changed as well. The latter is error-prone and inconsistencies can arise therefore. Avoiding code duplication can be achieved by putting the particular piece of code in a method, or by moving common functionality to base classes.
+- Refactoring is necessary for methods, which have grown over time. The excessive length of a method is a good reason to think about splitting it up logically into a few smaller and simpler methods.
+- Deeply nested constructs are another reason for refactoring. they can be eliminated by taking out a block of code into a method.
+- Classes that do not provide a sufficiently good level of abstraction or ones that perform unrelated tasks (weak cohesion) are candidates for refactoring as well.
+- Long parameter lists and public fields should also do to the fix-it list. Tightly coupled classes go in the same category.
+
+### Refactoring at Data Level
+
+A good practice is to avoid magic numbers scattered throughout the code. They should be replaced by named constants. Variables with unclear names should be renamed. Long conditional expressions can be refactored into separate methods. Variables can be used to hold the intermediate results of expressions. A group of data that always appears together can be refactored into a separate class. Related constants should be grouped into enumerations.
+
+### Refactoring at Method and Class Level
+
+Within a longer method, all tasks that are unrelated to its main purpose are better moved into separate methods. Similar tasks should be grouped in common classes, similar classes – in a common package. If a group of classes have common functionality, it should be moved into a base class.
+Circular dependencies between the classes should not exist, they should be removed. In most cases the more common class has a reference to the more specialized class (parent-child relationship).
