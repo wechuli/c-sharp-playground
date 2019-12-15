@@ -335,3 +335,15 @@ Circular dependencies between the classes should not exist, they should be remov
 
 ## Unit Testing
 
+Unit testing means to write a program that tests a certain method or class. A typical unit test executes the method that should be tested, passes a sample data to (parameters and object states) and checks whether the method's result is correct (for this sample data), i.e. whether the method does exactly what it should do and whether it does it correctly.
+
+A single method is usually tested by several unit tests, each implementing a different testing scenario. First, the typical case is checked. Then the border cases are checked. The border cases are special cases which could need special processing logic. Finally, the method is tested with incorrect data and an exception is expected to be thrown. Sometimes a performance test may be involved to check whether the method is fast enough.
+
+### Benefits of Unit Testing
+
+- Unit testing significantly improves the code quality. If the unit tests are well written and the entire functionality is covered, the code is expected to be bug free. In practice it is very hard to cover with tests any possible scenario so unit testing only dramatically reduces the number of bugs but does not make the code bug free.
+- Unit testing allows the tests to be executed many times, continuously e.g at every hour. If some tests fails, the problem is caught almost instantly.
+- The code quality is preserved every time the method is modified. This dramatically simplifies the maintenance. If we change the algorithm inside some method or class and we have covered it well with tests, we will be sure that the new algorithm behaves the same way like the old.
+- Unit tests allow code refactoring without worrying of something being broken. It can happen that we refactor the code to improve its internal quality but by mistake after the refactoring the code does not work correctly in all special cases.
+
+When we modify the code and a unit test fails, either the tested code is incorrect, or the unit test is incorrect. In both cases we are notified that our new code behaves differently than our old code. This is very important in software engineering process. When we develop a complex software product, we want the features that work in its current version to continue to works the same way in all its next versions.
