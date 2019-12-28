@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 namespace extension_methods
 {
     class Program
@@ -9,6 +10,11 @@ namespace extension_methods
             string helloString = "Hello, Extension Methods!";
             int wordCount = helloString.WordCount();
             Console.WriteLine(wordCount);
+
+            List<int> numbers = new List<int> { 1, 2, 3, 4, 5 };
+            Console.WriteLine(numbers.ToString<int>());
+            numbers.IncreaseWith(5);
+            Console.WriteLine(numbers.ToString<int>());
         }
     }
 
@@ -33,6 +39,28 @@ namespace extension_methods
             {
                 list[i] += amount;
             }
+        }
+    }
+
+
+    public static class IEnumerableExtensions
+    {
+        public static string ToString<T>(this IEnumerable<T> enumaration)
+        {
+            StringBuilder result = new StringBuilder();
+            result.Append("[");
+            foreach (var item in enumaration)
+            {
+                result.Append(item.ToString());
+                result.Append(", ");
+            }
+            if (result.Length > 1)
+            {
+                result.Remove(result.Length - 2, 2);
+            }
+            result.Append("]");
+            return result.ToString();
+
         }
     }
 }

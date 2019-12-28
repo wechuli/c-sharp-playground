@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\anonymous_types\obj\Debug\netcoreapp3.1\anonymous_types.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\anonymous_types\obj\Debug\netcoreapp3.1\anonymous_types.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\anonymous_types\obj\Debug\netcoreapp3.1\anonymous_types.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\anonymous_types\bin\Debug\netcoreapp3.1\anonymous_types.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\anonymous_types\bin\Debug\netcoreapp3.1\anonymous_types.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\anonymous_types\bin\Debug\netcoreapp3.1\anonymous_types.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\anonymous_types\bin\Debug\netcoreapp3.1\anonymous_types.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\anonymous_types\bin\Debug\netcoreapp3.1\anonymous_types.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\anonymous_types\bin\Debug\netcoreapp3.1\anonymous_types.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\anonymous_types\obj\Debug\netcoreapp3.1\anonymous_types.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\anonymous_types\obj\Debug\netcoreapp3.1\anonymous_types.pdb

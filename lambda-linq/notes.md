@@ -20,4 +20,24 @@ To refer to a specific extension method, we should add “using” and the corre
 
 ### Extension Methods for Interfaces
 
-Extension methods can not only be used on classes, but on interfaces as well. The e
+Extension methods can not only be used on classes, but on interfaces as well. The extension methods also give us the opportunity to work on generic types.
+
+## Anonymous Types
+
+In object-oriented languages (such as C#), it is common to define small classes that will be used only once. Typical example is the class **Point** that has only two fields - the coordinates of a point. Creating a simple class with the idea of using it just once is inconvenient and time consuming for the programmer, especially when the standard operations for each class: **ToString()**, **Equals()**, and **GetHashCode()** have to be predefined.
+
+In C# there is a built-in way to create **single-use types**, called anonymous types. Objects of such type are created almost the same way as other objects in C#. The thing with them is that we don't need to define data type for the variable in advance. The **keyword var** indicates to the compiler that the type of the variable will be automatically detected by the expression, after the equals sign. We actually don't have a choice here, since we can't tell the specific type of the variable, because it is defined as one of an anonymous type. After that, we specify name for the object, followed by the "=" operator and the keyword **new**. In curly braces we enumerate the names and the values of the properties of the anonymous type.
+e.g
+
+```C#
+var myCar = new { Color = "Red", Brand = "BMW", Speed = 180 };
+
+```
+
+During compilation, the compiler will create a class with a **unique name** and will generate properties for it (with getter and setter).In the example above, the compiler will guess by its own, that the properties Color and Brand are of type string and Speed will be set as int. Right after the initialization, the object of the anonymous type can be used as one of an ordinary type with its three properties:
+
+As any other type in .NET, the anonymous ones inherit the class **System.Object**. During compilation, the compiler will automatically redefine the methods **ToString()**, **Equals()** and **GetHashCode()** for us.
+
+### Arrays of Anonymous Types
+
+The anonymous types, like ordinary ones, can be used as elements of arrays. We can initialize them with the keyword **new** followed by square brackets. The values of the elements of the array are listed the same way, as the values assigned to the anonymous type. The values in the array should be homogenous, i.e. it is not possible to have different anonymous types in the same array.
