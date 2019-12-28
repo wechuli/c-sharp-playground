@@ -17,3 +17,7 @@ The extension methods are defined as **static** in ordinary static classes. The 
 Extension methods can be applied directly to objects of the class/interface they extend. They can also be invoked statically through the static class they are defined in, but it is not a good practice.
 
 To refer to a specific extension method, we should add “using” and the corresponding namespace, where the static class, describing this method, is defined. Otherwise the compiler has no way of knowing about their existence.
+
+### Extension Methods for Interfaces
+
+Extension methods can not only be used on classes, but on interfaces as well. The e

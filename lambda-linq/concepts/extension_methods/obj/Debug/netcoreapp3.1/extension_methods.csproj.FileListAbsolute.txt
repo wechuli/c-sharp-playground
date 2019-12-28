@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\extension_methods\bin\Debug\netcoreapp3.1\extension_methods.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\extension_methods\bin\Debug\netcoreapp3.1\extension_methods.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\extension_methods\bin\Debug\netcoreapp3.1\extension_methods.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\extension_methods\bin\Debug\netcoreapp3.1\extension_methods.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\extension_methods\bin\Debug\netcoreapp3.1\extension_methods.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\extension_methods\bin\Debug\netcoreapp3.1\extension_methods.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\extension_methods\obj\Debug\netcoreapp3.1\extension_methods.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\extension_methods\obj\Debug\netcoreapp3.1\extension_methods.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\extension_methods\obj\Debug\netcoreapp3.1\extension_methods.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\extension_methods\obj\Debug\netcoreapp3.1\extension_methods.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\extension_methods\obj\Debug\netcoreapp3.1\extension_methods.pdb
