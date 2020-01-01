@@ -41,3 +41,9 @@ As any other type in .NET, the anonymous ones inherit the class **System.Object*
 ### Arrays of Anonymous Types
 
 The anonymous types, like ordinary ones, can be used as elements of arrays. We can initialize them with the keyword **new** followed by square brackets. The values of the elements of the array are listed the same way, as the values assigned to the anonymous type. The values in the array should be homogenous, i.e. it is not possible to have different anonymous types in the same array.
+
+## Lambda Expressions
+
+Lambda expressions are anonymous functions that contain expressions or sequence of operators. All lambda expressions use the lambda operator =>, which can be read as `goes to`. The left side of the lambda operator specifies the input parameters and the right side holds an expression or a code block that works with the entry parameters and conceivably returns some result.
+
+Usually lambda expressions are used as predicates or instead of delegates (a type that references a method instance), which can be applied on collections, processing their elements and/or returning a certain result.

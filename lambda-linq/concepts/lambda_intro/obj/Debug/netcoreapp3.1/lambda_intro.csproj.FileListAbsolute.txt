@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\lambda_intro\bin\Debug\netcoreapp3.1\lambda_intro.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\lambda_intro\bin\Debug\netcoreapp3.1\lambda_intro.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\lambda_intro\bin\Debug\netcoreapp3.1\lambda_intro.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\lambda_intro\bin\Debug\netcoreapp3.1\lambda_intro.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\lambda_intro\bin\Debug\netcoreapp3.1\lambda_intro.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\lambda_intro\bin\Debug\netcoreapp3.1\lambda_intro.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\lambda_intro\obj\Debug\netcoreapp3.1\lambda_intro.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\lambda_intro\obj\Debug\netcoreapp3.1\lambda_intro.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\lambda_intro\obj\Debug\netcoreapp3.1\lambda_intro.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\lambda_intro\obj\Debug\netcoreapp3.1\lambda_intro.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\lambda_intro\obj\Debug\netcoreapp3.1\lambda_intro.pdb
