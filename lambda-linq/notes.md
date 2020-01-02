@@ -44,6 +44,32 @@ The anonymous types, like ordinary ones, can be used as elements of arrays. We c
 
 ## Delegates
 
+A delegate is a type that represents references to methods with a particular parameter list and return type. When you instantiate a delegate, you can associate its instance with any method with a compatible signature and return type. You can invoke (or call) the method through the delegate instance.
+
+Delegates are used to pass methods as arguments to other methods. Event handlers are mothing more than methods that are invoked through delegates.
+
+```C#
+public delegate int PerformCalculation(int x, int y);
+
+```
+
+Any method from any accessible class or struct that matches the delegate type can be assigned to the delegate. The method can be either static or an instance method. This makes is possible to programmatically change method calls, and also plug new code into existing classes.
+
+This ability to refer to a method as a parameter makes delegates ideal for defining callback methods.
+
+### Delegates Overview
+
+Delegates have the following properties:
+
+- Delegates are similar to C++ function pointers, but delegates are fully object-oriented, and unlike C++ pointers to member functions, delegates encapsulate both an object instance and a method.
+- Delegates allow methods to be passed as parameters
+- Delegates can be used to define callback methods
+- Delegates can be chained together
+- Methods do not have to match the delegate type exactly
+- C# version 2.0 introduced the concept of anonymous methods, which allow code blocks to be passed as parameters in place of a separately defined method. C# 3.0 introduced lambda expressions as a more concise way of writing inline code blocks. Both anonymous methods and lambda expressions (in certain contexts) are compiled to delegate types. Together, these features are now known as anonymous functions. For more information about lambda expressions, see Lambda expressions.
+
+
+A delegate object is normally constructed by providing the name of the method the delegate will wrap
 
 ## Lambda Expressions
 
