@@ -68,8 +68,48 @@ Delegates have the following properties:
 - Methods do not have to match the delegate type exactly
 - C# version 2.0 introduced the concept of anonymous methods, which allow code blocks to be passed as parameters in place of a separately defined method. C# 3.0 introduced lambda expressions as a more concise way of writing inline code blocks. Both anonymous methods and lambda expressions (in certain contexts) are compiled to delegate types. Together, these features are now known as anonymous functions. For more information about lambda expressions, see Lambda expressions.
 
+A delegate object is normally constructed by providing the name of the method the delegate will wrap, or with an anonymous function. Once a delegate is instantiated, a method call made to the delegate will be passed by the delegate to that method. The parameters passed to the delegate by the caller are passed to the method, and the return value, if any, from the method is returned to the caller by the delegate. This is known as invoking the delegate.
 
-A delegate object is normally constructed by providing the name of the method the delegate will wrap
+Delegate types are derived from the Delegate class in the .NET Framework. Delegate types are sealed—they cannot be derived from— and it is not possible to derive custom classes from Delegate. Because the instantiated delegate is an object, it can be passed as a parameter, or assigned to a property. This allows a method to accept a delegate as a parameter, and call the delegate at some later time. This is known as an asynchronous callback, and is a common method of notifying a caller when a long process has completed. When a delegate is used in this fashion, the code using the delegate does not need any knowledge of the implementation of the method being used. The functionality is similar to the encapsulation interfaces provide.
+
+Another common use of callbacks is defining a custom comparison method and passing that delegate to a sort method. It allows the caller's code to become part of the sort algorithm.
+
+When a delegate is constructed to wrap an instance method, the delegate references both the instance and the method. A delegate has no knowledge of the instance type aside from the method it wraps, so a delegate can refer to any type of object as long as there is a method on that object that matches the delegate signature. When a delegate is constructed to wrap a static method, it only references the method.
+
+A delegate can call more than one method when invoked. This is referred to as multicasting. To add an extra method to the delegate's list of methods - the invocation list - simply requires adding two delegates using the addition or addition assignment operators ('+' or '+=').
+
+```C#
+var obj = new MethodClass();
+Del d1 = obj.Method1;
+Del d2 = obj.Method2;
+Del d3 = DelegateMethod;
+
+//Both types of assignment are valid.
+Del allMethodsDelegate = d1 + d2;
+allMethodsDelegate += d3;
+
+```
+
+At this point allMethodsDelegate contains three methods in its invocation list—Method1, Method2, and DelegateMethod. The original three delegates, d1, d2, and d3, remain unchanged. When allMethodsDelegate is invoked, all three methods are called in order. If the delegate uses reference parameters, the reference is passed sequentially to each of the three methods in turn, and any changes by one method are visible to the next method. When any of the methods throws an exception that is not caught within the method, that exception is passed to the caller of the delegate and no subsequent methods in the invocation list are called. If the delegate has a return value and/or out parameters, it returns the return value and parameters of the last method invoked. To remove a method from the invocation list, use the subtraction or subtraction assignment operators (- or -=)
+
+```C#
+//remove Method1
+allMethodsDelegate -= d1;
+
+// copy AllMethodsDelegate while removing d2
+Del oneMethodDelegate = allMethodsDelegate - d2;
+```
+
+Because delegate types are derived from System.Delegate, the methods and properties defined by that class can be called on the delegate. For example, to find the number of methods in a delegate's invocation list, you may write:
+
+```C#
+int invocationCount = d1.GetInvocationList().GetLength(0);
+
+```
+
+Delegates with more than one method in their invocation list derive from MulticastDelegate, which is a subclass of System.Delegate. The above code works in either case because both classes support GetInvocationList.
+
+Multicast delegates are used extensively in event handling. Event source objects send event notifications to recipient objects that have registered to receive that event. To register for an event, the recipient creates a method designed to handle the event, then creates a delegate for that method and passes the delegate to the event source. The source calls the delegate when the event occurs. The delegate then calls the event handling method on the recipient, delivering the event data. The delegate type for a given event is defined by the event source. For more, see Events.
 
 ## Lambda Expressions
 
