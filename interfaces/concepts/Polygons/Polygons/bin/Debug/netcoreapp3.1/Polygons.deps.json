@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Polygons/1.0.0": {
+        "dependencies": {
+          "Polygons.Library": "1.0.0"
+        },
+        "runtime": {
+          "Polygons.dll": {}
+        }
+      },
+      "Polygons.Library/1.0.0": {
+        "runtime": {
+          "Polygons.Library.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Polygons/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Polygons.Library/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

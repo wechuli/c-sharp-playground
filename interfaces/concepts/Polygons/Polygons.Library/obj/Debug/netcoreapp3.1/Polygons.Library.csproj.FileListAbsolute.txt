@@ -1,0 +1,8 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\Polygons\Polygons.Library\bin\Debug\netcoreapp3.1\Polygons.Library.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\Polygons\Polygons.Library\bin\Debug\netcoreapp3.1\Polygons.Library.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\Polygons\Polygons.Library\bin\Debug\netcoreapp3.1\Polygons.Library.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\Polygons\Polygons.Library\obj\Debug\netcoreapp3.1\Polygons.Library.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\Polygons\Polygons.Library\obj\Debug\netcoreapp3.1\Polygons.Library.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\Polygons\Polygons.Library\obj\Debug\netcoreapp3.1\Polygons.Library.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\Polygons\Polygons.Library\obj\Debug\netcoreapp3.1\Polygons.Library.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\Polygons\Polygons.Library\obj\Debug\netcoreapp3.1\Polygons.Library.pdb
