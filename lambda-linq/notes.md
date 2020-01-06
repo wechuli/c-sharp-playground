@@ -141,3 +141,7 @@ return (i % 2) == 0;
 
 Lambda functions can be written in delegates. Delegates are such a type of variable that contains a reference to methods.
 Some standard delegate types in .NET are: `Action`, `Action<in T>`, `Action<in T1, in T2>`, and so on and `Func<out TResult>`, `Func<in T, out TResult>`, `Func<in T1, in T2, out TResult>` and so on. The types `Func` and `Action` are generic and contain the types of the return value, and the types of the parameters of the functions. The variables of such types are references to methods.
+
+## Language Integrated Query (LINQ)
+
+- https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/
