@@ -116,3 +116,28 @@ Multicast delegates are used extensively in event handling. Event source objects
 Lambda expressions are anonymous functions that contain expressions or sequence of operators. All lambda expressions use the lambda operator =>, which can be read as `goes to`. The left side of the lambda operator specifies the input parameters and the right side holds an expression or a code block that works with the entry parameters and conceivably returns some result.
 
 Usually lambda expressions are used as predicates or instead of delegates (a type that references a method instance), which can be applied on collections, processing their elements and/or returning a certain result.
+
+### Using Lambda Expressions with Anonymous Types
+
+We can create collections of anonymous types from a collection with some elements by using lambda expressions.
+
+### Statements in Lambda Expressions
+
+Lambda functions can also have a body.
+
+```C#
+
+List<int> list = new List<int>() { 20, 1, 4, 8, 9, 44 };
+// Process each argument with code statements
+var evenNumbers = list.FindAll((i) =>
+{
+Console.WriteLine("Value of i is: {0}", i);
+return (i % 2) == 0;
+});
+
+```
+
+### Lambda Expressions as Delegates
+
+Lambda functions can be written in delegates. Delegates are such a type of variable that contains a reference to methods.
+Some standard delegate types in .NET are: `Action`, `Action<in T>`, `Action<in T1, in T2>`, and so on and `Func<out TResult>`, `Func<in T, out TResult>`, `Func<in T1, in T2, out TResult>` and so on. The types `Func` and `Action` are generic and contain the types of the return value, and the types of the parameters of the functions. The variables of such types are references to methods.
