@@ -145,3 +145,20 @@ Some standard delegate types in .NET are: `Action`, `Action<in T>`, `Action<in T
 ## Language Integrated Query (LINQ)
 
 - https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/
+
+LINQ is the name of a set of technologies based on the integration of query capabilities directly into the C# language.
+You can write LINQ queries in C# for SQL Server databases, XML documents, ADO.NET Datasets, and any collection of objects that supports IEnumerable or the generic `IEnumerable<T>` interface. LINQ support is also provided by third parties for many Web services and other database implementations.
+
+LINQ is a very powerful tool, similar to most SQL languages by logic and syntax
+
+### Data Sources with LINQ
+
+To define the data source (collection, array and so on), we have to use the keywords **from** and **in** and a variable for the collection (the iteration is similar to the one with the **foreach** operator).
+
+### Data Filtering with LINQ
+
+The Keyword **where** can be used to set conditions, that should be kept by each item of the collection, in order to continue with the execution of the query. The expression after **where** is always of a Boolean type. We can say that **where** works as a filter for the elements. After **where ... in**, we use only the name we gave for the iteration of the variables in the collection.
+
+### Results of LINQ Queries
+
+To choose the output data for the query, we can use the keyword **select**. The result is an object of an existing class or anonymous type.  The result can also be a property of the objects, the query runs through or the objects themselves. The select statement and everything following it is placed always at the end of the query.

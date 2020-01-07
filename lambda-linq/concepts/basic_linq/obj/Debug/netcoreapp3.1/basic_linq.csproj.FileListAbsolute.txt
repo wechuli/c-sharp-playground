@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\basic_linq\bin\Debug\netcoreapp3.1\basic_linq.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\basic_linq\bin\Debug\netcoreapp3.1\basic_linq.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\basic_linq\bin\Debug\netcoreapp3.1\basic_linq.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\basic_linq\bin\Debug\netcoreapp3.1\basic_linq.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\basic_linq\bin\Debug\netcoreapp3.1\basic_linq.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\basic_linq\bin\Debug\netcoreapp3.1\basic_linq.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\basic_linq\obj\Debug\netcoreapp3.1\basic_linq.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\basic_linq\obj\Debug\netcoreapp3.1\basic_linq.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\basic_linq\obj\Debug\netcoreapp3.1\basic_linq.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\basic_linq\obj\Debug\netcoreapp3.1\basic_linq.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\concepts\basic_linq\obj\Debug\netcoreapp3.1\basic_linq.pdb
