@@ -161,4 +161,16 @@ The Keyword **where** can be used to set conditions, that should be kept by each
 
 ### Results of LINQ Queries
 
-To choose the output data for the query, we can use the keyword **select**. The result is an object of an existing class or anonymous type.  The result can also be a property of the objects, the query runs through or the objects themselves. The select statement and everything following it is placed always at the end of the query.
+To choose the output data for the query, we can use the keyword **select**. The result is an object of an existing class or anonymous type. The result can also be a property of the objects, the query runs through or the objects themselves. The select statement and everything following it is placed always at the end of the query.
+
+### Sorting Data with LINQ
+
+Sorting with LINQ queries is done through the keyword **orderby**. The conditions, used for sorting the elements, are placed after it. For each condition, the order of arrangement can be indicated: ascending,descending as by default the elements are ordered in ascending order.
+
+### Grouping Results with LINQ
+
+To group the results by some criteria the keyword **group** should be used. The pattern is as follows:
+
+        group [variable name] by [grouping condition] into [group name]
+
+The result of grouping is a new collection of a special type that can be used further in the query. After the grouping, however, the query stops working with its initial variable. This means that in the **select** statement, we can only use the group.
