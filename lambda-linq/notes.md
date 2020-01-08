@@ -174,3 +174,38 @@ To group the results by some criteria the keyword **group** should be used. The 
         group [variable name] by [grouping condition] into [group name]
 
 The result of grouping is a new collection of a special type that can be used further in the query. After the grouping, however, the query stops working with its initial variable. This means that in the **select** statement, we can only use the group.
+
+### Joining Data with LINQ
+
+The **join** statement is a bit more complicated that the other LINQ statements. It joins collections by certain matching criteria and extracts the needed data
+
+Its syntax is as follows:
+
+        from [variable name from collection 1] in [collection 1] join [variable name from collection 2] in [collection 2] on [part of the compare condition from collection 1] equals [part of the compare condition from collection 2]
+
+### Nested LINQ Queries
+
+LINQ also supports nested queries e.g.
+
+```C#
+var productsWithCategories =
+from product in products
+select new {
+Name = product.Name,
+Category =
+(from category in categories
+where category.ID == product.CategoryID
+select category.Name).First()
+};
+
+```
+
+Since each query in LINQ returns a collection of items (irrespective of whether the result from it is of 0, 1 or more elements), we need to use the extension method First() over the result of the nested query. The method First() returns the first element (in our case the only one) of the collection it is applied on. In this way we get the name of the category only by its ID number.
+
+### LINQ Performance
+
+As a rule using LINQ and extension methods is slower than using direct operations over a collection of elements, so beware of using LINQ when processing large collection or the performance is critical.
+
+LINQ technology and extension methods work through the concept of expression trees. Each LINQ query is translated by the compiler to an expression tree and is executed when its results are actually accessed (not earlier).
+
+Standard .NET Framework collection classes like `List<T>`, `HashSet<T>` and `Dictionary<K,V>` are optimized to work fast with LINQ. Most operations with LINQ work almost as fast as if we run them directly.
