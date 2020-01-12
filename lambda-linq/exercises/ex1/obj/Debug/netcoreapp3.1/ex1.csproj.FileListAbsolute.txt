@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex1\bin\Debug\netcoreapp3.1\ex1.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex1\bin\Debug\netcoreapp3.1\ex1.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex1\bin\Debug\netcoreapp3.1\ex1.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex1\bin\Debug\netcoreapp3.1\ex1.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex1\bin\Debug\netcoreapp3.1\ex1.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex1\bin\Debug\netcoreapp3.1\ex1.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex1\obj\Debug\netcoreapp3.1\ex1.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex1\obj\Debug\netcoreapp3.1\ex1.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex1\obj\Debug\netcoreapp3.1\ex1.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex1\obj\Debug\netcoreapp3.1\ex1.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex1\obj\Debug\netcoreapp3.1\ex1.pdb
