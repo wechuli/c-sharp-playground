@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex5\bin\Debug\netcoreapp3.1\ex5.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex5\bin\Debug\netcoreapp3.1\ex5.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex5\bin\Debug\netcoreapp3.1\ex5.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex5\bin\Debug\netcoreapp3.1\ex5.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex5\bin\Debug\netcoreapp3.1\ex5.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex5\bin\Debug\netcoreapp3.1\ex5.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex5\obj\Debug\netcoreapp3.1\ex5.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex5\obj\Debug\netcoreapp3.1\ex5.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex5\obj\Debug\netcoreapp3.1\ex5.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex5\obj\Debug\netcoreapp3.1\ex5.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\lambda-linq\exercises\ex5\obj\Debug\netcoreapp3.1\ex5.pdb
