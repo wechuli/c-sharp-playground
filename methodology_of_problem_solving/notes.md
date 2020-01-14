@@ -33,3 +33,22 @@ When verifying your ideas, choose your examples carefully. They should be simple
 When you find your idea is incorrect, the obvious thing to do is to invent a new, better idea. We can do this in two ways: we can either try to fix our old idea or create a completely new one.
 
         The creating of a solution for a computer programming problem is an iterative process, which consists of inventing ideas, verifying them and sometimes, when problem occurs, inventing new ones. Sometimes the first idea that comes to our mind is the right one, but most of the times we need to go through many different ideas until we reach the best one.
+
+## Choose Appropriate Data Structures
+
+We should choose the right data structures, which are going to help us build a correct solution. Before you even start with the implementation of your idea, you should choose the proper data structures. It may turn out that your current idea is not as good as it seems. The solution could be inefficient or difficult to implement. It is better to figure this out before your write any programming code.
+
+The choice of data structure begins with the consideration of all key operations that we are going to perform on it. Next we analyze all suitable structures and choose the one that will be most efficient and easiest to use. And sometimes we should make a compromise between efficiency and the simplicity.
+
+## Think about Efficiency
+
+You should think of efficiency before writing even a line of a programming code. Otherwise, you risk wasting your time implementing an algorithm, which is inefficient and slow.
+
+You can estimate how many operations an algorithm performs to solve the problem. We sometimes have to make a compromise between the performance and the efforts, which we put, when we implement our algorithm.
+
+## Implement Your Algorithm
+
+We have finally reached the time where we can start with the implementation of our solution. We already have a working idea, we have chosen the best data structure and now it is the time to start writing the programming code. The implementation of already invented and checked idea is very easy and simple. But the implementation itself requires additional skills and mostly experience. The more experience you have the faster and easier it will be for you to write efficient programming code. With lots of practice, which will come with time, you will become very skilled in writing high-quality code and you will be able to write code faster.
+
+## Write the Code Step by Step
+
