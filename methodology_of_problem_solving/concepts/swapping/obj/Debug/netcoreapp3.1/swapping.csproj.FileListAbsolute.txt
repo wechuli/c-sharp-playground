@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\methodology_of_problem_solving\concepts\swapping\obj\Debug\netcoreapp3.1\swapping.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\methodology_of_problem_solving\concepts\swapping\obj\Debug\netcoreapp3.1\swapping.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\methodology_of_problem_solving\concepts\swapping\obj\Debug\netcoreapp3.1\swapping.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\methodology_of_problem_solving\concepts\swapping\bin\Debug\netcoreapp3.1\swapping.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\methodology_of_problem_solving\concepts\swapping\bin\Debug\netcoreapp3.1\swapping.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\methodology_of_problem_solving\concepts\swapping\bin\Debug\netcoreapp3.1\swapping.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\methodology_of_problem_solving\concepts\swapping\bin\Debug\netcoreapp3.1\swapping.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\methodology_of_problem_solving\concepts\swapping\bin\Debug\netcoreapp3.1\swapping.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\methodology_of_problem_solving\concepts\swapping\bin\Debug\netcoreapp3.1\swapping.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\methodology_of_problem_solving\concepts\swapping\obj\Debug\netcoreapp3.1\swapping.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\methodology_of_problem_solving\concepts\swapping\obj\Debug\netcoreapp3.1\swapping.pdb
