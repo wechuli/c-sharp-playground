@@ -52,3 +52,35 @@ We have finally reached the time where we can start with the implementation of o
 
 ## Write the Code Step by Step
 
+Do not write large lumps of code at one time, instead you should write small parts and then test them. This helps us reduce the amount of code that we have to concentrate on in any given moment. By treating the problem in parts, we decrease its complexity.
+
+## Test Your Solution!
+
+In programming, to be ready with a task means:
+- I have understood the description of the task well
+- I have come up with an algorithm to solve the problem
+- I have tested my algorithm on a piece of paper and I am sure that it is correct
+- I have thought up for the data structure we need and for the complexity of my algorithm
+- I have written a program, which implements my algorithm correctly
+- I have tested my program with suitable examples so that I can be sure that everything works flawlessly, even in unusual situations
+
+Testing is an important part of the programmer's duties.
+
+### How to Test?
+
+A program works correctly if it can handle every kind of input data. Testing is a process, which aims to find any type of bugs. Sadly, you can't predict all cases and test them. Therefore you must think up examples, which cover most of the situations, which could happen.
+
+It is good to start testing with a typical case for our program. After that we have to test our program with more difficult and bigger examples to see how our program behaves in more complicated situations. We now have to test with borderline cases and test for performance.
+
+### What Else to Test For ?
+- A **hard common-case test** - The goal is to check whether your program can handle a bigger and harder to compute example. It is never late to find a bug in our program and the only way we can do that is to test it with many tests, which cover practical situations.
+- **Borderline tests** - They check whether your program can handle an unusual case, which could happen. How do we think of borderline cases ? We analyze all of the data, which is being entered, to our program and think up such extreme values, which are possible to be entered. These values could be extremely small, extremely large or just strange.
+- **Performance tests** - These tests put our program in extreme conditions. Usually these tests consists of large data, which needs to be inputted and processed.
+
+### Regression Test
+
+While fixing bugs, we often create new bugs without noticing. On every edit of code, which concerns other cases, we must redo the tests. That's why it is a good idea to save the tests as methods and be able to run them again. Re-testing with the tests already passed in the past is called "regression testing"
+
+### Performance Tests
+
+It is normal to have some performance requirements about a module or the program at all.
