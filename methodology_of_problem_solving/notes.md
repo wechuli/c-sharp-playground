@@ -84,3 +84,7 @@ While fixing bugs, we often create new bugs without noticing. On every edit of c
 ### Performance Tests
 
 It is normal to have some performance requirements about a module or the program at all.
+
+## General Conclusions
+
+The first step in acquiring programming-problem-solving techniques is to learn to approach the problem systematically and to acquire the recipe for problem solving.
