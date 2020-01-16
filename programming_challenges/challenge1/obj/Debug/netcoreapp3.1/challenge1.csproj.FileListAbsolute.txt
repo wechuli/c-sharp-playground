@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\programming_challenges\challenge1\bin\Debug\netcoreapp3.1\challenge1.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\programming_challenges\challenge1\bin\Debug\netcoreapp3.1\challenge1.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\programming_challenges\challenge1\bin\Debug\netcoreapp3.1\challenge1.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\programming_challenges\challenge1\bin\Debug\netcoreapp3.1\challenge1.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\programming_challenges\challenge1\bin\Debug\netcoreapp3.1\challenge1.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\programming_challenges\challenge1\bin\Debug\netcoreapp3.1\challenge1.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\programming_challenges\challenge1\obj\Debug\netcoreapp3.1\challenge1.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\programming_challenges\challenge1\obj\Debug\netcoreapp3.1\challenge1.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\programming_challenges\challenge1\obj\Debug\netcoreapp3.1\challenge1.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\programming_challenges\challenge1\obj\Debug\netcoreapp3.1\challenge1.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\programming_challenges\challenge1\obj\Debug\netcoreapp3.1\challenge1.pdb
