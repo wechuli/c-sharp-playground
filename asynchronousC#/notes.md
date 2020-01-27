@@ -160,4 +160,20 @@ public async Task<int> ExampleMethodAsync()
     // . . . .
 }
 ```
-5. 
+
+5. **Include at least one await expression in the async method code.**
+
+The marked async method can use await to designate suspension points. The await operator tells the compiler that the async method can't continue past that point until the awaited asynchronous process is complete. In the meantime, control returns to the caller of the async method. The suspension of an async method at an await exression doesn't constitute an exit from the method, and finally blocks don't run.
+
+```C#
+public async Task<int> ExampleMethodAsync()
+{
+	//some code
+	string pageContents = await client.GetStringAsync(uri);
+	//some more code
+	return pageContents.Length;
+}
+
+```
+
+Although an async method typically contains one or more occurrences of an await operator, the absence of await expression doesn't cause a compile error. If an async method doesn't use an await operator to mark a suspension point, the method executes as a synchronous method does, despite the async modifier. The compiler issues a warning for such methods.
