@@ -177,3 +177,43 @@ public async Task<int> ExampleMethodAsync()
 ```
 
 Although an async method typically contains one or more occurrences of an await operator, the absence of await expression doesn't cause a compile error. If an async method doesn't use an await operator to mark a suspension point, the method executes as a synchronous method does, despite the async modifier. The compiler issues a warning for such methods.
+
+## Creating Async Methods
+
+### When to use Async methods in your code
+
+It may seem like using async programming in all your code is a good idea. Well, this is not correct. Async programming is best usefult in certain scenarios and use cases. Consider the following questions during your code design to decide whether async is the best practice for your application
+
+1. Will your code be waiting for something to happen ? For instance, will it be integrating with web services?
+2. Are you leveraging a library/method that is already asynchronous
+3. Is your code likely to have multiple simultaneous users ?
+4. Are you developing an application with a desktop/UI technology and responiveness is a key for the best user experience.
+
+If the answer is yes to any of the questions above, then you may consider asynchronous programming.
+
+If you choose to use asynchronous programming then your next step is to identify the entry point of asynchronous code. This means identifying where the async methods should start and where to await on calls. For example, consider where a web service will be called in the code and when (when a user clicks on a button for example, or web server receives a request from a client).
+
+Another strategy is to start with synchronous code with network- or I/O bound code. Then work on converting your synchronous code to asynchronous code by doing the following:
+
+Add await keyword for calling code.
+Add async keyword for the method doing the await call.
+Adjust return types.
+Adjust calling methods on the call stack, to also be asynchronous.
+
+## Understanding what is happening
+
+In async methods, you use the proper keywords and types to indicate what you want to do, and the compiler does the rest, including keeping track of what must happen when control returns to an await point in a suspended method.
+
+The .NET Framework simplifies many operations to allow methods to be async. It does a lot of work that you do not have to write code for unless you were writing asynchronous code manually. Examples of these operations are :
+
+1. Saving state
+2. Saving the parameters of your method
+3. Saving local variables; any other variables in scope
+
+The .NET Framework saves the location in your method where the asynchronous thread starts to be able to resume back to the right step in the execution.
+
+The .NET Framework saves context of the current thread which includes:
+
+- Execution Context
+- Security Context
+- Call Context
