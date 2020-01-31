@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\basics\bin\Debug\netcoreapp3.1\basics.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\basics\bin\Debug\netcoreapp3.1\basics.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\basics\bin\Debug\netcoreapp3.1\basics.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\basics\bin\Debug\netcoreapp3.1\basics.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\basics\bin\Debug\netcoreapp3.1\basics.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\basics\bin\Debug\netcoreapp3.1\basics.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\basics\obj\Debug\netcoreapp3.1\basics.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\basics\obj\Debug\netcoreapp3.1\basics.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\basics\obj\Debug\netcoreapp3.1\basics.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\basics\obj\Debug\netcoreapp3.1\basics.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\basics\obj\Debug\netcoreapp3.1\basics.pdb
