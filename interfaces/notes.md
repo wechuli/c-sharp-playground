@@ -11,6 +11,7 @@ interface IEquatable<T>
 }
 
 ```
+
 Any class or struct that implements the `IEquatable<T>` interface must contain a definition for an **Equals** method that matches the signature that the interface specifies. As a result, you can count on a class that implements `IEquatable<T>` to contain an **Equals** method with which an instance of the class can determine whether it's equal to another instance of the same class.
 
 An interface in C# is a type definition similar to a class, except that is purely represents a contract between an object and its user. It can neither be directly instantiated as an object, nor can data members be defined. An interface contains definitions for a group of related functionalities that a non-abstract class or a struct must implement.
@@ -25,10 +26,59 @@ Interfaces can inherit from other interfaces. A class might include an interface
 
 A base class can also implement interface members by using virtual members. In that case, a derived class can change the interface behavior by overriding the virtual members.
 
-
 ## Explicit Interface Implementation
 
 If a **class** implements two interfaces that contain a member with the same signature, then implementing that member on the class will cause both interfaces to use that member as their implementation.
+
+If the two interface members do not perform the same function, however, this can lead to an incorrect implementation of one or both of the interface. It is possible to implement an interface member explicitly - creating a class member that is only called through the interface, and is specific to that interface. This is accomplished by naming the class member with the name of the interface and a period
+
+```C#
+
+  public class AnotherSampleClass : IControl, ISurface
+    {
+        void IControl.Paint()
+        {
+
+            Console.WriteLine("IControl.Paint");
+        }
+        void ISurface.Paint()
+        {
+            Console.WriteLine("ISurface.Paint");
+        }
+
+    }
+
+```
+
+The class member IControl.Paint is only available through the IControl interface, and ISurface.Paint is only available through ISurface. Both method implementations are separate, and neither is available directly on the class.
+
+Explicit implementation is also used to resolve cases where two interfaces each declare different members of the same name such as property and a method:
+
+```C#
+interface ILeft
+{
+    int P{get;}
+}
+
+interface IRight
+{
+    int P();
+}
+
+```
+
+To implement both interfaces, a class has to use explicit implementation either for the property P or the method P, or both, to avoid a compile error. e.g
+
+```C#
+class Middle : ILeft, IRight
+{
+    public int P() { return 0; }
+    int ILeft.P { get { return 0; } }
+}
+
+```
+
+Explicit interface implementation also allows the programmer to implement two interfaces that have the same member names and give each interface member a separate implementation.
 
 ## Interfaces Summary
 

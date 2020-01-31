@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\explicitInterface\obj\Debug\netcoreapp3.1\explicitInterface.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\explicitInterface\obj\Debug\netcoreapp3.1\explicitInterface.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\explicitInterface\obj\Debug\netcoreapp3.1\explicitInterface.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\explicitInterface\bin\Debug\netcoreapp3.1\explicitInterface.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\explicitInterface\bin\Debug\netcoreapp3.1\explicitInterface.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\explicitInterface\bin\Debug\netcoreapp3.1\explicitInterface.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\explicitInterface\bin\Debug\netcoreapp3.1\explicitInterface.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\explicitInterface\bin\Debug\netcoreapp3.1\explicitInterface.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\explicitInterface\bin\Debug\netcoreapp3.1\explicitInterface.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\explicitInterface\obj\Debug\netcoreapp3.1\explicitInterface.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\interfaces\concepts\explicitInterface\obj\Debug\netcoreapp3.1\explicitInterface.pdb

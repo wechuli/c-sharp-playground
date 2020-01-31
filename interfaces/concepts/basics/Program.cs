@@ -6,12 +6,30 @@ namespace basics
     {
         static void Main(string[] args)
         {
-           SampleClass sc = new SampleClass();
-           IControl ctrl = sc;
-           ISurface srfc = sc;
+            SampleClass sc = new SampleClass();
+            IControl ctrl = sc;
+            ISurface srfc = sc;
 
-           // The following lines all call the same method
-           sc
+            // The following lines all call the same method
+            sc.Paint();
+            ctrl.Paint();
+            srfc.Paint();
+
+
+            AnotherSampleClass sc2 = new AnotherSampleClass();
+            IControl ctrl2 = sc2;
+            ISurface srfc2 = sc2;
+            ISalutations slts = sc2;
+
+
+
+            ctrl2.Paint();
+            srfc2.Paint();
+
+            Console.WriteLine(sc2.Greeting);
+            // change something
+            slts.Greeting = "The interface has changed this";
+            Console.WriteLine(sc2.Greeting);
         }
     }
 

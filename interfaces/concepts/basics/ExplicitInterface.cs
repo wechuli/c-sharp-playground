@@ -4,8 +4,14 @@ namespace basics
 {
 
 
+    interface ISalutations
+    {
+        string Greeting { get; set; }
+    }
+
     interface IControl
     {
+
         void Paint();
     }
     interface ISurface
@@ -25,6 +31,29 @@ namespace basics
         {
             Console.WriteLine("I am a fake method");
         }
+    }
+
+    public class AnotherSampleClass : IControl, ISurface, ISalutations
+    {
+
+        public string fakeField = "blah";
+
+        public string Greeting { get; set; }
+
+        public AnotherSampleClass()
+        {
+            this.Greeting = "Original greeting";
+        }
+        void IControl.Paint()
+        {
+
+            Console.WriteLine("IControl.Paint");
+        }
+        void ISurface.Paint()
+        {
+            Console.WriteLine("ISurface.Paint");
+        }
+
     }
 
 }
