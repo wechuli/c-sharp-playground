@@ -220,6 +220,25 @@ The .NET Framework saves context of the current thread which includes:
 
 The most important thing to understand in asynchronous programming is how the control flow moves from method to method.
 
-
 ![](assets/process.PNG)
 
+1. An event handler calls and awaits the `AccessTheWebAsync` async method.
+2. `AccessTheWebAsync` creates an HttpClient instance and calls the `GetStringsAsync` asynchronous method to download the contents of a website as a string
+3. Something happens in `GetStringAsync` that suspends its progress. Perhaps it must wait for a website to download or some other blocking activity. To avoid blocking resources, `GetStringAsync` yields control to its called, `AccessTheWebAsync`. `GetStringAsync` returns a `Task<TResult>` where `TResult` is a string, the `AccessTheWebAsync` assigns the task to the `getStringTask` variable. The task represents the ongoing process for the call to `GetStringAsync`, with a commitment to produce an actual string value when the work is complete.
+4. Because `getStringTask` hasn't been awaited yet, `AccessTheWebAsync` can continue with other work that doesn't depend on the final result from `GetStringAsync`. That work is represented by a call to the synchronous method `DoIndependentWork`.
+5. `DoIndpendentWork` is a synchronous method that does its work and returns to its caller.
+6. `AccessTheWebAsync` has run out of work that it can do without a result from `getStringTask`. `AccessTheWebAsync` next wants to calculate and return the length of the downloaded string but the method can't calculate the value until the method has the string. Therefore `AccessTheWebAsync` uses an await operator to suspend its progress and to yield control to the method that called `AccessTheWebAsync`. `AccessTheWebAsync` returns a `Task<int>` to the caller. The task represents a promise to produce an integer result that's the length of the downloaded string.
+
+   Note:
+   If `GetStringAsync` (and therefore getStringTask) is complete before `AccessTheWebAsync` awaits it, control remains in `AccessTheWebAsync`. The expense of suspending and then returning to `AccessTheWebAsync` would be wasted if the called asynchronous process (getStringTask) has already completed and `AccessTheWebSync` doesn't have to wait for the final result.
+
+Inside the caller (the event handler in this example), the processing pattern continues. The caller might do other work that doesn't depend on the result from `AccessTheWebAsync` before awaiting the result, or the caller might `await` immediately. The event handler is waiting for `AccessTheWebAsync` and the `AccessTheWebAsync` is waiting for `GetStringAsync`.
+
+7. `GetStringAsync` completed and produces a string result. The string result isn't returned by the call to `GetStringAsync` in the way that you might expect. (Remember that the method already returned a task in step 3.) Instead, the string result is stored in the task that represents the completion of the method, getStringTask. The await operator retrieves the result from getStringTask. The assignment statement assigns the retrieved result to `urlContents`.
+8. When AccessTheWebAsync has the string result, the method can calculate the length of the string. Then the work of AccessTheWebAsync is also complete, and the waiting event handler can resume. In the full example at the end of the topic, you can confirm that the event handler retrieves and prints the value of the length result.
+
+Note 1: Take a minute to consider the difference between synchronous and asynchronous behavior. A synchronous method returns when its work is complete (step 5), but an async method returns a task value when its work is suspended (steps 3 and 6). When the async method eventually completes its work, the task is marked as completed and the result, if any, is stored in the task.
+
+Note 2: The async/await keywords are often referred to as “syntatic sugar”, meaning that it's an easier way to write async code that uses callback methods. That's true in the sense that results are the same, but there are some low-level differences, such as memory allocations or how the contexts mentioned above are treated.
+
+Note 3: As a rule of thumb, any legacy async code with callbacks can be consumed or replaced with async/await.
