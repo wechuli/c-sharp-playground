@@ -217,3 +217,9 @@ The .NET Framework saves context of the current thread which includes:
 - Execution Context
 - Security Context
 - Call Context
+
+The most important thing to understand in asynchronous programming is how the control flow moves from method to method.
+
+
+![](assets/process.PNG)
+
