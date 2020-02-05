@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\webServiceAsync\obj\Debug\netcoreapp3.1\webServiceAsync.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\webServiceAsync\obj\Debug\netcoreapp3.1\webServiceAsync.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\webServiceAsync\obj\Debug\netcoreapp3.1\webServiceAsync.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\webServiceAsync\bin\Debug\netcoreapp3.1\webServiceAsync.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\webServiceAsync\bin\Debug\netcoreapp3.1\webServiceAsync.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\webServiceAsync\bin\Debug\netcoreapp3.1\webServiceAsync.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\webServiceAsync\bin\Debug\netcoreapp3.1\webServiceAsync.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\webServiceAsync\bin\Debug\netcoreapp3.1\webServiceAsync.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\webServiceAsync\bin\Debug\netcoreapp3.1\webServiceAsync.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\webServiceAsync\obj\Debug\netcoreapp3.1\webServiceAsync.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\webServiceAsync\obj\Debug\netcoreapp3.1\webServiceAsync.pdb
