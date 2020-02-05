@@ -13,23 +13,23 @@ namespace AsyncCoinWebApi.Controllers
     {
         // GET api/asynccoin/5
         [HttpGet("{requestedAmount}")]
-        public string Get(int requestedAmount)
+        public async Task<string> GetAsync(int requestedAmount)
         {
-            return AcquireAsyncCoin(requestedAmount);
+            return await AcquireAsyncCoinAsync(requestedAmount);
         }
 
-        private string PretendToConnectToCoinService(int requestedAmount)
+        private async Task<string> PretendToConnectToCoinServiceAsync(int requestedAmount)
         {
             // Simulate a long-running network connection
-            Thread.Sleep(requestedAmount * 1000);
+            await Task.Delay(requestedAmount * 1000);
             return $"You've got {requestedAmount} AsyncCoin!";
         }
 
-        public string AcquireAsyncCoin(int requestedAmount)
+        public async Task<string> AcquireAsyncCoinAsync(int requestedAmount)
         {
             var msg = string.Empty;
             msg += $"Your mining operation started at {DateTime.Now}" + Environment.NewLine;
-            var result = PretendToConnectToCoinService(requestedAmount);
+            var result = await PretendToConnectToCoinServiceAsync(requestedAmount);
             msg += $"Your mining operation finished at {DateTime.Now}" + Environment.NewLine;
             msg += $"result: {result}";
             return msg;
