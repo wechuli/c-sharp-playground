@@ -242,3 +242,21 @@ Note 1: Take a minute to consider the difference between synchronous and asynchr
 Note 2: The async/await keywords are often referred to as “syntatic sugar”, meaning that it's an easier way to write async code that uses callback methods. That's true in the sense that results are the same, but there are some low-level differences, such as memory allocations or how the contexts mentioned above are treated.
 
 Note 3: As a rule of thumb, any legacy async code with callbacks can be consumed or replaced with async/await.
+
+## Processes and Threads
+
+In order to define a thread formally, we must first understand the boundaries of where a thread operates.
+
+A computer program becomes a process when it is loaded from some store into the computer's memory and begins execution. A process can be executed by a processor or a set of processors. A process description in memory contains vital information such as the program counter which keeps track of the current position in the program ( i.e which instruction is currently being executed), registers, variable stores, file handles, signals and so forth.
+
+A **thread** is a sequence of such instructions within a program that can be executed independently of other code.
+
+![](assets/threads.PNG)
+
+Threads are within the same process address space, thus , much of the information present in the memory description of the process can be shared across threads.
+
+Some information cannot be replicated, such as the stack (stack pointer to a different memory area per thread), registers and thread-specific data. This information suffices to allow threads to be scheduled independently of the program's main thread and possibly one or more other threads within the program.
+
+Explicit operating system support is required to run multithreaded programs. Fortunately, most modern operating systems support threads such as Linux (via NPTL), BSD variants, Mac OS X, Windows, Solaris, AIX, HP-UX, etc. Operating systems may use different mechanisms to implement multithreading support.
+
+## Introduction to threads
