@@ -260,3 +260,142 @@ Some information cannot be replicated, such as the stack (stack pointer to a dif
 Explicit operating system support is required to run multithreaded programs. Fortunately, most modern operating systems support threads such as Linux (via NPTL), BSD variants, Mac OS X, Windows, Solaris, AIX, HP-UX, etc. Operating systems may use different mechanisms to implement multithreading support.
 
 ## Introduction to threads
+
+Threads are the basic unit to which an operating system allocates processor time. Operating systems use processes to separate the different applications that they are executing. More than one thread can be executing code inside one process. This is called mutli-threaded code. The operating system stores threads information which is called thread context and uses it to joggle between multiple programs or sets of code running on different threads so that it can come back and resume execution. This is what we call multitasking, multi-threading or parallel computing. Each program or application is assigned at least one thread by the operating system when it is started.
+
+An operating system that supports multi-tasking creates the effect of simultaneous execution of multiple threads from multiple processes. It does this by dividing the available processor time among the threads that need it, allocating processor time slice to each thread one after another. The currently executing thread is suspended when its time slice elapses, and another thread resumes running. When the system switches from one thread to another, it save the thread context of the preempted thread and reloads the saved context of the next thread in the thread queue.
+
+The length of the time slice depends on the operating system and the processor. Because each time slice is small, multiple threads appear to be executing at the same time, even if there is only one processor. This is also the case on multiprocessor systems, where the executable threads are distributed among the available processors.
+
+Threading can be used in one program to enable an application to perform concurrent processing so that you can do more than one operation at a time. Using multiple threads of execution is one of the most powerful ways to keep your application responsive to the user and at the same time make use of the processor (or multiple processors if you have that) in between or even during user events. For example, you can use threading to listen to input from the user, perform background tasks, and handle simultaneous streams of input. Threads are an operating system concept, they are utilized in performing tasks, scheduling and prioritizing all the things an OS needs to do. When an application starts, the OS assigns a thread for this application to run on, in that sense, a thread is considered an entry point for an application.
+
+When to use multi-threaded code It is important to know that threads share the application's resources so they need something to manage that sharing. Threading solves problems with throughput and responsiveness, but it can also introduce resource-sharing issues such as deadlocks and race conditions. Multiple threads are best for tasks that require different resources such as file handles and network connections. Assigning multiple threads to a single resource is likely to cause synchronization issues, and having threads frequently blocked when waiting for other threads which defeats the purpose of using multiple threads. Other use cases for multi-threaded code are long-running, CPU-bound processes which can drag out, if performed sequentially. This can cause timeouts and unnecessary delays. CPU-bound processes can also lock up the UI thread in desktop technologies.
+
+Note: Don't try to use multi-threaded code for everything, thinking it is going to make your application faster. As we said, it has it's own challenges and overhead. Think about your use cases and if multi-threading will really be beneficial. Remember that multi-threading will make things more complex especially with code management and debugging. Make sure you truly have heavyweight, CPU-bound processes that cannot be simplified.
+
+### Benefits of multi-threaded code
+
+1. Potential for time savings. Most personal computers and workstations today have two or four cores (that is, CPUs) that enable multiple threads to be executed simultaneously so that heavyweight tasks can run in parallel.
+2. Allows responsiveness / feedback while CPU-bound code is running which results in better user experience because there is no UI blockage.
+
+### Challenges of multi-threaded code
+
+1. The system consumes memory for the context information required by processes, and threads. Therefore, the number of processes, and threads that can be created is limited by available memory.
+2. Keeping track of a large number of threads consumes significant processor time. If there are too many threads, most of them will not make significant progress. If most of the current threads are in one process, threads in other processes are scheduled less frequently.
+3. Complexity in every aspect including code design, maintenance and debugging.
+4. Destroying threads requires knowing what could happen and handling those issues.
+5. Multiple threads can work on a single process / class / variable, leading to unpredictable or unwanted results.
+6. Because threads share resources, they need communication and synchronization to avoid conflicts. Communication between threads is difficult to manage well. Lack of good thread communication management can lead to problems deadlocks, and race conditions.
+
+### Common Multithreading terms
+
+- **Deadlocks** - a problem in multi-threaded code that happens when two threads stop responding while each awaits for the other to complete.
+- **Race conditions** - a synchronization problem in multi-threaded code happens when anomalous result occurs due to an unexpected critical dependence on the timing of two events
+- **Threadsafe code** - code is considered thread-safe if it functions correctly during simultaneous execution by multiple threads. For example, a thread that is accessing some data like a file in memory is considered thread safe if there is no other threads trying to access the same file at the same time. Achieving thread safety is a key challenge in multi-threaded programming because developers need to make sure their code is thread safe.
+- **Thread pool** - A thread pool is a collection of worker threads, managed by the system, that efficiently execute parallel code on behalf of the application. The thread pool is primarily used to reduce the number of application threads and provide management of the worker threads. Applications can queue work items, associate work with waitable handles, automatically queue based on a timer, and bind with I/O. The .Net Framework offer a ThreadPool class that you can use to easily use threading in your application with less management overhead on your side.
+
+### Multithreading in .Net Framework
+
+Remember that operating systems use processes to separate the different applications that are executing and that one process can host more than one thread of code. The .NET Framework offers managed support for multi-threaded code by further subdividing an operating system process into lightweight managed subprocesses, called application domains, represented by the AppDomain Class. AppDomain is an isolated environment where applications execute. One or more managed threads (represented by the Thread Class) can run in one or any number of application domains within the same managed process. Although each application domain is started with a single thread, code in that application domain can create additional application domains and additional threads. The result is that a managed thread can move freely between application domains inside the same managed process; you might have only one thread moving among several application domains.
+
+By default, a C# program has one thread. It gets assigned and starts with the beginning of the `Main()` function in the .Net Core apps. However, threads can be created and used to execute code in parallel with the primary thread. These threads are often called worker threads.
+
+Worker threads can be used to perform time-consuming or time-critical tasks without tying up the primary thread. For example, worker threads are often used in server applications to fulfill incoming requests without waiting for the previous request to be completed. Worker threads are also used to perform “background” tasks in desktop applications so that the main thread–which drives user interface elements–remains responsive to user actions. All .NET code has a CurrentThread property, which holds information about the thread on which the code is running. The C# namespace for threads is System.Threading. The System.Threading namespace provides classes and interfaces that enable multi-threaded programming.
+To access the current thread at any time in your application you use the following code:
+
+```C#
+using System.Threading;
+public static void Main()
+{
+	// some code
+	//....
+	// this will give you the current running thread
+	Thread current = Thread.CurrentThread;
+}
+```
+
+In the past, parallelization required low-level manipulation of threads and locks. Beginning with the .NET Framework 4, multi-threaded programming is greatly simplified with the Parallel and Task classes, Parallel LINQ (PLINQ), new concurrent collection classes in the System.Collections.Concurrent namespace, and a new programming model that is based on the concept of tasks rather than threads. We will cover those classes in the next lessons.
+
+### How .NET Core utilizes threads
+
+- The .NET framework manages threads within an application. Every application must have at least one thread. The AppDomain is the environment in which the .Net manages the execution of an application.
+- The .NET Takes the notion of an Operating system process and refines it into the concept of AppDomain. The AppDomain groups resources and isolates them from each other. Threads run in an AppDomain context.
+- Each thread has a private storage area called thread local storage which is mainly used by OS processes.
+
+The .Net technologies that support threading:
+
+- Task Parallel Library (TPL) - A set of public types and APIs in the System.Threading and System.Threading.Tasks namespaces. The Parallel class, which includes parallel versions of For and ForEach loops, and also the Task class, which represents the preferred way to express asynchronous operations. We will cover these two classes later in this module.
+- Parallel LINQ (PLINQ) - A parallel implementation of LINQ to Objects that significantly improves performance in many scenarios. PLINQ implements the full set of LINQ standard query operators as extension methods for the System.Linq namespace and has additional operators for parallel operations. We are not going to cover in PLINQ this course.
+- Concurrent collection classes - A set of thread-safe data Structures for Parallel Programming provided through the System.Collections.Concurrent namespace.
+- Parallel Diagnostic Tools - A set of tools for Visual Studio debugger for tasks and parallel stacks. Includes the Concurrency Visualizer, which consists of a set of views in the Visual Studio Application Lifecycle Management Profiler that you can use to debug and to tune the performance of parallel code.
+
+## Introducing Tasks
+
+Beginning with the .NET Framework 4, multi-threaded programming is greatly simplified with the `Parallel` and `Task` classes. A new programming model, that is based on the concept of tasks rather than threads, was introduced for parallel programming. This new model simplifies a lot of things with threads and is actually the recommended way to go if you want some parallel behavior in your .Net application.
+
+The **Task Parallel Library(TPL)** is a set of public types and APIs in the `System.Threading` and `System.Threading.Tasks` namespaces. The purpose of the TPL is to make developers more productive by simplifying the process of adding parallelism and concurrency to applications. The TPL scales the degree of concurrency dynamically to most efficiently use all the processors that are available. In addition, the TPL handles the partitioning of the work, the scheduling of threads on the ThreadPool, cancellation support, state management, and other low-level details. By using TPL, you can maximize the performance of your code while focusing on the work that your program is designed to accomplish. However, parallelization like any multi-threaded code adds complexity to your program execution. Although the TPL simplifies multi-threaded scenarios, it is still recommended that you have a basic understanding of threading concepts, for example, locks, deadlocks, and race conditions, so that you can use the TPL effectively.
+
+you have already seen how the Task class is used as a return type of an async method that uses the async/await keywords. We also introduced the `Task<TResult>` and explained how it is considered a promise to the caller that a value of type TResult will eventually be returned when the async method has finished it is work.
+
+In the .Net simplified model, a task is considered an asynchronous operation. In some ways, a task resembles a thread or ThreadPool work item, but at a higher level of abstraction without going into the details of working with a thread.
+
+When more than one independent tasks are running at the same time we call that task parallelism
+
+here are some facts about the Task class:
+
+- It is part of the Namespace: System.Threading.Tasks
+- Task has several properties to indicate its state e.g. IsCompleted, IsCanceled, IsFaulted, Status, AsyncState.
+- The Task class represents a single operation that does not return a value and that usually executes asynchronously.
+- The work performed by a Task object typically executes asynchronously on a managed thread pool thread rather than synchronously on the main application thread.
+- For operations that return values, we use the Task<TResult> class for the task to deliver results values.
+- Most commonly, a lambda expression is used to specify the work that the task is to perform. the code below is an example:
+
+```C#
+using System;
+using System.Threading.Tasks;
+
+public class Example
+{
+   public static void Main()
+   {
+      Task t = Task.Run( () => {
+                                  // Just loop.
+                                  int ctr = 0;
+                                  for (ctr = 0; ctr <= 1000000; ctr++)
+                                  {}
+                                  Console.WriteLine("Finished {0} loop iterations",
+                                                    ctr);
+                               } );
+      t.Wait();
+// Console.Writeline("I am after the task");
+   }
+}
+// The example displays the following output:
+//        Finished 1000001 loop iterations
+```
+
+### Using Task.Run
+
+The static `Task.Run()` method is the most common way to create a `Task` instance because of its simplicity. The Run method uses default values with no addition parameters required to start a new task, the above code sample uses the Run(Action) method to start a task that loops and then displays the number of loops.
+
+The `Task.Run` method takes a `Func<Task>` or `Action` as input. It has overloads for cancellation. Behind the scenes the `Task.Run` method will run the given code on a separate thread. The .NET Framework will figure out where to run the code; it will use existing threads from the thread pool, for efficiency. This is the level of abstraction the Task.Run method provides.
+
+Writing code to be used with a Task, can be accomplished by
+
+1. You can go ahead and write inline code with lambda syntax as in the example above
+2. You can use existing methods with lambda syntax as in `Task.Run(()=>myMethod())`
+3. You can write a Func or Action to call the Run method with.
+
+### Task.Wait
+
+A synchronous placeholder in code, to await the completion of a Task. Sometimes your application's logic may require that the calling thread continue execution only when one or more tasks has completed execution. You can synchronize the execution of the calling thread and the asynchronous tasks it launches by calling a `Wait` method to wait for one or more tasks to complete.To wait for a single task to complete, you can call its Task.Wait method. A call to the Wait method blocks the calling thread until the single class instance has completed execution. The parameterless Wait() method waits unconditionally until a task completes. behind the scenes, the task simulates this work by calling the Thread.Sleep method to sleep for two seconds.
+
+### Task.WhenAll(..) -
+
+is used for completion code. It creates a task that will complete when all of the Tasks passed in the Tasks array parameter have completed.
+
+### Task.WhenAny(..)
+
+The Task class provides many variations on Wait and When methods with difference Tasks parameters. For instance, WaitAll waits for all elements in an array of Tasks to complete. WaitAny waits for any one of an array of Tasks to complete before proceeding.
+
+You application code can launch any number of Tasks with Task.Run method while other code can execute while results are in process. Using tasks for running parallel code can be of high performance gains especially that most modern computers use multiple CPU's / cores. The best use case of parallelism using tasks is compute-bound problems.

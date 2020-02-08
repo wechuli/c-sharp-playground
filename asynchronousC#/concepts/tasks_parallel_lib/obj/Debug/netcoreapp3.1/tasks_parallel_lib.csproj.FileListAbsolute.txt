@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_parallel_lib\bin\Debug\netcoreapp3.1\tasks_parallel_lib.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_parallel_lib\bin\Debug\netcoreapp3.1\tasks_parallel_lib.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_parallel_lib\bin\Debug\netcoreapp3.1\tasks_parallel_lib.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_parallel_lib\bin\Debug\netcoreapp3.1\tasks_parallel_lib.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_parallel_lib\bin\Debug\netcoreapp3.1\tasks_parallel_lib.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_parallel_lib\bin\Debug\netcoreapp3.1\tasks_parallel_lib.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_parallel_lib\obj\Debug\netcoreapp3.1\tasks_parallel_lib.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_parallel_lib\obj\Debug\netcoreapp3.1\tasks_parallel_lib.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_parallel_lib\obj\Debug\netcoreapp3.1\tasks_parallel_lib.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_parallel_lib\obj\Debug\netcoreapp3.1\tasks_parallel_lib.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_parallel_lib\obj\Debug\netcoreapp3.1\tasks_parallel_lib.pdb
