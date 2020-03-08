@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_tests\bin\Debug\netcoreapp3.1\tasks_tests.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_tests\bin\Debug\netcoreapp3.1\tasks_tests.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_tests\bin\Debug\netcoreapp3.1\tasks_tests.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_tests\bin\Debug\netcoreapp3.1\tasks_tests.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_tests\bin\Debug\netcoreapp3.1\tasks_tests.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_tests\bin\Debug\netcoreapp3.1\tasks_tests.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_tests\obj\Debug\netcoreapp3.1\tasks_tests.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_tests\obj\Debug\netcoreapp3.1\tasks_tests.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_tests\obj\Debug\netcoreapp3.1\tasks_tests.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_tests\obj\Debug\netcoreapp3.1\tasks_tests.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\concepts\tasks_tests\obj\Debug\netcoreapp3.1\tasks_tests.pdb
