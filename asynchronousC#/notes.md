@@ -324,7 +324,7 @@ In the past, parallelization required low-level manipulation of threads and lock
 
 The .Net technologies that support threading:
 
-- Task Parallel Library (TPL) - A set of public types and APIs in the System.Threading and System.Threading.Tasks namespaces. The Parallel class, which includes parallel versions of For and ForEach loops, and also the Task class, which represents the preferred way to express asynchronous operations. We will cover these two classes later in this module.
+- Task Parallel Library (TPL) - A set of public types and APIs in the System.Threading and System.Threading.Tasks namespaces. The Parallel class, which includes parallel versions of For and ForEach loops, and also the Task class, which represents the preferred way to express asynchronous operations.
 - Parallel LINQ (PLINQ) - A parallel implementation of LINQ to Objects that significantly improves performance in many scenarios. PLINQ implements the full set of LINQ standard query operators as extension methods for the System.Linq namespace and has additional operators for parallel operations. We are not going to cover in PLINQ this course.
 - Concurrent collection classes - A set of thread-safe data Structures for Parallel Programming provided through the System.Collections.Concurrent namespace.
 - Parallel Diagnostic Tools - A set of tools for Visual Studio debugger for tasks and parallel stacks. Includes the Concurrency Visualizer, which consists of a set of views in the Visual Studio Application Lifecycle Management Profiler that you can use to debug and to tune the performance of parallel code.

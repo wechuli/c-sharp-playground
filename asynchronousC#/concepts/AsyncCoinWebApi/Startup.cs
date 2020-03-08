@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 
 namespace AsyncCoinWebApi
 {
+    
     public class Startup
     {
         public Startup(IConfiguration configuration)
