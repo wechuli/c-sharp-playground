@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\simple-demo\bin\Debug\netcoreapp3.1\simple-demo.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\simple-demo\bin\Debug\netcoreapp3.1\simple-demo.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\simple-demo\bin\Debug\netcoreapp3.1\simple-demo.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\simple-demo\bin\Debug\netcoreapp3.1\simple-demo.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\simple-demo\bin\Debug\netcoreapp3.1\simple-demo.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\simple-demo\bin\Debug\netcoreapp3.1\simple-demo.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\simple-demo\obj\Debug\netcoreapp3.1\simple-demo.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\simple-demo\obj\Debug\netcoreapp3.1\simple-demo.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\simple-demo\obj\Debug\netcoreapp3.1\simple-demo.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\simple-demo\obj\Debug\netcoreapp3.1\simple-demo.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\simple-demo\obj\Debug\netcoreapp3.1\simple-demo.pdb

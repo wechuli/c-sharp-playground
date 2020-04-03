@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\consoleAsync\bin\Debug\netcoreapp3.1\consoleAsync.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\consoleAsync\bin\Debug\netcoreapp3.1\consoleAsync.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\consoleAsync\bin\Debug\netcoreapp3.1\consoleAsync.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\consoleAsync\bin\Debug\netcoreapp3.1\consoleAsync.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\consoleAsync\bin\Debug\netcoreapp3.1\consoleAsync.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\consoleAsync\bin\Debug\netcoreapp3.1\consoleAsync.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\consoleAsync\obj\Debug\netcoreapp3.1\consoleAsync.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\consoleAsync\obj\Debug\netcoreapp3.1\consoleAsync.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\consoleAsync\obj\Debug\netcoreapp3.1\consoleAsync.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\consoleAsync\obj\Debug\netcoreapp3.1\consoleAsync.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\consoleAsync\obj\Debug\netcoreapp3.1\consoleAsync.pdb
