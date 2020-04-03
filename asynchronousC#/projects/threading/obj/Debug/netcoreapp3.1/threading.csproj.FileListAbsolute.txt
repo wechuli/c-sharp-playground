@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\threading\bin\Debug\netcoreapp3.1\threading.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\threading\bin\Debug\netcoreapp3.1\threading.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\threading\bin\Debug\netcoreapp3.1\threading.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\threading\bin\Debug\netcoreapp3.1\threading.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\threading\bin\Debug\netcoreapp3.1\threading.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\threading\bin\Debug\netcoreapp3.1\threading.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\threading\obj\Debug\netcoreapp3.1\threading.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\threading\obj\Debug\netcoreapp3.1\threading.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\threading\obj\Debug\netcoreapp3.1\threading.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\threading\obj\Debug\netcoreapp3.1\threading.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\threading\obj\Debug\netcoreapp3.1\threading.pdb

@@ -261,7 +261,7 @@ Explicit operating system support is required to run multithreaded programs. For
 
 ## Introduction to threads
 
-Threads are the basic unit to which an operating system allocates processor time. Operating systems use processes to separate the different applications that they are executing. More than one thread can be executing code inside one process. This is called mutli-threaded code. The operating system stores threads information which is called thread context and uses it to joggle between multiple programs or sets of code running on different threads so that it can come back and resume execution. This is what we call multitasking, multi-threading or parallel computing. Each program or application is assigned at least one thread by the operating system when it is started.
+Threads are the basic unit to which an operating system allocates processor time. Operating systems use processes to separate the different applications that they are executing. More than one thread can be executing code inside one process. This is called multi-threaded code. The operating system stores threads information which is called thread context and uses it to joggle between multiple programs or sets of code running on different threads so that it can come back and resume execution. This is what we call multitasking, multi-threading or parallel computing. Each program or application is assigned at least one thread by the operating system when it is started.
 
 An operating system that supports multi-tasking creates the effect of simultaneous execution of multiple threads from multiple processes. It does this by dividing the available processor time among the threads that need it, allocating processor time slice to each thread one after another. The currently executing thread is suspended when its time slice elapses, and another thread resumes running. When the system switches from one thread to another, it save the thread context of the preempted thread and reloads the saved context of the next thread in the thread queue.
 
@@ -366,6 +366,8 @@ public class Example
                                   Console.WriteLine("Finished {0} loop iterations",
                                                     ctr);
                                } );
+
+							
       t.Wait();
 // Console.Writeline("I am after the task");
    }
