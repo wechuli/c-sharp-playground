@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "ParallelTasks/1.0.0": {
+        "runtime": {
+          "ParallelTasks.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ParallelTasks/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

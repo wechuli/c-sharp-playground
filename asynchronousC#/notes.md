@@ -367,7 +367,7 @@ public class Example
                                                     ctr);
                                } );
 
-							
+
       t.Wait();
 // Console.Writeline("I am after the task");
    }
@@ -401,3 +401,45 @@ is used for completion code. It creates a task that will complete when all of th
 The Task class provides many variations on Wait and When methods with difference Tasks parameters. For instance, WaitAll waits for all elements in an array of Tasks to complete. WaitAny waits for any one of an array of Tasks to complete before proceeding.
 
 You application code can launch any number of Tasks with Task.Run method while other code can execute while results are in process. Using tasks for running parallel code can be of high performance gains especially that most modern computers use multiple CPU's / cores. The best use case of parallelism using tasks is compute-bound problems.
+
+## C Sharp Parallel Class
+
+Once you start running processes in parallel, you start to have to track other considerations like how many processors/cores you have, how many tasks you want to try to run in parallel, how to make your variables thread safe, and how to track the progress and results of your processes.
+
+The `System.Threading.Tasks.Parallel` class allows you to execute tasks in parallel fashion using threads without needing to think about thread-way at all. It handles many of the concerns you would have when using threads. For examples:
+
+- It manages scheduling of the tasks
+- It manages thread creation while using an appropriately sized thread pool
+- It makes decisions on how to distribute the workload to various processors/processes
+- If an error happens on one task, the rest will continue
+- It reports progress on the whole collection of tasks.
+
+The Parallel class provides support for parallel loops and regions. It has library-based data parallel replacements for common operations such as for loops, for each loops, and execution of a set of statements. It is also thread safe since all public and protected members of Parallel class are thread-safe and may be used concurrently from multiple threads.
+
+### Things to consider when using the Parallel class:
+
+#### Use cases for the Parallel class
+
+- As with any parallel code, make sure your code warrants it. You need multiple CPU-bound processes, otherwise gains will be limited.
+- Parallel helps when you have many processes to run; it is easier to manage than individual Tasks or threads.
+- Good for bulk operations with similar characteristic - for instance, parsing many log files.
+
+#### Considerations for code using Parallel
+
+- Try to structure clean units of work. Think how to achieve isolation between tasks.
+- Try not to create dependencies on order of operation
+- Decide on a strategy for handling any errors.
+
+### Some APIs from the Parallel Class:
+
+#### Parallel.Invoke method
+
+Executes each of the provided actions, possibly in parallel. It has a signature of Parallel.Invoke Method (Action[]). The method takes a list of Actions to execute in parallel. No guarantees are made about the order in which the operations execute or whether they execute in parallel. This method does not return until each of the provided operations has completed, regardless of whether completion occurs due to normal or exceptional termination. Some advantages of using this method are that it optimizes scheduling and the number of threads used to execute the provided actions. With Invoke, you simply express which actions you want to run concurrently, and the runtime handles all thread scheduling details, including scaling automatically to the number of cores on the host computer. It Also allows simultaneous launch and management of different types of delegates. In addition to that, it provides a short clean syntax for kicking off more than one function with just one statement or call.
+
+#### Parallel.For method
+
+This is an easy conceptual leap from a traditional For loop that just goes in parallel. It works by running a certain number of iterations in parallel for a delegate. You can pass different parameters for the delegate for each iteration. You can monitor and manipulate the state of the loop through the Monitor static class accessible in the delegates body. the state property allows you to know which iteration is executing for debugging and logging purposes. Overloads of the method may allow more than one delegate for more advanced use cases.
+
+#### Parallel.ForEach method
+
+This method is an easy conceptual leap from a traditional ForEach loop that just goes in parallel. It processes a delegate for each item in a collection. It is mainly used for situations where you have existing collections to act upon.
