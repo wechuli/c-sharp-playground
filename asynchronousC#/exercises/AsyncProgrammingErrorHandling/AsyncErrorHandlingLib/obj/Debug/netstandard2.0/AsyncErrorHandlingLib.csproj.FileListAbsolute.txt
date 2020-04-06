@@ -1,0 +1,8 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\AsyncProgrammingErrorHandling\AsyncErrorHandlingLib\bin\Debug\netstandard2.0\AsyncErrorHandlingLib.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\AsyncProgrammingErrorHandling\AsyncErrorHandlingLib\bin\Debug\netstandard2.0\AsyncErrorHandlingLib.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\AsyncProgrammingErrorHandling\AsyncErrorHandlingLib\bin\Debug\netstandard2.0\AsyncErrorHandlingLib.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\AsyncProgrammingErrorHandling\AsyncErrorHandlingLib\obj\Debug\netstandard2.0\AsyncErrorHandlingLib.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\AsyncProgrammingErrorHandling\AsyncErrorHandlingLib\obj\Debug\netstandard2.0\AsyncErrorHandlingLib.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\AsyncProgrammingErrorHandling\AsyncErrorHandlingLib\obj\Debug\netstandard2.0\AsyncErrorHandlingLib.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\AsyncProgrammingErrorHandling\AsyncErrorHandlingLib\obj\Debug\netstandard2.0\AsyncErrorHandlingLib.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\AsyncProgrammingErrorHandling\AsyncErrorHandlingLib\obj\Debug\netstandard2.0\AsyncErrorHandlingLib.pdb
