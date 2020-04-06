@@ -1,0 +1,8 @@
+c:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\asyncReturnTypesWithTests\AsyncReturnTypeLibrary\bin\Debug\netstandard2.0\AsyncReturnTypeLibrary.deps.json
+c:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\asyncReturnTypesWithTests\AsyncReturnTypeLibrary\bin\Debug\netstandard2.0\AsyncReturnTypeLibrary.dll
+c:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\asyncReturnTypesWithTests\AsyncReturnTypeLibrary\bin\Debug\netstandard2.0\AsyncReturnTypeLibrary.pdb
+c:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\asyncReturnTypesWithTests\AsyncReturnTypeLibrary\obj\Debug\netstandard2.0\AsyncReturnTypeLibrary.csprojAssemblyReference.cache
+c:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\asyncReturnTypesWithTests\AsyncReturnTypeLibrary\obj\Debug\netstandard2.0\AsyncReturnTypeLibrary.AssemblyInfoInputs.cache
+c:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\asyncReturnTypesWithTests\AsyncReturnTypeLibrary\obj\Debug\netstandard2.0\AsyncReturnTypeLibrary.AssemblyInfo.cs
+c:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\asyncReturnTypesWithTests\AsyncReturnTypeLibrary\obj\Debug\netstandard2.0\AsyncReturnTypeLibrary.dll
+c:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\asyncReturnTypesWithTests\AsyncReturnTypeLibrary\obj\Debug\netstandard2.0\AsyncReturnTypeLibrary.pdb

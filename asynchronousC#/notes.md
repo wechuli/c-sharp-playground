@@ -443,3 +443,153 @@ This is an easy conceptual leap from a traditional For loop that just goes in pa
 #### Parallel.ForEach method
 
 This method is an easy conceptual leap from a traditional ForEach loop that just goes in parallel. It processes a delegate for each item in a collection. It is mainly used for situations where you have existing collections to act upon.
+
+## Async Return Types
+
+Async methods are built to start processing then results later. Inside an async method, an await operator is applied to a task that's returned from a call to another async method. An async method typically returns a `Task` or a `Task<TResult>`.
+
+Asynchronous methods can return nearly any .NET data type or class.
+
+1. **void** return type
+
+- This is strictly for fire-and-forget operations. This means it should be used only for event handlers which require that return type.
+- Not recommended, unless you don't have much choice. For instance, sometimes you need to write UI or Framework code that can't utilize return values.
+- The caller of a void-returning async method can't await it and can't catch exceptions that the method throws.
+
+2. **Task** return type
+
+- You use Task as the return type if the method has no return statement or has a return statement that doesn't return an operand. The Task return type can provide information about the operation.
+- Useful for methods where you don't need return value, but want information about the process.
+- A call to an async method with this return type returns a Task object, but when the Task is completed, any await expression that's awaiting the Task evaluates to void.
+- It is recommended to use Task over void return type. Task can give you information you can use for control of flow, error handling, ..etc.
+
+3. **Task<TResult>**
+
+- This is the most flexible return type - TResult can be nearly any return type
+- You specify Task<TResult> as the return type if the method contains a return statement that specifies an operand of type TResult.
+- The Task type provides information about the process while the TResult has any possibilities - string, any number type, struct, custom class, etc.
+
+### Some relevant properties of Task
+
+- AsyncState gets the state object supplied when the Task was created, or null if none was supplied.
+- Id gets an ID for this Task instance.
+- Status gets the TaskStatus of this task. The Task.Status property returns a member of the TaskStatus enumeration to indicate the task's current status. Values for the TaskStatus enumumeration include: Canceled, Created, Faulted, RanToCompletion, Running, WaitingForActivation, WaitingForChildrenToComplete, and WaitingToRun.
+- Exception - gets the AggregateException for any exception that was thrown during the method execution. If the Task completed successfully or has not yet thrown any exceptions, this will return null.
+
+### Other async considerations
+
+When defining an interface for an async method, use corresponding return type (`Task`, `Task<T>`), but the async keyword is not valid in an interface. It's just used for method compilation, so use it only in the implementation class.
+async methods are called by async methods – you will generally find that asynchrony goes all the way up a method's call stack.
+
+## Async Exception patterns and error handling
+
+.Net Core exception and error handling with async code is designed to behave similarly to synchronously code's method for exception handling. Conceptually, there is a significant difference because the async code breaks from the current call stack. So in order for the .Net framework to make it behave similar to synchronous exceptions, the async/await infrastructure will catch errors that occur during the awaited code and will accordingly propagate values in the Task properties as follows:
+
+- The `Task.Status` property is set to Faulted
+- The `Task.Exception` property is set with the error that the async method threw
+- C# then propagates the exception into the current call stack when `await` is called.
+
+The completed task to which `await` is applied might be in a faulted state because of an unhandled exception in the method that returns the task. Awaiting the task throws an exception. A task can also end up in a cenceled state if the asynchronous process that returns it is canceled. Awaiting a canceled task throws an OperationCanceledException.
+
+### How to handle errors thrown in an async/await method
+
+Simply use try/catch blocks to catch known and expected errors. To catch the exception that the async task throws, await the task in a try block, and catch the exception in the associated catch block.
+
+## Exception patterns and error handling in parallel code
+
+Parallel code using `Task.Run` handles errors in a similar way as in the async code with some differences:
+
+- `Task.Status` and `Task.Exception` behave the same as they do with async/await.
+- There are additional possibilities. Multiple exceptions can be thrown for one method, which isn't the case for sync methods. For example, when multiple `Task.Run` calls are started and then awaited with `Task.WaitAll`, multiple exceptions can accrue or multiple exceptions can be caugh on the code being awaited. The Task class handles this possibility by using an `AggregateException` for its onboard `Exception` property. To keep behavior consistent with sync code, C# will throw the first exception encountered in the `AggregateException`. You can have access to other exceptions contained in an `AggregateException` but must catch the first exception. Even if one exception is thrown, it is still wrapped in an `AggregateException` exception.
+
+### Parallel Code using `Parallel` Class
+
+The Parallel.For and Parallel.ForEach overloads do not have any special mechanism to handle exceptions that might be thrown. In this respect, they resemble regular for and foreach loops. An unhandled exception causes the loop to terminate immediately. When you add your own exception-handling logic to parallel loops, you should think about your use case. Do you want to stop when the first exception is thrown? Or do you want to continue with the other code in your loop?
+Stop at first exception:
+The default behavior is to stop on first exception. To do that, you should wrap your parallel loop in a try-catch block.
+Continue the code after the first exception:
+To do that, you need to add a try-catch block within your loop, so that the processing does not stop, and captures any errors with an AggregateException.
+
+In this example, all exceptions are caught and then wrapped in an AggregateException which is thrown. The caller can decide which exceptions to handle.
+
+```C#
+class ExceptionDemo2
+{
+    static void Main(string[] args)
+    {
+        // Create some random data to process in parallel.
+        // There is a good probability this data will cause some exceptions to be thrown.
+        byte[] data = new byte[5000];
+        Random r = new Random();
+        r.NextBytes(data);
+
+        try
+        {
+            ProcessDataInParallel(data);
+        }
+
+        catch (AggregateException ae)
+        {
+            // This is where you can choose which exceptions to handle.
+            foreach (var ex in ae.InnerExceptions)
+            {
+                if (ex is ArgumentException)
+                    Console.WriteLine(ex.Message);
+                else
+                    throw ex;
+            }
+        }
+
+        Console.WriteLine("Press any key to exit.");
+        Console.ReadKey();
+    }
+
+    private static void ProcessDataInParallel(byte[] data)
+    {
+        // Use ConcurrentQueue to enable safe enqueueing from multiple threads.
+        var exceptions = new ConcurrentQueue<Exception>();
+
+        // Execute the complete loop and capture all exceptions.
+        Parallel.ForEach(data, d =>
+        {
+            try
+            {
+                // Cause a few exceptions, but not too many.
+                if (d < 0x3)
+                    throw new ArgumentException(String.Format("value is {0:x}. Elements must be greater than 0x3.", d));
+                else
+                    Console.Write(d + " ");
+            }
+            // Store the exception and continue with the loop.
+            catch (Exception e) { exceptions.Enqueue(e); }
+        });
+
+        // Throw the exceptions here after the loop completes.
+        if (exceptions.Count > 0) throw new AggregateException(exceptions);
+    }
+}
+
+```
+
+### Error handling Challenges in async and parallel code
+
+One of the most difficult things about error handling with async or parallel code is that many types of errors do not throw exceptions. They just produce unexpected or inconsistent results. You need to handle these situations with planning and testing. Examples of these errors are like:
+
+1. Reentrancy issues
+
+Refers to the possibility of starting an async method while one or more instances of that method are already running. This is called reentering an asynchronous operation before it has completed. If you don't identify and handle it can cause unexpected results. Reentrancy issues mainly occur in UI apps. You can handle reentrancy in a variety of ways, depending on what you want your app to do. They may include disabling the UI control that invokes this operation, cancel and restart the operation if reentrancy happens, or run multiple operations and queue the output. depending on how sophisticated your use case is, one of these options is a good solution.
+
+2. Race conditions
+
+Refers to problems that can occur when one thread has a dependency on another, but the dependent thread processes first. A simple example of a race condition is incrementing a field. Suppose a class has a private static field objCt that is incremented every time an instance of the class is created, using code such as objCt++. This operation requires loading the value from objCt into a register, incrementing the value, and storing it in objCt. In a multithreaded application, a thread that has loaded and incremented the value might be preempted by another thread which performs all three steps; when the first thread resumes execution and stores its value, it overwrites objCt without taking into account the fact that the value has changed in the interim.
+This particular race condition is easily avoided by using methods of the System.Threading.Interlocked class, such as Interlocked.Increment. The Interlocked class provides atomic operations for variables that are shared by multiple threads.
+
+Race conditions can also occur when you synchronize the activities of multiple threads. Whenever you write a line of code, you must consider what might happen if a thread were preempted before executing the line (or before any of the individual machine instructions that make up the line), and another thread overtook it.
+
+### Async Testing patterns
+
+.NET Core has been designed with testability in mind, so that creating unit tests for applications is easy. Having a suite of automated tests is one of the best ways to ensure a software application does what its authors intended it to do. There are different kinds of tests for software applications, including integration tests, web tests, load tests and others. Unit tests are tests that test individual software components or methods are the lowest level test. Unit tests should only test code within the developer's control and should not test infrastructure concerns like databases, file systems or network resources.
+
+Unit Test projects for asynchrony in .NET Core are supported for C#. You can choose between xUnit, NUnit and MSTest test Platforms.
+
+Async methods returning void are difficult to test. Because of the differences in error handling and composing, it’s difficult to write unit tests that call async void methods. The MSTest asynchronous testing support only works for async methods returning Task or Task<T>. It’s possible to install a SynchronizationContext that detects when all async void methods have completed and collects any exceptions, but it’s much easier to just make the async void methods return Task instead.

@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\parallelCodeErrorHandling\bin\Debug\netcoreapp3.1\parallelCodeErrorHandling.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\parallelCodeErrorHandling\bin\Debug\netcoreapp3.1\parallelCodeErrorHandling.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\parallelCodeErrorHandling\bin\Debug\netcoreapp3.1\parallelCodeErrorHandling.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\parallelCodeErrorHandling\bin\Debug\netcoreapp3.1\parallelCodeErrorHandling.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\parallelCodeErrorHandling\bin\Debug\netcoreapp3.1\parallelCodeErrorHandling.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\parallelCodeErrorHandling\bin\Debug\netcoreapp3.1\parallelCodeErrorHandling.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\parallelCodeErrorHandling\obj\Debug\netcoreapp3.1\parallelCodeErrorHandling.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\parallelCodeErrorHandling\obj\Debug\netcoreapp3.1\parallelCodeErrorHandling.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\parallelCodeErrorHandling\obj\Debug\netcoreapp3.1\parallelCodeErrorHandling.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\parallelCodeErrorHandling\obj\Debug\netcoreapp3.1\parallelCodeErrorHandling.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\parallelCodeErrorHandling\obj\Debug\netcoreapp3.1\parallelCodeErrorHandling.pdb

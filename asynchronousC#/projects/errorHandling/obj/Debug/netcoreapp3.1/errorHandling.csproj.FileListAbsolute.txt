@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\errorHandling\obj\Debug\netcoreapp3.1\errorHandling.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\errorHandling\obj\Debug\netcoreapp3.1\errorHandling.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\errorHandling\obj\Debug\netcoreapp3.1\errorHandling.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\errorHandling\bin\Debug\netcoreapp3.1\errorHandling.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\errorHandling\bin\Debug\netcoreapp3.1\errorHandling.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\errorHandling\bin\Debug\netcoreapp3.1\errorHandling.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\errorHandling\bin\Debug\netcoreapp3.1\errorHandling.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\errorHandling\bin\Debug\netcoreapp3.1\errorHandling.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\errorHandling\bin\Debug\netcoreapp3.1\errorHandling.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\errorHandling\obj\Debug\netcoreapp3.1\errorHandling.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\errorHandling\obj\Debug\netcoreapp3.1\errorHandling.pdb

@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\AsyncCoinMiner\obj\Debug\netcoreapp3.1\AsyncCoinMiner.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\AsyncCoinMiner\obj\Debug\netcoreapp3.1\AsyncCoinMiner.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\AsyncCoinMiner\obj\Debug\netcoreapp3.1\AsyncCoinMiner.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\AsyncCoinMiner\bin\Debug\netcoreapp3.1\AsyncCoinMiner.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\AsyncCoinMiner\bin\Debug\netcoreapp3.1\AsyncCoinMiner.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\AsyncCoinMiner\bin\Debug\netcoreapp3.1\AsyncCoinMiner.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\AsyncCoinMiner\bin\Debug\netcoreapp3.1\AsyncCoinMiner.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\AsyncCoinMiner\bin\Debug\netcoreapp3.1\AsyncCoinMiner.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\AsyncCoinMiner\bin\Debug\netcoreapp3.1\AsyncCoinMiner.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\AsyncCoinMiner\obj\Debug\netcoreapp3.1\AsyncCoinMiner.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\AsyncCoinMiner\obj\Debug\netcoreapp3.1\AsyncCoinMiner.pdb
