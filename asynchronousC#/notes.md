@@ -593,3 +593,82 @@ Race conditions can also occur when you synchronize the activities of multiple t
 Unit Test projects for asynchrony in .NET Core are supported for C#. You can choose between xUnit, NUnit and MSTest test Platforms.
 
 Async methods returning void are difficult to test. Because of the differences in error handling and composing, it’s difficult to write unit tests that call async void methods. The MSTest asynchronous testing support only works for async methods returning Task or Task<T>. It’s possible to install a SynchronizationContext that detects when all async void methods have completed and collects any exceptions, but it’s much easier to just make the async void methods return Task instead.
+
+## Task-Based Asynchronous Pattern (TAP)
+
+The Task-based Asynchronous Pattern (TAP) is a pattern for writing asynchronous code with the .NET Framework. It is based on the `Task` and `Task<TResult>` types in the `System.Threading.Tasks` namespace. TAP is helpful for creating shared libraries and creating a consistent method of creating/consuming async methods. TAP uses a single method to represent the initiation and completion of an asynchronous operation. This is in contrast to the Asynchronous Programming Model (APM or IAsyncResult) pattern, which requires Begin and End methods, and in contrast to the Event-based Asynchronous Pattern (EAP), which requires a method that has the Async suffix and also requires one or more events, event handler delegate types, and EventArg-derived types.
+
+### Naming conventions in TAP
+
+The naming convention for async code in TAP uses the following guidance:
+
+- Synchronous methods should follow standard .NET naming conventions
+- Async methods whould have the same name as synchronous methods, with Async as a suffic
+- When adding a TAP method to a class that already contains a method `MethodNameAsync`, the suffix `TaskAsync` may be used instead, e.g if the class already has a `ReadAsync` method, use the name `ReadTaskAsync`
+
+### Parameters in TAP
+
+The parameters of a TAP method should match the parameters of its synchronous counterpart, and should be provided in the same order. `out` and `ref` parameters are exceptions of this rule and should be avoided entirely in TAP methods. Any data that would have been returned through an `out` or `ref` parameter should instead be returned as part of the `TResult` returned by `Task<TResult>`. If you have multiple values to return, use a tuple or a custom data structure to accomodate multiple values.
+
+You can overload your TAP methods with optional parameters. For instance:
+1- ReadAsync(string stringToRead)
+2- ReadAsync(string stringToRead, CancellationToken cancellationToken)
+3- ReadAsync(string stringToRead, CancellationToken cancellationToken, IProgress<T> progress)
+
+### Return Types in TAP
+
+The TAP method returns either a Task or a `Task<TResult>`. If the corresponding synchronous method returns void, use Task return type for the TAP method. If corresponding synchronous method returns a type `TResult`, use `Task<TResult>` return type for the TAP method. TAP methods do not return void.
+
+### TAP Guidelines for Writing Asynchronous operation
+
+- If you need to do some synchronous work in your async methods such as validating arguments before returning the resulting Task, then you should keep that synchronous work to the minimum. Remember that your async method is supposed to return quickly to the calling method in order not to harm the responsiveness of you application. Also remember that multiple asynchronous methods may be launched concurrently. Therefore, any long-running work in the synchronous portion of an asynchronous method could delay the initiation of other asynchronous operations, thereby decreasing the benefits of concurrency. As a result, you should avoid the synchronous work in your async methods unless necessary and keep it to minimum.
+
+- Use async methods for I/O-bound workloads. While compute-bound methods should not be async, they should be handled with Task.Run.
+
+### Handling exceptions in TAP
+
+An asynchronous method should raise an exception only in response to a usage error to be thrown out of the asynchronous method call. For example, if passing a null reference as one of the method’s arguments causes an error state (usually represented by an `ArgumentNullException` exception), you can modify the calling code to ensure that a null reference is never passed. For all other errors including exceptions that occur when an asynchronous method is running should be assigned to the Exception property of the returned Task object and not explicitly thrown, even if the asynchronous method happens to complete synchronously before the task is returned. Typically, a task contains at most one exception. However, if the task represents multiple operations (for example, WhenAll), multiple exceptions may be associated with a single task.
+
+### Providing a cancellation mechanism
+
+In TAP, cancellation is optional for both asynchronous method implementers and asynchronous method consumers. If an operation allows cancellation, it exposes an overload of the asynchronous method that accepts a cancellation token (System.Threading.CancellationToken instance). By convention, the parameter is named cancellationToken. If the passed token has requested cancellation, the returned task will end in the TaskStatus.Canceled state and there will be no available Result and no Exception.
+
+```C#
+public Task ReadAsync(byte [] buffer, int offset, int count,
+                      CancellationToken cancellationToken)
+```
+
+### Providing progress reporting
+
+Another optional benefit supported by TAP in the .Net Framework is providing progress notifications during the asynchronous operation. this is useful to update a user interface with information about the progress of the asynchronous operation. The .NET Framework provides the IProgress<T> interface and a single Progress<T> implementation, to allow progress reporting from async methods. To receive progress on the asynchronous operation, you should pass a IProgress<T> to the asynchronous method as a parameter that is usually named progress. Progress<T> has a callback method defined to report progress, it is your responsibility to implement reporting according to your needs. Providing the progress interface when the asynchronous method is called helps eliminate race conditions that result from incorrect usage (that is, when event handlers that are incorrectly registered after the operation starts may miss updates). More importantly, the progress interface supports varying implementations of progress, as determined by the consuming code. For example, the consuming code may only care about the latest progress update, or may want to buffer all updates, or may want to invoke an action for each update, or may want to control whether the invocation is marshaled to a particular thread. All these options may be achieved by using a different implementation of the interface, customized to the particular consumer’s needs.
+
+Example:
+
+If a ReadAsync method is able to report intermediate progress in the form of the number of bytes read thus far, the progress callback could be an IProgress<T> interface:
+
+```C#
+public Task ReadAsync(byte[] buffer, int offset, int count,
+                      IProgress<long> progress)
+```
+
+If a TAP implementation uses both the optional CancellationToken and optional IProgress<T> parameters, it could potentially require up to four overloads:
+
+```C#
+public Task MethodNameAsync(…);
+public Task MethodNameAsync(…, CancellationToken cancellationToken);
+public Task MethodNameAsync(…, IProgress<T> progress);
+public Task MethodNameAsync(…,
+    CancellationToken cancellationToken, IProgress<T> progress);
+```
+
+The `Progress<T>` class is declared in the .Net Framework as follows:
+
+```C#
+public class Progress<T> : IProgress<T>
+{
+    public Progress();
+    public Progress(Action<T> handler);
+    protected virtual void OnReport(T value);
+    public event EventHandler<T> ProgressChanged;
+}
+```
