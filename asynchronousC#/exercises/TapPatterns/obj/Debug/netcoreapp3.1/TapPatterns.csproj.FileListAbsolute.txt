@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\TapPatterns\bin\Debug\netcoreapp3.1\TapPatterns.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\TapPatterns\bin\Debug\netcoreapp3.1\TapPatterns.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\TapPatterns\bin\Debug\netcoreapp3.1\TapPatterns.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\TapPatterns\bin\Debug\netcoreapp3.1\TapPatterns.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\TapPatterns\bin\Debug\netcoreapp3.1\TapPatterns.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\TapPatterns\bin\Debug\netcoreapp3.1\TapPatterns.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\TapPatterns\obj\Debug\netcoreapp3.1\TapPatterns.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\TapPatterns\obj\Debug\netcoreapp3.1\TapPatterns.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\TapPatterns\obj\Debug\netcoreapp3.1\TapPatterns.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\TapPatterns\obj\Debug\netcoreapp3.1\TapPatterns.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\exercises\TapPatterns\obj\Debug\netcoreapp3.1\TapPatterns.pdb

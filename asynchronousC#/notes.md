@@ -672,3 +672,135 @@ public class Progress<T> : IProgress<T>
     public event EventHandler<T> ProgressChanged;
 }
 ```
+
+### Asynchronous Programming Model (APM)
+
+Asynchronous Programming Model (APM) pattern (also called the IAsyncREsult pattern) is one of the legacy legacy asynchronous programming patterns in the .Net Framework. While it is not the recommended way to write async code currently, it is still beneficial to learn about them so that you can work with legacy code that was once written using this model.
+
+In APM, asynchronous operations require Begin and End methods named Begin OperationName and End OperationName that begin and end the asynchronous operation OperationName respectively. (for example, BeginRead and EndRead for asynchronous read operations).
+
+To start an asynchronous operation in APM, the Begin method is called first. when called, the Begin method will return an object that implements the IASyncResult interface. This object stores information about the asynchronous operation. The application can continue executing instructions on the calling thread while the asynchronous operation takes place on a different thread. For each call to the Begin method, the application should also call the End method to get the results of the operation.
+
+The Begin method
+A Begin method takes any parameters declared in the signature of the synchronous version of the method that are passed by value or by reference. out parameters can not be part of the Begin method signature. The Begin method signature also includes two additional parameters: 1- The first parameter defines an System.AsyncCallback delegate that references a method that is called when the asynchronous operation completes. The caller can specify null if it does not want a method invoked when the operation completes.
+2- The second parameter is a user-defined object. This object can be used to pass application-specific state information to the method invoked when the asynchronous operation completes. If a Begin method takes additional operation-specific parameters, such as a byte array to store bytes read from a file, the AsyncCallback and application state object are the last parameters in the Begin method signature.
+
+Begin method returns control to the calling thread immediately. If the Begin method throws exceptions, the exceptions are thrown before the asynchronous operation is started, and the callback method is not invoked.
+
+The End method
+The End method ends the asynchronous operation. The return value of the End method is the same type returned by its synchronous counterpart and is specific to the asynchronous operation. For example, the EndRead method returns the number of bytes read from a FileStream and the EndGetHostByName method returns an IPHostEntry object that contains information about a host computer. The End method takes any out or ref parameters declared in the signature of the synchronous version of the method. In addition to the parameters from the synchronous method, the End method also includes an IAsyncResult parameter. Callers must pass the instance returned by the corresponding call to Begin.
+
+If the asynchronous operation represented by the IAsyncResult object has not completed when the End method is called, the End method blocks the calling thread until the asynchronous operation is complete. Exceptions thrown by the asynchronous operation are thrown from the End method. The effect of calling the End method multiple times with the same IAsyncResult is not defined. Likewise, calling the End method with an IAsyncResult that was not returned by the related Begin method is also not defined.
+
+The IAsyncResult objects
+As mentioned before, the IAsyncResult is returned from the Begin method and it should be passed in the call to the End method.
+
+The following members of the IAsyncResult class are important to know when working with APM code:
+
+1- AsyncState - An optional application-specific object that contains information about the asynchronous operation.
+2- AsyncWaitHandle - A WaitHandle that can be used to block application execution until the asynchronous operation completes.
+3- CompletedSynchronously - A value that indicates whether the asynchronous operation completed on the thread used to call Begin OperationName instead of completing on a separate ThreadPool thread.
+4- IsCompleted - A value that indicates whether the asynchronous operation has completed.
+
+Consider a Read method that reads a specified amount of data into a provided buffer starting at a specified offset:
+
+public class MyClass  
+{  
+ public int Read(byte [] buffer, int offset, int count);  
+}
+The APM version of this method would expose the BeginRead and EndRead methods as follows:
+
+public class MyClass  
+{  
+ public IAsyncResult BeginRead(  
+ byte [] buffer, int offset, int count,  
+ AsyncCallback callback, object state);  
+ public int EndRead(IAsyncResult asyncResult);  
+}
+
+### Event-based Asynchronous Pattern (EAP)
+
+Event-based Asynchronous Pattern (EAP) pattern is one of the legacy asynchronous programming patterns in the .Net Framework. EAP was introduced in the .NET Framework 2.0. While it is not the recommended way to write async code currently, it is still beneficial to learn about this pattern so that you can work with legacy code that was once written using this model.
+EAP requires a method to have the Async suffix, and also requires one or more events, event handler delegate types, and EventArg-derived types.
+The Event-based Asynchronous Pattern provides the advantages of multithreaded applications while hiding many of the complex issues inherent in multithreaded design. Using a class that supports this pattern can allow you to perform time-consuming tasks, such as downloads and database operations, “in the background,” without interrupting your application. It also allows you to execute multiple operations simultaneously, receiving notifications when each completes, wait for resources to become available without stopping your application. It is also allows the communication with pending asynchronous operations using the familiar events-and-delegates model.
+
+A class that supports the Event-based Asynchronous Pattern will have one or more methods named MethodNameAsync. These methods may mirror synchronous versions, which perform the same operation on the current thread. When calling the Async version of the class methods, the application will continue to run while the method proceeds on a separate thread (“in the background”). The class will also have a MethodNameCompleted event for every Async method and it may have a MethodNameAsyncCancel (or simply CancelAsync) method. An event handler will be called when the method operation is complete, and your event handler can examine the AsyncCompletedEventArgs parameter to determine if the operation completed successfully. EAP classes can optionally support cancellation, progress reporting, and incremental results for each asynchronous method.
+
+Below is an example class declaration that conforms to the pattern:
+
+public class AsyncExample  
+{  
+ // Synchronous methods.  
+ public int Method1(string param);  
+ public void Method2(double param);
+
+    // Asynchronous methods.
+    public void Method1Async(string param);
+    public void Method1Async(string param, object userState);
+    public event Method1CompletedEventHandler Method1Completed;
+
+    public void Method2Async(double param);
+    public void Method2Async(double param, object userState);
+    public event Method2CompletedEventHandler Method2Completed;
+
+    public void CancelAsync(object userState);
+
+    public bool IsBusy { get; }
+
+    // Class implementation not shown.
+
+}
+There are potentially two overloads for the asynchronous operations: single-invocation and multiple-invocation. You can distinguish these two forms by their method signatures: the multiple-invocation form has an extra parameter called userState. This form makes it possible for your code to call Method1Async(string param, object userState) multiple times without waiting for any pending asynchronous operations to finish. If, on the other hand, you try to call Method1Async(string param) before a previous invocation has completed, the method raises an InvalidOperationException.
+
+The userState parameter for the multiple-invocation overloads allows you to distinguish among asynchronous operations. You provide a unique value (for example, a GUID or hash code) for each call to Method1Async(string param, object userState), and when each operation is completed, your event handler can determine which instance of the operation raised the completion event.
+
+One drawback of this pattern is in the forced need to track pending operations. If you use the multiple-invocation overloads, your code will need to keep track of the userState objects (task IDs) for pending tasks. For each call to Method1Async(string param, object userState), you will typically generate a new, unique userState object and add it to a collection. When the task corresponding to this userState object raises the completion event, your completion method implementation will examine AsyncCompletedEventArgs.UserState and remove it from your collection. Used this way, the userState parameter takes the role of a task ID.
+
+Cancelation in EAP
+It is important to be able to cancel asynchronous operations at any time before their completion. Classes that implement the Event-based Asynchronous Pattern will have a CancelAsync method (if there is only one asynchronous method) or a MethodNameAsyncCancel method (if there are multiple asynchronous methods). Methods that allow multiple invocations take a userState parameter, which can be used to track the lifetime of each task. CancelAsync takes a userState parameter, which allows you to cancel particular pending tasks. Methods that support only a single pending operation at a time, like Method1Async(string param), are not\* cancelable.
+
+Tracking progress and Incremental results in EAP
+A class that adheres to the Event-based Asynchronous Pattern may optionally provide an event for tracking progress and incremental results. This will typically be named ProgressChanged or MethodNameProgressChanged, and its corresponding event handler will take a ProgressChangedEventArgs parameter.
+
+TAP is the recommended asynchronous pattern to use by the .Net Framework for modern applications. APM and EAP are legacy models and are maintained just for older applications that were written before TAP was introduced in the .Net Framework 4.5
+
+Guidance for APM
+Application developers have several design choices for accessing the results of the asynchronous operation. The correct choice depends on whether the application has instructions that can execute while the operation completes. If an application cannot perform any additional work until it receives the results of the asynchronous operation, the application must block until the results are available. To block until an asynchronous operation completes, you can use one of the following approaches:
+
+Call End OperationName from the application’s main thread, blocking application execution until the operation is complete.
+Use the AsyncWaitHandle to block application execution until one or more operations are complete.
+Applications that do not need to block while the asynchronous operation completes can use one of the following approaches:
+a. Poll for operation completion status by checking the IsCompleted property periodically and calling End OperationName when the operation is complete.
+b. Use an AsyncCallback delegate to specify a method to be invoked when the operation is complete. For an example that illustrates this technique, see Using an AsyncCallback Delegate to End an Asynchronous Operation.
+Guidance for EAP
+The following sections describe requirements and guidelines you should consider when you implement a class that follows the Event-based Asynchronous Pattern. It is important when you implement the Event-based Asynchronous Pattern to provide a number of guarantees to ensure that your class will behave properly and clients of your class can rely on such behavior. Below is the list of best practices for EAP:
+
+Always invoke the MethodNameCompleted event handler when you have successful completion, an error, or a cancellation. Applications should never encounter a situation where they remain idle and completion never occurs. One exception to this rule is if the asynchronous operation itself it designed so that it never completes.
+For each separate MethodNameAsync method, define a MethodNameCompleted event on the same class as the method.
+Define an EventArgs class and accompanying delegate for the MethodNameCompleted event that derives from the AsyncCompletedEventArgs class. The default class name should be of the form MethodNameCompletedEventArgs.
+Ensure that the EventArgs class is specific to the return values of the MethodName method. When you use the EventArgs class, you should never require developers to cast the result.
+Ensure that you catch any exceptions that occur in the asynchronous operation and assign the caught exception to the Error property.
+If your class supports multiple concurrent invocations, ensure that the MethodNameCompleted event contains the appropriate userSuppliedState object.
+Ensure that the MethodNameCompleted event is raised on the appropriate thread and at the appropriate time in the application lifecycle.
+If there was an error during execution of the asynchronous operation, the results should not be accessible. Ensure that accessing any property in the AsyncCompletedEventArgs when Error is not null raises the exception referenced by Error. The AsyncCompletedEventArgs class provides the RaiseExceptionIfNecessary method for this purpose.
+
+How to refactor?
+When you need functionality that is contained legacy code written in APM- or EAP-style code, you have two choices:
+
+1. Rewrite the code in the more modern TAP style. .
+2. Integrate the legacy code into TAP libraries by consuming the old code with new.
+
+There is no magic answer about which is best, but there are things to consider that can influence you one way or another.
+
+Which way to go?
+Use cases that trend toward rewriting:
+If the functionality is straightforward. Some things that used to take a lot of code are easy to implement now.
+
+If your app needs to be cross-platform. Legacy code will be Windows-only. The other guidance was written before .NET Core and a truly cross-plaform framework. If you need to run on Linux/Mac, chances are, you'll need to rewrite.
+
+If you own the code or work with a team that does. It's always easier to rewrite code that is well understood and under your control.
+
+Use cases that trend toward integration:
+If you don't own the code. If you are working with a third-party library, or with a team that won't share the code, you may not have an option to rewrite.
+
+If the functionality is complex. There has been a lot of asynchronous code written over the years. If it is still in production, rewriting it can be a tall order.
