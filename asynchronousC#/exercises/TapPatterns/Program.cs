@@ -1,15 +1,28 @@
 ﻿using System;
+using System.Threading.Tasks;
+
 
 namespace TapPatterns
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             Console.WriteLine("Start !");
             var manager = new TapPatternManager();
-            manager.Launch();
+            await manager.LaunchAsync();
             Console.ReadLine();
         }
+
+        // static void Main(string[] args)
+        // {
+        //     Console.WriteLine("Start !");
+        //     var manager = new TapPatternManager();
+        //     manager.Launch();
+        //     Console.ReadLine();
+        // }
+
+
+
     }
 }
