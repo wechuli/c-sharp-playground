@@ -23,7 +23,9 @@ namespace TapPatterns
         public async Task LaunchAsync()
         {
             //await LaunchMiningMethodAsync();
-            await LaunchMiningMethodLocalAsync();
+            // await LaunchMiningMethodLocalAsync();
+            // await LaunchMiningMethodWithCancellationAsync();
+            await LaunchMiningMethodWithReportingAsync();
 
         }
 
@@ -167,6 +169,101 @@ namespace TapPatterns
 
         }
 
+
+        #endregion
+
+        #region TAP advanced
+
+        public async Task<MiningResultDto> RentTimeOnMiningServerAsync(string authToken, int requestedAmount, CancellationToken c)
+        {
+            if (!AuthorizeTheToken(authToken))
+            {
+                throw new Exception("Failed Authorization");
+            }
+
+            Thread.Sleep(1500);
+            var result = new MiningResultDto();
+            var startTime = DateTime.UtcNow;
+            var asyncTask = CallCoinServiceAsync(requestedAmount);
+
+            if (c.IsCancellationRequested)
+            {
+                c.ThrowIfCancellationRequested();
+            }
+            var coinResult = await asyncTask;
+            var elapsedSeconds = (DateTime.UtcNow - startTime).TotalSeconds;
+
+            result.ElapsedSeconds = elapsedSeconds;
+            result.MiningText = coinResult;
+
+            return result;
+        }
+
+        public async Task LaunchMiningMethodWithCancellationAsync()
+        {
+            var cts = new CancellationTokenSource(1000);
+
+            Task<MiningResultDto> asyncTask = RentTimeOnMiningServerAsync("SecretToken", 4, cts.Token);
+
+            try
+            {
+                MiningResultDto result = await asyncTask;
+                Console.WriteLine($"mining result: {result.MiningText}");
+                Console.WriteLine($"Elapsed seconds: {result.ElapsedSeconds:N}");
+                Console.WriteLine("end");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine($"Task status: {asyncTask.Status}");
+            }
+        }
+
+
+        private async Task<string> CallCoinServiceWithProgressAsync(int howMany, IProgress<int> progress)
+        {
+            var result = new StringBuilder($"Your mining operation started at UTC {DateTime.UtcNow}.");
+            double progressPercentage = 0;
+            double progressChunks = 100 / howMany;
+
+            for (int i = 0; i < howMany; i++)
+            {
+                await Task.Delay(1000);
+                progressPercentage += progressChunks;
+                progress.Report((int)progressPercentage);
+            }
+            result.AppendLine($"Your mining operation ended at UTC {DateTime.UtcNow}.");
+            result.AppendLine($"You've got {howMany} AsyncCoin!");
+            return result.ToString();
+        }
+
+
+        public async Task<MiningResultDto> RentTimeOnMiningServerWithProgressAsync(string authToken, int requestedAmount, IProgress<int> progress)
+        {
+            if (!AuthorizeTheToken(authToken))
+            {
+                throw new Exception("Failed Authorization");
+            }
+
+            var result = new MiningResultDto();
+            var startTime = DateTime.UtcNow;
+            var coinResult = await CallCoinServiceWithProgressAsync(requestedAmount, progress);
+            var elapsedSeconds = (DateTime.UtcNow - startTime).TotalSeconds;
+
+            result.ElapsedSeconds = elapsedSeconds;
+            result.MiningText = coinResult;
+
+            return result;
+        }
+
+        public async Task LaunchMiningMethodWithReportingAsync()
+        {
+            var progress = new Progress<int>(total => Console.WriteLine($"Progress: {total}%"));
+            var result = await RentTimeOnMiningServerWithProgressAsync("Secret Token", 5, progress);
+            Console.WriteLine($"Elapsed seconds: {result.ElapsedSeconds:N}");
+            Console.WriteLine($"mining result: {result.MiningText}");
+            Console.WriteLine("end");
+        }
 
         #endregion
 

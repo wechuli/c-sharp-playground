@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\TapCompliance\bin\Debug\netcoreapp3.1\TapCompliance.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\TapCompliance\bin\Debug\netcoreapp3.1\TapCompliance.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\TapCompliance\bin\Debug\netcoreapp3.1\TapCompliance.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\TapCompliance\bin\Debug\netcoreapp3.1\TapCompliance.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\TapCompliance\bin\Debug\netcoreapp3.1\TapCompliance.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\TapCompliance\bin\Debug\netcoreapp3.1\TapCompliance.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\TapCompliance\obj\Debug\netcoreapp3.1\TapCompliance.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\TapCompliance\obj\Debug\netcoreapp3.1\TapCompliance.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\TapCompliance\obj\Debug\netcoreapp3.1\TapCompliance.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\TapCompliance\obj\Debug\netcoreapp3.1\TapCompliance.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\asynchronousC#\projects\TapCompliance\obj\Debug\netcoreapp3.1\TapCompliance.pdb
