@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\fileWatching\obj\Debug\netcoreapp3.1\fileWatching.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\fileWatching\obj\Debug\netcoreapp3.1\fileWatching.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\fileWatching\obj\Debug\netcoreapp3.1\fileWatching.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\fileWatching\bin\Debug\netcoreapp3.1\fileWatching.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\fileWatching\bin\Debug\netcoreapp3.1\fileWatching.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\fileWatching\bin\Debug\netcoreapp3.1\fileWatching.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\fileWatching\bin\Debug\netcoreapp3.1\fileWatching.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\fileWatching\bin\Debug\netcoreapp3.1\fileWatching.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\fileWatching\bin\Debug\netcoreapp3.1\fileWatching.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\fileWatching\obj\Debug\netcoreapp3.1\fileWatching.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\fileWatching\obj\Debug\netcoreapp3.1\fileWatching.pdb

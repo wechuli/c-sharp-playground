@@ -175,4 +175,8 @@ Many of the operations related to files can cause exceptional situations.
 - When setting a specified encoding by the creation of a **StreamReader** or a **StreamWriter** object, an **ArgumentException** can be thrown. This means that the encoding we have chosen is not supported
 - Another common mistake is **IOException**. This is the base class for all IO errors when working with streams.
 
-The standard approach for handling exceptions when working with files is the following: declare variables of class **StreamReader** or **StreamWriter** in `try-catch` block. Initialize them with the necessary values in the block and hanle the potential exceptions properly. To close the stream, we use the structure **using**.
+The standard approach for handling exceptions when working with files is the following: declare variables of class **StreamReader** or **StreamWriter** in `try-catch` block. Initialize them with the necessary values in the block and handle the potential exceptions properly. To close the stream, we use the structure **using**.
+
+## Data Buffer
+
+In Computer Science, a data buffer is a region of a physical memory storage used to temporarily store data while it is being moved from one place to another. Typically, the data is stored in a buffer as it is retrieved from an input device or just before it is sent to an output device. However, a buffer may be used when moving data between processes within a computer. This is comparable to buffers in telecommunication. Buffers can be implemented in a fixed memory location in hardware or by using a virtual data buffer in software, pointing at a location in the physical memory.
