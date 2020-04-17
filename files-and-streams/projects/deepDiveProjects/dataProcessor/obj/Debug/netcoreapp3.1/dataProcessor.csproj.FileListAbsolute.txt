@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\dataProcessor\bin\Debug\netcoreapp3.1\dataProcessor.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\dataProcessor\bin\Debug\netcoreapp3.1\dataProcessor.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\dataProcessor\bin\Debug\netcoreapp3.1\dataProcessor.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\dataProcessor\bin\Debug\netcoreapp3.1\dataProcessor.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\dataProcessor\bin\Debug\netcoreapp3.1\dataProcessor.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\dataProcessor\bin\Debug\netcoreapp3.1\dataProcessor.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\dataProcessor\obj\Debug\netcoreapp3.1\dataProcessor.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\dataProcessor\obj\Debug\netcoreapp3.1\dataProcessor.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\dataProcessor\obj\Debug\netcoreapp3.1\dataProcessor.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\dataProcessor\obj\Debug\netcoreapp3.1\dataProcessor.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\files-and-streams\projects\deepDiveProjects\dataProcessor\obj\Debug\netcoreapp3.1\dataProcessor.pdb

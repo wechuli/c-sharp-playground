@@ -18,6 +18,8 @@ namespace encoding
             StreamReader reader2 = new StreamReader("poem.txt", win1251);
 
 
+
+
             using (reader1)
             {
                 Console.WriteLine(reader1.ReadLine());
