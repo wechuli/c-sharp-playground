@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\c#-attributes\projects\ContactWriter\bin\Release\netcoreapp3.1\ContactWriter.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\c#-attributes\projects\ContactWriter\bin\Release\netcoreapp3.1\ContactWriter.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\c#-attributes\projects\ContactWriter\bin\Release\netcoreapp3.1\ContactWriter.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\c#-attributes\projects\ContactWriter\bin\Release\netcoreapp3.1\ContactWriter.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\c#-attributes\projects\ContactWriter\bin\Release\netcoreapp3.1\ContactWriter.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\c#-attributes\projects\ContactWriter\bin\Release\netcoreapp3.1\ContactWriter.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\c#-attributes\projects\ContactWriter\obj\Release\netcoreapp3.1\ContactWriter.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\c#-attributes\projects\ContactWriter\obj\Release\netcoreapp3.1\ContactWriter.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\c#-attributes\projects\ContactWriter\obj\Release\netcoreapp3.1\ContactWriter.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\c#-attributes\projects\ContactWriter\obj\Release\netcoreapp3.1\ContactWriter.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\c#-attributes\projects\ContactWriter\obj\Release\netcoreapp3.1\ContactWriter.pdb

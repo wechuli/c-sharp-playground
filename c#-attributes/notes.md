@@ -45,4 +45,22 @@ We can use attributes at code time, design time and run time.
 - Reflection
 
 ## Attributes Inheritance
+
 - Attributes can be inherited
+
+### Controlling the debugging experience
+
+- `[DebuggerDisplay]`
+- `[DegubberTypeProxy]`
+- `[DebuggerBrowsable]`
+
+## Custom attributes
+
+- Defining where a custom attribute can be applied
+- Allowing a custom attribute to be used multiple times
+- Controlling attribute inheritance
+- Create a custom display attribute
+- Access a runtime with reflection
+- Apply custom attribute
+- Add a class level custom attribute
+- Add a multiple use custom attribute
