@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\MovieApp\bin\Debug\netcoreapp3.1\MovieApp.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\MovieApp\bin\Debug\netcoreapp3.1\MovieApp.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\MovieApp\bin\Debug\netcoreapp3.1\MovieApp.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\MovieApp\bin\Debug\netcoreapp3.1\MovieApp.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\MovieApp\bin\Debug\netcoreapp3.1\MovieApp.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\MovieApp\bin\Debug\netcoreapp3.1\MovieApp.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\MovieApp\obj\Debug\netcoreapp3.1\MovieApp.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\MovieApp\obj\Debug\netcoreapp3.1\MovieApp.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\MovieApp\obj\Debug\netcoreapp3.1\MovieApp.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\MovieApp\obj\Debug\netcoreapp3.1\MovieApp.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\MovieApp\obj\Debug\netcoreapp3.1\MovieApp.pdb
