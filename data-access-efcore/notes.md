@@ -107,3 +107,177 @@ public class Course
 The Enrollments property is a navigation property. A Course entity can be related to any number of Enrollment entities.
 
 The DatabaseGenerated attribute lets you enter the primary key for the course rather than having the database generate it (not auto generated).
+
+## Create the Database Context
+
+The main class that coordinates Entity Framework functionality for a given model is the database context class. You create this class by deriving from `Microsoft.EntityFramework.DbContext` class. The derived context represents a session with the database, allowing you to query and save data. In your code you specify which entity classes are included in the data model by exposing a typed `DbSet<TEntity>` for each class in your model. You can also customize certain Entity Framework behavior. For the same class enrollment example we have been looking at in the previous lesson, we will create a DBContext class named SchoolContext.
+
+```C#
+using Microsoft.EntityFrameworkCore;
+
+public class SchoolContext : DbContext
+{
+    public SchoolContext(DbContextOptions<SchoolContext> options) : base(options)
+    {
+    }
+
+    public DbSet<Course> Courses { get; set; }
+    public DbSet<Enrollment> Enrollments { get; set; }
+    public DbSet<Student> Students { get; set; }
+}
+
+```
+
+This code creates a `DbSet` property for each entity set. In Entity Framework terminology, an entity set typically corresponds to a database table and an entity corresponds to a row in the table.
+
+NB
+You could have omitted the `DbSet<Enrollment>` and `DbSet<Course>` statements and it would work the same. The Entity Framework would include them implicitly because the Student entity references the Enrollment entity and the Enrollment entity references the Course entity. This has been explained in the previous lesson when we created the entity classes.
+
+When the database is created, EF creates tables that have names the same as the DbSet property names. Property names for collections are typically plural (Students rather than Student), but developers disagree about whether table names should be pluralized or not. EF Core gives you the option to override the default behavior by specifying different table names than the corresponding DbSet names in the `DbContext`. To do that, you will override the OnModelCreating method of the DbContext parent class. Add the following highlighted code after the last DbSet property.
+
+```C#
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+    modelBuilder.Entity<Course>().ToTable("Course");
+    modelBuilder.Entity<Enrollment>().ToTable("Enrollment");
+    modelBuilder.Entity<Student>().ToTable("Student");
+}
+
+```
+
+The final code for the SchoolContext class will look like this:
+
+```C#
+using Microsoft.EntityFrameworkCore;
+
+public class SchoolContext : DbContext
+{
+    public SchoolContext(DbContextOptions<SchoolContext> options) : base(options)
+    {
+    }
+
+    public DbSet<Course> Courses { get; set; }
+    public DbSet<Enrollment> Enrollments { get; set; }
+    public DbSet<Student> Students { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Course>().ToTable("Course");
+        modelBuilder.Entity<Enrollment>().ToTable("Enrollment");
+        modelBuilder.Entity<Student>().ToTable("Student");
+    }
+}
+
+```
+
+As you have seen, Entity Framework uses a set of conventions to build a model based on the shape of your entity classes. You can specify additional configuration to supplement and/or override what was discovered by convention. There are two main methods for configuring a model.
+
+### Methods of model configuration
+
+1. **Fluent API**
+
+You can override the `OnModelCreating` method in your derived context and use the ModelBuilder API to configure your model. This is the most powerful method of configuration and allows configuration to be specified without modifying your entity classes. Fluent API configuration has the highest precedence and will override conventions and data annotations.
+
+```C#
+class MyContext : DbContext
+    {
+        public DbSet<Blog> Blogs { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Blog>()
+                .Property(b => b.Url)
+                .IsRequired();
+        }
+    }
+
+```
+
+2. **Data Annotations**
+
+You can also apply attributes (known as Data Annotations) to your classes and properties. Data annotations will override conventions, but will be overwritten by Fluent API configuration.
+
+```C#
+public class Blog
+    {
+        public int BlogId { get; set; }
+        [Required]
+        public string Url { get; set; }
+    }
+
+```
+
+That is all the code you need to start storing and retrieving data.
+
+## Basic Data Operations
+
+The next step that comes normally after you create the model(both the entities and the context) is to start dealing with the data by reading and writing from and to the database through the EF model. The basic data operations in computer programming are referred to as CRUD which is the acronym for data operations involving Create, Read, Update and Delete. CRUD can map to the corresponding standard SQL statements for relational database operations which are INSERT SELECT UPDATE and DELETE.
+
+Entity Framework Core uses Language Integrated Query (LINQ) to query data from the database. LINQ allows you to use C# to write strongly typed queries based on your derived context and entity classes. The dbcontext derived class you will create in your application, which represents a database session, along with the DBSet objects you have defined in it, both have functionalities, form their respective .Net classes and parent classes DbContext and DbSet, that allows you to do CRUD operations.
+
+### Create
+
+To create or insert a new entity(or row) in a database table you need to use the `DbSet.Add` method and supply the new student object. After that, you will need to confirm the insert so that EF Core would actually reflect that into the database.
+
+```C#
+
+using(var context = new SchoolContext()
+{
+	var newStudent = new Student(....);
+	context.Students.Add(newStudent);
+	context.SaveChanges();
+}
+
+```
+
+### Read
+
+To read or select data from your tables you need to use LINQ queries.
+
+```C#
+using(var context = new SchoolContext())
+{
+	// Get all Students from the database
+		var query = from s in context.Students
+				select s;
+
+		Console.WriteLine("All students in the database:");
+	//Display all students' names
+		foreach (var item in query)
+		{
+			Console.WriteLine(item.Name);
+		}
+		Console.ReadKey();
+}
+```
+
+### Update
+
+EF Core will automatically detect changes made to an existing entity that is tracked by the context. This includes entities that you load/query from the database and entities that were previously added and saved to the database. Simply modify the values assigned to properties and then call `SaveChanges`
+
+```C#
+using (var context = new SchoolContext())
+{
+    var course = context.Courses.First();
+    course.Title = "Data Access in C# and .Net Core";
+    context.SaveChanges();
+}
+```
+
+### Delete
+
+Use the DbSet.Remove method to delete instances of you entity classes. If the entity already exists in the database, it will be deleted during SaveChanges. If the entity has not yet been saved to the database (i.e. it is tracked as added) then it will be removed from the context and will no longer be inserted when SaveChanges is called.
+
+```C#
+using (var context = new SchoolContext())
+{
+    var lastCourse = context.Courses.Last();
+    context.Courses.Remove(lastCourse);
+    context.SaveChanges();
+}
+
+```
+
+Note: All operations that require a write to the database (create, update, delete ) require a call to the DbContext.SaveChanges method so that EF reflects the changes in the database.
+
+Note: You can combine multiple Add/Update/Remove operations into a single call to SaveChanges. For most database providers, SaveChanges is transactional. This means all the operations applied to the context since the last save will either succeed (commit) or fail (rollback) and the operations will never be left partially applied.
