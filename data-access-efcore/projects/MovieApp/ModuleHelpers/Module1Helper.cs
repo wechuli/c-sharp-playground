@@ -49,7 +49,50 @@ namespace MovieApp
         }
         internal static void CreateItem()
         {
-            Console.WriteLine(nameof(CreateItem));
+
+            // add an actor
+            Console.WriteLine("Add an Actor");
+
+            Console.WriteLine("Enter a First Name");
+            var firstName = Console.ReadLine();
+
+            Console.WriteLine("Enter a Last Name");
+            var lastName = Console.ReadLine();
+
+            var actor = new Actor { FirstName = firstName, LastName = lastName };
+            MoviesContext.Instance.Actors.Add(actor);
+
+            MoviesContext.Instance.SaveChanges();
+
+            var actors = MoviesContext.Instance.Actors.Where(a => a.ActorId == actor.ActorId).Select(a => a.Copy<Actor, ActorModel>());
+            ConsoleTable.From(actors).Write();
+
+
+            // add a film
+            Console.WriteLine("Add a Film");
+
+            Console.WriteLine("Enter a Title");
+            var title = Console.ReadLine();
+
+            Console.WriteLine("Enter a Description");
+            var description = Console.ReadLine();
+
+            Console.WriteLine("Enter a Release Year");
+            var year = Console.ReadLine().ToInt();
+
+            Console.WriteLine("Enter a Rating");
+            var rating = Console.ReadLine();
+
+            var film = new Film { Title = title, Description = description, ReleaseYear = year, Rating = rating };
+
+            MoviesContext.Instance.Films.Add(film);
+
+            MoviesContext.Instance.SaveChanges();
+
+            var films = MoviesContext.Instance.Films
+                            .Where(f => f.FilmId == film.FilmId)
+                            .Select(f => f.Copy<Film, FilmModel>());
+            ConsoleTable.From(films).Write();
         }
 
         internal static void UpdateItem()
