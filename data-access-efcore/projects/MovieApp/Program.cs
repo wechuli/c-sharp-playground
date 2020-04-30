@@ -6,7 +6,9 @@ namespace MovieApp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Starting program");
+            // Module1Helper.SelectList();
+            Module1Helper.SelectById();
         }
     }
 }

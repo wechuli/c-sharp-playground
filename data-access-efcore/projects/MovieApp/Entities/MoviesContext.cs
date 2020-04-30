@@ -15,11 +15,25 @@ namespace MovieApp.Entities
         {
         }
 
-        public virtual DbSet<Actor> Actor { get; set; }
-        public virtual DbSet<Category> Category { get; set; }
-        public virtual DbSet<Film> Film { get; set; }
-        public virtual DbSet<FilmActor> FilmActor { get; set; }
-        public virtual DbSet<FilmCategory> FilmCategory { get; set; }
+        public virtual DbSet<Actor> Actors { get; set; }
+        public virtual DbSet<Category> Categories { get; set; }
+        public virtual DbSet<Film> Films { get; set; }
+        public virtual DbSet<FilmActor> FilmActors { get; set; }
+        public virtual DbSet<FilmCategory> FilmCategories { get; set; }
+
+
+        private static MoviesContext _context;
+        public static MoviesContext Instance
+        {
+            get
+            {
+                if (_context == null)
+                {
+                    _context = new MoviesContext();
+                }
+                return _context;
+            }
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

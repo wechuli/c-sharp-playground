@@ -34,3 +34,4 @@ C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\
 C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\MovieApp\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.Design.dll
 C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\MovieApp\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
 C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\MovieApp\obj\Debug\netcoreapp3.1\MovieApp.csproj.CopyComplete
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\MovieApp\bin\Debug\netcoreapp3.1\ConsoleTables.dll
