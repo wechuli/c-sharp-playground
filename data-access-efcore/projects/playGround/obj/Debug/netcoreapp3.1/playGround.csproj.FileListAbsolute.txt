@@ -1,0 +1,11 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\playGround\obj\Debug\netcoreapp3.1\playGround.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\playGround\obj\Debug\netcoreapp3.1\playGround.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\playGround\obj\Debug\netcoreapp3.1\playGround.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\playGround\bin\Debug\netcoreapp3.1\playGround.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\playGround\bin\Debug\netcoreapp3.1\playGround.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\playGround\bin\Debug\netcoreapp3.1\playGround.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\playGround\bin\Debug\netcoreapp3.1\playGround.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\playGround\bin\Debug\netcoreapp3.1\playGround.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\playGround\bin\Debug\netcoreapp3.1\playGround.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\playGround\obj\Debug\netcoreapp3.1\playGround.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\playGround\obj\Debug\netcoreapp3.1\playGround.pdb

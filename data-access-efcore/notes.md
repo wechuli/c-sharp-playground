@@ -563,3 +563,43 @@ var sortedGroups =
     select newGroup;
 
 ```
+
+## Lambda expressions
+
+Lambda expression is a shorter way of representing anonymous methods (delegates) using certain syntax (the lambda operator =>)
+
+```C#
+//the anonymous method
+delegate(Student s) { return s.Age > 12 && s.Age < 20; };
+
+//the lambda expression equivalent opetained by removing the delegate keyword and parameter type and adding a lambda operator => to separate the lambda's parameter list from its executable code.
+s => { return s.Age > 12 && s.Age < 20; };
+```
+
+In the above example, we have only one statement that returns a value, in this case, we don't need the curly braces, return and semicolon. Also we can remove paranthesis(), if we have only one parameter.
+
+```C#
+
+ s => s.Age > 12 && s.Age < 20
+```
+
+If you have more than one parameter to pass, use parantheses as follows:
+
+```C#
+
+(s, minAge) => s.Age >= minAge;
+
+```
+
+### lambda returns
+
+Lambda expressions that don't return a value correspond to a specific Action delegate, depending on its number of parameters. Lambda expressions that return a value correspond to a specific Func delegate, depending on its number of parameters. For example, a lambda expression that has two parameters but returns no value corresponds to an `Action<T1,T2>` delegate. A lambda expression that has one parameter and returns a value corresponds to `Func<T,TResult>` delegate. The last parameter type in a `Func<>` delegate is the return type and the rest are input parameters. The following lambda expression returns true if a student in between the age of 12 and 20.
+
+```C#
+Func<Student, bool> isStudentAgeInRange = s => s.age > 12 && s.age < 20;
+Student s = new Student() { age = 14 };
+// returns true
+bool isTeen = isStudentAgeInRange(s);
+
+```
+### Querying with Lambda Expression
