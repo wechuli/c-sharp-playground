@@ -705,3 +705,165 @@ Code First Migrations has two primary commands:
 When you make some changes in your application model then run the Add-Migration command, EF Core will auto generate the migration file in the migrations folder. This file will contain a class that inherits from Microsoft.EntityFrameworkCore.Migrations.Migration and has a definition for two main methods. One method with the name Up and the other will have the name Down.
 
 The Up method will have the EF generated code that will execute on the database when you call Update-Database command. The Down method has the EF generated code that will execute in the case of rolling back the migration.
+
+## Keys, Composite Keys and Alternate Keys
+
+A key serves as the primary unique identifier for each entity instance. When using a relational database, this maps to the concept of a primary key. Each entity needs one primary key. A primary key can either be:
+
+1. **Simple key** which is configured using a single property or column. A simple key is usually referred to as just a key.
+2. **Composite key** primary key that is composed of multiple properties or column from one table
+
+In general keys can be generated using three methods:
+
+1. **Conventions**: EF Core convention is that a property named Id or <type name>Id in the entity model will be automatically configured as the key of an entity when you run a migration. Conventions can be used to create simple primary keys.
+
+```C#
+class Car
+{
+    public string Id { get; set; }
+
+    public string Make { get; set; }
+    public string Model { get; set; }
+}
+```
+
+2. **Data Annotations**: You can also use data annotations [Key] to configure a single property to be the key of an entity in the entity model. Data Annotations can be used to create simple primary keys.
+
+```C#
+class Car
+{
+	//configuring a key using data annotations
+    [Key]
+    public string LicensePlate { get; set; }
+
+    public string Make { get; set; }
+    public string Model { get; set; }
+}
+
+```
+
+3. **The Fluent API HasKey**: The Fluent API can be used to create single as well as composite keys. It is the only way to create composite keys in EF Core. When using the Fluent API to create a key you will configure that in the DbContext derived class in the body of the OnModelCreating method.
+
+```C#
+class MyContext : DbContext
+{
+    public DbSet<Car> Cars { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+		//single property key
+        modelBuilder.Entity<Car>()
+            .HasKey(c => c.LicensePlate);
+
+		//multiple property key
+	modelBuilder.Entity<Car>()
+            .HasKey(c => c.State, c.LicensePlate);
+    }
+}
+
+class Car
+{
+    public string LicensePlate { get; set; }
+    public string Make { get; set; }
+    public string Model { get; set; }
+}
+
+```
+
+### Alternate Keys
+
+An alternate key serves as an alternate unique identifier for each entity instance in addition to the primary key. Alternate keys can be used as the target of a relationship. When using a relational database this maps to the concept of a unique index/constraint on the alternate key columns(s) and one or more foreign key constraints that reference the columns(s)
+
+Conventions and Fluent API can be used to create alternate keys. Data Annotations can't be used to create alternate keys.
+
+1. **Conventions** - By convention, an alternate key is introduced for you when you identify a property, that is not the primary key, as the target of a relationship.
+
+```C#
+class MyContext : DbContext
+{
+    public DbSet<Blog> Blogs { get; set; }
+    public DbSet<Post> Posts { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Post>()
+            .HasOne(p => p.Blog)
+            .WithMany(b => b.Posts)
+            .HasForeignKey(p => p.BlogUrl)
+            .HasPrincipalKey(b => b.Url);
+    }
+}
+```
+
+2. **Fluent API HasAlternateKey method** - You can use the Fluent API to configure a single property to be an alternate key. You can also configure multiple properties to be an alternate keys (known as composite alternate key).
+
+```C#
+class MyContext : DbContext
+{
+    public DbSet<Car> Cars { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+	//single property alternate key
+        modelBuilder.Entity<Car>()
+            .HasAlternateKey(c => c.LicensePlate);
+    }
+
+	//multiple property alternate key
+	modelBuilder.Entity<Car>()
+            .HasAlternateKey(c => c.State, c.LicensePlate);
+}
+```
+
+## Indexes
+
+Indexes are a common concept across many data stores like files and databases. While their implementation may vary in different data stores, they are used to make lookups based on a column (or set of columns) more efficient. By convention, an index is created in each property(or set of properties) that are used as a foreign key.
+
+### The Fluent API to create Indexes
+
+The term Fluent API refers to a pattern of programming where method calls are chained together with the end result being less verbose and more readable than a series of statements. EF Core's Fluent API provides methods for configuring various aspects of your model. For example, the Fluent API is used to create an index on a specific property in an entity model by using `HasIndex` method. Index creation usually takes place on the `OnModelCreating` method. The following code shows how to create an index using the Fluent API
+
+```C#
+class MyContext : DbContext
+{
+    public DbSet<Student> Students { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Student>()
+            .HasIndex(s => s.LastName);
+    }
+}
+
+public class Student
+{
+    public int StudentId { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+}
+```
+
+By default, indexes are non-unique. You can also specify that an index should be unique by using the IsUnique method, meaning that no two entities can have the same value(s) for the given property(s).
+
+```C#
+modelBuilder.Entity<Blog>()
+            .HasIndex(b => b.Url)
+            .IsUnique();
+```
+
+you can also create an index over more than one column as follows:
+
+```C#
+
+class MyContext : DbContext
+{
+    public DbSet<Student> Students { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Student>()
+            .HasIndex(p => new { p.FirstName, p.LastName });
+    }
+}
+
+```
