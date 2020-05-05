@@ -602,4 +602,106 @@ Student s = new Student() { age = 14 };
 bool isTeen = isStudentAgeInRange(s);
 
 ```
+
 ### Querying with Lambda Expression
+
+You do not use lambda expressions directly in query syntax, but you do use them in method calls. Since LINQ query syntax must be translated into method calls for the .NET common language runtime (CLR) when the code is compiled, lambda expressions can therefore be used in LINQ query expressions.
+
+The following example demonstrates how to use a lambda expression in a method call of a query expression. The lambda is necessary because the Sum standard query operator cannot be invoked by using query syntax.
+
+The query first groups the students according to their grade level, as defined in the GradeLevel enum. Then for each group it adds the total scores for each student. This requires two Sum operations. The inner Sum calculates the total score for each student, and the outer Sum keeps a running, combined total for all students in the group.
+
+```C#
+
+private static void TotalsByGradeLevel()
+{
+    // This query retrieves the total scores for First Year students, Second Years, and so on.
+    // The outer Sum method uses a lambda in order to specify which numbers to add together.
+    var categories =
+    from student in students
+    group student by student.Year into studentGroup
+    select new { GradeLevel = studentGroup.Key, TotalScore = studentGroup.Sum(s => s.ExamScores.Sum()) };
+
+    // Execute the query.
+    foreach (var cat in categories)
+    {
+        Console.WriteLine("Key = {0} Sum = {1}", cat.GradeLevel, cat.TotalScore);
+    }
+}
+/*
+     Outputs:
+     Key = SecondYear Sum = 1014 (just an example number)
+     Key = ThirdYear Sum = 964 (just an example number)
+     Key = FirstYear Sum = 1058 (just an example number)
+     Key = FourthYear Sum = 974 (just an example number)
+*/
+
+```
+
+LINQ query syntax must be translated into method calls for the .NET common language runtime (CLR) when the code is compiled. These method calls invoke the standard query operators, which have names such as Where, Select, GroupBy, Join, Max, and Average. You can call them directly by using method syntax instead of query syntax. The following example shows a simple query expression and the semantically equivalent query written as a method-based query.
+
+```C#
+
+class QueryVMethodSyntax
+{
+    static void Main()
+    {
+        int[] numbers = { 5, 10, 8, 3, 6, 12};
+
+        //Query syntax:
+        IEnumerable<int> numQuery1 =
+            from num in numbers
+            where num % 2 == 0
+            orderby num
+            select num;
+
+        //Method syntax:
+        IEnumerable<int> numQuery2 = numbers.Where(num => num % 2 == 0).OrderBy(n => n);
+
+        foreach (int i in numQuery1)
+        {
+            Console.Write(i + " ");
+        }
+        Console.WriteLine(System.Environment.NewLine);
+        foreach (int i in numQuery2)
+        {
+            Console.Write(i + " ");
+        }
+
+        // Keep the console open in debug mode.
+        Console.WriteLine(System.Environment.NewLine);
+        Console.WriteLine("Press any key to exit");
+        Console.ReadKey();
+    }
+}
+/*
+    Output:
+    6 8 10 12
+    6 8 10 12
+ */
+
+```
+
+The output from the two examples is identical. You can see that the type of the query variable is the same in both forms: `IEnumerable<T>`.
+
+## Migrations
+
+When you develop a new application, your data model changes frequently, and each time the model changes, it gets out of sync with the database. If the database has no data yet, then maybe each time you change the data model- add, remove, or change entity classes or change your DbContext class - you can delete the database and EF Core creates a new one that matches the model, and seeds it with tests data if you are using any test data. However, in real production applications with real data in the database, this is not the case. When the application is running in production it is usually storing data that you want to keep, and you don't want to lose everything each time you make a change such as adding a new column. The EF Core Migrations feature solves this problem by enabling EF to update the database schema instead of creating a new database. After doing the changes in your model, you run the migration command which reflects the changes in your database.
+
+### When to use migrations
+
+1. In a code first approach with no pre-existing database, you create the application model as entity classes along with a DbContext class. Then EF Core can use this model to create the back-end database. This is called an initial migrations.
+2. While working on your application, if you need to make any changes to your model (add a column, create an index, drop a table, ...etc) after the creation of the database, you can run a migration, after the model changes, to reflect these changes in the existing database.
+
+### Generating and Running Migrations
+
+Code First Migrations has two primary commands:
+
+1. **Add-Migration** - will scaffold the next migration based on changes you have made to your model since the last migration was created. Each migration gets a unique name. When you run this command, the `Migrations` folder in your project directory will have a file with the migration name. The migration filename is pre-fixed with a timestamp to help ordering.
+2. **Update-Database** - will apply any pending migrations added to the Add-migration command to the database. This is when the database is actually updated with the changes in the migration.
+
+### Running the Add-Migration command
+
+When you make some changes in your application model then run the Add-Migration command, EF Core will auto generate the migration file in the migrations folder. This file will contain a class that inherits from Microsoft.EntityFrameworkCore.Migrations.Migration and has a definition for two main methods. One method with the name Up and the other will have the name Down.
+
+The Up method will have the EF generated code that will execute on the database when you call Update-Database command. The Down method has the EF generated code that will execute in the case of rolling back the migration.
