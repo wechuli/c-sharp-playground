@@ -15,7 +15,9 @@ namespace MovieApp
 
             //Module1Helper.DeleteItem();
 
-            Module1Helper.SelfAssessment();
+            // Module1Helper.SelfAssessment();
+
+            Module2Helper.Sort();
         }
     }
 }
