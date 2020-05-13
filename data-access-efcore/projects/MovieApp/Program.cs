@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace MovieApp
 {
     class Program
@@ -17,7 +18,26 @@ namespace MovieApp
 
             // Module1Helper.SelfAssessment();
 
-            Module2Helper.Sort();
+            // Module2Helper.Sort();
+
+            // Module2Helper.SortDescending();
+
+            //  Module2Helper.Skip();
+
+            // Module2Helper.Take();
+
+            // Module2Helper.Paging();
+
+            //  Module2Helper.PagingWithUserInput();
+
+            // Module2Helper.LinqBasics();
+
+            // Module2Helper.LambdaBasics();
+
+
+            Module2Helper.LinqVsLambda();
+
+
         }
     }
 }
