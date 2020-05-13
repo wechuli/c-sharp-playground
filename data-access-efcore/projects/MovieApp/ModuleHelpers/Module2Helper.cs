@@ -203,6 +203,11 @@ namespace MovieApp
                     Console.WriteLine($"\t{film.Title}");
                 }
             }
+
+            // check below for more into group by
+
+            // https://stackoverflow.com/questions/58138556/client-side-groupby-is-not-supported
+            // https://docs.microsoft.com/en-us/ef/core/querying/complex-query-operators
         }
 
         private static Expression<Func<Film, object>> GetSort(ConsoleKeyInfo info)
