@@ -210,6 +210,27 @@ namespace MovieApp
             // https://docs.microsoft.com/en-us/ef/core/querying/complex-query-operators
         }
 
+        public static void Join()
+        {
+            var ratings = new[] {
+                                new { Code = "G", Name = "General Audiences"},
+                                new { Code = "PG", Name = "Parental Guidance Suggested"},
+                                new { Code = "PG-13", Name = "Parents Strongly Cautioned"},
+                                new { Code = "R", Name = "Restricted"},
+                                };
+
+            var films = (from f in MoviesContext.Instance.Films
+                         join r in ratings on f.Rating equals r.Code
+                         select new { f.Title, r.Code, r.Name });
+            ConsoleTable.From(films).Write();
+
+            films = MoviesContext.Instance.Films.Join(ratings,
+                        f => f.Rating,
+                        r => r.Code,
+                        (f, r) => new { f.Title, r.Code, r.Name });
+            ConsoleTable.From(films).Write();
+        }
+
         private static Expression<Func<Film, object>> GetSort(ConsoleKeyInfo info)
         {
             switch (info.Key)

@@ -35,7 +35,9 @@ namespace MovieApp
             // Module2Helper.LambdaBasics();
 
 
-            Module2Helper.LinqVsLambda();
+            // Module2Helper.LinqVsLambda();
+
+            Module2Helper.Join();
 
 
         }
