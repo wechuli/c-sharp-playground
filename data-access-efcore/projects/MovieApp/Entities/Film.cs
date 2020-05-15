@@ -17,6 +17,8 @@ namespace MovieApp.Entities
         public int? ReleaseYear { get; set; }
         public string Rating { get; set; }
 
+        public int? Runtime { get; set; }
+
         public virtual ICollection<FilmActor> FilmActor { get; set; }
         public virtual ICollection<FilmCategory> FilmCategory { get; set; }
     }

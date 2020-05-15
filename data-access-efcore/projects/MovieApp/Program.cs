@@ -37,7 +37,9 @@ namespace MovieApp
 
             // Module2Helper.LinqVsLambda();
 
-            Module2Helper.Join();
+           // Module2Helper.Join();
+
+           Module2Helper.MigrationAddColumn();
 
 
         }

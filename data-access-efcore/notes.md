@@ -867,3 +867,19 @@ class MyContext : DbContext
 }
 
 ```
+
+## Related Entities
+
+Any database of substance will have related tables. Dealing with those related tables can be an issue without some background knowledge.
+
+There are different relationship types that can exist between data in a database:
+
+1. One-to-One relationship
+2. One-to-Many relationship
+3. Many-to-Many relationship
+
+The One-to-one relationship is the most basic type of relationship that can exist between tables or entities. It occurs when one row or record table is linked to one and only one record in another table record only. These relationships are the easiest to represent in a database. If you look at the relationship from any side that it can be related to the other side or table by only one link. For example, in a parent/teacher conference scheduling system each time slot is linked to one family and each family is assigned one time slot to have the conference at. So if table A has the records of families information and table B has the available slots records, then this is a one-to-one relationship where each family is scheduled for one slot and each slot is reserved for one family.
+
+### How tables are linked
+
+A relationship defines how two entities relate to each other. In a relational database, this is represented by a foreign key constraint. Foreign keys are used to link tables together. A foreign key is called so because it is a field borrowed from the parent table in a relationship and added to the child table(also known as dependent table or entity) to keep track of the relationship. A foreign key is not required to be unique. Usually, the foreign key in a child table is the primary key of the parent table of a relationship. In the case of one-to-one relationship, a foreign key needs to be unique to enforce the one and only one relationship type. To achieve this, you can introduce a unique index on the foreign key property to ensure only one dependent is related to each principal.

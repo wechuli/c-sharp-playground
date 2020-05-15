@@ -77,6 +77,8 @@ namespace MovieApp.Entities
             {
                 entity.ToTable("film");
 
+                entity.HasIndex(e => e.Rating);
+
                 entity.Property(e => e.Description)
                     .HasColumnType("text")
                     .HasCharSet("utf8")

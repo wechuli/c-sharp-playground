@@ -231,6 +231,21 @@ namespace MovieApp
             ConsoleTable.From(films).Write();
         }
 
+        public static void MigrationAddColumn()
+        {
+            var film = MoviesContext.Instance.Films.FirstOrDefault(f => f.Title.Contains("the first avenger"));
+
+            if (film != null)
+            {
+                Console.WriteLine($"Updating film with id {film.FilmId}");
+                film.Runtime = 124;
+                MoviesContext.Instance.SaveChanges();
+            }
+
+            var films = MoviesContext.Instance.Films.Select(f => f.Copy<Film, FilmModel>());
+            ConsoleTable.From(films).Write();
+        }
+
         private static Expression<Func<Film, object>> GetSort(ConsoleKeyInfo info)
         {
             switch (info.Key)
