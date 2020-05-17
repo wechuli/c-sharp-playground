@@ -883,3 +883,188 @@ The One-to-one relationship is the most basic type of relationship that can exis
 ### How tables are linked
 
 A relationship defines how two entities relate to each other. In a relational database, this is represented by a foreign key constraint. Foreign keys are used to link tables together. A foreign key is called so because it is a field borrowed from the parent table in a relationship and added to the child table(also known as dependent table or entity) to keep track of the relationship. A foreign key is not required to be unique. Usually, the foreign key in a child table is the primary key of the parent table of a relationship. In the case of one-to-one relationship, a foreign key needs to be unique to enforce the one and only one relationship type. To achieve this, you can introduce a unique index on the foreign key property to ensure only one dependent is related to each principal.
+
+### Creating a one-to-one relationship in EF Core
+
+EF Core uses conventions to auto detect one-to-one relationships from the model and creates them. One-to-one relationships have a reference navigation property on both sides with a unique index introduced on the foreign key property to ensure only one dependent is related to each principal. EF core will choose one of the model to be the dependent based on its ability to detect a foreign key property, if the wrong entity is chosen as the dependent, you can use the Fluent API to correct this.
+
+Consider the following entities:
+
+```C#
+public class Student
+{
+	public int StudentId { get; set; }
+	public string FirstName{ get; set; }
+	public string LastName{ get; set; }
+	public int Age{ get; set; }
+
+	public StudentImage StudentImage { get; set; }
+}
+
+public class StudentImage
+{
+    public int StudentImageId { get; set; }
+    public byte[] Image { get; set; }
+    public string Caption { get; set; }
+
+    public int StudentId { get; set; }
+    public Student Student { get; set; }
+}
+
+```
+
+When configuring the relationship with the Fluent API, you use the `HasOne` and `WithOne` methods.
+
+When configuring the foreign key you need to specify the dependent entity type - notice the generic parameter provided to `HasForeignKey` in the listing below. In one-to-many relationship, it is clear that the entity with the reference navigation is the dependent and the one with the collection is the principal. But this is not so in a one-to-one relationship - hence the need to explicitly define it.
+
+```C#
+
+class MyContext : DbContext
+{
+    public DbSet<Student> Students { get; set; }
+    public DbSet<StudentImage> StudentImages { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Student>()
+            .HasOne(p => p.StudentImage)
+            .WithOne(i => i.Student)
+            .HasForeignKey<StudentImage>(b => b.StudentForeignKey);
+    }
+}
+
+public class Student
+{
+    public int StudentId { get; set; }
+    public string FirstName{ get; set; }
+	public string LastName{ get; set; }
+	public int Age{ get; set; }
+
+    public StudentImage StudentImage { get; set; }
+}
+
+public class StudentImage
+{
+    public int StudentImageId { get; set; }
+    public byte[] Image { get; set; }
+    public string Caption { get; set; }
+
+    public int StudentForeignKey { get; set; }
+    public Student Student { get; set; }
+}
+
+```
+
+### One-to-Many relationship
+
+In a one-to-many relationship, each row in the primary table can be related to many rows in the relating table. This allows frequently used information to be saved only once in a table and referenced many times in all other tables. In a one-to-many relationship between Table A and Table B, each row in Table A is linked to 0,1 or many rows in Table B. The number of rows in Table A is almost always less than the number of rows in Table B. An example of this type of relationship in the school system is the grade/students relationship. One grade has many students in it while each student is registered in one grade at a time.
+
+- **Dependent entity** - This is the entity that contains the foreign key property(s). Sometimes referred to as the child of the relationship.
+- **Principal entity** - This is the entity that contains the primary/alternate key property(s). Sometimes referred to as the parent of the relationship.
+- **Foreign key** - The property(s) in the dependent entity that is used to store the values of the principal key property that the entity is related to.
+- **Principal key** - The property(s) that uniquely identifies the principal entity. This may be the primary key or an alternate key.
+- **Navigation property** - A property defined on the principal and/or dependent entity that contains a reference(s) to the related entity(s).
+  - a. _Collection navigation property_: A navigation property that contains references to many related entities.
+  - b. _Reference navigation property_: A navigation property that holds a reference to a single related entity.
+  - c. _Inverse navigation property_: When discussing a particular navigation property, this term refers to the navigation property on the other end of the relationship.
+
+```C#
+public class Grade
+{
+  public int GradeId { get; set; }
+  public string Name { get; set; }
+
+  public List<Student> Students { get; set; }
+}
+
+public class Student
+{
+  public int StudentId { get; set; }
+  public string FirstName { get; set; }
+  public string LastName { get; set; }
+  public int Age { get; set; }
+
+  public int GradeId { get; set; }
+  public Grade Grade { get; set; }
+}
+```
+
+1. `Student` is the dependent entity
+2. `Grade` is the principal entity
+3. `Student.GradeId` is the foreign key
+4. `Grade.GradeId` is the principal key (in this case it is a primary key rather than an alternate key)
+5. `Student.Grade` is a reference navigation property
+6. `Grade.Students` is a collection navigation property.
+7. `Student.Grade` is the inverse navigation property of `Grade.Students` and vice versa
+
+#### How EF Core creates the relationship from the model
+
+By convention, EF Core will automatically create a relationship when there is a navigation property discovered on a type. A property is considered a navigation property if the type it points to can not be mapped as a scalar type by the current database provider. This auto discovery and creation of relationships by EF is called Conventions. Relationships that are discovered by convention will always target the primary key of the principal entity. To target an alternate key, additional configuration must be performed using the Fluent API.
+
+The most common pattern for relationships is to have navigation properties defined on both ends of the relationship and a foreign key property defined in the dependent entity class. In the above example Student.Grade and Grade.Students are navigation properties on both the Student and Grade entities. Student.GradeId is the foreign key defined in the dependent entity which is the Student entity. In a one-to-many relationship, the dependent entity is the one that is on the many side of the relationship.
+
+If a pair of navigation properties is found between two types, then they will be configured as inverse navigation properties of the same relationship. If the dependent entity contains a property named `<primary key property name>`, `<navigation property name><primary key property name>`, or `<principal entity name><primary key property name>`, then it will be configured as the foreign key.
+
+#### Using Data Annotations
+
+There are two data annotations that can be used to configure relationships, `[ForeignKey]` and `[InverseProperty]`. You can use the [ForeignKey] data annotation to configure which property should be used as the foreign key property for a given relationship. This is typically done when the foreign key property is not discovered by convention. You can also use the `[InverseProperty]` data annotation to configure how navigation properties on the dependent and principal entities pair up. This is typically done when there is more than one pair of navigation properties between two entity types.
+
+```C#
+public class Grade
+{
+    public int GradeId { get; set; }
+    public string Name { get; set; }
+
+	[InverseProperty("Student")]
+    public List<Student> Students { get; set; }
+}
+
+public class Student
+{
+    public int StudentId { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public int Age { get; set; }
+
+    [ForeignKey("GradeForeignKey")]
+    public int GradeId { get; set; }
+    public Grade Grade { get; set; }
+}
+```
+
+#### Using Fluent API
+
+To configure a relationship in the Fluent API, you start by identifying the navigation properties that make up the relationship. `HasOne` or `HasMany` identifies the navigation property on the entity type you are beginning the configuration on. You then chain a call to `WithOne` or `WithMany` to identify the inverse navigation. `HasOne/WithOne` are used for reference navigation properties and `HasMany/WithMany` are used for collection navigation properties.
+
+```C#
+class MyContext : DbContext
+{
+    public DbSet<Student> Students { get; set; }
+    public DbSet<Grade> Grades { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Student>()
+            .HasOne(p => p.Grade)
+            .WithMany(b => b.Students);
+    }
+}
+
+public class Grade
+{
+    public int GradeId { get; set; }
+    public string Name { get; set; }
+
+    public List<Post> Students { get; set; }
+}
+
+public class Student
+{
+    public int StudentId { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public int Age { get; set; }
+
+	public Grade grade {get; set;}
+}
+```
