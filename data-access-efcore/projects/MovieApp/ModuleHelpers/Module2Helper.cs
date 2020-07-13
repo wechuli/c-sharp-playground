@@ -121,8 +121,12 @@ namespace MovieApp
             var films = MoviesContext.Instance.Films.OrderBy(f => f.Title).Select(f => f.Copy<Film, FilmModel>());
             ConsoleTable.From(films).Write();
 
+           
+
             films = MoviesContext.Instance.Films.Where(f => f.FilmId == 4).Select(f => f.Copy<Film, FilmModel>());
             ConsoleTable.From(films).Write();
+
+            
 
 
             string search = "g";

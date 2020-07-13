@@ -1068,3 +1068,243 @@ public class Student
 	public Grade grade {get; set;}
 }
 ```
+
+### Many to Many Relationship
+
+In a many-to-many relationship, one or more rows in a table can be related to 0,1 or many rows in another table. In a many-to-many relationship between Table A and Table B, each row in Table A is linked to 0,1, or many rows in Table B and vice versa. A 3rd table called a mapping table is required in order to implement such a relationship. The mapping table will have a reference key from each table and together they form a composite primary key for the mapping table. For example, in a school system, a student can sign up in many courses and each course can be taken by many students. A mapping table with a name like Enrollment is needed to track this many to many relationship. It will have a field for the `StudentId` and a field for the `CourseID`, each row in this Enrollment table represents a one course Enrollment for one student. Together, the `StudentId` and the `CourseID` fields make the primary key of the Enrollment table, the table can also have other fields like the data the student enrolled in the course and if he has fulfilled the prerequisites or not for instance.
+
+#### Creating many-to-many
+
+In EF Core you can represent a many-to-many relationship by including an entity class for the join table and mapping two separate one-to-many relationships. The following code shows how you can do that:
+
+```C#
+
+class MyContext : DbContext
+{
+    public DbSet<Course> Courses { get; set; }
+    public DbSet<Student> Students { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Enrollment>()
+            .HasKey(t => new { t.CourseId, t.StudentId });
+
+        modelBuilder.Entity<Enrollment>()
+            .HasOne(pt => pt.Course)
+            .WithMany(p => p.Enrollments)
+            .HasForeignKey(pt => pt.CourseId);
+
+        modelBuilder.Entity<Enrollment>()
+            .HasOne(pt => pt.Student)
+            .WithMany(t => t.Enrollments)
+            .HasForeignKey(pt => pt.StudentId);
+    }
+}
+
+public class Course (post)
+{
+    public int CourseId { get; set; }
+    public string Title { get; set; }
+    public string Content { get; set; }
+
+    public List<Enrollment> Enrollments { get; set; }
+}
+
+public class Student
+{
+    public int StudentId { get; set; }
+	public string FirstName { get; set; }
+	public string LastName { get; set; }
+
+    public List<Enrollment> Enrollments { get; set; }
+}
+
+public class Enrollment
+{
+    public int StudentId { get; set; }
+    public Student Student { get; set; }
+
+    public int CourseId { get; set; }
+    public Course Course { get; set; }
+
+	public DateTime EnrollmentDate { get; set; }
+}
+
+```
+
+Many-to-many relationships without an entity class to represent the join table are not yet supported in EF Core 2.0. Many to many relationships can only be represented by including an entity class for the join table and mapping two separate one-to-many relationships.
+
+### Querying related data
+
+Entity Framework Core allows you to use navigation properties in your model to query data from related entities.
+
+#### Using LINQ queries
+
+Navigation properties are mainly the way to query related data. That is why navigation properties are there. You can use a LINQ query that represents the contents of a navigation property. This allows you to do things such as running an aggregate operator over the related entities without loading them into memory. For example:
+
+```C#
+
+using (var context = new SchoolContext())
+{
+    var grade = context.Grades
+        .Single(b => b.GradeId == 1);
+
+    var studentCount = context.Entry(grade)
+        .Collection(b => b.Students)
+        .Query()
+        .Count();
+}
+
+```
+
+You can also filter which related entities are loaded into memory. For example:
+
+```C#
+
+using (var context = new SchoolContext())
+{
+    var grade = context.Grades
+        .Single(b => b.GradeId == 1);
+
+    var excellingStudents = context.Entry(grade)
+        .Collection(b => b.Students)
+        .Query()
+        .Where(p => p.Score > 3)
+        .ToList();
+}
+
+```
+
+#### Using EF Core Include
+
+EF Core has the `Include` method that can be used to include related data in a query result. When executing the code, EF Core will generate a Raw SQL query to execute against the database.
+
+In the following example for the school application, the courses that are returned in the results will have their Students property populated with the related students, this query can serve as a roster report for all courses:
+
+```C#
+using (var context = new StudentContext())
+{
+    var courses = context.Courses
+        .Include(course => course.Students)
+        .ToList();
+}
+
+```
+
+You can also include data from multiple relationships in a single query.
+
+You can also include data from multiple relationships in a single query. Assume that in our school application we have a Teacher entity beside the Course and Student entities and that there is a relationship between the Course entity and the Teacher entity in addition to the relationship between the Course entity and the Student entity. You can query both relationships in one query as follows:
+
+```C#
+using (var context = new StudentContext())
+{
+    var courses = context.Courses
+        .Include(course => course.Students)
+        .Include(course => course.Teacher)
+        .ToList();
+}
+```
+
+#### Using Raw SQL Queries
+
+Entity Framework Core allows you to drop down to raw SQL queries when working with a relational database. This can be useful if the query you want to perform can't be expressed using LINQ, or if using a LINQ query is resulting in inefficient SQL being sent to the database.
+
+You can use the `FromSql` extension method to begin a LINQ query based on a raw SQL query.
+
+```C#
+
+var blogs = context.Courses
+    .FromSql("SELECT * FROM dbo.Courses")
+    .ToList();
+
+
+```
+
+Raw SQL queries can be used to execute a stored procedure as follows:
+
+```C#
+var blogs = context.Blogs
+    .FromSql("EXECUTE dbo.GetMostPopularCourses")
+    .ToList();
+```
+
+#### Passing parameters
+
+As with any API that accepts SQL, it is important to parameterize any user input to protect against SQL injection attack. You can include parameter placeholders in the SQL query string and then supply parameter values as additional arguments. Any parameter values you supply will automatically be converted to a `DbParameter`.
+
+The following example passes a single parameter to a stored procedure. While this may look like `String.Format` syntax, the supplied value is wrapped in a parameter and the generated parameter name inserted where the {0} placeholder was specified:
+
+```C#
+
+var student = "john";
+
+var students = context.Students
+    .FromSql("EXECUTE dbo.GetCoursesForStudentByName {0}", student)
+    .ToList();
+
+```
+
+This is the same query but using string interpolation syntax, which is supported in EF Core 2.0 and above:
+
+```C#
+var student = "john";
+
+var students = context.students
+    .FromSql($"EXECUTE dbo.GetCoursesForStudentByName {student}")
+    .ToList();
+```
+
+You can also construct a DbParameter and supply it as a parameter value. This allows you to use named parameters in the SQL query string
+
+```C#
+var user = new SqlParameter("student", "john");
+
+var students = context.students
+    .FromSql("EXECUTE dbo.GetCoursesForStudentByName @student", student)
+    .ToList();
+```
+
+#### Composing Raw SQL and LINQ
+
+If the SQL query can be composed on in the database, then you can compose on top of the initial raw SQL query using LINQ operators. SQL queries that can be composed on being with the SELECT keyword.
+
+The following example uses a raw SQL query that selects from a Table-Valued Function (TVF) and then composes on it using LINQ to perform filtering and sorting.
+
+```C#
+
+var searchTerm = ".NET";
+
+var courses = context.Courses
+    .FromSql($"SELECT * FROM dbo.SearchCourses({searchTerm})")
+    .Where(b => b.Rating > 3)
+    .OrderByDescending(b => b.Rating)
+    .ToList();
+
+```
+
+#### Limitations with Raw SQL Queries
+
+There are a couple of limitations to be aware of when using raw SQL queries:
+
+1. SQL queries can only be used to return entity types that are part of your model.
+2. The SQL query must return data for all properties of the entity type.
+3. The column names in the result set must match the column names that properties are mapped to.
+4. The SQL query cannot contain related data. However, in many cases, you can compose on top of the query using the `Include` operator to return related data.
+
+```C#
+
+var searchTerm = ".NET";
+
+var courses = context.Courses
+    .FromSql($"SELECT * FROM dbo.SearchCourses({searchTerm})")
+    .Include(b => b.Students)
+    .ToList();
+
+```
+Note: Always use parameterization for raw SQL queries: APIs that accept a raw SQL string such as FromSql and ExecuteSqlCommand allow values to be easily passed as parameters. In addition to validating user input, always use parameterization for any values used in a raw SQL query/command. If you are using string concatenation to dynamically build any part of the query string then you are responsible for validating any input to protect against SQL injection attacks.
+
+#### Asynchronous Queries
+
+Asynchronous queries avoid blocking a thread while the query is executed in the database. This can be useful to avoid freezing the UI of a thick client application. Asynchronous operations can also increase throughput in a web application, where the thread can be freed up to service other requests while the database operation completes.EF Core does not support multiple parallel operations being run on the same context instance. You should always wait for an operation to complete before beginning the next operation. This is typically done by using the await keyword on each asynchronous operation.
+
+Entity Framework Core provides a set of asynchronous extension methods that can be used as an alternative to the LINQ methods that cause a query to be executed and results returned. Examples include ToListAsync(), ToArrayAsync(), SingleAsync(), etc. Also you can use Parallel LINQ (PLINQ) which is a parallel implementation of LINQ to Objects. PLINQ implements the full set of LINQ standard query operators as extension methods for the System.Linq namespace and has additional operators for parallel operations.
