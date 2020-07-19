@@ -1,0 +1,27 @@
+{
+    "version": "1.0.0-*",
+    "buildOptions": {
+        "debugType": "portable",
+        "emitEntryPoint": true
+    },
+    "dependencies": {
+        "Npgsql.EntityFrameworkCore.PostgreSQL": "1.1.0",
+        "Microsoft.EntityFrameworkCore.Design": {
+            "version": "1.1.0",
+            "type": "build"
+        }
+    },
+    "frameworks": {
+        "netcoreapp1.1": {
+            "dependencies": {
+                "Microsoft.NETCore.App": {
+                    "type": "platform",
+                    "version": "1.1.0"
+                }
+            }
+        }
+    },
+    "tools": {
+        "Microsoft.EntityFrameworkCore.Tools.DotNet": "1.1.0-preview4-final"
+    }
+}

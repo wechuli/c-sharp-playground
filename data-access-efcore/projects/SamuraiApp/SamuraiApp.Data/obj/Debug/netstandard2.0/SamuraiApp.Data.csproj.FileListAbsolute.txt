@@ -1,0 +1,12 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\SamuraiApp\SamuraiApp.Data\bin\Debug\netstandard2.0\SamuraiApp.Data.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\SamuraiApp\SamuraiApp.Data\bin\Debug\netstandard2.0\SamuraiApp.Data.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\SamuraiApp\SamuraiApp.Data\bin\Debug\netstandard2.0\SamuraiApp.Data.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\SamuraiApp\SamuraiApp.Data\bin\Debug\netstandard2.0\SamuraiApp.Domain.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\SamuraiApp\SamuraiApp.Data\bin\Debug\netstandard2.0\SamuraiApp.Domain.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\SamuraiApp\SamuraiApp.Data\obj\Debug\netstandard2.0\SamuraiApp.Data.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\SamuraiApp\SamuraiApp.Data\obj\Debug\netstandard2.0\SamuraiApp.Data.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\SamuraiApp\SamuraiApp.Data\obj\Debug\netstandard2.0\SamuraiApp.Data.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\SamuraiApp\SamuraiApp.Data\obj\Debug\netstandard2.0\SamuraiApp.Data.csproj.CoreCompileInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\SamuraiApp\SamuraiApp.Data\obj\Debug\netstandard2.0\SamuraiApp.Data.csproj.CopyComplete
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\SamuraiApp\SamuraiApp.Data\obj\Debug\netstandard2.0\SamuraiApp.Data.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\SamuraiApp\SamuraiApp.Data\obj\Debug\netstandard2.0\SamuraiApp.Data.pdb

@@ -13,9 +13,13 @@
         "packagesPath": "C:\\Users\\Wechuli\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Wechuli\\Documents\\repos\\c-sharp-playground\\data-access-efcore\\projects\\SamuraiApp\\SamuraiApp.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
           "C:\\Users\\Wechuli\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
