@@ -14,7 +14,6 @@ namespace netwosoft
             var prideAndPrejudice = new Movie { Name = "Pride and Prejudice", ReleaseDate = DateTime.Now.AddDays(-9022).ToUniversalTime(), Genres = new List<string> { "Romance", "Comedy", "Drama" } };
             var constantine = new Movie { Name = "Constantine", ReleaseDate = DateTime.Now.AddDays(-5000).ToUniversalTime(), Genres = new List<string> { "Romance", "Mystery", "Action", "Horror" } };
 
-
             IDictionary<string, int> studentsMarks = new Dictionary<string, int>();
 
             KeyValuePair<string, int>[] st;
