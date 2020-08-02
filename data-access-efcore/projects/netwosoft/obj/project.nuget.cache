@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Toc6ERNjyc8kp4FqoodMyYfE8A6kE5l5lKZGSzmawgta1dHzubyOoKViL0w8cuPVM8ciX1qhrmFqURqr5TDzCQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Wechuli\\Documents\\repos\\c-sharp-playground\\data-access-efcore\\projects\\netwosoft\\netwosoft.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Wechuli\\.nuget\\packages\\json.net\\1.0.23\\json.net.1.0.23.nupkg.sha512"
+  ],
+  "logs": []
+}

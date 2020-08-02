@@ -1,0 +1,15 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\netwosoft\bin\Debug\netcoreapp3.1\netwosoft.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\netwosoft\bin\Debug\netcoreapp3.1\netwosoft.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\netwosoft\bin\Debug\netcoreapp3.1\netwosoft.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\netwosoft\bin\Debug\netcoreapp3.1\netwosoft.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\netwosoft\bin\Debug\netcoreapp3.1\netwosoft.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\netwosoft\bin\Debug\netcoreapp3.1\netwosoft.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\netwosoft\bin\Debug\netcoreapp3.1\Json.Net.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\netwosoft\obj\Debug\netcoreapp3.1\netwosoft.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\netwosoft\obj\Debug\netcoreapp3.1\netwosoft.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\netwosoft\obj\Debug\netcoreapp3.1\netwosoft.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\netwosoft\obj\Debug\netcoreapp3.1\netwosoft.csproj.CoreCompileInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\netwosoft\obj\Debug\netcoreapp3.1\netwosoft.csproj.CopyComplete
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\netwosoft\obj\Debug\netcoreapp3.1\netwosoft.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\netwosoft\obj\Debug\netcoreapp3.1\netwosoft.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\netwosoft\obj\Debug\netcoreapp3.1\netwosoft.genruntimeconfig.cache

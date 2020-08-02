@@ -1,0 +1,5 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\EFDemoApp\EFDataAccessLibrary\bin\Debug\netstandard2.0\EFDataAccessLibrary.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\EFDemoApp\EFDataAccessLibrary\bin\Debug\netstandard2.0\EFDataAccessLibrary.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\EFDemoApp\EFDataAccessLibrary\obj\Debug\netstandard2.0\EFDataAccessLibrary.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\EFDemoApp\EFDataAccessLibrary\obj\Debug\netstandard2.0\EFDataAccessLibrary.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\EFDemoApp\EFDataAccessLibrary\obj\Debug\netstandard2.0\EFDataAccessLibrary.AssemblyInfo.cs

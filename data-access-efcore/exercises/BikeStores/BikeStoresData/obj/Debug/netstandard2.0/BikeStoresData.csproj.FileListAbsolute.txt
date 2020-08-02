@@ -1,0 +1,9 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\BikeStores\BikeStoresData\bin\Debug\netstandard2.0\BikeStoresData.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\BikeStores\BikeStoresData\bin\Debug\netstandard2.0\BikeStoresData.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\BikeStores\BikeStoresData\obj\Debug\netstandard2.0\BikeStoresData.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\BikeStores\BikeStoresData\obj\Debug\netstandard2.0\BikeStoresData.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\BikeStores\BikeStoresData\obj\Debug\netstandard2.0\BikeStoresData.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\BikeStores\BikeStoresData\bin\Debug\netstandard2.0\BikeStoresData.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\BikeStores\BikeStoresData\obj\Debug\netstandard2.0\BikeStoresData.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\BikeStores\BikeStoresData\obj\Debug\netstandard2.0\BikeStoresData.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\BikeStores\BikeStoresData\obj\Debug\netstandard2.0\BikeStoresData.csproj.CoreCompileInputs.cache
