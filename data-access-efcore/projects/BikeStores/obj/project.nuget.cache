@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "1FnxUEuPVPj/c0BHwgtuvwxu5N8km+L/KPHDET0i4ZX34ulpC4CCFsDEbX97OWoBzuXstYwkA7Kzs3Y7S/UyvA==",
+  "dgSpecHash": "8MvTSwln02lEdYCjbQgsTQkn9E39WUUS6Fcym/90sTOHm8k7cQEcFbBMos+s0xKDoF06DOfg4Qru1VGAVJmEGQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Wechuli\\Documents\\repos\\c-sharp-playground\\data-access-efcore\\projects\\BikeStores\\BikeStores.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Wechuli\\.nuget\\packages\\consoletables\\2.4.2\\consoletables.2.4.2.nupkg.sha512",
     "C:\\Users\\Wechuli\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Wechuli\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\Wechuli\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
