@@ -13,7 +13,8 @@ namespace BikeStores
             using (var bikeStoresContext = new BikeStoresContext())
             {
 
-                await Querying.Sorting(bikeStoresContext);
+                // await Querying.Sorting(bikeStoresContext);
+                await Querying.Paging(bikeStoresContext);
 
             }
 

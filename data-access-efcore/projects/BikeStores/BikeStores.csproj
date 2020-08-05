@@ -18,6 +18,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3" />
+    <PackageReference Include="MiniProfiler.EF6" Version="4.2.1" />
   </ItemGroup>
 
 </Project>
