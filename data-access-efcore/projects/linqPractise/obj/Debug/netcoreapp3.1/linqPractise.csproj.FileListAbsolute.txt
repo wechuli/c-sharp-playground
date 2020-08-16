@@ -1,0 +1,13 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\linqPractise\bin\Debug\netcoreapp3.1\linqPractise.exe
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\linqPractise\bin\Debug\netcoreapp3.1\linqPractise.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\linqPractise\bin\Debug\netcoreapp3.1\linqPractise.runtimeconfig.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\linqPractise\bin\Debug\netcoreapp3.1\linqPractise.runtimeconfig.dev.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\linqPractise\bin\Debug\netcoreapp3.1\linqPractise.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\linqPractise\bin\Debug\netcoreapp3.1\linqPractise.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\linqPractise\obj\Debug\netcoreapp3.1\linqPractise.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\linqPractise\obj\Debug\netcoreapp3.1\linqPractise.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\linqPractise\obj\Debug\netcoreapp3.1\linqPractise.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\linqPractise\obj\Debug\netcoreapp3.1\linqPractise.csproj.CoreCompileInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\linqPractise\obj\Debug\netcoreapp3.1\linqPractise.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\linqPractise\obj\Debug\netcoreapp3.1\linqPractise.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\data-access-efcore\projects\linqPractise\obj\Debug\netcoreapp3.1\linqPractise.genruntimeconfig.cache

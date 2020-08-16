@@ -706,6 +706,23 @@ When you make some changes in your application model then run the Add-Migration 
 
 The Up method will have the EF generated code that will execute on the database when you call Update-Database command. The Down method has the EF generated code that will execute in the case of rolling back the migration.
 
+### Quick commands
+
+- you need a reference to `Microsoft.EntityFrameworkCore.Design` for migrations to work 
+
+**adding a migration**
+```shell
+dotnet ef migrations add {name_of_migration}
+```
+**seeing migration script**
+```shell
+dotnet ef migrations script
+```
+**performing the actual migration**
+```shell
+dotnet ef database update
+```
+
 ## Keys, Composite Keys and Alternate Keys
 
 A key serves as the primary unique identifier for each entity instance. When using a relational database, this maps to the concept of a primary key. Each entity needs one primary key. A primary key can either be:
