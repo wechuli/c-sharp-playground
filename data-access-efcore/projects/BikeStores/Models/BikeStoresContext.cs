@@ -49,7 +49,7 @@ namespace BikeStores.Models
                     .IsRequired()
                     .HasColumnName("brand_name")
                     .HasMaxLength(255)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
             });
 
             modelBuilder.Entity<Categories>(entity =>
@@ -65,7 +65,7 @@ namespace BikeStores.Models
                     .IsRequired()
                     .HasColumnName("category_name")
                     .HasMaxLength(255)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
             });
 
             modelBuilder.Entity<Customers>(entity =>
@@ -80,45 +80,45 @@ namespace BikeStores.Models
                 entity.Property(e => e.City)
                     .HasColumnName("city")
                     .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
                 entity.Property(e => e.Email)
                     .IsRequired()
                     .HasColumnName("email")
                     .HasMaxLength(255)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
                 entity.Property(e => e.FirstName)
                     .IsRequired()
                     .HasColumnName("first_name")
                     .HasMaxLength(255)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
                 entity.Property(e => e.LastName)
                     .IsRequired()
                     .HasColumnName("last_name")
                     .HasMaxLength(255)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
                 entity.Property(e => e.Phone)
                     .HasColumnName("phone")
                     .HasMaxLength(25)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
                 entity.Property(e => e.State)
                     .HasColumnName("state")
                     .HasMaxLength(25)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
                 entity.Property(e => e.Street)
                     .HasColumnName("street")
                     .HasMaxLength(255)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
                 entity.Property(e => e.ZipCode)
                     .HasColumnName("zip_code")
                     .HasMaxLength(5)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
             });
 
             modelBuilder.Entity<OrderItems>(entity =>
@@ -225,7 +225,7 @@ namespace BikeStores.Models
                     .IsRequired()
                     .HasColumnName("product_name")
                     .HasMaxLength(255)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
                 entity.HasOne(d => d.Brand)
                     .WithMany(p => p.Products)
@@ -257,19 +257,19 @@ namespace BikeStores.Models
                     .IsRequired()
                     .HasColumnName("email")
                     .HasMaxLength(255)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
                 entity.Property(e => e.FirstName)
                     .IsRequired()
                     .HasColumnName("first_name")
                     .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
                 entity.Property(e => e.LastName)
                     .IsRequired()
                     .HasColumnName("last_name")
                     .HasMaxLength(50)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
                 entity.Property(e => e.ManagerId).HasColumnName("manager_id");
 
@@ -327,38 +327,38 @@ namespace BikeStores.Models
                 entity.Property(e => e.City)
                     .HasColumnName("city")
                     .HasMaxLength(255)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
                 entity.Property(e => e.Email)
                     .HasColumnName("email")
                     .HasMaxLength(255)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
                 entity.Property(e => e.Phone)
                     .HasColumnName("phone")
                     .HasMaxLength(25)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
                 entity.Property(e => e.State)
                     .HasColumnName("state")
                     .HasMaxLength(10)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
                 entity.Property(e => e.StoreName)
                     .IsRequired()
                     .HasColumnName("store_name")
                     .HasMaxLength(255)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
                 entity.Property(e => e.Street)
                     .HasColumnName("street")
                     .HasMaxLength(255)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
 
                 entity.Property(e => e.ZipCode)
                     .HasColumnName("zip_code")
                     .HasMaxLength(5)
-                    .IsUnicode(false);
+                    .IsUnicode(true);
             });
 
             OnModelCreatingPartial(modelBuilder);

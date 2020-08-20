@@ -37,10 +37,11 @@ namespace MigrationsPractise
 
                 entity.HasKey(e => e.Id);
                 entity.HasAlternateKey(e => e.isbn);
+                entity.HasIndex(e => e.isbn);
                 entity.ToTable("books");
                 entity.Property(e => e.Id).ValueGeneratedOnAdd();
                 entity.Property(e => e.isbn).HasMaxLength(25);
-                
+
 
             });
 

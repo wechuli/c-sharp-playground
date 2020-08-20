@@ -66,6 +66,8 @@ namespace MigrationsPractise.Migrations
 
                     b.HasIndex("CategoryId");
 
+                    b.HasIndex("isbn");
+
                     b.ToTable("books");
                 });
 

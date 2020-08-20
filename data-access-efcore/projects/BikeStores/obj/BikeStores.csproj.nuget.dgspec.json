@@ -72,7 +72,7 @@
             },
             "MiniProfiler.EF6": {
               "target": "Package",
-              "version": "[*, )"
+              "version": "[4.2.1, )"
             }
           },
           "imports": [
@@ -90,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
