@@ -14,7 +14,10 @@ namespace BikeStores
             {
 
                 // await Querying.Sorting(bikeStoresContext);
-                await Querying.Paging(bikeStoresContext);
+                // await Querying.Paging(bikeStoresContext);
+                // await Querying.QueryingRelatedData(bikeStoresContext);
+
+                await Querying.RawSQLQueries(bikeStoresContext);
 
             }
 

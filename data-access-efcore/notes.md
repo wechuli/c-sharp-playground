@@ -708,17 +708,22 @@ The Up method will have the EF generated code that will execute on the database 
 
 ### Quick commands
 
-- you need a reference to `Microsoft.EntityFrameworkCore.Design` for migrations to work 
+- you need a reference to `Microsoft.EntityFrameworkCore.Design` for migrations to work
 
 **adding a migration**
+
 ```shell
 dotnet ef migrations add {name_of_migration}
 ```
+
 **seeing migration script**
+
 ```shell
 dotnet ef migrations script
 ```
+
 **performing the actual migration**
+
 ```shell
 dotnet ef database update
 ```
@@ -1318,6 +1323,7 @@ var courses = context.Courses
     .ToList();
 
 ```
+
 Note: Always use parameterization for raw SQL queries: APIs that accept a raw SQL string such as FromSql and ExecuteSqlCommand allow values to be easily passed as parameters. In addition to validating user input, always use parameterization for any values used in a raw SQL query/command. If you are using string concatenation to dynamically build any part of the query string then you are responsible for validating any input to protect against SQL injection attacks.
 
 #### Asynchronous Queries
@@ -1325,3 +1331,23 @@ Note: Always use parameterization for raw SQL queries: APIs that accept a raw SQ
 Asynchronous queries avoid blocking a thread while the query is executed in the database. This can be useful to avoid freezing the UI of a thick client application. Asynchronous operations can also increase throughput in a web application, where the thread can be freed up to service other requests while the database operation completes.EF Core does not support multiple parallel operations being run on the same context instance. You should always wait for an operation to complete before beginning the next operation. This is typically done by using the await keyword on each asynchronous operation.
 
 Entity Framework Core provides a set of asynchronous extension methods that can be used as an alternative to the LINQ methods that cause a query to be executed and results returned. Examples include ToListAsync(), ToArrayAsync(), SingleAsync(), etc. Also you can use Parallel LINQ (PLINQ) which is a parallel implementation of LINQ to Objects. PLINQ implements the full set of LINQ standard query operators as extension methods for the System.Linq namespace and has additional operators for parallel operations.
+
+### How Queries Work
+
+Entity Framework Core uses Language Integrated Query(LINQ) to query data from the database. LINQ allows you to use C# to write strongly typed queries based on your derived context and entity classes.
+
+#### The life of a query
+
+1. The LINQ query is processed by Entity Framework Core to build a representation that is ready to be processed by the database provider. The result is cached so that this processing does not need to be done every time the query is executed.
+2. The result is passed to the database provider. The database provider identifies which parts of the query can be evaluated in the database. These parts of the query are translated to database specific query language (e.g. SQL for a relational database). One or more queries are sent to the database and the result set returned(results are values from the database, not entity instances)
+3. For each item in the result set a. If this is a tracking query, EF checks if the data represents an entity already in the change tracker for the context instance i. If so, the existing entity is returned ii. If not, a new entity is created, change tracking is setup, and the new entity is returned b. If this is a no-tracking query, EF checks if the data represents an entity already in the result set for this query i. If so, the existing entity is returned ii. If not, a new entity is created and returned
+
+#### When queries are executed
+
+When you call LINQ operators, you are simply building up an in-memory representation of the query. EF Core generates a raw SQL equivalent to your query and the query is only sent to the database when the results are consumed.
+
+The most common operations that result in the query being sent to the database are:
+
+1. Iterating the results in a for loop
+2. Using an operator such as ToList, ToArray, Single, Count
+3. Binding the results of a query to a UI control or element 

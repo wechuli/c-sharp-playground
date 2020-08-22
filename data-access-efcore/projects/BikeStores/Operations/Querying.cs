@@ -47,5 +47,34 @@ namespace BikeStores
 
 
         }
+
+        public static async Task QueryingRelatedData(BikeStoresContext bikeStoresContext)
+        {
+            var customer_one = bikeStoresContext.Customers.Single(customer => customer.CustomerId == 1);
+
+            var ordersByOne = bikeStoresContext.Orders.Where(order => order.CustomerId == customer_one.CustomerId).Include(order => order.Customer);
+            Console.WriteLine(ordersByOne.Count());
+
+            foreach (var item in ordersByOne)
+            {
+                var customer = item.Customer;
+                Console.WriteLine($"{customer.CustomerId}, {customer.Email}");
+
+            }
+
+            ConsoleTable.From(ordersByOne).Write();
+
+        }
+
+        public static async Task RawSQLQueries(BikeStoresContext bikeStoresContext)
+        {
+            var AllOrders = bikeStoresContext.Orders.FromSqlRaw("SELECT * from sales.orders").Take(10);
+
+
+            ConsoleTable.From(AllOrders).Write();
+
+
+
+        }
     }
 }
