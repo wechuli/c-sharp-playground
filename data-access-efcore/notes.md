@@ -1350,4 +1350,270 @@ The most common operations that result in the query being sent to the database a
 
 1. Iterating the results in a for loop
 2. Using an operator such as ToList, ToArray, Single, Count
-3. Binding the results of a query to a UI control or element 
+3. Binding the results of a query to a UI control or element
+
+### Lazy and Eager Loading
+
+EF Core allows you to use the navigation properties in your model to load related entities. There are three common ORM patterns used to load related data.
+
+1. **Eager loading**: means that the related data is loaded from the database as part of the initial query
+2. **Explicit loading**: means that the related data is explicitly loaded from the database at a later time
+3. **Lazy loading**: means that the related data is transparently loaded from the database when the navigation property is accessed.
+
+#### Eager Loading
+
+Eager loading is achieved by using the EF Core Include method as explained in the previous lesson. Entity Framework Core will automatically fix-up navigation properties to any other entities that were previously loaded into the context instance before your query is called. So even if you don't explicitly include the data for a navigation property, the property may still be populated if some or all of the related entities were previously loaded. In the previous lesson you saw how to use the Include method to load related data in another related entity as well as multiple related entities.
+Additionally the ThenInclude method can be used to drill down through relationships to include multiple levels of related data using the ThenInclude method. The following example loads all courses, their related students, and the grade of each student (Remember that the Student is related to the Grade entity with a one-to-one relationship).
+
+```C#
+using (var context = new SchoolContext())
+{
+    var courses = context.courses
+        .Include(course => course.Students)
+            .ThenInclude(student => student.Grade)
+        .ToList();
+}
+```
+
+You can chain multiple calls to ThenInclude to continue including further levels of related data.
+
+```C#
+
+using (var context = new SchoolContext())
+{
+    var courses = context.Courses
+        .Include(course => course.Students)
+            .ThenInclude(student => student.Grade)
+                .ThenInclude(grade => grade.SuccessRequirements)
+        .ToList();
+}
+```
+
+You can combine all of this to include related data from multiple levels and multiple roots in the same query.
+
+```C#
+using (var context = new SchoolContext())
+{
+    var courses = context.Courses
+        .Include(course => course.Students)
+            .ThenInclude(student => student.Grade)
+            .ThenInclude(grade => grade.SuccessRequirements)
+        .Include(course => course.Teacher)
+            .ThenInclude(teacher => teacher.Name)
+        .ToList();
+}
+```
+
+If you change the query so that it no longer returns instances of the entity type that the query began with, then the include operators are ignored.
+
+In the following example, the include operators are based on the Course, but then the Select operator is used to change the query to return an anonymous type. In this case, the include operators have no effect.
+
+```C#
+using (var context = new SchoolContext())
+{
+    var courses = context.Courses
+        .Include(course => course.Students)
+        .Select(course => new
+        {
+            Id = course.CourseId,
+            Title = course.Title
+        })
+        .ToList();
+}
+```
+
+#### Explicit Loading
+
+As mentioned earlier, explicit loading means that the related data is explicitly loaded from the database at a later time.
+
+```C#
+using (var context = new SchoolContext())
+{
+    var course = context.Courses
+        .Single(c => c.CourseId == 1);
+
+    context.Entry(course)
+        .Collection(c => c.Students)
+        .Load();
+
+    context.Entry(course)
+        .Reference(c => c.Teacher)
+        .Load();
+}
+
+```
+
+You can also explicitly load a navigation property by executing a separate query that returns the related entities. If change tracking is enabled, then when loading an entity, EF Core will automatically set the navigation properties of the newly-loaded entity to refer to any entities already loaded, and set the navigation properties of the already-loaded entities to refer to the newly-loaded entity.
+
+You can also get a LINQ query that represents the contents of a navigation property.
+
+This allows you to do things such as running an aggregate operator over the related entities without loading them into memory.
+
+## Advanced Topics
+
+### Using Transactions
+
+Transactions allow several operations to be processed together in unity. If the transaction is committed, all of the operations are successfully applied to the database. If the transaction is rolled back, none of the operations are applied to the database.
+
+For transactions to occur, they need to be supported by the database provider. In that case, one call to `SaveChanges()` method in EF Core will try to apply all changes in one transaction. Therefore, if any of the changes fail, then the transaction is rolled back and none of the changes are applied to the database. This means that `SaveChanges()` is guaranteed to either completely succeed, or leave the database unmodified if an error occurs.
+
+The `DbContext.Database` APIs can be used to begin, commit, and rollback transactions.
+
+```C#
+
+using (var context = new SchoolContext())
+        {
+            using (var transaction = context.Database.BeginTransaction())
+            {
+                try
+                {
+                    context.Courses.Add(new Course { Title = "Data Access in C# and .Net Core" });
+                    context.SaveChanges();
+
+                    context.Courses.Add(new Course { Title = "LINQ in C#" });
+                    context.SaveChanges();
+
+                    var courses = context.Courses
+                        .OrderBy(c => c.Title)
+                        .ToList();
+
+                    // Commit transaction if all commands succeed, transaction will auto-rollback
+                    // when disposed if either commands fails
+                    transaction.Commit();
+                }
+                catch (Exception)
+                {
+                    // TODO: Handle failure
+						transaction.Rollback();
+                }
+            }
+        }
+
+```
+
+### Performance Optimizations
+
+Data profiling is the process of examining the data available in an existing data source (e.g. a database or a file) and collecting statistics and inform about that data. Data profiling is used to optimize the performance of the database.
+
+### Updating disconnected entities in EF
+
+Disconnected data has been an issue to consider with client/server applications ever since data access existed. Disconnected data means that data at the data server side (database) gets sent to the client application, then the application would alter this data while the server has no idea about that. Then data at the client side becomes different that the data at the server. Until a server update happens and both sides become in sync, data is considered disconnected.
+Tools like ADO.NET DataSets is an example of a tool that solves the data disconnection issue. It acts as the middle tier between the client and server and uses Datasets to store the data as well as all the state information about changes to it. It keeps track of the changes that happen at the client and encapsulates all of the change state information for each row and each column.
+EF came to replace ADO Datasets and it does this in a modern and better way than ADO DataSets. EF does not use state information on the wire like ADO. Change-tracking information, original value, current value, and state are stored by EF as part of the ObjectContext, rather than being stored with the data in Datasets. The light-weight DbContext object can easily inform the context about the state of the entity. With a class that inherits from DbContext, you can write code such as:
+
+```C#
+myContext.Entity(someEntity).State=EntityState.Modified;
+```
+
+When someEntity is new to the context, this forces the context to begin tracking the entity and, at the same time, specify its state. That’s enough for EF to know what type of SQL command to compose upon SaveChanges. In the preceding example, it would result in an UPDATE command. Entity().State doesn’t help with the problem of knowing the state when some data comes over the wire, but it does allow you to implement a nice pattern that’s now in wide use by developers using Entity Framework.
+
+The problem with disconnected data escalates as graphs of data get passed back and forth. One of the biggest problems is when those graphs contain objects of mixed state—with the server having no default way of detecting the varying states of entities it has received. If you use DbSet.Add, the entities will all get marked Added by default. If you use DbSet.Attach, they’ll be marked Unchanged. This is the case even if any of the data originated from the database and has a key property populated. EF follows the instructions, that is, Add or Attach. EF Core gives us an Update method, which will follow the same behavior as Add, Attach and Delete, but mark the entities as Modified. One exception to be aware of is that if the DbContext is already tracking an entity, it won’t overwrite the entity’s known state. But with a disconnected application, I wouldn’t expect the context to be tracking anything prior to connecting the data returned from a client.
+
+### Executing Commands with EF Core
+
+To execute a command or a query directly in a database there are usually two ways to go, Raw SQL statements and Stored Procedures.
+
+#### Raw SQL Queries
+
+This means to write raw SQL queries and execute them against the database. Entity Framework Core allows you to drop down to raw SQL queries when working with a relational database. This can be useful if the query you want to perform can't be expressed using LINQ, or if using a LINQ query is resulting in inefficient SQL being sent to the database.
+
+##### Limitations of using raw SQL queries:
+
+- SQL queries can only be used to return entity types that are part of your model.
+- The SQL query must return data for all properties of the entity type. So basically your SQL query should be Select \* from {tableName}.
+- The column names in the result set must match the column names that properties are mapped to.
+- The SQL query cannot contain related data. However, in many cases you can compose on top of the query using the Include operator to return related data.
+
+You can use the FromSql extension method to begin a LINQ query based on a raw SQL query:
+
+```C#
+
+var courses = context.Courses
+    .FromSql("SELECT * FROM dbo.Courses")
+    .ToList();
+```
+
+If the SQL query can be composed on in the database, then you can compose on top of the initial raw SQL query using LINQ operators. Also, Composing with LINQ operators can be used to include related data in the query by using the Include operator. Here are two examples:
+
+```C#
+var courses = context.Courses
+    .FromSql("SELECT * FROM dbo.Courses")
+    .Where(c => c.Rating > 3)
+    .OrderByDescending(c => c.Rating)
+    .ToList();
+
+var coursesWithRelatedTeachers = context.Courses
+    .FromSql("SELECT * FROM dbo.Courses")
+    .Include(c => c.Teachers)
+    .ToList();
+```
+
+##### Stored Procedures
+
+A stored procedures (SP for short) is a parametrized prepared group of one or more Transact-SQL statements created and stored at the database for reusing purposes. Stored Procedures are used to perform data operations with one call and are stored to be used over and over again. When calling a parametrized SP, values for the parameters should be supplied.
+
+The `FromSql` method is used in EF Core to execute Stored Procedures for retrieving data. For CRUD operations that actually do something to the data in the database, EF Core offers the `ExecuteSqlCommand` method.
+
+Use the FromSql extension method to call stored procedures to retrieve data:
+
+```C#
+
+//call a stored procedure using FromSql
+var courses = context.Courses
+    .FromSql("EXECUTE GetCourses")
+    .ToList();
+```
+
+**3 ways to pass parameters to a SP using FromSql**:
+
+You can include parameter placeholders in the SQL query string and then supply parameter values as additional arguments. Any parameter values you supply will automatically be converted to a DbParameter.
+
+```C#
+
+var title = "C#";
+//call a stored procedure with a passed parameter
+var courses = context.Courses
+    .FromSql("EXECUTE GetCourses {0}", title)
+    .ToList();
+
+```
+
+This is the same query but using string interpolation syntax, which is supported in EF Core 2.0 and above:
+
+```C#
+var title = "C#";
+
+var courses = context.Courses
+    .FromSql($"EXECUTE GetCourses {title}")
+    .ToList();
+```
+
+You can also construct a DbParameter and supply it as a parameter value. This allows you to use named parameters in the SQL query string:
+
+```C#
+var title = new SqlParameter("title", "C#");
+
+var courses = context.Courses
+    .FromSql("EXECUTE GetCourses @title", title)
+    .ToList();
+
+```
+
+If you want to execute INSERT, UPDATE, DELETE queries, use the ExecuteSqlCommand. It returns integer value which indicates the count of affected rows. ExecuteSqlCommand should be used on context.Database. Let’s see with an example:
+
+Suppose that in our school database, there is a SP to update courses titles, the SP name is UpdateCourseTitle and it takes two parameters, the id of the course whose title will be updated and the new title for the course. Here is how you can call UpdateCourseTitle to update the title of the course with id value of 1 with the new title “Data Access in CSharp”:
+
+```C#
+
+var newCourseTitle = "Data Access in CSharp";
+var courseID = "1";
+schoolContext.Database
+           .ExecuteSqlCommand("UpdateCourseTitle @CID @CTitle", courseID, newCourseTitle);
+
+```
+
+### Seeding the database
+
+Seeding a database means to feed the database tables with initial or default data at the application startup. Most of this data will be data that does not change frequently. A good example of seed data would be a list of countries/regions, postal codes etc. Some seed data can also be used for developers. It is often beneficial to seed data that will allow developers and the testing team to walk through the application without any setup.
+
+To seed the database using EF Core, you would put the database initialization code in the application startup. If you are using migrations, call context.Database.Migrate(), otherwise use context.Database.EnsureCreated()/EnsureDeleted().
