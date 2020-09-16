@@ -1,0 +1,9 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\Game\GameEngine\bin\Debug\netstandard2.0\GameEngine.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\Game\GameEngine\bin\Debug\netstandard2.0\GameEngine.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\Game\GameEngine\bin\Debug\netstandard2.0\GameEngine.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\Game\GameEngine\obj\Debug\netstandard2.0\GameEngine.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\Game\GameEngine\obj\Debug\netstandard2.0\GameEngine.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\Game\GameEngine\obj\Debug\netstandard2.0\GameEngine.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\Game\GameEngine\obj\Debug\netstandard2.0\GameEngine.csproj.CoreCompileInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\Game\GameEngine\obj\Debug\netstandard2.0\GameEngine.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\Game\GameEngine\obj\Debug\netstandard2.0\GameEngine.pdb
