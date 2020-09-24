@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace GameEngine.Tests
+namespace GameEngine.Test
 {
     public class ExternalHealthDamageTestData
     {

@@ -22,3 +22,41 @@
 - Arrange - set things up, create object instances, create test data/inputs
 - Act - Execute production code, call methods, set properties
 - Assert - Check results. Test passes/fails
+
+### Asserts
+
+Asserts evaluate and verify the outcome of a test, based on a returned result, final object state, or the occurrence of events observed during execution. An assert can either pass or fail. If all asserts pass, the test passes; if any assert fails the test fails.
+
+#### Boolean values
+- True/false
+
+#### String values
+- Equality, inequality
+- Empty
+- Starts with / ends with
+- Contains substring
+- Matches regular expression
+
+#### Numeric values
+- Equality, inequality
+- In a given range
+- Floating point precision
+
+#### Collection contents
+- Equality with another collection
+- Contains/does not contain
+- Contains item satisfying predicate
+
+#### Raised events
+- Custom events
+- Framework events
+
+#### Object types
+
+### How Many Asserts per Test?
+
+### Test Data Sources
+- Inline attribute
+- Property/field/method
+- Custom attribute
+- External data

@@ -1,15 +1,15 @@
 ﻿using Xunit;
 using Xunit.Abstractions;
 
-namespace GameEngine.Tests
+namespace GameEngine.Test
 {
     [Collection("GameState collection")]
-    public class TestClass1
+    public class TestClass2
     {
         private readonly GameStateFixture _gameStateFixture;
         private readonly ITestOutputHelper _output;
 
-        public TestClass1(GameStateFixture gameStateFixture, ITestOutputHelper output)
+        public TestClass2(GameStateFixture gameStateFixture, ITestOutputHelper output)
         {
             _gameStateFixture = gameStateFixture;
 
@@ -17,13 +17,13 @@ namespace GameEngine.Tests
         }
 
         [Fact]
-        public void Test1()
+        public void Test3()
         {
             _output.WriteLine($"GameState ID={_gameStateFixture.State.Id}");
         }
 
         [Fact]
-        public void Test2()
+        public void Test4()
         {
             _output.WriteLine($"GameState ID={_gameStateFixture.State.Id}");
         }

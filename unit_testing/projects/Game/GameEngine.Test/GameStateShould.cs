@@ -1,7 +1,7 @@
 ﻿using Xunit;
 using Xunit.Abstractions;
 
-namespace GameEngine.Tests
+namespace GameEngine.Test
 {
     public class GameStateShould : IClassFixture<GameStateFixture>
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GameEngine.Tests
+namespace GameEngine.Test
 {
     public class GameStateFixture : IDisposable
     {
