@@ -1,0 +1,9 @@
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\CreditCardApp\CreditCard\bin\Debug\netstandard2.0\CreditCard.deps.json
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\CreditCardApp\CreditCard\bin\Debug\netstandard2.0\CreditCard.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\CreditCardApp\CreditCard\bin\Debug\netstandard2.0\CreditCard.pdb
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\CreditCardApp\CreditCard\obj\Debug\netstandard2.0\CreditCard.csprojAssemblyReference.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\CreditCardApp\CreditCard\obj\Debug\netstandard2.0\CreditCard.AssemblyInfoInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\CreditCardApp\CreditCard\obj\Debug\netstandard2.0\CreditCard.AssemblyInfo.cs
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\CreditCardApp\CreditCard\obj\Debug\netstandard2.0\CreditCard.csproj.CoreCompileInputs.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\CreditCardApp\CreditCard\obj\Debug\netstandard2.0\CreditCard.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\CreditCardApp\CreditCard\obj\Debug\netstandard2.0\CreditCard.pdb

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "c2C/XOXnvLqyjMTwc3yzWg/ruCzwR2wHlgnAqsmz8hE0+lyf9E9ibT+gVRxUkgvCpwsjejzk6mFY8l4DTyc8lA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Wechuli\\Documents\\repos\\c-sharp-playground\\unit_testing\\projects\\CreditCardApp\\CreditCard\\CreditCard.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Wechuli\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Wechuli\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
