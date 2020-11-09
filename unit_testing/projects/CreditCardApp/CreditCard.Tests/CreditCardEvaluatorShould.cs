@@ -24,13 +24,12 @@ namespace CreditCard.Tests
         [Fact]
         public void ReferYoungApplications()
         {
-            var application = new CreditCardApplication
-            {
-                Age = 19
-            };
+           var application = new CreditCardApplication{Age = 19};
             CreditCardApplicationDecision decision = creditCardApplicationEvaluator.Evaluate(application);
 
-            Assert.Equal(CreditCardApplicationDecision.ReferredToHuman, decision);
+           Assert.Equal(CreditCardApplicationDecision.ReferredToHuman, decision);
+
+      
 
         }
     }

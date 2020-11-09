@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace CreditCard
 {
@@ -11,5 +12,30 @@ namespace CreditCard
         public int Age { get; set; }
         public decimal GrossAnnualIncome { get; set; }
         public string FrequentFlyerNumber { get; set; }
+    }
+
+
+    interface IPerson
+    {
+        string firstName { get; set; }
+        string lastName { get; set; }
+
+    }
+    public class Person : IPerson
+    {
+        public string firstName { get; set; }
+        public string lastName { get; set; }
+        private Boolean IsAdmin = false;
+        public Person(string name)
+        {
+            this.firstName = name;
+        }
+
+        public async Task<string> ReturnFullName()
+        {
+
+            await Task.Delay(2000);
+            return this.firstName + this.lastName;
+        }
     }
 }
