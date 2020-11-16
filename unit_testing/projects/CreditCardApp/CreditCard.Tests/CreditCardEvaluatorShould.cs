@@ -1,5 +1,6 @@
 using System;
 using Xunit;
+using Moq;
 
 namespace CreditCard.Tests
 {
@@ -9,7 +10,10 @@ namespace CreditCard.Tests
 
         public CreditCardEvaluatorShould()
         {
-            creditCardApplicationEvaluator = new CreditCardApplicationEvaluator(null);
+            Mock<IFrequentFlyerNumberValidator> mockValidator = new Mock<IFrequentFlyerNumberValidator>();
+            mockValidator.Setup(x => x.IsValid("x")).Returns(true);
+
+            creditCardApplicationEvaluator = new CreditCardApplicationEvaluator(mockValidator.Object);
 
         }
         [Fact]
@@ -32,5 +36,15 @@ namespace CreditCard.Tests
       
 
         }
+        [Fact]
+
+        public void DeclineLowIncomeApplications()
+        {
+            var application = new CreditCardApplication { Age = 42, GrossAnnualIncome = 19_999, FrequentFlyerNumber = "x" };
+            CreditCardApplicationDecision decision = creditCardApplicationEvaluator.Evaluate(application);
+
+            Assert.Equal(CreditCardApplicationDecision.AutoDeclined, decision);
+        }
+
     }
 }

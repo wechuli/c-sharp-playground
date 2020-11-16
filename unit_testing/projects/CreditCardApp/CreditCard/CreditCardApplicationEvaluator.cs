@@ -14,6 +14,10 @@ namespace CreditCard
 
         public CreditCardApplicationEvaluator(IFrequentFlyerNumberValidator validator)
         {
+            if(validator == null)
+            {
+                throw new ArgumentNullException(nameof(validator));
+            }
             _validator = validator;
 
         }

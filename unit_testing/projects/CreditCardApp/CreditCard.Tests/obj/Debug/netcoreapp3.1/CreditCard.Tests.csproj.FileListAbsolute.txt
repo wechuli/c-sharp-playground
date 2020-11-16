@@ -96,3 +96,5 @@ C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\Credit
 C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\CreditCardApp\CreditCard.Tests\obj\Debug\netcoreapp3.1\CreditCard.Tests.dll
 C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\CreditCardApp\CreditCard.Tests\obj\Debug\netcoreapp3.1\CreditCard.Tests.pdb
 C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\CreditCardApp\CreditCard.Tests\obj\Debug\netcoreapp3.1\CreditCard.Tests.genruntimeconfig.cache
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\CreditCardApp\CreditCard.Tests\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\Wechuli\Documents\repos\c-sharp-playground\unit_testing\projects\CreditCardApp\CreditCard.Tests\bin\Debug\netcoreapp3.1\Moq.dll
